@@ -112,6 +112,9 @@ markers = [
 source = ["src"]
 branch = true
 
+[project.scripts]
+cah = "cah_engine.cli.main:main"
+
 [tool.coverage.report]
 exclude_lines = [
     "pragma: no cover",
