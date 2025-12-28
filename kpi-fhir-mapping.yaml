@@ -1,0 +1,148 @@
+# CAH KPI to FHIR R4 Mapping Schema
+# Version: 1.0
+# Standard: FHIR R4 / USCDI v3
+
+metrics:
+  # Financial Metrics
+  - id: FIN-001
+    name: Net Patient Revenue
+    category: Financial
+    fhir_resources:
+      - Claim
+      - ExplanationOfBenefit
+    calculation: |
+      SUM(ExplanationOfBenefit.payment.amount) 
+      WHERE ExplanationOfBenefit.status = 'active'
+    unit: USD
+    frequency: Monthly
+    source: Claims Processing
+
+  - id: FIN-002
+    name: Denial Rate
+    category: Financial
+    fhir_resources:
+      - Claim
+      - ClaimResponse
+    calculation: |
+      COUNT(ClaimResponse.outcome = 'error') / COUNT(Claim) * 100
+    unit: Percentage
+    frequency: Monthly
+    source: Claims Processing
+
+  # Clinical Metrics
+  - id: CLN-001
+    name: Average Length of Stay
+    category: Clinical
+    fhir_resources:
+      - Encounter
+    calculation: |
+      AVG(Encounter.period.end - Encounter.period.start)
+      WHERE Encounter.class.code = 'IMP'
+    unit: Hours
+    frequency: Monthly
+    constraint: Must be <= 96 hours for CAH compliance
+    source: EHR
+
+  - id: CLN-002
+    name: ED Wait Time
+    category: Clinical
+    fhir_resources:
+      - Encounter
+    calculation: |
+      AVG(Encounter.period.start - Encounter.reasonReference.onset)
+      WHERE Encounter.type.coding.code = 'EMER'
+    unit: Minutes
+    frequency: Daily
+    source: EHR
+
+  - id: CLN-003
+    name: Transfer Rate
+    category: Clinical
+    fhir_resources:
+      - Encounter
+      - ServiceRequest
+    calculation: |
+      COUNT(Encounter.hospitalization.dischargeDisposition.code = 'other-hcf') 
+      / COUNT(Encounter) * 100
+    unit: Percentage
+    frequency: Monthly
+    source: EHR
+
+  # Operational Metrics
+  - id: OPS-001
+    name: Bed Occupancy Rate
+    category: Operational
+    fhir_resources:
+      - Encounter
+      - Location
+    calculation: |
+      AVG(COUNT(active Encounters) / Location.physicalType.bed.count) * 100
+    unit: Percentage
+    frequency: Daily
+    constraint: Location.physicalType.bed.count <= 25 for CAH
+    source: EHR
+
+  - id: OPS-002
+    name: Average Daily Census
+    category: Operational
+    fhir_resources:
+      - Encounter
+    calculation: |
+      COUNT(Encounter WHERE status = 'in-progress' at census time)
+    unit: Patients
+    frequency: Daily
+    source: EHR
+
+  # Quality Metrics
+  - id: QUA-001
+    name: Readmission Rate (30-day)
+    category: Quality
+    fhir_resources:
+      - Encounter
+    calculation: |
+      COUNT(Encounters within 30 days of prior discharge) 
+      / COUNT(Discharges) * 100
+    unit: Percentage
+    frequency: Monthly
+    source: EHR
+
+fhir_profiles:
+  - resource: Encounter
+    profile: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    required_elements:
+      - status
+      - class
+      - period
+      - type
+      - subject
+
+  - resource: Claim
+    profile: http://hl7.org/fhir/StructureDefinition/Claim
+    required_elements:
+      - status
+      - type
+      - patient
+      - created
+      - total
+
+  - resource: Patient
+    profile: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    required_elements:
+      - identifier
+      - name
+      - gender
+      - birthDate
+
+data_quality_requirements:
+  completeness_threshold: 0.90
+  timeliness_max_lag_days: 30
+  validation_rules:
+    - id: VAL-001
+      rule: Encounter.period.end >= Encounter.period.start
+      severity: error
+    - id: VAL-002
+      rule: Encounter.period duration <= 96 hours for acute
+      severity: warning
+    - id: VAL-003
+      rule: Patient.birthDate <= today
+      severity: error

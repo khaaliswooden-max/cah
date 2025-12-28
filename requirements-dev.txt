@@ -1,0 +1,46 @@
+# CAH Transformation Engine
+# Development Dependencies
+# Install: pip install -r requirements-dev.txt
+
+# Include production dependencies
+-r requirements.txt
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-xdist>=3.3.0
+hypothesis>=6.82.0
+faker>=19.0.0
+
+# Code Quality
+ruff>=0.1.0
+black>=23.7.0
+isort>=5.12.0
+mypy>=1.5.0
+
+# Security
+bandit>=1.7.0
+pip-audit>=2.6.0
+safety>=2.3.0
+
+# Documentation
+mkdocs>=1.5.0
+mkdocs-material>=9.2.0
+mkdocstrings>=0.22.0
+
+# Pre-commit hooks
+pre-commit>=3.3.0
+
+# Jupyter for analysis
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipykernel>=6.25.0
+
+# Profiling
+py-spy>=0.3.14
+memory-profiler>=0.61.0
+
+# Type stubs
+pandas-stubs>=2.0.0
+types-requests>=2.31.0
+types-PyYAML>=6.0.0
