@@ -1,218 +1,157 @@
-# CAH Transformation Engine
+# CAH Data Acquisition Pipeline - Quick Start Guide
 
-**Computational Research Environment for Critical Access Hospital Innovation**
+## 🚀 Getting Started
 
-*A joint initiative of Visionblox LLC & Zuup Innovation Lab*
-
----
-
-## Overview
-
-The CAH Transformation Engine is a mathematical modeling and computational research platform designed to solve the systemic challenges facing America's 1,300+ Critical Access Hospitals (CAHs). These essential rural healthcare facilities operate under unique regulatory constraints—25-bed maximums, 96-hour length-of-stay limits, 35-mile distance requirements—that render conventional enterprise transformation approaches fundamentally inapplicable.
-
-This repository provides a rigorous, first-principles framework for:
-
-- **Mathematical optimization** of CAH operations under regulatory constraints
-- **Hypothesis-driven analysis** with reproducible, citable findings
-- **Algorithm development** validated against realistic CAH infrastructure
-- **Performance gap quantification** with evidence-based intervention mapping
-
-## Core Principle
-
-> *Traditional enterprise digital transformation systematically fails for CAHs because it assumes high patient volumes, substantial IT budgets, and dedicated technical staff—characteristics opposite to CAH realities.*
-
-The Transformation Engine inverts this paradigm by treating **data flow as the primary product** rather than applications, enabling modular solutions that scale down rather than up.
-
-## Mathematical Foundations
-
-### Constrained Optimization
-
-CAH operations are modeled as continuous optimization problems with hard regulatory constraints:
-
-```
-maximize    f(x) = Σᵢ wᵢ·Outcomeᵢ(x)
-subject to  g₁(x) ≤ 25 beds          [Bed capacity]
-            g₂(x) ≤ 96 hours         [Length of stay]
-            g₃(x) ≥ 35 miles         [Distance requirement]
-            g₄(x) ≤ Budget           [Resource constraint]
-            x ≥ 0
-```
-
-Lagrangian multipliers quantify the marginal value of relaxing each constraint, enabling evidence-based policy recommendations.
-
-### Sensitivity Analysis
-
-Partial derivatives model operational sensitivities:
-
-- `∂Revenue/∂Volume` — Marginal revenue per additional patient
-- `∂Cost/∂Complexity` — Cost impact of case mix changes
-- `∂Outcome/∂Intervention` — Clinical efficacy gradients
-
-### Cumulative Effects
-
-Integration captures longitudinal impacts:
-
-```
-TotalImpact(T) = ∫₀ᵀ Effect(t)·Decay(t) dt
-```
-
-## Repository Structure
-
-```
-cah-transformation-engine/
-├── README.md                    # This file
-├── LICENSE                      # Copyright notice
-├── CONTRIBUTING.md              # Contribution guidelines
-├── CODE_OF_CONDUCT.md           # Community standards
-├── SECURITY.md                  # Security policy
-├── CHANGELOG.md                 # Version history
-├── CITATION.md                  # Academic citation
-│
-├── docs/
-│   ├── ARCHITECTURE.md          # System architecture
-│   ├── METHODOLOGY.md           # Research methodology
-│   ├── MV-CAHI.md               # Minimum Viable CAH Infrastructure
-│   ├── GLOSSARY.md              # Terminology reference
-│   └── ADR/                     # Architecture Decision Records
-│
-├── research/
-│   ├── hypotheses/              # Active research hypotheses
-│   ├── experiments/             # Experimental protocols
-│   └── findings/                # Documented results
-│
-├── models/
-│   ├── financial/               # Financial optimization models
-│   ├── clinical/                # Clinical outcome models
-│   ├── operational/             # Workflow optimization
-│   └── technical/               # Infrastructure models
-│
-├── algorithms/
-│   ├── optimization/            # Constrained optimization
-│   ├── prediction/              # Forecasting algorithms
-│   └── analysis/                # Gap analysis tools
-│
-├── data/
-│   └── schemas/                 # FHIR R4 data schemas
-│
-└── .github/
-    └── workflows/               # CI/CD configurations
-```
-
-## Quick Start
+This pipeline acquires all critical datasets needed for CAH dual-objective optimization (5% profit increase + quality benchmarks).
 
 ### Prerequisites
 
-- Python 3.11+
-- LaTeX distribution (for documentation)
-- Jupyter Notebook (for interactive analysis)
+```bash
+# Required Python packages
+pip install requests pandas beautifulsoup4 openpyxl
+```
 
-### Installation
+### File Structure
+
+```
+cah_data_acquisition/
+├── scripts/
+│   ├── master_execution_guide.py          # Main orchestrator
+│   ├── step1_download_cms_cost_reports.py # CMS financial data
+│   ├── step2_download_mbqip_quality.py    # Quality measures  
+│   └── step3_download_cah_designation.py  # CAH designation data
+├── data/
+│   ├── cms_cost_reports/                  # Financial baseline
+│   ├── mbqip_quality/                     # Quality baseline
+│   ├── cah_designation/                   # Regulatory constraints
+│   └── processed/                         # Integrated datasets
+└── reports/                                # Execution reports
+```
+
+## 📋 Execution Options
+
+### Option 1: Full Automated Pipeline (Recommended)
+
+Execute all steps automatically with validation and error handling:
 
 ```bash
-git clone https://github.com/khaaliswooden-max/cah.git
-cd cah
-pip install -r requirements.txt
+cd cah_data_acquisition
+python3 scripts/master_execution_guide.py
 ```
 
-### Running the Test Suite
+This will:
+- Validate environment and dependencies
+- Execute all 3 critical dataset acquisitions
+- Generate progress reports
+- Handle errors with retry options
+- Create final execution report
+
+**Estimated time: 45-60 minutes**
+**Required disk space: ~2GB**
+
+### Option 2: Step-by-Step Manual Execution
+
+Execute each step individually for maximum control:
 
 ```bash
-pytest tests/ --cov=models --cov-report=term-missing
+# Step 1: CMS Cost Reports (30-45 min, ~1.5GB)
+python3 scripts/step1_download_cms_cost_reports.py
+
+# Step 2: MBQIP Quality Measures (10-15 min, ~50MB)
+python3 scripts/step2_download_mbqip_quality.py
+
+# Step 3: CAH Designation Data (5-10 min, ~100MB)
+python3 scripts/step3_download_cah_designation.py
 ```
 
-## Learn-Scale-Disrupt (LSD) Cycle
+## 📊 What Gets Downloaded
 
-Every research iteration follows a structured feedback loop:
+### Step 1: CMS Cost Reports (CRITICAL)
+- **Source**: CMS Healthcare Cost Report Information System
+- **Data**: Form 2552-10 for years 2021-2023
+- **Size**: ~500MB per year
+- **Purpose**: Financial baseline (revenue, costs, profit margins)
+- **Use**: Objective Function 1 (5% profit increase)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│   LEARN                    SCALE                   DISRUPT      │
-│   ┌─────────┐             ┌─────────┐             ┌─────────┐   │
-│   │Hypothesis│───────────▶│Algorithm│───────────▶│Implement│   │
-│   └────┬────┘             └────┬────┘             └────┬────┘   │
-│        │                       │                       │        │
-│   ┌────▼────┐             ┌────▼────┐             ┌────▼────┐   │
-│   │ Data    │             │Simulate │             │  Perf   │   │
-│   │Collect  │             │         │             │  Delta  │   │
-│   └────┬────┘             └────┬────┘             └────┬────┘   │
-│        │                       │                       │        │
-│   ┌────▼────┐             ┌────▼────┐             ┌────▼────┐   │
-│   │  Gap    │             │Validate │             │  New    │   │
-│   │Quantify │             │         │             │Hypothes │   │
-│   └─────────┘             └─────────┘             └────┬────┘   │
-│                                                        │        │
-│                          ◀─────────────────────────────┘        │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+### Step 2: MBQIP Quality Measures (CRITICAL)
+- **Source**: HRSA + CMS Hospital Compare
+- **Data**: Quality measures across 4 domains
+- **Size**: ~50MB
+- **Purpose**: Quality benchmarks and current performance
+- **Use**: Objective Function 2 (quality optimization)
 
-**Iteration Requirements:**
-- Reduce uncertainty bounds by ≥20% per cycle
-- Generate at least one testable prediction
-- Document negative results as rigorously as positive findings
+### Step 3: CAH Designation Data (CRITICAL)
+- **Source**: CMS Provider of Services File
+- **Data**: CAH designations and regulatory constraints
+- **Size**: ~100MB
+- **Purpose**: Constraint boundaries (25-bed limit, 96-hour LOS, etc.)
+- **Use**: Regulatory constraints for optimization model
 
-## Minimum Viable CAH Infrastructure (MV-CAHI)
+## ✅ Validation Checklist
 
-All solutions must demonstrate viability against the reference CAH profile:
+After execution, verify:
 
-| Dimension | Specification |
-|-----------|---------------|
-| **Clinical** | 25 beds (10 acute / 15 swing), ER, basic imaging, lab |
-| **Financial** | $15-25M annual revenue, -2% to +3% margin, 65% Medicare |
-| **Technical** | 1-2 IT FTE, basic EHR, 25/3 Mbps rural broadband |
-| **Workforce** | 80-120 FTE, high travel nurse dependency |
+- [ ] **Cost Reports**: 3 years of data for 1300+ CAHs
+- [ ] **Quality Measures**: MBQIP data across all 4 domains
+- [ ] **CAH Designations**: Current CAH list with constraints
+- [ ] **Data Quality**: <5% missing values in critical fields
+- [ ] **File Integrity**: All CSV files readable and properly formatted
 
-See [docs/MV-CAHI.md](docs/MV-CAHI.md) for complete specification.
+Check reports in `reports/` directory:
+- `step1_completion_report.json`
+- `step2_completion_report.json`
+- `step3_completion_report.json`
+- `master_execution_report.json`
 
-## Documentation
+## 🔍 Troubleshooting
 
-| Document | Purpose |
-|----------|---------|
-| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Three-layer system design |
-| [METHODOLOGY.md](docs/METHODOLOGY.md) | Research protocols and standards |
-| [MV-CAHI.md](docs/MV-CAHI.md) | Reference infrastructure |
-| [GLOSSARY.md](docs/GLOSSARY.md) | CAH terminology |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+### Issue: Network timeout during download
+**Solution**: Script includes automatic retry logic. If download fails, rerun the specific step script.
 
-## Regulatory Context
+### Issue: File extraction errors
+**Solution**: Check disk space (need ~2GB free). Delete corrupted ZIP files and retry.
 
-CAH designation (42 CFR § 485.610) requires:
+### Issue: CAH identification fails
+**Solution**: Manual verification may be needed. Check JSON metadata files for guidance.
 
-- Location ≥35 miles from nearest hospital (or state-designated)
-- ≤25 acute care inpatient beds
-- Average length of stay ≤96 hours
-- 24/7 emergency services with on-call physician
-
-Compliance with these constraints is embedded in all optimization models.
-
-## Citation
-
-If you use this work in academic research, please cite:
-
-```bibtex
-@software{cah_transformation_engine,
-  author       = {Wooden, Aldrich K.},
-  title        = {CAH Transformation Engine: Computational Research for Rural Healthcare},
-  year         = {2025},
-  publisher    = {Visionblox LLC / Zuup Innovation Lab},
-  url          = {https://github.com/khaaliswooden-max/cah}
-}
+### Issue: Missing Python packages
+**Solution**: 
+```bash
+pip install requests pandas beautifulsoup4 openpyxl
 ```
 
-## License
+## 📈 Next Steps After Data Acquisition
 
-Copyright © 2025 Visionblox LLC / Zuup Innovation Lab. All rights reserved.
+1. **Validate Data Quality**
+   - Check completion reports in `reports/`
+   - Verify CAH counts match expectations (~1,300)
+   - Confirm financial and quality baselines established
 
-This software is proprietary. See [LICENSE](LICENSE) for terms.
+2. **Data Integration**
+   - Merge datasets on CAH provider ID
+   - Create unified optimization input dataset
+   - Validate variable ranges and constraints
 
-## Contact
+3. **Mathematical Optimization**
+   - Parameterize Lagrangian dual-objective function
+   - Define regulatory constraint boundaries
+   - Execute Sequential Quadratic Programming (SQP)
+   - Generate Pareto frontier for profit vs. quality
 
-**Khaalis Wooden**  
-Director of Enterprise Capture & Compliance, Visionblox LLC  
-kwooden@visionblox.com  
-(256) 988-1130
+## 📞 Support
 
----
+For issues or questions:
+1. Check execution reports in `reports/` directory
+2. Review error logs from script output
+3. Consult individual step scripts for detailed comments
 
-*Building the mathematical foundations for rural healthcare transformation.*
+## 🎯 Success Criteria
+
+Pipeline is successful when:
+- All 3 critical datasets downloaded and validated
+- CAH financial baselines established (~1,300 hospitals)
+- Quality benchmarks defined (MBQIP 4 domains)
+- Regulatory constraints mathematically parameterized
+- Master execution report shows "CRITICAL_DATASETS_ACQUIRED"
+
+**You're ready for optimization when all 3 critical steps complete successfully.**
