@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2026-01-03",
+    "description": "Operational benchmarks linking optimization goals to staff/patient-level metrics",
+    "optimization_model": "CAH Dual-Objective (Profitability + Quality)"
+  },
+  "summary": {
+    "total_benchmarks": 35,
+    "by_cadence": {
+      "daily": 14,
+      "weekly": 12,
+      "monthly": 9
+    },
+    "by_goal": {
+      "profitability": 15,
+      "quality": 10,
+      "optimization_alignment": 10
+    },
+    "by_stakeholder": {
+      "staff": 8,
+      "patient": 5,
+      "unit": 10,
+      "facility": 8,
+      "executive": 4
+    }
+  },
+  "optimization_linkages": {
+    "decision_variables": {
+      "x0_acute_beds": ["OPT-D01", "PROF-D04"],
+      "x1_swing_beds": ["PROF-W04", "OPT-D01"],
+      "x2_nursing_fte": ["PROF-D03", "PROF-W02", "QUAL-D03", "OPT-D03"],
+      "x3_provider_fte": ["PROF-W05", "OPT-D04", "OPT-W01"],
+      "x4_adc": ["PROF-D01", "OPT-D02", "OPT-W03"],
+      "x5_ed_visits": ["PROF-D02", "OPT-W01"],
+      "x6_op_visits": ["PROF-D05"],
+      "x7_cmi": ["PROF-W03"]
+    },
+    "quality_measures": {
+      "ed_throughput": ["QUAL-D01", "QUAL-W01"],
+      "pain_management": ["QUAL-D02"],
+      "hcahps_overall": ["QUAL-W03", "QUAL-M04"],
+      "opioid_concurrent": ["QUAL-W05"],
+      "readmission_30d": ["QUAL-W02", "QUAL-M01"],
+      "falls_injury": ["QUAL-D04", "QUAL-M02"],
+      "cauti_rate": ["QUAL-D05", "QUAL-W04", "QUAL-M03"]
+    },
+    "constraints": {
+      "bed_cap_25": ["OPT-D01"],
+      "alos_96hr": ["OPT-D02"],
+      "census_capacity": ["OPT-W03"],
+      "nursing_ratio": ["OPT-D03"],
+      "ed_capacity": ["OPT-W01"],
+      "margin_floor": ["PROF-M01"]
+    }
+  },
+  "daily_benchmarks": [
+    {
+      "id": "PROF-D01",
+      "name": "Daily Revenue per Patient Day",
+      "target": 4200,
+      "floor": 3500,
+      "unit": "$/patient-day",
+      "measurement": "Total daily charges ÷ occupied beds",
+      "data_source": "EHR charges + ADT",
+      "responsible": "Revenue Cycle",
+      "optimization_link": "Revenue function R(x)"
+    },
+    {
+      "id": "PROF-D02",
+      "name": "ED Revenue per Visit",
+      "target": 485,
+      "floor": 400,
+      "unit": "$/visit",
+      "measurement": "ED charges ÷ ED encounters",
+      "data_source": "ED module + billing",
+      "responsible": "ED Staff",
+      "optimization_link": "α₂ parameter"
+    },
+    {
+      "id": "PROF-D03",
+      "name": "Daily Labor Cost per Patient Day",
+      "target": 2800,
+      "ceiling": 3500,
+      "unit": "$/patient-day",
+      "measurement": "(Nursing hrs × rate + Provider hrs × rate) ÷ patient days",
+      "data_source": "Payroll + ADT",
+      "responsible": "Nurse Manager",
+      "optimization_link": "Cost function C(x)"
+    },
+    {
+      "id": "PROF-D04",
+      "name": "Daily Bed Utilization Rate",
+      "target": 50,
+      "floor": 30,
+      "ceiling": 85,
+      "unit": "%",
+      "measurement": "Midnight census ÷ staffed beds × 100",
+      "data_source": "ADT",
+      "responsible": "Nursing Supervisor",
+      "optimization_link": "Constraint: ADC ≤ 85% beds"
+    },
+    {
+      "id": "PROF-D05",
+      "name": "Outpatient Encounters per Day",
+      "target": 55,
+      "floor": 40,
+      "unit": "visits/day",
+      "measurement": "Count of OP encounters",
+      "data_source": "Scheduling + EHR",
+      "responsible": "Clinic Manager",
+      "optimization_link": "x[6] OP visits"
+    },
+    {
+      "id": "QUAL-D01",
+      "name": "ED Door-to-Provider Time",
+      "target": 25,
+      "ceiling": 45,
+      "unit": "minutes",
+      "measurement": "Median(provider contact - arrival)",
+      "data_source": "ED tracking board",
+      "responsible": "ED Nurse/Provider",
+      "optimization_link": "ed_throughput quality measure"
+    },
+    {
+      "id": "QUAL-D02",
+      "name": "Pain Assessment Compliance",
+      "target": 95,
+      "floor": 90,
+      "unit": "%",
+      "measurement": "Patients with pain score ≤30min ÷ all patients × 100",
+      "data_source": "EHR vitals",
+      "responsible": "Bedside Nurse",
+      "optimization_link": "pain_management quality measure"
+    },
+    {
+      "id": "QUAL-D03",
+      "name": "Nursing Hours per Patient Day",
+      "target": 8.0,
+      "floor": 6.0,
+      "unit": "hours/patient-day",
+      "measurement": "Nursing hours worked ÷ patient days",
+      "data_source": "Payroll + ADT",
+      "responsible": "Nurse Manager",
+      "optimization_link": "x[2] nursing FTE; Aiken 2014"
+    },
+    {
+      "id": "QUAL-D04",
+      "name": "Falls Risk Assessment Rate",
+      "target": 100,
+      "floor": 95,
+      "unit": "%",
+      "measurement": "Admissions with falls assessment ÷ total admissions × 100",
+      "data_source": "EHR assessments",
+      "responsible": "Admitting Nurse",
+      "optimization_link": "falls_injury quality measure"
+    },
+    {
+      "id": "QUAL-D05",
+      "name": "Hand Hygiene Compliance",
+      "target": 95,
+      "floor": 85,
+      "unit": "%",
+      "measurement": "Compliant observations ÷ total observations × 100",
+      "data_source": "Infection control audit",
+      "responsible": "All Clinical Staff",
+      "optimization_link": "cauti_rate quality measure"
+    },
+    {
+      "id": "OPT-D01",
+      "name": "Total Beds Occupied",
+      "target": 18,
+      "floor": 10,
+      "ceiling": 25,
+      "unit": "beds",
+      "measurement": "Acute census + swing census",
+      "data_source": "ADT",
+      "responsible": "House Supervisor",
+      "optimization_link": "HARD CONSTRAINT: 42 CFR § 485.620"
+    },
+    {
+      "id": "OPT-D02",
+      "name": "Average Length of Stay",
+      "target": 72,
+      "ceiling": 96,
+      "unit": "hours",
+      "measurement": "Rolling 7-day (discharge - admit) ÷ discharges",
+      "data_source": "ADT",
+      "responsible": "Case Manager",
+      "optimization_link": "HARD CONSTRAINT: 42 CFR § 485.620"
+    },
+    {
+      "id": "OPT-D03",
+      "name": "Nurse-to-Patient Ratio",
+      "target": 0.50,
+      "floor": 0.40,
+      "unit": "ratio",
+      "measurement": "Nurses on duty ÷ occupied beds",
+      "data_source": "Staffing grid + ADT",
+      "responsible": "Charge Nurse",
+      "optimization_link": "Constraint h₂: x[2] ≥ 0.5 × x[4]"
+    },
+    {
+      "id": "OPT-D04",
+      "name": "ED Coverage Hours",
+      "target": 24,
+      "floor": 20,
+      "unit": "hours",
+      "measurement": "Sum of provider on-site hours",
+      "data_source": "Scheduling + time clock",
+      "responsible": "ED Director",
+      "optimization_link": "Constraint g₄: 24/7 coverage"
+    }
+  ],
+  "weekly_benchmarks": [
+    {
+      "id": "PROF-W01",
+      "name": "Weekly Charge Capture Rate",
+      "target": 98,
+      "floor": 95,
+      "unit": "%",
+      "measurement": "Services with charges ÷ documented services × 100",
+      "data_source": "CDM audit",
+      "responsible": "Revenue Cycle",
+      "optimization_link": "Revenue leakage prevention"
+    },
+    {
+      "id": "PROF-W02",
+      "name": "Weekly Overtime Hours per FTE",
+      "target": 2,
+      "ceiling": 6,
+      "unit": "hours/FTE",
+      "measurement": "Total OT hours ÷ budgeted FTE",
+      "data_source": "Payroll",
+      "responsible": "Department Managers",
+      "optimization_link": "Cost control β₁, β₂"
+    },
+    {
+      "id": "PROF-W03",
+      "name": "Case Mix Index",
+      "target": 1.10,
+      "floor": 0.85,
+      "unit": "index",
+      "measurement": "Sum(DRG weights) ÷ discharges",
+      "data_source": "HIM coding",
+      "responsible": "HIM Director",
+      "optimization_link": "x[7] CMI"
+    },
+    {
+      "id": "PROF-W04",
+      "name": "Swing Bed Utilization",
+      "target": 65,
+      "floor": 40,
+      "unit": "%",
+      "measurement": "Swing bed days ÷ (swing beds × 7) × 100",
+      "data_source": "ADT",
+      "responsible": "SNF Coordinator",
+      "optimization_link": "x[1] swing beds; α₄ revenue"
+    },
+    {
+      "id": "PROF-W05",
+      "name": "ED Provider Productivity",
+      "target": 12,
+      "floor": 8,
+      "unit": "encounters/shift",
+      "measurement": "Weekly ED visits ÷ provider shifts",
+      "data_source": "ED log + scheduling",
+      "responsible": "ED Medical Director",
+      "optimization_link": "x[3] provider FTE efficiency"
+    },
+    {
+      "id": "QUAL-W01",
+      "name": "ED Length of Stay",
+      "target": 180,
+      "ceiling": 240,
+      "unit": "minutes",
+      "measurement": "Median(departure - arrival)",
+      "data_source": "ED tracking board",
+      "responsible": "ED Staff",
+      "optimization_link": "ed_throughput (ED-2b)"
+    },
+    {
+      "id": "QUAL-W02",
+      "name": "Medication Reconciliation Rate",
+      "target": 98,
+      "floor": 90,
+      "unit": "%",
+      "measurement": "Discharges with med rec ÷ total discharges × 100",
+      "data_source": "EHR",
+      "responsible": "Discharge Nurse",
+      "optimization_link": "readmission_30d prevention"
+    },
+    {
+      "id": "QUAL-W03",
+      "name": "HCAHPS Responsiveness Score",
+      "target": 75,
+      "floor": 65,
+      "unit": "%",
+      "measurement": "Patients rating 'always' ÷ surveyed × 100",
+      "data_source": "Real-time feedback",
+      "responsible": "Nursing Staff",
+      "optimization_link": "hcahps_overall"
+    },
+    {
+      "id": "QUAL-W04",
+      "name": "Catheter Days per 100 Patient Days",
+      "target": 15,
+      "ceiling": 25,
+      "unit": "days/100 PD",
+      "measurement": "Catheter days ÷ patient days × 100",
+      "data_source": "EHR device documentation",
+      "responsible": "Bedside Nurse",
+      "optimization_link": "cauti_rate reduction"
+    },
+    {
+      "id": "QUAL-W05",
+      "name": "Opioid Prescribing Compliance",
+      "target": 95,
+      "floor": 90,
+      "unit": "%",
+      "measurement": "Compliant opioid Rx ÷ total opioid Rx × 100",
+      "data_source": "PDMP + EHR",
+      "responsible": "Prescribing Provider",
+      "optimization_link": "opioid_concurrent"
+    },
+    {
+      "id": "OPT-W01",
+      "name": "ED Visits per Provider FTE",
+      "target": 90,
+      "ceiling": 125,
+      "unit": "visits/FTE",
+      "measurement": "Weekly ED visits ÷ provider FTEs",
+      "data_source": "ED log + HR",
+      "responsible": "ED Director",
+      "optimization_link": "Constraint h₄: ≤5000/FTE annual"
+    },
+    {
+      "id": "OPT-W03",
+      "name": "Census Capacity Utilization",
+      "target": 70,
+      "ceiling": 100,
+      "unit": "%",
+      "measurement": "Avg census ÷ (0.85 × staffed beds) × 100",
+      "data_source": "ADT + staffing",
+      "responsible": "CNO",
+      "optimization_link": "Constraint h₁"
+    }
+  ],
+  "monthly_benchmarks": [
+    {
+      "id": "PROF-M01",
+      "name": "Operating Margin",
+      "target": 5,
+      "floor": 0,
+      "unit": "%",
+      "measurement": "(Revenue - Expenses) ÷ Revenue × 100",
+      "data_source": "GL",
+      "responsible": "CFO",
+      "optimization_link": "PRIMARY GOAL: margin_floor ≥ 5%"
+    },
+    {
+      "id": "PROF-M02",
+      "name": "Days in A/R",
+      "target": 45,
+      "ceiling": 60,
+      "unit": "days",
+      "measurement": "(Ending A/R ÷ monthly revenue) × 30",
+      "data_source": "Billing + GL",
+      "responsible": "Revenue Cycle Director",
+      "optimization_link": "Cash flow management"
+    },
+    {
+      "id": "PROF-M03",
+      "name": "Cost per Adjusted Patient Day",
+      "target": 3200,
+      "ceiling": 4000,
+      "unit": "$/APD",
+      "measurement": "Total expenses ÷ (patient days × CMI)",
+      "data_source": "GL + ADT + coding",
+      "responsible": "CFO",
+      "optimization_link": "Cost function C(x)"
+    },
+    {
+      "id": "QUAL-M01",
+      "name": "30-Day Readmission Rate",
+      "target": 12,
+      "ceiling": 18,
+      "unit": "%",
+      "measurement": "Readmissions ≤30 days ÷ eligible discharges × 100",
+      "data_source": "ADT + claims",
+      "responsible": "Quality Director",
+      "optimization_link": "readmission_30d"
+    },
+    {
+      "id": "QUAL-M02",
+      "name": "Falls with Injury Rate",
+      "target": 1.5,
+      "ceiling": 3.0,
+      "unit": "per 1000 PD",
+      "measurement": "Falls with injury ÷ patient days × 1000",
+      "data_source": "Incident reports",
+      "responsible": "Quality/Safety",
+      "optimization_link": "falls_injury"
+    },
+    {
+      "id": "QUAL-M03",
+      "name": "CAUTI Rate",
+      "target": 1.0,
+      "ceiling": 2.0,
+      "unit": "per 1000 cath days",
+      "measurement": "CAUTI events ÷ catheter days × 1000",
+      "data_source": "Infection control",
+      "responsible": "Infection Preventionist",
+      "optimization_link": "cauti_rate"
+    },
+    {
+      "id": "QUAL-M04",
+      "name": "HCAHPS Overall Rating",
+      "target": 72,
+      "floor": 65,
+      "unit": "%",
+      "measurement": "Patients rating 9-10 ÷ surveyed × 100",
+      "data_source": "HCAHPS vendor",
+      "responsible": "CNO",
+      "optimization_link": "hcahps_overall"
+    },
+    {
+      "id": "OPT-M01",
+      "name": "Constraint Satisfaction Score",
+      "target": 100,
+      "floor": 95,
+      "unit": "%",
+      "measurement": "Days all constraints met ÷ days in month × 100",
+      "data_source": "Compliance dashboard",
+      "responsible": "CEO",
+      "optimization_link": "All g(x), h(x) constraints"
+    },
+    {
+      "id": "OPT-M02",
+      "name": "Optimization Model Alignment",
+      "target": 0.90,
+      "floor": 0.75,
+      "unit": "score",
+      "measurement": "1 - Mean(|actual - optimal| ÷ range)",
+      "data_source": "All systems",
+      "responsible": "CEO",
+      "optimization_link": "Decision variables x[0]-x[7]"
+    }
+  ],
+  "staff_daily_checklist": {
+    "nursing": [
+      {"task": "Document pain score within 30 min of arrival", "benchmark": "QUAL-D02"},
+      {"task": "Complete falls risk assessment on admission", "benchmark": "QUAL-D04"},
+      {"task": "Perform hand hygiene at 5 moments", "benchmark": "QUAL-D05"},
+      {"task": "Review catheter necessity daily", "benchmark": "QUAL-W04"},
+      {"task": "Complete medication reconciliation at discharge", "benchmark": "QUAL-W02"}
+    ],
+    "provider": [
+      {"task": "See ED patients within 25 min of arrival", "benchmark": "QUAL-D01"},
+      {"task": "Review opioid prescriptions against PDMP", "benchmark": "QUAL-W05"},
+      {"task": "Document coding-relevant diagnoses", "benchmark": "PROF-W03"},
+      {"task": "Complete discharge summary same day", "benchmark": "QUAL-M01"}
+    ],
+    "charge_nurse": [
+      {"task": "Verify nurse-to-patient ratio ≥ 0.5", "benchmark": "OPT-D03"},
+      {"task": "Monitor bed census vs 25 cap", "benchmark": "OPT-D01"},
+      {"task": "Review ALOS for approaching 96hr cases", "benchmark": "OPT-D02"},
+      {"task": "Report charge capture completeness", "benchmark": "PROF-W01"}
+    ],
+    "ed_staff": [
+      {"task": "Record door-to-provider times", "benchmark": "QUAL-D01"},
+      {"task": "Track ED LOS for each patient", "benchmark": "QUAL-W01"},
+      {"task": "Ensure provider coverage 24/7", "benchmark": "OPT-D04"},
+      {"task": "Document all ED charges", "benchmark": "PROF-D02"}
+    ]
+  },
+  "hypothesis_validation_mapping": {
+    "profitability_goal": {
+      "hypothesis": "CAH can achieve ≥5% operating margin through optimized resource allocation",
+      "primary_metric": "PROF-M01",
+      "supporting_metrics": ["PROF-D01", "PROF-D02", "PROF-D03", "PROF-M03"],
+      "leading_indicators": ["PROF-W01", "PROF-W02", "PROF-W03"],
+      "validation_frequency": "monthly",
+      "success_criteria": "3 consecutive months with margin ≥ 5%"
+    },
+    "quality_goal": {
+      "hypothesis": "Quality metrics improve with evidence-based staffing (Aiken 2014)",
+      "primary_metric": "QUAL-M04",
+      "supporting_metrics": ["QUAL-M01", "QUAL-M02", "QUAL-M03"],
+      "leading_indicators": ["QUAL-D01", "QUAL-D02", "QUAL-D03", "QUAL-D04", "QUAL-D05"],
+      "validation_frequency": "monthly",
+      "success_criteria": "All MBQIP benchmarks met for 3 consecutive months"
+    },
+    "lagrangian_correctness": {
+      "hypothesis": "Operational KPIs align with optimization model decision variables",
+      "primary_metric": "OPT-M02",
+      "supporting_metrics": ["OPT-M01", "OPT-M03"],
+      "constraint_metrics": ["OPT-D01", "OPT-D02", "OPT-D03", "OPT-D04", "OPT-W01"],
+      "validation_frequency": "monthly",
+      "success_criteria": "Alignment score ≥ 0.85 with 100% constraint satisfaction"
+    }
+  }
+}
+
