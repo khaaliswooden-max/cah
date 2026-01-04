@@ -1,0 +1,237 @@
+{
+  "phase": 2,
+  "name": "Optimization Execution",
+  "timestamp": "2026-01-03T20:33:28.815159",
+  "steps": {
+    "data_integration": {
+      "status": "COMPLETE",
+      "total_cahs": 1375,
+      "states": 45
+    },
+    "sqp_optimization": {
+      "status": "COMPLETE",
+      "solve_time_seconds": 0.6485841274261475,
+      "iterations": 34,
+      "function_evaluations": 398,
+      "optimal_margin": 0.08000021045169659,
+      "optimal_quality": 0.9930112301984257,
+      "charnes_cooper_margin": 0.5111343400299152
+    },
+    "opt_m01_validation": {
+      "metric": "OPT-M01",
+      "target": "100% constraint satisfaction",
+      "constraints": {
+        "bed_cap_25": {
+          "description": "Total beds <= 25 (42 CFR 485.620)",
+          "value": 24.384484911156093,
+          "limit": 25.0,
+          "satisfied": "True"
+        },
+        "los_96hr": {
+          "description": "Average LOS <= 96 hours (42 CFR 485.620)",
+          "value": 3.2,
+          "limit": 4.0,
+          "satisfied": true
+        },
+        "census_capacity": {
+          "description": "ADC <= 85% of acute beds",
+          "value": 2.399340052521131,
+          "limit": 15.543330185565589,
+          "satisfied": "True"
+        },
+        "ed_capacity": {
+          "description": "ED visits <= 5000 per provider FTE",
+          "value": 3170.6217725755473,
+          "limit": 45447.1683909287,
+          "satisfied": "True"
+        },
+        "nursing_ratio": {
+          "description": "Nursing FTE >= 0.5 per patient day",
+          "value": 52.55860541648974,
+          "minimum": 1.1996700262605655,
+          "satisfied": "True"
+        },
+        "min_providers": {
+          "description": "Provider FTE >= 2",
+          "value": 9.08943367818574,
+          "minimum": 2.0,
+          "satisfied": "True"
+        },
+        "margin_floor": {
+          "description": "Operating margin >= 5.0%",
+          "value": 0.08000021045169659,
+          "minimum": 0.05,
+          "satisfied": "True"
+        },
+        "positive_revenue": {
+          "description": "Revenue > 0",
+          "value": 12714694.493050259,
+          "satisfied": "True"
+        },
+        "bound_acute_beds": {
+          "description": "acute_beds in [5.0, 25.0]",
+          "value": 18.28627080654775,
+          "bounds": [
+            5.0,
+            25.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_swing_beds": {
+          "description": "swing_beds in [0.0, 15.0]",
+          "value": 6.098214104608344,
+          "bounds": [
+            0.0,
+            15.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_nursing_fte": {
+          "description": "nursing_fte in [20.0, 60.0]",
+          "value": 52.55860541648974,
+          "bounds": [
+            20.0,
+            60.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_provider_fte": {
+          "description": "provider_fte in [2.0, 12.0]",
+          "value": 9.08943367818574,
+          "bounds": [
+            2.0,
+            12.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_avg_daily_census": {
+          "description": "avg_daily_census in [2.0, 18.0]",
+          "value": 2.399340052521131,
+          "bounds": [
+            2.0,
+            18.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_ed_visits": {
+          "description": "ed_visits in [2000.0, 15000.0]",
+          "value": 3170.6217725755473,
+          "bounds": [
+            2000.0,
+            15000.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_outpatient_visits": {
+          "description": "outpatient_visits in [5000.0, 40000.0]",
+          "value": 30282.57727662592,
+          "bounds": [
+            5000.0,
+            40000.0
+          ],
+          "satisfied": "True"
+        },
+        "bound_cmi": {
+          "description": "cmi in [0.8, 1.4]",
+          "value": 1.1707970295207737,
+          "bounds": [
+            0.8,
+            1.4
+          ],
+          "satisfied": "True"
+        }
+      },
+      "violations": [],
+      "total_constraints": 16,
+      "satisfied_constraints": 16,
+      "satisfaction_rate": 1.0,
+      "status": "VALIDATED"
+    },
+    "opt_m02_validation": {
+      "metric": "OPT-M02",
+      "target": "Model Alignment >= 0.90",
+      "components": {
+        "margin_alignment": {
+          "value": 0.08000021045169659,
+          "target_range": [
+            0.05,
+            0.12
+          ],
+          "in_range": "True",
+          "alignment": 1.0
+        },
+        "revenue_per_bed": {
+          "value": 521425.592518183,
+          "target_range": [
+            500000,
+            800000
+          ],
+          "alignment": 1.0
+        },
+        "bed_count": {
+          "value": 24.384484911156093,
+          "target_range": [
+            10,
+            25
+          ],
+          "alignment": 1.0
+        },
+        "nursing_ratio": {
+          "value": 2.1554117549739082,
+          "target_range": [
+            2.0,
+            4.0
+          ],
+          "alignment": 1.0
+        },
+        "ed_visits": {
+          "value": 3170.6217725755473,
+          "target_range": [
+            3000,
+            10000
+          ],
+          "alignment": 1.0
+        },
+        "quality_score": {
+          "value": 0.9930112301984257,
+          "target": 0.85,
+          "alignment": 1.0
+        },
+        "benchmarks_met": {
+          "value": false,
+          "alignment": 0.8
+        },
+        "data_coverage": {
+          "hospitals_analyzed": 1375,
+          "with_ratings": 213,
+          "coverage_rate": 0.1549090909090909,
+          "alignment": 0.9774545454545455
+        }
+      },
+      "alignment_scores": {},
+      "overall_alignment": 0.9877454545454546,
+      "status": "VALIDATED",
+      "alignment_weights": {
+        "margin_alignment": 0.2,
+        "revenue_per_bed": 0.15,
+        "bed_count": 0.1,
+        "nursing_ratio": 0.15,
+        "ed_visits": 0.1,
+        "quality_score": 0.15,
+        "benchmarks_met": 0.05,
+        "data_coverage": 0.1
+      }
+    }
+  },
+  "metrics": {
+    "OPT_M01_constraint_satisfaction": 1.0,
+    "OPT_M01_status": "VALIDATED",
+    "OPT_M02_model_alignment": 0.9877454545454546,
+    "OPT_M02_status": "VALIDATED",
+    "margin_achieved": 0.08000021045169659,
+    "quality_score": 0.9930112301984257,
+    "solver_converged": true,
+    "all_constraints_met": true
+  },
+  "final_status": "VALIDATED"
+}

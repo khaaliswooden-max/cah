@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "generated": "2026-01-03T20:27:03.972410",
+    "phase": "Phase 1: Empirical Validation",
+    "objective": "Extract state-specific CAH benchmarks for WA/MT"
+  },
+  "operating_margin_target": {
+    "target_pct": 5.0,
+    "evidence_sources": [
+      "Holmes et al. (2022) - J Rural Health, PMID: 35357095",
+      "KFF (2024) - Hospital Margins Report",
+      "AHA (2024) - Trendwatch"
+    ],
+    "justification": "Industry sustainability threshold; Top 20 CAHs achieve 5-12%"
+  },
+  "states": {
+    "WA": {
+      "state_name": "Washington",
+      "total_facilities": 39,
+      "statistics": {
+        "total_facilities": 39,
+        "with_emergency_services": 39,
+        "emergency_pct": 100.0,
+        "birthing_friendly": 8,
+        "birthing_friendly_pct": 20.5,
+        "ownership_breakdown": {
+          "Government - Hospital District or Authority": 31,
+          "Voluntary non-profit - Church": 3,
+          "Government - Local": 1,
+          "Voluntary non-profit - Other": 1,
+          "Voluntary non-profit - Private": 3
+        },
+        "facilities_with_rating": 13,
+        "rating_distribution": {
+          "2": 1,
+          "5": 1,
+          "3": 7,
+          "4": 1,
+          "1": 3
+        },
+        "average_rating": 2.69,
+        "quality_summary": {
+          "mortality_measures_better_total": 0,
+          "mortality_measures_worse_total": 0,
+          "readmission_measures_better_total": 5,
+          "readmission_measures_worse_total": 0
+        }
+      }
+    },
+    "MT": {
+      "state_name": "Montana",
+      "total_facilities": 50,
+      "statistics": {
+        "total_facilities": 50,
+        "with_emergency_services": 48,
+        "emergency_pct": 96.0,
+        "birthing_friendly": 7,
+        "birthing_friendly_pct": 14.0,
+        "ownership_breakdown": {
+          "Voluntary non-profit - Private": 39,
+          "Government - Hospital District or Authority": 6,
+          "Voluntary non-profit - Other": 1,
+          "Government - Local": 1,
+          "Government - Federal": 2,
+          "Physician": 1
+        },
+        "facilities_with_rating": 5,
+        "rating_distribution": {
+          "1": 1,
+          "3": 1,
+          "4": 2,
+          "5": 1
+        },
+        "average_rating": 3.4,
+        "quality_summary": {
+          "mortality_measures_better_total": 0,
+          "mortality_measures_worse_total": 0,
+          "readmission_measures_better_total": 7,
+          "readmission_measures_worse_total": 0
+        }
+      }
+    }
+  },
+  "denial_categories": {
+    "high_priority": [
+      {
+        "category": "CODING",
+        "recovery_rate": 0.85,
+        "carc_codes": [
+          "4",
+          "5",
+          "6",
+          "16"
+        ]
+      },
+      {
+        "category": "ELIGIBILITY",
+        "recovery_rate": 0.7,
+        "carc_codes": [
+          "1",
+          "2",
+          "3",
+          "27",
+          "28"
+        ]
+      }
+    ],
+    "medium_priority": [
+      {
+        "category": "AUTHORIZATION",
+        "recovery_rate": 0.5,
+        "carc_codes": [
+          "15",
+          "197",
+          "198"
+        ]
+      },
+      {
+        "category": "MEDICAL_NECESSITY",
+        "recovery_rate": 0.4,
+        "carc_codes": [
+          "50",
+          "55",
+          "56",
+          "57"
+        ]
+      }
+    ],
+    "low_priority": [
+      {
+        "category": "TIMELY_FILING",
+        "recovery_rate": 0.2,
+        "carc_codes": [
+          "29"
+        ]
+      },
+      {
+        "category": "DUPLICATE",
+        "recovery_rate": 0.05,
+        "carc_codes": [
+          "18"
+        ]
+      }
+    ]
+  },
+  "validation_status": {
+    "benchmark_sources_documented": true,
+    "operating_margin_target_set": true,
+    "wa_mt_benchmarks_extracted": true,
+    "denial_codes_categorized": true,
+    "ready_for_phase_2": true
+  }
+}

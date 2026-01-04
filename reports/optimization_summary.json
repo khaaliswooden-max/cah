@@ -24,12 +24,12 @@
     "case_mix_index": 1.3358726727933186
   },
   "uncertainty_analysis": {
-    "margin_90_ci_lower": -0.1927457850984805,
-    "margin_90_ci_upper": 0.4263973372986803,
+    "margin_90_ci_lower": -0.19046559460556414,
+    "margin_90_ci_upper": 0.42918715445035677,
     "probability_target_achieved": 0.772
   },
   "pareto_analysis": {
-    "n_pareto_optimal_solutions": 11,
+    "n_pareto_optimal_solutions": 8,
     "margin_range": [
       0.05170429317858246,
       0.7564760956071254
@@ -65,5 +65,5 @@
       "action": "Optimize swing bed allocation for flexibility."
     }
   ],
-  "timestamp": "2026-01-03T16:05:22.947683"
+  "timestamp": "2026-01-03T20:15:14.815060"
 }

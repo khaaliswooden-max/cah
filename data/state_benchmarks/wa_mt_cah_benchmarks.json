@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2026-01-03",
+    "description": "State-specific CAH benchmarks for Washington (WA) and Montana (MT)",
+    "sources": [
+      "CMS Hospital Compare (2024)",
+      "Washington State Hospital Association (2025)",
+      "Montana Office of Rural Health (2024)",
+      "National Rural Health Association Top 20 CAH Awards"
+    ]
+  },
+  
+  "washington": {
+    "state_code": "WA",
+    "state_fips": "53",
+    "ccn_prefix": "501",
+    "total_cahs": 39,
+    
+    "summary_statistics": {
+      "with_emergency_services": 38,
+      "birthing_friendly_designated": 5,
+      "with_overall_rating": 15,
+      "government_hospital_district": 31,
+      "voluntary_nonprofit": 8
+    },
+    
+    "quality_program": {
+      "name": "WSHA Critical Access Hospital Achievement of Excellence",
+      "measures_count": 14,
+      "excellence_threshold": 5.0,
+      "recognition_year": 2025,
+      "hospitals_recognized": 20,
+      "measure_categories": [
+        "Sepsis Management",
+        "Workplace Safety",
+        "Diagnostic Accuracy",
+        "Health Disparity Reduction"
+      ]
+    },
+    
+    "financial_context": {
+      "statewide_acute_care_margin_2023": -4.6,
+      "margin_unit": "percent",
+      "source": "WSHA Hospital Financial Survey 2023",
+      "note": "Statewide average includes all acute care hospitals, not CAH-specific"
+    },
+    
+    "facilities": [
+      {"ccn": "501301", "name": "Garfield County PHD #1", "city": "Pomeroy", "county": "Garfield", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501302", "name": "Dayton General Hospital", "city": "Dayton", "county": "Columbia", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501303", "name": "Willapa Harbor Hospital", "city": "South Bend", "county": "Pacific", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501304", "name": "Summit Pacific Medical Center", "city": "Elma", "county": "Grays Harbor", "ownership": "Government - Hospital District", "emergency": true, "rating": 2},
+      {"ccn": "501305", "name": "Lincoln Hospital", "city": "Davenport", "county": "Lincoln", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501307", "name": "Odessa Memorial Healthcare Center", "city": "Odessa", "county": "Lincoln", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501308", "name": "Coulee Medical Center", "city": "Grand Coulee", "county": "Grant", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501309", "name": "Providence St Joseph Hospital", "city": "Chewelah", "county": "Stevens", "ownership": "Voluntary non-profit - Church", "emergency": true},
+      {"ccn": "501310", "name": "Newport Community Hospital", "city": "Newport", "county": "Pend Oreille", "ownership": "Government - Hospital District", "emergency": true, "birthing_friendly": true},
+      {"ccn": "501311", "name": "East Adams Rural Hospital", "city": "Ritzville", "county": "Adams", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501312", "name": "Prosser Memorial Hospital", "city": "Prosser", "county": "Benton", "ownership": "Government - Hospital District", "emergency": true, "birthing_friendly": true, "rating": 5},
+      {"ccn": "501313", "name": "Cascade Medical Center", "city": "Leavenworth", "county": "Chelan", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501314", "name": "Ocean Beach Hospital", "city": "Ilwaco", "county": "Pacific", "ownership": "Government - Hospital District", "emergency": true, "rating": 3},
+      {"ccn": "501315", "name": "Skyline Hospital", "city": "White Salmon", "county": "Klickitat", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501316", "name": "Klickitat Valley Hospital", "city": "Goldendale", "county": "Klickitat", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501317", "name": "Columbia Basin Hospital", "city": "Ephrata", "county": "Grant", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501318", "name": "Othello Community Hospital", "city": "Othello", "county": "Adams", "ownership": "Government - Local", "emergency": true},
+      {"ccn": "501319", "name": "Arbor Health Morton Hospital", "city": "Morton", "county": "Lewis", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501320", "name": "Quincy Valley Medical Center", "city": "Quincy", "county": "Grant", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501321", "name": "North Valley Hospital", "city": "Tonasket", "county": "Okanogan", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501322", "name": "Ferry County Memorial Hospital", "city": "Republic", "county": "Ferry", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501323", "name": "Jefferson Healthcare", "city": "Port Townsend", "county": "Jefferson", "ownership": "Government - Hospital District", "emergency": true, "birthing_friendly": true, "rating": 3},
+      {"ccn": "501324", "name": "Three Rivers Hospital", "city": "Brewster", "county": "Okanogan", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501325", "name": "Forks Community Hospital", "city": "Forks", "county": "Clallam", "ownership": "Government - Hospital District", "emergency": true, "birthing_friendly": true},
+      {"ccn": "501326", "name": "Providence Mount Carmel Hospital", "city": "Colville", "county": "Stevens", "ownership": "Voluntary non-profit - Church", "emergency": true, "birthing_friendly": true, "rating": 3},
+      {"ccn": "501327", "name": "Whitman Hospital and Medical Center", "city": "Colfax", "county": "Whitman", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501328", "name": "Mid Valley Hospital & Clinic", "city": "Omak", "county": "Okanogan", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501329", "name": "PeaceHealth United General Medical Center", "city": "Sedro Woolley", "county": "Skagit", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501330", "name": "Astria Sunnyside Hospital", "city": "Sunnyside", "county": "Yakima", "ownership": "Voluntary non-profit - Other", "emergency": true, "rating": 1},
+      {"ccn": "501331", "name": "Pullman Regional Hospital", "city": "Pullman", "county": "Whitman", "ownership": "Government - Hospital District", "emergency": true, "rating": 3},
+      {"ccn": "501332", "name": "Tri-State Memorial Hospital", "city": "Clarkston", "county": "Asotin", "ownership": "Voluntary non-profit - Private", "emergency": true, "rating": 3},
+      {"ccn": "501333", "name": "Lake Chelan Community Hospital", "city": "Chelan", "county": "Chelan", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501334", "name": "Snoqualmie Valley Hospital", "city": "Snoqualmie", "county": "King", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501335", "name": "San Juan Island Medical Center", "city": "Friday Harbor", "county": "San Juan", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "501337", "name": "Whidbey Health Medical Center", "city": "Coupeville", "county": "Island", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501338", "name": "Mason General Hospital", "city": "Shelton", "county": "Mason", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501339", "name": "Olympic Medical Center", "city": "Port Angeles", "county": "Clallam", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501340", "name": "Kittitas Valley Healthcare", "city": "Ellensburg", "county": "Kittitas", "ownership": "Government - Hospital District", "emergency": true, "rating": 4},
+      {"ccn": "501341", "name": "Samaritan Hospital", "city": "Moses Lake", "county": "Grant", "ownership": "Voluntary non-profit - Private", "emergency": true, "rating": 3}
+    ]
+  },
+  
+  "montana": {
+    "state_code": "MT",
+    "state_fips": "30",
+    "ccn_prefix": "271",
+    "total_cahs": 50,
+    
+    "summary_statistics": {
+      "with_emergency_services": 48,
+      "birthing_friendly_designated": 3,
+      "with_overall_rating": 8,
+      "government_entities": 15,
+      "voluntary_nonprofit": 33,
+      "ihs_facilities": 2
+    },
+    
+    "quality_program": {
+      "name": "Montana Rural Healthcare Performance Improvement Network (PIN)",
+      "description": "Peer benchmarking for rural hospitals",
+      "affiliation": "Montana Office of Rural Health, University of Montana",
+      "measure_categories": [
+        "Financial Performance",
+        "Utilization Metrics", 
+        "Patient Care Quality"
+      ]
+    },
+    
+    "top_performers": {
+      "nrha_top_20_cahs": [
+        {
+          "ccn": "271318",
+          "name": "Barrett Hospital & HealthCare",
+          "city": "Dillon",
+          "county": "Beaverhead",
+          "recognition_years": ["2022", "2023", "2024"]
+        },
+        {
+          "ccn": "271317",
+          "name": "Livingston Healthcare",
+          "city": "Livingston",
+          "county": "Park",
+          "recognition_years": ["2024"],
+          "rating": 1
+        }
+      ]
+    },
+    
+    "facilities": [
+      {"ccn": "271300", "name": "Poplar Community Hospital", "city": "Poplar", "county": "Roosevelt", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271301", "name": "Fallon Medical Complex Hospital", "city": "Baker", "county": "Fallon", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271302", "name": "Dahl Memorial Healthcare", "city": "Ekalaka", "county": "Carter", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271303", "name": "Granite County Medical Center", "city": "Philipsburg", "county": "Granite", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "271304", "name": "Missouri River Medical Center", "city": "Fort Benton", "county": "Chouteau", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "271305", "name": "McCone County Health Center", "city": "Circle", "county": "McCone", "ownership": "Voluntary non-profit - Other", "emergency": true},
+      {"ccn": "271306", "name": "Mountainview Medical Center", "city": "White Sulphur Spring", "county": "Meagher", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271307", "name": "Benefis Teton Medical Center", "city": "Choteau", "county": "Teton", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271308", "name": "Roosevelt Medical Center", "city": "Culbertson", "county": "Roosevelt", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271309", "name": "Prairie Community CAH", "city": "Terry", "county": "Prairie", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "271310", "name": "Garfield County Health Center", "city": "Jordan", "county": "Garfield", "ownership": "Government - Local", "emergency": true},
+      {"ccn": "271311", "name": "Big Sandy Medical Center", "city": "Big Sandy", "county": "Chouteau", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271312", "name": "Phillips County Hospital", "city": "Malta", "county": "Phillips", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271313", "name": "Pioneer Medical Center", "city": "Big Timber", "county": "Sweet Grass", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271314", "name": "Deer Lodge Medical Center", "city": "Deer Lodge", "county": "Powell", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271315", "name": "PHS Indian Hospital - Ft Belknap", "city": "Harlem", "county": "Blaine", "ownership": "Government - Federal", "emergency": true},
+      {"ccn": "271316", "name": "Frances Mahon Deaconess Hospital", "city": "Glasgow", "county": "Valley", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271317", "name": "Livingston Healthcare", "city": "Livingston", "county": "Park", "ownership": "Physician", "emergency": true, "birthing_friendly": true, "rating": 1, "top_20_cah": true},
+      {"ccn": "271318", "name": "Barrett Hospital & HealthCare", "city": "Dillon", "county": "Beaverhead", "ownership": "Government - Hospital District", "emergency": true, "birthing_friendly": true, "top_20_cah": true},
+      {"ccn": "271319", "name": "Ruby Valley Medical Center", "city": "Sheridan", "county": "Madison", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "271320", "name": "Cabinet Peaks Medical Center", "city": "Libby", "county": "Lincoln", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271321", "name": "Wheatland Memorial Hospital", "city": "Harlowton", "county": "Wheatland", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271322", "name": "Sheridan Memorial Hospital", "city": "Plentywood", "county": "Sheridan", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271323", "name": "Clark Fork Valley Hospital", "city": "Plains", "county": "Sanders", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271324", "name": "Pondera Medical Center", "city": "Conrad", "county": "Pondera", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271325", "name": "St Luke Community Hospital", "city": "Ronan", "county": "Lake", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271326", "name": "Beartooth Billings Clinic", "city": "Red Lodge", "county": "Carbon", "ownership": "Voluntary non-profit - Private", "emergency": false},
+      {"ccn": "271327", "name": "Rosebud Health Care Center", "city": "Forsyth", "county": "Rosebud", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271328", "name": "Central Montana Medical Center", "city": "Lewistown", "county": "Fergus", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271329", "name": "Sweet Grass Community Health", "city": "Big Timber", "county": "Sweet Grass", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271330", "name": "Marias Medical Center", "city": "Shelby", "county": "Toole", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271331", "name": "Northern Montana Hospital", "city": "Havre", "county": "Hill", "ownership": "Voluntary non-profit - Private", "emergency": true, "birthing_friendly": true},
+      {"ccn": "271332", "name": "Community Medical Center", "city": "Missoula", "county": "Missoula", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271333", "name": "Marcus Daly Memorial Hospital", "city": "Hamilton", "county": "Ravalli", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271334", "name": "St James Healthcare", "city": "Butte", "county": "Silver Bow", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271335", "name": "Glendive Medical Center", "city": "Glendive", "county": "Dawson", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271336", "name": "Holy Rosary Healthcare", "city": "Miles City", "county": "Custer", "ownership": "Voluntary non-profit - Church", "emergency": true},
+      {"ccn": "271337", "name": "Sidney Health Center", "city": "Sidney", "county": "Richland", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271338", "name": "St Peters Health", "city": "Helena", "county": "Lewis and Clark", "ownership": "Voluntary non-profit - Church", "emergency": true, "rating": 3},
+      {"ccn": "271339", "name": "Bozeman Health Deaconess Hospital", "city": "Bozeman", "county": "Gallatin", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271340", "name": "Kalispell Regional Medical Center", "city": "Kalispell", "county": "Flathead", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271341", "name": "PHS Blackfeet Community Hospital", "city": "Browning", "county": "Glacier", "ownership": "Government - Federal", "emergency": true},
+      {"ccn": "271342", "name": "Benefis Health System", "city": "Great Falls", "county": "Cascade", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271343", "name": "Billings Clinic Hospital", "city": "Billings", "county": "Yellowstone", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271344", "name": "Providence St Patrick Hospital", "city": "Missoula", "county": "Missoula", "ownership": "Voluntary non-profit - Church", "emergency": true},
+      {"ccn": "271345", "name": "Logan Health Whitefish", "city": "Whitefish", "county": "Flathead", "ownership": "Voluntary non-profit - Private", "emergency": true, "top_20_cah": true},
+      {"ccn": "271346", "name": "Stillwater Billings Clinic", "city": "Columbus", "county": "Stillwater", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271347", "name": "Madison Valley Medical Center", "city": "Ennis", "county": "Madison", "ownership": "Government - Hospital District", "emergency": true},
+      {"ccn": "271348", "name": "North Valley Hospital", "city": "Whitefish", "county": "Flathead", "ownership": "Voluntary non-profit - Private", "emergency": true},
+      {"ccn": "271349", "name": "Riverstone Health", "city": "Billings", "county": "Yellowstone", "ownership": "Government - Local", "emergency": true}
+    ]
+  },
+  
+  "operating_margin_benchmarks": {
+    "target": 5.0,
+    "unit": "percent",
+    "justification": "Industry sustainability threshold for capital reinvestment",
+    
+    "comparison_data": {
+      "top_20_cahs_range": {"min": 5.0, "max": 12.0, "source": "NRHA 2024"},
+      "top_quartile_cahs": {"min": 4.0, "max": 6.0, "source": "Chartis 2024"},
+      "median_cah_national": {"min": 1.5, "max": 3.0, "source": "KFF 2024"},
+      "rural_hospital_average_2023": 3.1,
+      "non_micropolitan_average_2023": 1.8
+    },
+    
+    "key_findings": {
+      "surgical_services_impact": "+1.5% margin per additional inpatient surgical service",
+      "occupancy_rate_impact": "+0.9% margin per 10% occupancy increase",
+      "cmi_impact": "+0.9% margin per 0.1 CMI increase",
+      "source": "Holmes et al. 2022, PMID: 35357095"
+    }
+  },
+  
+  "denial_categories": {
+    "source": "X12/CMS CARC Code Sets",
+    "categories": [
+      {
+        "id": "ELIGIBILITY",
+        "carc_codes": ["1", "2", "3", "27", "28", "29", "109", "180"],
+        "recovery_probability": 0.70,
+        "priority": "HIGH"
+      },
+      {
+        "id": "MEDICAL_NECESSITY",
+        "carc_codes": ["50", "55", "56", "57", "58", "96", "97", "167"],
+        "recovery_probability": 0.40,
+        "priority": "MEDIUM"
+      },
+      {
+        "id": "CODING",
+        "carc_codes": ["4", "5", "6", "16", "18", "19", "151", "152"],
+        "recovery_probability": 0.85,
+        "priority": "HIGH"
+      },
+      {
+        "id": "AUTHORIZATION",
+        "carc_codes": ["15", "197", "198", "199"],
+        "recovery_probability": 0.50,
+        "priority": "MEDIUM"
+      },
+      {
+        "id": "TIMELY_FILING",
+        "carc_codes": ["29"],
+        "recovery_probability": 0.20,
+        "priority": "LOW"
+      },
+      {
+        "id": "DUPLICATE",
+        "carc_codes": ["18", "B15"],
+        "recovery_probability": 0.05,
+        "priority": "LOW"
+      },
+      {
+        "id": "NON_COVERED",
+        "carc_codes": ["96"],
+        "recovery_probability": 0.10,
+        "priority": "LOW"
+      }
+    ]
+  }
+}
+

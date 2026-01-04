@@ -1,0 +1,517 @@
+{
+  "validation_timestamp": "2026-01-03T20:14:50.449607",
+  "overall_validation_score": 79.71428571428571,
+  "overall_status": "STRONG_FRAMEWORK_NEEDS_REAL_DATA",
+  "category_scores": {
+    "mathematical_framework": {
+      "score": 90,
+      "target": 90,
+      "status": "VALIDATED"
+    },
+    "regulatory_compliance": {
+      "score": 95,
+      "target": 95,
+      "status": "VALIDATED"
+    },
+    "operational_benchmarks": {
+      "score": 78.57142857142857,
+      "target": 90,
+      "status": "NEEDS_WORK"
+    },
+    "data_acquisition": {
+      "score": 85,
+      "target": 85,
+      "status": "DATA_ACQUISITION_COMPLETE"
+    },
+    "gap_analysis": {
+      "score": 50.0,
+      "target": 80,
+      "status": "MODELED_NOT_PROVEN"
+    }
+  },
+  "data_acquisition": {
+    "cms_cost_reports": {
+      "2021": {
+        "directory_exists": true,
+        "report_files": 1,
+        "alpha_files": 1,
+        "nmrc_files": 1,
+        "total_files": 3,
+        "status": "COMPLETE"
+      },
+      "2022": {
+        "directory_exists": true,
+        "report_files": 1,
+        "alpha_files": 1,
+        "nmrc_files": 1,
+        "total_files": 3,
+        "status": "COMPLETE"
+      },
+      "2023": {
+        "directory_exists": true,
+        "report_files": 1,
+        "alpha_files": 1,
+        "nmrc_files": 1,
+        "total_files": 3,
+        "status": "COMPLETE"
+      }
+    },
+    "mbqip_quality": {
+      "hospital_compare": {
+        "exists": true,
+        "cah_hospitals": 0
+      },
+      "metadata_2021": true,
+      "metadata_2022": true,
+      "metadata_2023": true
+    },
+    "cah_designation": {
+      "providers": {
+        "exists": true,
+        "total_hospitals": 1375,
+        "states_represented": 45,
+        "top_states": [
+          [
+            "TX",
+            91
+          ],
+          [
+            "IA",
+            82
+          ],
+          [
+            "KS",
+            82
+          ],
+          [
+            "MN",
+            76
+          ],
+          [
+            "NE",
+            62
+          ]
+        ]
+      },
+      "constraints": {
+        "total_cahs": 1375,
+        "extraction_timestamp": "2026-01-03T15:51:46.729842",
+        "geographic_distribution": {
+          "TX": 91,
+          "KS": 82,
+          "IA": 82,
+          "MN": 76,
+          "NE": 62,
+          "WI": 58,
+          "IL": 55,
+          "MT": 50,
+          "SD": 40,
+          "OK": 39
+        }
+      }
+    },
+    "overall_status": "DATA_ACQUISITION_COMPLETE",
+    "confidence": 85
+  },
+  "cah_provider_analysis": {
+    "total_cahs": 1375,
+    "by_state": {
+      "AL": 8,
+      "AK": 13,
+      "AZ": 17,
+      "AR": 28,
+      "CA": 38,
+      "CO": 32,
+      "FL": 12,
+      "GA": 30,
+      "HI": 9,
+      "ID": 26,
+      "IL": 55,
+      "IN": 33,
+      "IA": 82,
+      "KS": 82,
+      "KY": 30,
+      "LA": 27,
+      "ME": 18,
+      "MA": 4,
+      "MI": 35,
+      "MN": 76,
+      "MS": 29,
+      "MO": 35,
+      "MT": 50,
+      "NE": 62,
+      "NV": 13,
+      "NH": 13,
+      "NM": 13,
+      "NY": 20,
+      "NC": 20,
+      "ND": 37,
+      "OH": 32,
+      "OK": 39,
+      "OR": 25,
+      "PA": 17,
+      "SC": 3,
+      "SD": 40,
+      "TN": 15,
+      "TX": 91,
+      "UT": 13,
+      "VT": 8,
+      "VA": 8,
+      "WA": 39,
+      "WV": 21,
+      "WI": 58,
+      "WY": 19
+    },
+    "by_ownership": {
+      "Government - Local": 228,
+      "Government - Hospital District or Authority": 282,
+      "Voluntary non-profit - Private": 644,
+      "Tribal": 7,
+      "Voluntary non-profit - Church": 55,
+      "Voluntary non-profit - Other": 71,
+      "Government - Federal": 9,
+      "Proprietary": 64,
+      "Government - State": 11,
+      "Physician": 4
+    },
+    "quality_metrics": {
+      "overall_rating_distribution": {
+        "Not Available": 1162,
+        "3": 84,
+        "4": 60,
+        "5": 17,
+        "1": 16,
+        "2": 36
+      },
+      "rated_hospitals_pct": 15.49090909090909
+    },
+    "benchmark_candidates": {
+      "WA": {
+        "count": 39,
+        "sample": [
+          "GARFIELD COUNTY PUBLIC HOSPITAL DISTRICT #1",
+          "DAYTON GENERAL HOSPITAL",
+          "WILLAPA HARBOR HOSPITAL"
+        ]
+      },
+      "MT": {
+        "count": 50,
+        "sample": [
+          "POPLAR COMMUNITY HOSPITAL",
+          "FALLON MEDICAL COMPLEX HOSPITAL",
+          "DAHL MEMORIAL HEALTHCARE ASSOCIATION INC"
+        ]
+      },
+      "TX": {
+        "count": 91,
+        "sample": [
+          "PARMER COUNTY COMMUNITY HOSPITAL",
+          "REAGAN MEMORIAL HOSPITAL",
+          "LIMESTONE MEDICAL CENTER"
+        ]
+      },
+      "MN": {
+        "count": 76,
+        "sample": [
+          "LAKEWOOD HEALTH CENTER",
+          "SANFORD WESTBROOK MEDICAL CENTER",
+          "SANFORD TRACY MEDICAL CENTER"
+        ]
+      },
+      "KS": {
+        "count": 82,
+        "sample": [
+          "GRISELL MEMORIAL HOSPITAL",
+          "ELLINWOOD DISTRICT HOSPITAL",
+          "LANE COUNTY HOSPITAL"
+        ]
+      }
+    },
+    "emergency_services": {
+      "Yes": 1338,
+      "No": 37
+    }
+  },
+  "benchmark_validation": {
+    "benchmarks": {
+      "PROF-M01": {
+        "name": "Operating Margin",
+        "target": ">=5%",
+        "source": "Unknown - Needs validation",
+        "industry_range": "-1.2% to +2.8% national median",
+        "validation_status": "NEEDS_SOURCE",
+        "confidence": 60
+      },
+      "PROF-D01": {
+        "name": "Revenue per Patient Day",
+        "target": "$4,200",
+        "source": "Unknown",
+        "validation_status": "NEEDS_SOURCE",
+        "confidence": 50
+      },
+      "PROF-W01": {
+        "name": "Charge Capture Rate",
+        "target": "98%",
+        "source": "Industry standard",
+        "validation_status": "REASONABLE",
+        "confidence": 70
+      },
+      "QUAL-M04": {
+        "name": "HCAHPS Overall",
+        "target": ">=72%",
+        "source": "CMS Hospital Compare",
+        "validation_status": "VERIFIABLE",
+        "confidence": 85
+      },
+      "QUAL-D01": {
+        "name": "Door-to-Provider Time",
+        "target": "<=25 min",
+        "source": "ED-1b measure",
+        "validation_status": "VERIFIABLE",
+        "confidence": 85
+      },
+      "OPT-D01": {
+        "name": "Bed Capacity",
+        "target": "<=25 beds",
+        "source": "42 CFR \u00a7 485.620",
+        "validation_status": "VERIFIED_FEDERAL",
+        "confidence": 100
+      },
+      "OPT-D02": {
+        "name": "Average LOS",
+        "target": "<=96 hours",
+        "source": "42 CFR \u00a7 485.620",
+        "validation_status": "VERIFIED_FEDERAL",
+        "confidence": 100
+      }
+    },
+    "verified_count": 2,
+    "needs_source_count": 2,
+    "average_confidence": 78.57142857142857,
+    "critical_discrepancy": {
+      "metric": "Operating Margin Target",
+      "value_1": "5.0% (OPERATIONAL_BENCHMARKS.md)",
+      "value_2": "0.5% (Gap Analysis 1)",
+      "status": "REQUIRES_RECONCILIATION"
+    }
+  },
+  "mathematical_framework": {
+    "components_found": [
+      "models.py",
+      "objectives.py",
+      "constraints.py",
+      "solver.py",
+      "pareto.py",
+      "robust.py",
+      "run_optimization.py"
+    ],
+    "components_missing": [],
+    "validation_status": {
+      "optimization_run": true
+    },
+    "optimization_results": {
+      "executive_summary": {
+        "optimization_status": "optimal",
+        "target_margin_achieved": true,
+        "quality_benchmarks_met": false,
+        "robust_solution_available": true
+      },
+      "optimal_solution": {
+        "operating_margin": 0.19686833103124873,
+        "operating_margin_percent": 19.686833103124872,
+        "quality_score": 0.9888562449507292,
+        "annual_revenue": 15586159.525229191,
+        "annual_profit": 3068421.212918671
+      },
+      "resource_allocation": {
+        "acute_beds": 23.165706380018182,
+        "swing_beds": 0.9572588415626299,
+        "total_beds": 24.122965221580813,
+        "nursing_fte": 54.09653901032506,
+        "provider_fte": 11.999999999999996,
+        "expected_daily_census": 2.000000000000011,
+        "annual_ed_visits": 6608.832899848141,
+        "annual_outpatient_visits": 38974.430853821614,
+        "case_mix_index": 1.3358726727933186
+      },
+      "uncertainty_analysis": {
+        "margin_90_ci_lower": -0.1927457850984805,
+        "margin_90_ci_upper": 0.4263973372986803,
+        "probability_target_achieved": 0.772
+      },
+      "pareto_analysis": {
+        "n_pareto_optimal_solutions": 11,
+        "margin_range": [
+          0.05170429317858246,
+          0.7564760956071254
+        ],
+        "quality_range": [
+          0.7213243948963689,
+          0.9880875928694826
+        ]
+      },
+      "recommendations": [
+        {
+          "area": "Financial",
+          "priority": "Low",
+          "recommendation": "Operating margin of 19.7% exceeds 5% target with comfortable buffer.",
+          "action": "Consider reinvesting excess margin in quality improvement initiatives."
+        },
+        {
+          "area": "Quality",
+          "priority": "Low",
+          "recommendation": "Quality score of 0.989 indicates excellent performance.",
+          "action": "Maintain current staffing and protocols."
+        },
+        {
+          "area": "Risk Management",
+          "priority": "High",
+          "recommendation": "Only 77% probability of achieving target.",
+          "action": "Use robust optimization solution or increase safety margins."
+        },
+        {
+          "area": "Capacity",
+          "priority": "Medium",
+          "recommendation": "Operating near 25-bed CAH cap (24 beds).",
+          "action": "Optimize swing bed allocation for flexibility."
+        }
+      ],
+      "timestamp": "2026-01-03T16:05:22.947683"
+    },
+    "framework_completeness": 100.0,
+    "confidence": 90
+  },
+  "gap_analysis": {
+    "gaps": {
+      "operating_margin": {
+        "current": -0.023,
+        "benchmark": 0.005,
+        "gap": -0.028,
+        "financial_impact": 516250,
+        "confidence": 70,
+        "source_verified": false
+      },
+      "denial_rate": {
+        "current": 0.087,
+        "benchmark": 0.05,
+        "gap": 0.037,
+        "financial_impact": 298400,
+        "confidence": 55,
+        "source_verified": false
+      },
+      "labor_cost_ratio": {
+        "current": 0.582,
+        "benchmark": 0.52,
+        "gap": 0.062,
+        "financial_impact": 1160000,
+        "confidence": 45,
+        "source_verified": false
+      }
+    },
+    "priority_actions": {
+      "pre_bill_scrubbing": {
+        "projected_roi": 298000,
+        "timeline": "90 days",
+        "confidence": 55,
+        "assumptions": [
+          "50% of denials are recoverable through scrubbing",
+          "Denial reasons primarily coding/documentation issues"
+        ],
+        "validation_needed": "Pull denial reason codes from clearinghouse"
+      },
+      "staffing_optimization": {
+        "projected_roi": 580000,
+        "timeline": "6 months",
+        "confidence": 45,
+        "assumptions": [
+          "Overstaffed relative to census",
+          "No union contract constraints",
+          "State regulations allow proposed ratios"
+        ],
+        "validation_needed": "Pull current FTE counts by department and shift"
+      },
+      "swing_bed_expansion": {
+        "projected_roi": 185000,
+        "timeline": "12 months",
+        "confidence": 50,
+        "assumptions": [
+          "SNF licensure in place",
+          "Referral network exists",
+          "Staff trained for skilled nursing"
+        ],
+        "validation_needed": "Confirm current swing bed census and referral sources"
+      }
+    },
+    "total_opportunity": 1974650,
+    "total_projected": 1063000,
+    "average_confidence": 50.0
+  },
+  "critical_findings": [
+    {
+      "finding": "Operating margin target discrepancy",
+      "details": "PROF-M01 shows >=5% but Gap Analysis 1 uses 0.5%",
+      "action": "MUST RECONCILE - affects all financial projections",
+      "priority": "CRITICAL"
+    },
+    {
+      "finding": "Benchmark sources not documented",
+      "details": "2 benchmarks lack source citations",
+      "action": "Document with HRSA Flex Monitoring, CMS Cost Reports, state data",
+      "priority": "HIGH"
+    },
+    {
+      "finding": "Priority action ROI unvalidated",
+      "details": "Average confidence: 50%",
+      "action": "Pilot one action before committing to all three",
+      "priority": "HIGH"
+    },
+    {
+      "finding": "CAH identification from cost reports failed",
+      "details": "0 CAHs identified from CMS cost report data structure",
+      "action": "Use Hospital Compare CAH data (1,377 CAHs available) for validation",
+      "priority": "MEDIUM"
+    }
+  ],
+  "recommendations": {
+    "phase_1": {
+      "name": "Empirical Validation",
+      "timeline": "30 days",
+      "actions": [
+        "Document benchmark sources with citations",
+        "Reconcile operating margin target (0.5% vs 5.0%)",
+        "Extract state-specific (WA/MT) CAH benchmarks",
+        "Pull actual denial reason codes by category"
+      ]
+    },
+    "phase_2": {
+      "name": "Optimization Execution",
+      "timeline": "60 days",
+      "actions": [
+        "Integrate real hospital data into optimization model",
+        "Run SQP solver with validated parameters",
+        "Validate OPT-M01 (100% constraint satisfaction)",
+        "Validate OPT-M02 (Model Alignment >= 0.90)"
+      ]
+    },
+    "phase_3": {
+      "name": "Priority Action Pilot",
+      "timeline": "90 days",
+      "actions": [
+        "Pilot pre-bill scrubbing (highest confidence action)",
+        "Measure actual vs. projected denial reduction",
+        "Calculate realized ROI",
+        "Go/no-go decision for full implementation"
+      ]
+    }
+  },
+  "bottom_line": {
+    "what_you_have": "70% validated analytical framework with strong mathematical foundation",
+    "what_you_need": "Real data to move from 'modeled' to 'proven'",
+    "critical_gaps": [
+      "Benchmark sourcing (60% \u2192 need 90%+)",
+      "Operating margin target clarity",
+      "Priority action validation (55% \u2192 need 80%+)"
+    ],
+    "path_forward": "Execute data acquisition pipeline, ground benchmarks in peer-adjusted data, run one pilot"
+  }
+}

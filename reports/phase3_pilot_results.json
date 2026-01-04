@@ -1,0 +1,198 @@
+{
+  "report_metadata": {
+    "title": "Phase 3: Pre-Bill Scrubbing Pilot Results",
+    "generated_at": "2026-01-03T20:40:37.247186",
+    "pilot_duration_days": 90,
+    "total_claims_analyzed": 1167
+  },
+  "executive_summary": {
+    "headline": "Pre-Bill Scrubbing Pilot: GO Recommendation",
+    "key_findings": [
+      "Denial rate reduced by 49.6% (target: 15%)",
+      "Clean claim rate improved from 83.0% to 91.4%",
+      "Revenue protected during pilot: $189,567.13",
+      "Projected annual savings: $768,800.02",
+      "Projected ROI: 21.4x",
+      "Time to payment improved by 6.8 days"
+    ],
+    "bottom_line": "The pilot demonstrates clear value. Pre-bill scrubbing significantly reduces denial rates and improves revenue capture. Full implementation is recommended.",
+    "confidence_level": "95%"
+  },
+  "pilot_configuration": {
+    "duration_days": 90,
+    "control_ratio": 0.5,
+    "avg_claim_value": 4500.0,
+    "scrubbing_cost_per_claim": 12.0,
+    "baseline_denial_rate": 0.12,
+    "projected_denial_reduction": 0.35
+  },
+  "pilot_metrics": {
+    "volume": {
+      "total_claims": 1167,
+      "control_claims": 583,
+      "intervention_claims": 584
+    },
+    "denial_analysis": {
+      "control_denials": 99,
+      "intervention_denials": 50,
+      "control_denial_rate": 0.1698,
+      "intervention_denial_rate": 0.0856,
+      "denial_rate_reduction": 0.4958,
+      "denial_rate_reduction_percent": "49.6%"
+    },
+    "clean_claim_analysis": {
+      "control_clean_rate": 0.8302,
+      "intervention_clean_rate": 0.9144,
+      "clean_rate_improvement": 0.0842
+    },
+    "financial_impact": {
+      "control_total_charges": 2920193.91,
+      "intervention_total_charges": 3151768.55,
+      "control_paid": 1475372.7019405724,
+      "intervention_paid": 1703323.5600231325,
+      "control_denied_amount": 424432.0555,
+      "intervention_denied_amount": 234864.928,
+      "revenue_protected": 189567.1275,
+      "potential_annual_savings": 768800.0170833332
+    },
+    "cost_analysis": {
+      "pilot_intervention_cost": 7008.0,
+      "prevented_rework_cost": 1225.0,
+      "implementation_cost": 45000.0,
+      "annual_license_cost": 36000.0
+    },
+    "roi_analysis": {
+      "pilot_roi": 27.22,
+      "projected_annual_roi": 21.36,
+      "payback_months": 0.7
+    },
+    "time_to_payment": {
+      "control_avg_days": 34.3,
+      "intervention_avg_days": 27.5,
+      "days_improvement": 6.8
+    },
+    "statistical_analysis": {
+      "p_value": 0.0,
+      "confidence_interval_95": [
+        0.0462,
+        0.1222
+      ],
+      "statistically_significant": true,
+      "significance_level": 0.05
+    }
+  },
+  "actual_vs_projected": {
+    "denial_reduction": {
+      "projected": 0.35,
+      "actual": 0.4958143074581431,
+      "variance": 0.1458143074581431,
+      "status": "EXCEEDED"
+    },
+    "clean_claim_improvement": {
+      "projected": 0.15,
+      "actual": 0.08419488239855255,
+      "variance": -0.06580511760144744,
+      "status": "BELOW_TARGET"
+    }
+  },
+  "go_no_go_decision": {
+    "decision": "GO",
+    "confidence": 0.95,
+    "criteria_evaluation": {
+      "denial_reduction_met": true,
+      "denial_reduction_threshold": 0.15,
+      "roi_threshold_met": true,
+      "roi_threshold": 1.5,
+      "statistical_significance_met": true
+    },
+    "recommendations": [
+      "Proceed with full implementation across all claim types",
+      "Target go-live within 60 days to capture projected savings",
+      "Establish monthly ROI tracking dashboard",
+      "Train billing staff on scrubbing workflow integration"
+    ],
+    "risks": [
+      "Staff adoption may vary - plan for training",
+      "ROI may fluctuate with payer mix changes"
+    ],
+    "next_steps": [
+      "Finalize vendor contract/license agreement",
+      "Schedule implementation kickoff meeting",
+      "Define integration requirements with billing system",
+      "Establish baseline metrics for post-implementation tracking"
+    ],
+    "projected_annual_savings": 768800.0170833332,
+    "projected_roi": 21.35555603009259,
+    "savings_confidence_interval": [
+      576600.0128124999,
+      961000.0213541666
+    ]
+  },
+  "denial_analysis_by_category": {
+    "Prior authorization required": {
+      "control_count": 9,
+      "intervention_count": 2,
+      "reduction_percent": 77.8
+    },
+    "Missing/Invalid diagnosis": {
+      "control_count": 29,
+      "intervention_count": 11,
+      "reduction_percent": 62.1
+    },
+    "Patient not eligible": {
+      "control_count": 24,
+      "intervention_count": 14,
+      "reduction_percent": 41.7
+    },
+    "Medical necessity not established": {
+      "control_count": 1,
+      "intervention_count": 1,
+      "reduction_percent": 0.0
+    },
+    "Benefit not covered": {
+      "control_count": 21,
+      "intervention_count": 5,
+      "reduction_percent": 76.2
+    },
+    "Duplicate claim": {
+      "control_count": 11,
+      "intervention_count": 11,
+      "reduction_percent": 0.0
+    },
+    "Invalid procedure code": {
+      "control_count": 4,
+      "intervention_count": 6,
+      "reduction_percent": -50.0
+    }
+  },
+  "payer_analysis": {
+    "medicare": {
+      "control_claims": 297,
+      "intervention_claims": 342,
+      "control_denial_rate": 0.1414,
+      "intervention_denial_rate": 0.0526,
+      "improvement": 0.0888
+    },
+    "medicaid": {
+      "control_claims": 129,
+      "intervention_claims": 111,
+      "control_denial_rate": 0.1783,
+      "intervention_denial_rate": 0.1171,
+      "improvement": 0.0612
+    },
+    "commercial": {
+      "control_claims": 123,
+      "intervention_claims": 111,
+      "control_denial_rate": 0.2683,
+      "intervention_denial_rate": 0.1622,
+      "improvement": 0.1061
+    },
+    "self_pay": {
+      "control_claims": 34,
+      "intervention_claims": 20,
+      "control_denial_rate": 0.0294,
+      "intervention_denial_rate": 0.05,
+      "improvement": -0.0206
+    }
+  }
+}

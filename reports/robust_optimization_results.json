@@ -3,43 +3,43 @@
   "message": "Robust solution (\u0393=3.0, P(violation)\u226456.98%)",
   "optimal_solution": {
     "x": [
-      7.960225676343585,
-      13.006043981760298,
-      30.7375405371773,
+      9.21194437125788,
+      1.0655835058364933,
+      39.55571494022052,
       12.0,
-      5.302960885339934,
-      3930.0374755115326,
-      20254.953605604227,
-      0.8882150896958254
+      7.829275895379778,
+      3053.057886679628,
+      18388.334658594336,
+      1.1600145567099847
     ],
     "variables": {
-      "acute_beds": 7.960225676343585,
-      "swing_beds": 13.006043981760298,
-      "nursing_fte": 30.7375405371773,
+      "acute_beds": 9.21194437125788,
+      "swing_beds": 1.0655835058364933,
+      "nursing_fte": 39.55571494022052,
       "provider_fte": 12.0,
-      "avg_daily_census": 5.302960885339934,
-      "ed_visits": 3930.0374755115326,
-      "outpatient_visits": 20254.953605604227,
-      "cmi": 0.8882150896958254
+      "avg_daily_census": 7.829275895379778,
+      "ed_visits": 3053.057886679628,
+      "outpatient_visits": 18388.334658594336,
+      "cmi": 1.1600145567099847
     }
   },
   "financials": {
-    "revenue": 14335542.044837693,
-    "cost": 11759434.937217394,
-    "profit": 2576107.107620299,
-    "margin": 0.17970071166914606,
-    "margin_percent": 17.970071166914607
+    "revenue": 18838809.189151887,
+    "cost": 13274179.26882506,
+    "profit": 5564629.920326827,
+    "margin": 0.295381192327759,
+    "margin_percent": 29.5381192327759
   },
   "quality": {
-    "composite_score": 0.9926207765771791,
+    "composite_score": 0.9952885603073283,
     "individual_scores": {
-      "ed_throughput": 188.85506810738516,
-      "pain_management": 29.203702195475095,
-      "hcahps_overall": 77.3888934135747,
+      "ed_throughput": 185.65372763120618,
+      "pain_management": 29.94771732804011,
+      "hcahps_overall": 75.15684801587967,
       "opioid_concurrent": 2.0,
       "readmission_30d": 8,
-      "falls_injury": 2.101851097737548,
-      "cauti_rate": 1.261110658642529
+      "falls_injury": 2.4738586640200544,
+      "cauti_rate": 1.4843151984120326
     },
     "benchmarks_met": false
   },
@@ -58,8 +58,8 @@
   "solver": {
     "iterations": 1,
     "function_evaluations": 9,
-    "objective_value": 0.9963103882885895
+    "objective_value": 0.9976442801536641
   },
   "uncertainty": null,
-  "robust_timestamp": "2026-01-03T16:05:22.945915"
+  "robust_timestamp": "2026-01-03T20:15:14.813670"
 }

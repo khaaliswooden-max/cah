@@ -326,27 +326,86 @@ class X12Parser:
         return DenialCategory.OTHER
     
     def _get_carc_description(self, carc_code: str) -> str:
-        """Get description for CARC code."""
+        """
+        Get description for CARC code.
+        
+        Source: X12/CMS Claim Adjustment Reason Codes
+        Reference: Washington Publishing Company (https://x12.org/codes)
+        """
         descriptions = {
+            # Eligibility Category
             "1": "Deductible Amount",
             "2": "Coinsurance Amount",
             "3": "Co-payment Amount",
-            "4": "The procedure code is inconsistent with the modifier used",
-            "5": "The procedure code/bill type is inconsistent with the place of service",
-            "6": "The procedure code is inconsistent with the patient's age",
-            "15": "Authorization/pre-certification absent",
-            "16": "Claim/service lacks information",
-            "18": "Exact duplicate claim/service",
             "27": "Expenses incurred after coverage terminated",
-            "29": "The time limit for filing has expired",
-            "50": "Non-covered services",
-            "55": "Procedure/treatment is deemed experimental",
-            "56": "Procedure/treatment has not been deemed 'proven to be effective'",
-            "96": "Non-covered charge(s)",
-            "97": "The benefit for this service is included in the payment for another service",
+            "28": "Coverage not in effect at time of service",
+            "29": "Time limit for filing has expired",
             "109": "Claim/service not covered by this payer/contractor",
+            "180": "Patient cannot be identified as our insured",
+            
+            # Medical Necessity Category
+            "50": "Non-covered services (not deemed medical necessity)",
+            "55": "Procedure/treatment denied as separate procedure",
+            "56": "Procedure/treatment deemed experimental/investigational",
+            "57": "Procedure/treatment not authorized by plan",
+            "58": "Treatment was deemed not medically necessary by payer",
+            "96": "Non-covered charge(s) per contract/plan",
+            "97": "Benefit for this service included in payment for another service",
+            "167": "Diagnosis not covered by plan",
+            
+            # Coding Category
+            "4": "Procedure code inconsistent with modifier used",
+            "5": "Procedure code/bill type inconsistent with place of service",
+            "6": "Procedure code inconsistent with patient's age",
+            "16": "Claim/service lacks required information for adjudication",
+            "18": "Exact duplicate claim/service (code submitted previously)",
+            "19": "Claim denied; services not medically necessary per documentation",
+            "151": "Payment adjusted; prior payer payment included in this calculation",
+            "152": "Payment adjusted based on contract provisions",
+            
+            # Authorization Category
+            "15": "Authorization/pre-certification absent for service",
+            "197": "Precertification/authorization/notification absent",
+            "198": "Precertification/authorization exceeded",
+            "199": "Revenue code/procedure code requires precertification",
+            
+            # Duplicate Category
+            "B15": "This service/procedure requires that a qualifying service be received and covered",
+            
+            # Additional common codes
+            "22": "This care may be covered by another payer per coordination of benefits",
+            "23": "Impact of prior payer(s) adjudication including payments and adjustments",
+            "24": "Charges covered under capitation agreement/managed care plan",
+            "31": "Patient cannot be identified as our insured",
+            "32": "Our records indicate that this dependent is not an eligible dependent",
+            "33": "Claim/service denied. Insured has no dependent coverage",
+            "34": "Claim/service denied. Insured has no coverage for newborns",
+            "35": "Lifetime benefit maximum has been reached for this service",
+            "39": "Services denied at the time authorization/pre-certification was requested",
+            "45": "Charges exceed your contracted/legislated fee arrangement",
+            "49": "These are non-covered services because this is a routine exam",
+            "59": "Multiple/concurrent procedure - processed based on multiple procedure rules",
+            "89": "Professional charges for services that should be filed separately",
+            "119": "Benefit maximum for this time period or occurrence has been reached",
+            "140": "Patient/insured health identification number and name do not match",
+            "181": "Procedure code was invalid on the date of service",
+            "182": "Procedure modifier was invalid on the date of service",
+            "183": "The referring provider is not eligible to refer the patient",
+            "184": "The prescribing/ordering provider is not eligible to prescribe/order",
+            "185": "The rendering provider is not eligible to perform the service",
+            "186": "Level of care change adjustment",
+            "187": "Consumer Spending Account payments",
+            "188": "Adjustment represents the transfer amount",
+            "189": "Not otherwise classified (includes unlisted procedure codes)",
+            "190": "Payment adjusted; no documentation supporting care",
+            "191": "Services not consistent with documentation",
+            "192": "Claim denied. Appeal information provided separately",
+            "193": "Original payment decision maintained after appeal",
+            "194": "Anesthesia units have been reduced",
+            "195": "Refund/void",
+            "196": "Claim/service denied. Non-participating provider",
         }
-        return descriptions.get(carc_code, f"CARC {carc_code}")
+        return descriptions.get(carc_code, f"CARC {carc_code} - See X12 code list for description")
     
     def _get_recommended_action(
         self,
