@@ -1,0 +1,18 @@
+{
+  "calculation_date": "2026-01-03T17:59:41.188130",
+  "total_providers": 6066,
+  "valid_providers": 0,
+  "data_quality_breakdown": {
+    "unknown": 6066
+  },
+  "total_revenue": 0.0,
+  "total_medicare_revenue": 0.0,
+  "total_medicaid_revenue": 0.0,
+  "total_other_revenue": 0.0,
+  "aggregate_medicare_pct": 0.0,
+  "aggregate_medicaid_pct": 0.0,
+  "aggregate_other_pct": 0.0,
+  "medicare_pct_stats": {},
+  "medicaid_pct_stats": {},
+  "other_pct_stats": {}
+}

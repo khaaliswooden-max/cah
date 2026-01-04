@@ -1,0 +1,42 @@
+{
+  "acute_beds": {
+    "dMargin_dx": 0.0,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 0.0
+  },
+  "swing_beds": {
+    "dMargin_dx": 0.004645553366812434,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 90154.99999998129
+  },
+  "nursing_fte": {
+    "dMargin_dx": -0.0050365197323261925,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 0.0
+  },
+  "provider_fte": {
+    "dMargin_dx": -0.018285453805259907,
+    "dQuality_dx": 0.00046024263478290037,
+    "dRevenue_dx": 0.0
+  },
+  "avg_daily_census": {
+    "dMargin_dx": 0.0797794629588317,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 1957535.6321851083
+  },
+  "ed_visits": {
+    "dMargin_dx": 2.4991435906094815e-05,
+    "dQuality_dx": -8.357699532581328e-07,
+    "dRevenue_dx": 485.0000000000059
+  },
+  "outpatient_visits": {
+    "dMargin_dx": 1.1078951145457525e-05,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 214.99999999999824
+  },
+  "cmi": {
+    "dMargin_dx": 0.1510167015977935,
+    "dQuality_dx": 0.0,
+    "dRevenue_dx": 2930721.8749999856
+  }
+}

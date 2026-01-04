@@ -11,10 +11,11 @@ import json
 from datetime import datetime
 import time
 
-# Configuration
-BASE_DIR = Path("/home/claude/cah_data_acquisition")
-SCRIPTS_DIR = BASE_DIR / "scripts"
+# Configuration - Use the current script's directory as base
+BASE_DIR = Path(__file__).parent.resolve()
+SCRIPTS_DIR = BASE_DIR  # Scripts are in the same directory
 REPORTS_DIR = BASE_DIR / "reports"
+DATA_DIR = BASE_DIR / "data"
 
 # Acquisition Pipeline Steps
 PIPELINE_STEPS = [
@@ -43,6 +44,15 @@ PIPELINE_STEPS = [
         "description": "Regulatory constraints and CAH identification",
         "estimated_time": "5-10 minutes",
         "estimated_size": "~100MB",
+        "critical": True
+    },
+    {
+        "step": 4,
+        "name": "Dataset Integration & Optimization",
+        "script": "step4_integrate_optimization.py",
+        "description": "Integrate datasets and run optimization model",
+        "estimated_time": "2-5 minutes",
+        "estimated_size": "~10MB (reports)",
         "critical": True
     }
 ]
@@ -137,15 +147,19 @@ def validate_pipeline_readiness():
     checks.append(("All scripts exist", all_scripts_exist))
     
     # Check 4: Python dependencies
-    required_packages = ['requests', 'pandas', 'beautifulsoup4']
+    required_packages = [
+        ('requests', 'requests'),
+        ('pandas', 'pandas'),
+        ('bs4', 'beautifulsoup4'),  # bs4 is the import name for beautifulsoup4
+    ]
     packages_installed = True
     print(f"\nChecking Python dependencies...")
-    for package in required_packages:
+    for import_name, pip_name in required_packages:
         try:
-            __import__(package.replace('-', '_'))
-            print(f"✓ {package} installed")
+            __import__(import_name)
+            print(f"✓ {pip_name} installed")
         except ImportError:
-            print(f"✗ {package} missing - install with: pip install {package}")
+            print(f"✗ {pip_name} missing - install with: pip install {pip_name}")
             packages_installed = False
     checks.append(("Dependencies installed", packages_installed))
     
@@ -250,13 +264,8 @@ def main():
     print("READY TO BEGIN DATA ACQUISITION")
     print(f"{'='*80}")
     
-    proceed = input("\nExecute full pipeline? (yes/no): ").strip().lower()
-    if proceed not in ['yes', 'y']:
-        print(f"\n⏸️  Pipeline execution cancelled")
-        print(f"   You can execute individual steps manually:")
-        for step in PIPELINE_STEPS:
-            print(f"   • python3 scripts/{step['script']}")
-        return
+    # Auto-proceed (non-interactive mode)
+    print("\n[AUTO-MODE] Executing full pipeline...")
     
     # Execute pipeline
     execution_results = {}
@@ -267,16 +276,14 @@ def main():
         
         if not success and step_info['critical']:
             print(f"\n⚠️  CRITICAL STEP FAILED")
-            retry = input(f"Retry step {step_info['step']}? (yes/no): ").strip().lower()
-            if retry in ['yes', 'y']:
-                success = execute_step(step_info)
-                execution_results[step_info['step']] = success
+            # Auto-retry once in non-interactive mode
+            print(f"[AUTO-MODE] Retrying step {step_info['step']}...")
+            success = execute_step(step_info)
+            execution_results[step_info['step']] = success
             
             if not success:
-                proceed_anyway = input(f"Continue to next step anyway? (yes/no): ").strip().lower()
-                if proceed_anyway not in ['yes', 'y']:
-                    print(f"\n⏸️  Pipeline execution halted")
-                    break
+                # Continue to next step in non-interactive mode
+                print(f"[AUTO-MODE] Continuing to next step...")
     
     # Generate master report
     generate_master_report(execution_results)

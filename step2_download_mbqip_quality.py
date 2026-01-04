@@ -12,8 +12,8 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import time
 
-# Configuration
-BASE_DIR = Path("/home/claude/cah_data_acquisition")
+# Configuration - Use the current script's directory as base
+BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIR = BASE_DIR / "data" / "mbqip_quality"
 REPORTS_DIR = BASE_DIR / "reports"
 
@@ -149,6 +149,9 @@ def create_mbqip_measures_reference():
     print(f"CREATING MBQIP MEASURES REFERENCE")
     print(f"{'='*60}")
     
+    # Ensure data directory exists
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    
     measures_reference = {
         "Patient Safety / Inpatient Care": {
             "HCP-IMM-3": {
@@ -271,10 +274,8 @@ def main():
     print(f"Purpose: Quality benchmark optimization")
     print(f"Domains: Patient Safety, Outpatient, Engagement, Care Transitions")
     
-    proceed = input("\nProceed with data acquisition? (yes/no): ").strip().lower()
-    if proceed not in ['yes', 'y']:
-        print("❌ Acquisition cancelled")
-        return
+    # Auto-proceed (non-interactive mode)
+    print("\n[AUTO-MODE] Proceeding with data acquisition...")
     
     # Create MBQIP measures reference
     create_mbqip_measures_reference()

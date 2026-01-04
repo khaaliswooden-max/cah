@@ -1,0 +1,47 @@
+{
+  "step": 4,
+  "name": "Dataset Integration for Optimization",
+  "timestamp": "2026-01-03T16:07:51.773235",
+  "status": "COMPLETED",
+  "data_summary": {
+    "total_cah_facilities": 1375,
+    "states_covered": 45,
+    "top_states": {
+      "TX": 91,
+      "IA": 82,
+      "KS": 82,
+      "MN": 76,
+      "NE": 62,
+      "WI": 58,
+      "IL": 55,
+      "MT": 50,
+      "SD": 40,
+      "OK": 39
+    }
+  },
+  "aggregate_statistics": {
+    "median_margin": 0.0,
+    "median_occupancy": 0.0,
+    "median_beds": 0.0,
+    "median_ed_visits": 0.0
+  },
+  "optimization_summary": {
+    "facilities_analyzed": 200,
+    "facilities_at_risk": 200,
+    "at_risk_percentage": 100.0,
+    "target_margin": 0.19687012041758145,
+    "target_quality": 0.9898337852233359,
+    "total_revenue_opportunity": 128000968.35813895
+  },
+  "recommendations": [
+    "ALERT: 100% of CAHs below margin threshold - systemic intervention needed",
+    "Total revenue opportunity: $128M through optimization",
+    "Regional focus: CA has 38 at-risk facilities"
+  ],
+  "next_steps": [
+    "Review facility-specific recommendations",
+    "Prioritize at-risk facilities for intervention",
+    "Implement margin improvement strategies",
+    "Monitor quality metrics through MBQIP"
+  ]
+}

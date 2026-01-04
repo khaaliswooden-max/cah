@@ -1,0 +1,58 @@
+{
+  "Patient Safety / Inpatient Care": {
+    "HCP-IMM-3": {
+      "name": "Healthcare Personnel Influenza Vaccination",
+      "description": "Percentage of healthcare personnel who receive influenza vaccination",
+      "target": ">=90%",
+      "data_source": "NHSN (National Healthcare Safety Network)"
+    },
+    "Antibiotic Stewardship": {
+      "name": "Antibiotic Stewardship",
+      "description": "Assessment of antibiotic stewardship program elements",
+      "target": "100% of elements implemented",
+      "data_source": "CAH self-assessment"
+    }
+  },
+  "Outpatient Care": {
+    "OP-2": {
+      "name": "Fibrinolytic Therapy Received Within 30 Minutes",
+      "description": "AMI patients receiving fibrinolytic therapy during ED visit",
+      "target": ">=75%",
+      "data_source": "CMS QualityNet"
+    },
+    "OP-3": {
+      "name": "Median Time to Transfer to Another Facility - AMI",
+      "description": "Median time from ED arrival to departure for AMI patients",
+      "target": "<=60 minutes",
+      "data_source": "CMS QualityNet"
+    },
+    "OP-18": {
+      "name": "Median Time from ED Arrival to Departure",
+      "description": "For admitted ED patients",
+      "target": "<=274 minutes",
+      "data_source": "CMS QualityNet"
+    },
+    "OP-22": {
+      "name": "ED Left Without Being Seen",
+      "description": "Percentage who left before treatment",
+      "target": "<=3%",
+      "data_source": "CMS QualityNet"
+    }
+  },
+  "Patient Engagement": {
+    "HCAHPS": {
+      "name": "Hospital Consumer Assessment of Healthcare Providers and Systems",
+      "description": "Patient experience survey",
+      "target": "Top-box performance on all domains",
+      "data_source": "CMS Hospital Compare"
+    }
+  },
+  "Care Transitions": {
+    "EDTC": {
+      "name": "Emergency Department Transfer Communication",
+      "description": "Communication during interfacility transfers",
+      "target": "100% compliance",
+      "data_source": "CAH chart abstraction"
+    }
+  }
+}

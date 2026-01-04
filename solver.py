@@ -26,16 +26,28 @@ import numpy as np
 from scipy.optimize import minimize, OptimizeResult
 import warnings
 
-from .models import (
-    CAHParameters,
-    QualityBenchmarks,
-    DecisionVariables,
-    OptimizationResult,
-    OptimizationStatus,
-    ConstraintStatus,
-)
-from .objectives import CAHObjectiveFunctions
-from .constraints import CAHConstraints
+try:
+    from .models import (
+        CAHParameters,
+        QualityBenchmarks,
+        DecisionVariables,
+        OptimizationResult,
+        OptimizationStatus,
+        ConstraintStatus,
+    )
+    from .objectives import CAHObjectiveFunctions
+    from .constraints import CAHConstraints
+except ImportError:
+    from models import (
+        CAHParameters,
+        QualityBenchmarks,
+        DecisionVariables,
+        OptimizationResult,
+        OptimizationStatus,
+        ConstraintStatus,
+    )
+    from objectives import CAHObjectiveFunctions
+    from constraints import CAHConstraints
 
 
 class CAHOptimizer:

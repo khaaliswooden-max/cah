@@ -1,0 +1,195 @@
+{
+  "revenue_parameters": {
+    "alpha_1": {
+      "value": 12847.0,
+      "std_error": 2340.0,
+      "ci_90": [
+        8997.7,
+        16696.3
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    },
+    "alpha_2": {
+      "value": 485.0,
+      "std_error": 127.0,
+      "ci_90": [
+        276.08500000000004,
+        693.915
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    },
+    "alpha_3": {
+      "value": 215.0,
+      "std_error": 68.0,
+      "ci_90": [
+        103.14,
+        326.86
+      ],
+      "sample_size": 0,
+      "source": "Literature prior - HCUP/MedPAC benchmarks"
+    },
+    "alpha_4": {
+      "value": 380.0,
+      "std_error": 95.0,
+      "ci_90": [
+        223.725,
+        536.275
+      ],
+      "sample_size": 0,
+      "source": "Literature prior - CMS SNF rates"
+    }
+  },
+  "cost_parameters": {
+    "beta_1": {
+      "value": 78500.0,
+      "std_error": 12400.0,
+      "ci_90": [
+        58102.0,
+        98898.0
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    },
+    "beta_2": {
+      "value": 285000.0,
+      "std_error": 65000.0,
+      "ci_90": [
+        178075.0,
+        391925.0
+      ],
+      "sample_size": 0,
+      "source": "Literature prior - MGMA DataDive benchmarks"
+    },
+    "beta_3": {
+      "value": 4200000.0,
+      "std_error": 900000.0,
+      "ci_90": [
+        2719500.0,
+        5680500.0
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    },
+    "beta_4": {
+      "value": 892.0,
+      "std_error": 178.0,
+      "ci_90": [
+        599.19,
+        1184.81
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    }
+  },
+  "operational_parameters": {
+    "avg_los": {
+      "value": 3.2,
+      "std_error": 0.8,
+      "ci_90": [
+        1.8840000000000001,
+        4.516
+      ],
+      "sample_size": 0,
+      "source": "Prior (insufficient data: n=0)"
+    },
+    "swing_occupancy": {
+      "value": 0.65,
+      "std_error": 0.15,
+      "ci_90": [
+        0.40325,
+        0.89675
+      ],
+      "sample_size": 0,
+      "source": "Literature prior - Flex Monitoring Team"
+    },
+    "cmi": {
+      "value": 1.0,
+      "std_error": 0.15,
+      "ci_90": [
+        0.75325,
+        1.24675
+      ],
+      "sample_size": 0,
+      "source": "Literature prior - CMS MS-DRG data"
+    }
+  },
+  "quality_benchmarks": {
+    "ed_throughput": {
+      "value": 181.09859154929578,
+      "std_error": 45.0,
+      "ci_90": [
+        107.07359154929577,
+        255.12359154929578
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "pain_management": {
+      "value": 30.183098591549296,
+      "std_error": 10.0,
+      "ci_90": [
+        13.733098591549297,
+        46.6330985915493
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "hcahps_overall": {
+      "value": 72.43943661971832,
+      "std_error": 8.0,
+      "ci_90": [
+        59.279436619718325,
+        85.59943661971832
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "opioid_concurrent": {
+      "value": 5.030516431924883,
+      "std_error": 2.0,
+      "ci_90": [
+        1.740516431924883,
+        8.320516431924883
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "readmission_30d": {
+      "value": 15.091549295774648,
+      "std_error": 3.0,
+      "ci_90": [
+        10.156549295774647,
+        20.02654929577465
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "falls_injury": {
+      "value": 2.5152582159624415,
+      "std_error": 1.0,
+      "ci_90": [
+        0.8702582159624415,
+        4.1602582159624415
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    },
+    "cauti_rate": {
+      "value": 1.5091549295774649,
+      "std_error": 0.5,
+      "ci_90": [
+        0.6866549295774649,
+        2.331654929577465
+      ],
+      "sample_size": 213,
+      "source": "MBQIP benchmarks adjusted by Hospital Compare ratings"
+    }
+  },
+  "metadata": {
+    "facilities_analyzed": 1375,
+    "calibration_timestamp": "2026-01-03T16:07:17.837269",
+    "data_year": 2023
+  }
+}

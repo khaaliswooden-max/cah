@@ -17,14 +17,24 @@ from dataclasses import dataclass, field
 import numpy as np
 from scipy.optimize import minimize
 
-from .models import (
-    CAHParameters,
-    QualityBenchmarks,
-    DecisionVariables,
-    ParetoPoint,
-)
-from .objectives import CAHObjectiveFunctions
-from .constraints import CAHConstraints
+try:
+    from .models import (
+        CAHParameters,
+        QualityBenchmarks,
+        DecisionVariables,
+        ParetoPoint,
+    )
+    from .objectives import CAHObjectiveFunctions
+    from .constraints import CAHConstraints
+except ImportError:
+    from models import (
+        CAHParameters,
+        QualityBenchmarks,
+        DecisionVariables,
+        ParetoPoint,
+    )
+    from objectives import CAHObjectiveFunctions
+    from constraints import CAHConstraints
 
 
 @dataclass

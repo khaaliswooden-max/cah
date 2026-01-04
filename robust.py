@@ -15,10 +15,16 @@ from dataclasses import dataclass
 import numpy as np
 from scipy.optimize import minimize, linprog
 
-from .models import CAHParameters, QualityBenchmarks, DecisionVariables, OptimizationResult
-from .objectives import CAHObjectiveFunctions
-from .constraints import CAHConstraints
-from .solver import CAHOptimizer
+try:
+    from .models import CAHParameters, QualityBenchmarks, DecisionVariables, OptimizationResult
+    from .objectives import CAHObjectiveFunctions
+    from .constraints import CAHConstraints
+    from .solver import CAHOptimizer
+except ImportError:
+    from models import CAHParameters, QualityBenchmarks, DecisionVariables, OptimizationResult
+    from objectives import CAHObjectiveFunctions
+    from constraints import CAHConstraints
+    from solver import CAHOptimizer
 
 
 @dataclass

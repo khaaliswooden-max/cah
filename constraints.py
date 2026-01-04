@@ -21,7 +21,10 @@ from typing import List, Dict, Tuple, Callable
 from dataclasses import dataclass
 import numpy as np
 
-from .models import ConstraintStatus
+try:
+    from .models import ConstraintStatus
+except ImportError:
+    from models import ConstraintStatus
 
 
 @dataclass

@@ -15,7 +15,10 @@ guaranteed global optimality. See solver.py for implementation.
 from typing import Dict, Tuple
 import numpy as np
 
-from .models import CAHParameters, QualityBenchmarks
+try:
+    from .models import CAHParameters, QualityBenchmarks
+except ImportError:
+    from models import CAHParameters, QualityBenchmarks
 
 
 class CAHObjectiveFunctions:

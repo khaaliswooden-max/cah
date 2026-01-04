@@ -1,0 +1,47 @@
+# Data files (too large for git)
+data/raw/**/*.csv
+
+# CMS Cost Report data (download from source)
+data/cms_cost_reports/**/*.csv
+data/raw/**/*.zip
+data/raw/**/*.xlsx
+data/processed/**/*.csv
+data/processed/**/*.parquet
+
+# Keep directory structure but ignore data
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Reports (can regenerate)
+reports/acquisition/*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+

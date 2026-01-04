@@ -10,15 +10,19 @@ from pathlib import Path
 import json
 from datetime import datetime
 
-# Configuration
-BASE_DIR = Path("/home/claude/cah_data_acquisition")
+# Configuration - Use the current script's directory as base
+BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIR = BASE_DIR / "data" / "cah_designation"
 REPORTS_DIR = BASE_DIR / "reports"
 
-# Provider of Services URLs
+# Provider of Services URLs - Multiple sources to try
 POS_URLS = {
-    "cms_data_portal": "https://data.cms.gov/provider-data/api/1/datastore/query/xubh-q36u/0/download",
-    "cms_direct_csv": "https://data.cms.gov/provider-characteristics/api/1/datastore/query/89jj-35fg/0/download",
+    # Hospital general information dataset
+    "cms_hospital_general": "https://data.cms.gov/provider-data/api/1/datastore/query/xubh-q36u/0/download?format=csv",
+    # Provider of services dataset - different endpoints
+    "cms_pos_csv": "https://data.cms.gov/provider-characteristics/hospital-general-information/api/1/datastore/query/download?format=csv",
+    # Alternative API endpoints
+    "cms_hospital_json": "https://data.cms.gov/provider-data/api/1/datastore/query/xubh-q36u/0",
     "nber_backup": "https://www.nber.org/data/provider-of-services.html"
 }
 
@@ -30,42 +34,90 @@ def download_provider_of_services():
     
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     
-    # Try CMS direct CSV endpoint first
-    try:
-        print(f"📥 Fetching from CMS Provider Characteristics API...")
-        print(f"⏱️  This may take 2-3 minutes for ~100MB file...")
-        
-        url = POS_URLS["cms_direct_csv"]
-        response = requests.get(url, timeout=300, stream=True)
-        response.raise_for_status()
-        
-        # Save raw CSV
-        csv_path = DATA_DIR / "provider_of_services_raw.csv"
-        total_size = 0
-        
-        with open(csv_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=1024*1024):
-                if chunk:
-                    f.write(chunk)
-                    total_size += len(chunk)
-                    print(f"\r   Downloaded: {total_size/(1024*1024):.1f}MB", end='')
-        
-        print(f"\n✓ Download complete: {total_size/(1024*1024):.1f}MB")
-        
-        # Load and analyze
-        print(f"\n📊 Loading Provider of Services data...")
-        df = pd.read_csv(csv_path, low_memory=False)
-        
-        print(f"✓ Loaded {len(df):,} provider records")
-        print(f"   Columns: {len(df.columns)}")
-        print(f"\nSample columns: {list(df.columns[:15])}")
-        
-        return df
-        
-    except Exception as e:
-        print(f"✗ Error with primary source: {e}")
-        print(f"\nTrying alternative approach...")
-        return try_alternative_download()
+    # Try multiple sources
+    sources_to_try = [
+        ("CMS Hospital General CSV", POS_URLS["cms_hospital_general"]),
+        ("CMS POS CSV", POS_URLS["cms_pos_csv"]),
+        ("CMS Hospital JSON", POS_URLS["cms_hospital_json"]),
+    ]
+    
+    for source_name, url in sources_to_try:
+        try:
+            print(f"\n📥 Trying {source_name}...")
+            print(f"   URL: {url}")
+            
+            response = requests.get(url, timeout=300, stream=True)
+            
+            if response.status_code != 200:
+                print(f"   Status {response.status_code}, trying next...")
+                continue
+            
+            content_type = response.headers.get('content-type', '')
+            
+            # Check if it's JSON
+            if 'json' in content_type or url.endswith('/0'):
+                print(f"   Detected JSON response, parsing...")
+                data = response.json()
+                
+                # Handle different JSON structures
+                if isinstance(data, dict):
+                    if 'results' in data:
+                        df = pd.DataFrame(data['results'])
+                    elif 'data' in data:
+                        df = pd.DataFrame(data['data'])
+                    else:
+                        print(f"   Unknown JSON structure: {list(data.keys())[:5]}")
+                        continue
+                elif isinstance(data, list):
+                    df = pd.DataFrame(data)
+                else:
+                    print(f"   Unexpected JSON type: {type(data)}")
+                    continue
+                    
+                if len(df) > 0:
+                    csv_path = DATA_DIR / "provider_of_services_from_json.csv"
+                    df.to_csv(csv_path, index=False)
+                    print(f"✓ Loaded {len(df):,} records from JSON")
+                    print(f"   Columns: {list(df.columns[:10])}")
+                    return df
+            else:
+                # Assume CSV
+                csv_path = DATA_DIR / "provider_of_services_raw.csv"
+                total_size = 0
+                
+                with open(csv_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=1024*1024):
+                        if chunk:
+                            f.write(chunk)
+                            total_size += len(chunk)
+                            print(f"\r   Downloaded: {total_size/(1024*1024):.1f}MB", end='')
+                
+                if total_size > 1000:  # More than 1KB
+                    print(f"\n✓ Download complete: {total_size/(1024*1024):.1f}MB")
+                    
+                    # Check if it's actually CSV
+                    with open(csv_path, 'r', encoding='utf-8', errors='ignore') as f:
+                        first_line = f.readline()
+                        if '<' in first_line:  # HTML response
+                            print(f"   Response is HTML, not CSV. Trying next...")
+                            continue
+                    
+                    print(f"\n📊 Loading Provider of Services data...")
+                    df = pd.read_csv(csv_path, low_memory=False)
+                    
+                    print(f"✓ Loaded {len(df):,} provider records")
+                    print(f"   Columns: {len(df.columns)}")
+                    print(f"\nSample columns: {list(df.columns[:15])}")
+                    return df
+                else:
+                    print(f"\n   File too small ({total_size} bytes), trying next...")
+                
+        except Exception as e:
+            print(f"   Error: {e}, trying next...")
+            continue
+    
+    print(f"\n⚠️ All sources failed. Trying alternative download...")
+    return try_alternative_download()
 
 def try_alternative_download():
     """Try alternative method to get Provider of Services data"""
@@ -265,10 +317,8 @@ def main():
     print(f"Purpose: Constraint boundary definition for optimization")
     print(f"Expected: ~1,300 CAH records")
     
-    proceed = input("\nProceed with download? (yes/no): ").strip().lower()
-    if proceed not in ['yes', 'y']:
-        print("❌ Download cancelled")
-        return
+    # Auto-proceed (non-interactive mode)
+    print("\n[AUTO-MODE] Proceeding with download...")
     
     # Download Provider of Services data
     df = download_provider_of_services()

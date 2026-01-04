@@ -1,0 +1,373 @@
+{
+  "summary": {
+    "total_facilities": 1375,
+    "facilities_analyzed": 200,
+    "facilities_at_risk": 200
+  },
+  "population_metrics": {
+    "median_margin": 0.0,
+    "median_quality": 0.5
+  },
+  "optimization_targets": {
+    "target_margin": 0.19687012041758145,
+    "target_quality": 0.9898337852233359,
+    "total_revenue_opportunity": 128000968.35813895
+  },
+  "distributions": {
+    "margin": {
+      "min": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "quality": {
+      "min": 0.0,
+      "p10": 0.5,
+      "p25": 0.5,
+      "median": 0.5,
+      "p75": 0.5,
+      "p90": 0.5,
+      "max": 1.0,
+      "mean": 0.49,
+      "std": 0.15819331726764158
+    }
+  },
+  "top_recommendations": [
+    "ALERT: 100% of CAHs below margin threshold - systemic intervention needed",
+    "Total revenue opportunity: $128M through optimization",
+    "Regional focus: CA has 38 at-risk facilities"
+  ],
+  "facility_results": [
+    {
+      "facility_id": "011300",
+      "facility_name": "WASHINGTON COUNTY HOSPITAL",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011302",
+      "facility_name": "RED BAY HOSPITAL",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011304",
+      "facility_name": "OCHSNER CHOCTAW GENERAL",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011305",
+      "facility_name": "ST VINCENTS BLOUNT",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.0,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.9893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Quality improvement priority - consider MBQIP technical assistance",
+        "Address readmission rates - enhance discharge planning and follow-up",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011306",
+      "facility_name": "TANNER MEDICAL CENTER-EAST ALABAMA",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011307",
+      "facility_name": "MEDICAL CENTER BARBOUR",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011308",
+      "facility_name": "CRENSHAW COMMUNITY HOSPITAL",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "011309",
+      "facility_name": "WIREGRASS MEDICAL CENTER",
+      "state": "AL",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "021301",
+      "facility_name": "PROVIDENCE VALDEZ MEDICAL CENTER",
+      "state": "AK",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    },
+    {
+      "facility_id": "021302",
+      "facility_name": "PROVIDENCE SEWARD HOSPITAL",
+      "state": "AK",
+      "current_state": {
+        "margin": 0.0,
+        "quality_score": 0.5,
+        "beds": 0,
+        "occupancy": 0.0
+      },
+      "optimized_targets": {
+        "margin": 0.08000060522383717,
+        "quality_score": 0.9893599944817979
+      },
+      "improvements": {
+        "margin_improvement": 0.08000060522383717,
+        "quality_improvement": 0.4893599944817979,
+        "revenue_opportunity": 640004.8417906974
+      },
+      "recommended_actions": [
+        "CRITICAL: Review cost structure - operating margin below sustainability threshold",
+        "Increase patient volume through community outreach and service expansion",
+        "Critically low occupancy - evaluate swing bed program expansion"
+      ],
+      "risk_assessment": {
+        "margin_at_risk": true,
+        "compliance_risk": false,
+        "risk_factors": [
+          "Operating margin (0.0%) below 5% threshold"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-01-03T16:07:17.845543",
+    "data_year": 2023
+  }
+}

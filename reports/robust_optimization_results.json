@@ -1,0 +1,65 @@
+{
+  "status": "optimal",
+  "message": "Robust solution (\u0393=3.0, P(violation)\u226456.98%)",
+  "optimal_solution": {
+    "x": [
+      7.960225676343585,
+      13.006043981760298,
+      30.7375405371773,
+      12.0,
+      5.302960885339934,
+      3930.0374755115326,
+      20254.953605604227,
+      0.8882150896958254
+    ],
+    "variables": {
+      "acute_beds": 7.960225676343585,
+      "swing_beds": 13.006043981760298,
+      "nursing_fte": 30.7375405371773,
+      "provider_fte": 12.0,
+      "avg_daily_census": 5.302960885339934,
+      "ed_visits": 3930.0374755115326,
+      "outpatient_visits": 20254.953605604227,
+      "cmi": 0.8882150896958254
+    }
+  },
+  "financials": {
+    "revenue": 14335542.044837693,
+    "cost": 11759434.937217394,
+    "profit": 2576107.107620299,
+    "margin": 0.17970071166914606,
+    "margin_percent": 17.970071166914607
+  },
+  "quality": {
+    "composite_score": 0.9926207765771791,
+    "individual_scores": {
+      "ed_throughput": 188.85506810738516,
+      "pain_management": 29.203702195475095,
+      "hcahps_overall": 77.3888934135747,
+      "opioid_concurrent": 2.0,
+      "readmission_30d": 8,
+      "falls_injury": 2.101851097737548,
+      "cauti_rate": 1.261110658642529
+    },
+    "benchmarks_met": false
+  },
+  "constraints": {
+    "all_satisfied": true,
+    "status": {
+      "bed_cap": "satisfied",
+      "census_capacity": "satisfied",
+      "nursing_ratio": "satisfied",
+      "ed_capacity": "satisfied",
+      "min_providers": "satisfied",
+      "margin_floor": "satisfied"
+    },
+    "shadow_prices": {}
+  },
+  "solver": {
+    "iterations": 1,
+    "function_evaluations": 9,
+    "objective_value": 0.9963103882885895
+  },
+  "uncertainty": null,
+  "robust_timestamp": "2026-01-03T16:05:22.945915"
+}

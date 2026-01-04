@@ -13,16 +13,33 @@ from datetime import datetime
 import sys
 import time
 
-# Configuration
-BASE_DIR = Path("/home/claude/cah_data_acquisition")
+# Configuration - Use the current script's directory as base
+BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIR = BASE_DIR / "data" / "cms_cost_reports"
 REPORTS_DIR = BASE_DIR / "reports"
 
-# CMS Cost Report URLs (verified as of 2024)
+# CMS Cost Report URLs - Primary and alternative sources
+# Note: CMS periodically changes URL structures, these are best-effort URLs
 CMS_COST_REPORT_URLS = {
-    2023: "https://www.cms.gov/files/zip/hosp-2023-10-csv.zip",
-    2022: "https://www.cms.gov/files/zip/hosp-2022-10-csv.zip", 
-    2021: "https://www.cms.gov/files/zip/hosp-2021-10-csv.zip"
+    2023: "https://downloads.cms.gov/files/hcris/hosp10-2023-ALPHA.zip",
+    2022: "https://downloads.cms.gov/files/hcris/hosp10-2022-ALPHA.zip", 
+    2021: "https://downloads.cms.gov/files/hcris/hosp10-2021-ALPHA.zip"
+}
+
+# Alternative URL patterns that CMS has used
+CMS_ALT_URLS = {
+    2023: [
+        "https://www.cms.gov/files/zip/hosp-2023-10-csv.zip",
+        "https://downloads.cms.gov/files/hcris/HOSP10FY2023.zip",
+    ],
+    2022: [
+        "https://www.cms.gov/files/zip/hosp-2022-10-csv.zip",
+        "https://downloads.cms.gov/files/hcris/HOSP10FY2022.zip",
+    ],
+    2021: [
+        "https://www.cms.gov/files/zip/hosp-2021-10-csv.zip",
+        "https://downloads.cms.gov/files/hcris/HOSP10FY2021.zip",
+    ]
 }
 
 # Alternative direct data access
@@ -37,18 +54,49 @@ def download_cost_report(year):
     year_dir = DATA_DIR / str(year)
     year_dir.mkdir(parents=True, exist_ok=True)
     
-    url = CMS_COST_REPORT_URLS.get(year)
-    if not url:
-        print(f"⚠️  URL not configured for year {year}")
+    # Try primary URL first, then alternatives
+    urls_to_try = [CMS_COST_REPORT_URLS.get(year)] + CMS_ALT_URLS.get(year, [])
+    urls_to_try = [u for u in urls_to_try if u]  # Filter None values
+    
+    if not urls_to_try:
+        print(f"⚠️  No URLs configured for year {year}")
+        return False
+    
+    response = None
+    working_url = None
+    
+    for url in urls_to_try:
+        try:
+            print(f"📥 Trying: {url}")
+            response = requests.get(url, stream=True, timeout=600)
+            if response.status_code == 200:
+                working_url = url
+                print(f"✓ URL working!")
+                break
+            else:
+                print(f"   Status {response.status_code}, trying next...")
+        except requests.exceptions.RequestException as e:
+            print(f"   Failed: {e}, trying next...")
+            continue
+    
+    if not working_url or not response:
+        print(f"✗ All URLs failed for year {year}")
+        print(f"ℹ️  Manual download may be required from: https://www.cms.gov/data-research/statistics-trends-and-reports/cost-reports")
+        # Create placeholder summary
+        summary = {
+            "year": year,
+            "status": "download_failed",
+            "manual_download_required": True,
+            "cms_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/cost-reports",
+            "timestamp": datetime.now().isoformat()
+        }
+        summary_path = year_dir / f"download_status_{year}.json"
+        with open(summary_path, 'w') as f:
+            json.dump(summary, f, indent=2)
         return False
     
     try:
-        print(f"📥 Fetching from: {url}")
         print(f"⏱️  This may take 5-10 minutes for ~500MB file...")
-        
-        # Stream download with progress
-        response = requests.get(url, stream=True, timeout=600)
-        response.raise_for_status()
         
         total_size = int(response.headers.get('content-length', 0))
         zip_path = year_dir / f"hosp_{year}_10.zip"
@@ -241,10 +289,8 @@ def main():
     print(f"Estimated size: ~1.5GB total")
     print(f"Estimated time: 30-45 minutes")
     
-    proceed = input("\nProceed with download? (yes/no): ").strip().lower()
-    if proceed not in ['yes', 'y']:
-        print("❌ Download cancelled")
-        return
+    # Auto-proceed (non-interactive mode)
+    print("\n[AUTO-MODE] Proceeding with download...")
     
     # Download cost reports for each year
     results = {}
