@@ -1,0 +1,109 @@
+{
+  "generated": "2026-01-08T14:14:59.191329",
+  "dataset_info": {
+    "total_records": 264,
+    "unique_facilities": 88,
+    "years_covered": [
+      2021,
+      2022,
+      2023
+    ],
+    "columns": [
+      "Year",
+      "Provider_Num",
+      "State",
+      "Facility_Name",
+      "FY_Begin_Date",
+      "FY_End_Date",
+      "Total_Patient_Revenue",
+      "Total_Operating_Expenses",
+      "Operating_Margin",
+      "Bed_Count",
+      "RPT_REC_NUM",
+      "CCN",
+      "IMM-2",
+      "OP-18",
+      "OP-2",
+      "OP-22",
+      "OP-23",
+      "SEP-1",
+      "City",
+      "County",
+      "Ownership",
+      "Emergency_Services",
+      "Birthing_Friendly",
+      "Overall_Rating",
+      "Net_Revenue",
+      "Cost_Per_Revenue_Dollar",
+      "Revenue_Category",
+      "Margin_Category",
+      "Financial_Viability",
+      "Quality_Measures_Available"
+    ]
+  },
+  "state_distribution": {
+    "Montana": 147,
+    "Washington": 117
+  },
+  "financial_summary": {
+    "Total_Patient_Revenue": {
+      "mean": 71956119.50387597,
+      "median": 40019094.0,
+      "min": 2186003.0,
+      "max": 387636783.0,
+      "missing": 6
+    },
+    "Total_Operating_Expenses": {
+      "mean": 37286372.569767445,
+      "median": 23575418.5,
+      "min": 2186003.0,
+      "max": 162881670.0,
+      "missing": 6
+    },
+    "Operating_Margin": {
+      "mean": 0.3140140123034527,
+      "median": 0.33696979230273233,
+      "min": -0.4503638164884516,
+      "max": 0.7327400021385232,
+      "missing": 6
+    }
+  },
+  "quality_measures_summary": {
+    "OP-18": {
+      "coverage_count": 210,
+      "coverage_pct": 79.54545454545455,
+      "mean": 124.2,
+      "median": 120.0
+    },
+    "OP-2": {
+      "coverage_count": 45,
+      "coverage_pct": 17.045454545454543,
+      "mean": 91.46666666666667,
+      "median": 94.0
+    },
+    "IMM-2": {
+      "coverage_count": 251,
+      "coverage_pct": 95.07575757575758,
+      "mean": 58.1593625498008,
+      "median": 60.0
+    },
+    "OP-22": {
+      "coverage_count": 157,
+      "coverage_pct": 59.46969696969697,
+      "mean": 1.070063694267516,
+      "median": 1.0
+    },
+    "OP-23": {
+      "coverage_count": 27,
+      "coverage_pct": 10.227272727272728,
+      "mean": 60.44444444444444,
+      "median": 62.0
+    },
+    "SEP-1": {
+      "coverage_count": 42,
+      "coverage_pct": 15.909090909090908,
+      "mean": 66.14285714285714,
+      "median": 72.5
+    }
+  }
+}

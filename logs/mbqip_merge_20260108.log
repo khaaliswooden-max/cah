@@ -1,0 +1,239 @@
+2026-01-08 12:44:15,368 - INFO - Step 1: Loading/Downloading Quality Measures Data
+2026-01-08 12:44:15,369 - INFO -   No existing data found, downloading from CMS API...
+2026-01-08 12:44:15,369 - INFO - Downloading CMS Timely and Effective Care dataset...
+2026-01-08 12:44:17,242 - ERROR - Error downloading data at offset 0: 400 Client Error: Bad Request for url: https://data.cms.gov/provider-data/api/1/datastore/query/yv7e-xc69/0?offset=0&limit=5000
+2026-01-08 12:44:17,242 - WARNING - No data downloaded from API
+2026-01-08 12:44:17,245 - INFO - 
+Step 2: Processing Quality Measures
+2026-01-08 12:44:17,246 - WARNING -   No quality measures data available
+2026-01-08 12:44:17,246 - INFO - 
+Step 3: Loading HCRIS Financial Data
+2026-01-08 12:44:17,246 - INFO - Loading HCRIS financial data...
+2026-01-08 12:44:17,255 - INFO -   Loaded 264 HCRIS records
+2026-01-08 12:44:17,261 - INFO - 
+Step 4: Loading Facility Characteristics
+2026-01-08 12:44:17,261 - INFO - Loading facility characteristics...
+2026-01-08 12:44:17,266 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 12:44:17,267 - INFO - 
+Step 5: Creating Composite Dataset
+2026-01-08 12:44:17,267 - INFO - Creating composite dataset...
+2026-01-08 12:44:17,278 - INFO -   Merged characteristics: 264 records
+2026-01-08 12:44:17,279 - INFO - Adding derived metrics...
+2026-01-08 12:44:17,284 - INFO -   Added 3 derived columns
+2026-01-08 12:44:17,284 - INFO - 
+Step 6: Saving Outputs
+2026-01-08 12:44:17,469 - INFO -   Total records: 264
+2026-01-08 12:44:17,469 - INFO -   Total columns: 23
+2026-01-08 12:44:17,469 - INFO - Generating summary report...
+2026-01-08 12:44:17,479 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
+2026-01-08 12:45:41,734 - INFO - Step 1: Loading/Downloading Quality Measures Data
+2026-01-08 12:45:41,735 - INFO -   No existing data found, downloading from CMS API...
+2026-01-08 12:45:41,736 - INFO - Downloading CMS Timely and Effective Care dataset...
+2026-01-08 12:45:41,736 - INFO -   Attempting download from: https://data.cms.gov/provider-data/sites/default/files/resources/092256becd267d9...
+2026-01-08 12:45:43,014 - WARNING -   CSV download failed: 404 Client Error: Not Found for url: https://data.cms.gov/provider-data/sites/default/files/resources/092256becd267d9eeccf73bf7d16c46b_1735286729/Timely_and_Effective_Care-Hospital.csv
+2026-01-08 12:45:43,014 - INFO -   Attempting download from: https://data.cms.gov/provider-data/api/1/datastore/query/yv7e-xc69/0?format=csv...
+2026-01-08 12:45:45,513 - INFO -   [OK] Saved 1500 records to timely_effective_care_hospital.csv
+2026-01-08 12:45:45,516 - INFO - 
+Step 2: Processing Quality Measures
+2026-01-08 12:45:45,516 - INFO - Filtering for MT/WA Critical Access Hospitals...
+2026-01-08 12:47:50,501 - INFO - Step 1: Loading CAH Provider List
+2026-01-08 12:47:50,537 - INFO - Loaded 89 MT/WA CAH providers from designation file
+2026-01-08 12:47:50,538 - INFO - 
+Step 2: Loading/Downloading Quality Measures Data
+2026-01-08 12:47:50,538 - INFO -   No existing data found, downloading from CMS API...
+2026-01-08 12:47:50,539 - INFO - Downloading CMS Timely and Effective Care dataset...
+2026-01-08 12:47:50,539 - INFO -   Downloading data for state: MT
+2026-01-08 12:47:51,583 - WARNING -     SQL query failed for MT, trying alternative...
+2026-01-08 12:47:53,441 - INFO -   Downloading data for state: WA
+2026-01-08 12:47:54,645 - WARNING -     SQL query failed for WA, trying alternative...
+2026-01-08 12:47:56,484 - INFO -   State-specific download failed, trying full download with pagination...
+2026-01-08 12:47:58,111 - ERROR -     Error at offset 0: 400 Client Error: Bad Request for url: https://data.cms.gov/provider-data/api/1/datastore/query/yv7e-xc69/0?offset=0&limit=5000
+2026-01-08 12:47:58,111 - WARNING - No data downloaded from API
+2026-01-08 12:47:58,114 - INFO - 
+Step 3: Processing Quality Measures
+2026-01-08 12:47:58,114 - WARNING -   No quality measures data from API, creating placeholder structure
+2026-01-08 12:47:58,114 - INFO - Creating placeholder quality data structure...
+2026-01-08 12:47:58,116 - INFO -   Created placeholder for 89 facilities
+2026-01-08 12:47:58,117 - INFO - 
+Step 4: Loading HCRIS Financial Data
+2026-01-08 12:47:58,117 - INFO - Loading HCRIS financial data...
+2026-01-08 12:47:58,120 - INFO -   Loaded 264 HCRIS records
+2026-01-08 12:47:58,123 - INFO - 
+Step 5: Loading Facility Characteristics
+2026-01-08 12:47:58,123 - INFO - Loading facility characteristics...
+2026-01-08 12:47:58,125 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 12:47:58,125 - INFO - 
+Step 6: Creating Composite Dataset
+2026-01-08 12:47:58,126 - INFO - Creating composite dataset...
+2026-01-08 12:47:58,132 - INFO -   Merged quality measures: 264 records
+2026-01-08 12:47:58,139 - INFO -   Merged characteristics: 264 records
+2026-01-08 12:47:58,139 - INFO - Adding derived metrics...
+2026-01-08 12:47:58,148 - INFO -   Added 3 derived columns
+2026-01-08 12:47:58,148 - INFO - 
+Step 7: Saving Outputs
+2026-01-08 12:47:58,161 - INFO - [OK] Saved composite dataset to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\processed\cah_composite_baseline.csv
+2026-01-08 12:47:58,161 - INFO -   Total records: 264
+2026-01-08 12:47:58,161 - INFO -   Total columns: 32
+2026-01-08 12:47:58,162 - INFO - Generating summary report...
+2026-01-08 12:47:58,171 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
+2026-01-08 13:02:56,905 - INFO - Step 1: Loading CAH Provider List
+2026-01-08 13:02:57,022 - INFO - Loaded 89 MT/WA CAH providers from designation file
+2026-01-08 13:02:57,028 - INFO - 
+Step 2: Loading/Downloading Quality Measures Data
+2026-01-08 13:02:57,030 - INFO -   No existing data found, downloading from CMS API...
+2026-01-08 13:02:57,031 - INFO - Downloading CMS Timely and Effective Care dataset...
+2026-01-08 13:02:57,053 - INFO -   Downloading data for state: MT
+2026-01-08 13:03:00,183 - WARNING -     API returned status 400
+2026-01-08 13:03:00,485 - INFO -   Downloading data for state: WA
+2026-01-08 13:03:04,415 - WARNING -     API returned status 400
+2026-01-08 13:03:04,717 - WARNING - No data downloaded from API
+2026-01-08 13:03:04,727 - INFO - 
+Step 3: Processing Quality Measures
+2026-01-08 13:03:04,728 - WARNING -   No quality measures data from API, creating placeholder structure
+2026-01-08 13:03:04,728 - INFO - Creating placeholder quality data structure...
+2026-01-08 13:03:04,731 - INFO -   Created placeholder for 89 facilities
+2026-01-08 13:03:04,731 - INFO - 
+Step 4: Loading HCRIS Financial Data
+2026-01-08 13:03:04,732 - INFO - Loading HCRIS financial data...
+2026-01-08 13:03:04,741 - INFO -   Loaded 264 HCRIS records
+2026-01-08 13:03:04,751 - INFO - 
+Step 5: Loading Facility Characteristics
+2026-01-08 13:03:04,752 - INFO - Loading facility characteristics...
+2026-01-08 13:03:04,757 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 13:03:04,757 - INFO - 
+Step 6: Creating Composite Dataset
+2026-01-08 13:03:04,758 - INFO - Creating composite dataset...
+2026-01-08 13:03:04,770 - INFO -   Merged quality measures: 264 records
+2026-01-08 13:03:04,780 - INFO -   Merged characteristics: 264 records
+2026-01-08 13:03:04,781 - INFO - Adding derived metrics...
+2026-01-08 13:03:04,801 - INFO -   Added 3 derived columns
+2026-01-08 13:03:04,801 - INFO - 
+Step 7: Saving Outputs
+2026-01-08 13:03:04,891 - INFO - [OK] Saved composite dataset to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\processed\cah_composite_baseline.csv
+2026-01-08 13:03:04,892 - INFO -   Total records: 264
+2026-01-08 13:03:04,893 - INFO -   Total columns: 32
+2026-01-08 13:03:04,894 - INFO - Generating summary report...
+2026-01-08 13:03:04,955 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
+2026-01-08 13:05:27,190 - INFO - Step 1: Loading CAH Provider List
+2026-01-08 13:05:27,265 - INFO - Loaded 89 MT/WA CAH providers from designation file
+2026-01-08 13:05:27,280 - INFO - 
+Step 2: Loading/Downloading Quality Measures Data
+2026-01-08 13:05:27,281 - INFO -   No existing data found, downloading from CMS API...
+2026-01-08 13:05:27,281 - INFO - Downloading CMS Timely and Effective Care dataset...
+2026-01-08 13:05:27,281 - INFO -   Downloading data for state: MT
+2026-01-08 13:05:29,745 - INFO -     Batch: 1000 records...
+2026-01-08 13:05:33,662 - INFO -     Batch: 1821 records...
+2026-01-08 13:05:33,662 - INFO -     [OK] Total 1821 records for MT
+2026-01-08 13:05:33,963 - INFO -   Downloading data for state: WA
+2026-01-08 13:05:38,330 - INFO -     Batch: 1000 records...
+2026-01-08 13:05:42,493 - INFO -     Batch: 2000 records...
+2026-01-08 13:05:46,382 - INFO -     Batch: 2640 records...
+2026-01-08 13:05:46,383 - INFO -     [OK] Total 2640 records for WA
+2026-01-08 13:05:46,898 - INFO -   [OK] Total 4461 MT/WA records saved to timely_effective_care_hospital.csv
+2026-01-08 13:05:46,901 - INFO -   Measures found: ['EDV', 'GMCS', 'GMCS_Malnutrition_Diagnosis_Documented', 'GMCS_Malnutrition_Screening', 'GMCS_Nutrition_Assessment', 'GMCS_Nutritional_Care_Plan', 'HH_HYPER', 'HH_HYPO', 'HH_ORAE', 'IMM_3', 'OP_18a', 'OP_18b', 'OP_18c', 'OP_18d', 'OP_22', 'OP_23', 'OP_29', 'OP_31', 'OP_40', 'SAFE_USE_OF_OPIOIDS', 'SEP_1', 'SEP_SH_3HR', 'SEP_SH_6HR', 'SEV_SEP_3HR', 'SEV_SEP_6HR', 'STK_02', 'STK_03', 'STK_05', 'VTE_1', 'VTE_2']
+2026-01-08 13:05:46,906 - INFO - 
+Step 3: Processing Quality Measures
+2026-01-08 13:05:46,907 - INFO - Filtering for MT/WA Critical Access Hospitals...
+2026-01-08 13:05:46,907 - INFO -   Using CCN column: facility_id
+2026-01-08 13:05:47,028 - INFO -   Found 4438 records for MT/WA facilities
+2026-01-08 13:05:47,028 - INFO - Extracting MBQIP quality measures...
+2026-01-08 13:05:47,029 - INFO -   Using columns: facility=facility_id, measure=measure_id, score=score
+2026-01-08 13:05:47,175 - INFO -   Found 1490 records matching MBQIP measures
+2026-01-08 13:05:47,254 - INFO -   Created pivot table with 142 facilities
+2026-01-08 13:05:47,255 - INFO -   Measures found: ['IMM-2', 'OP-18', 'OP-2']
+2026-01-08 13:05:47,255 - INFO - 
+Step 4: Loading HCRIS Financial Data
+2026-01-08 13:05:47,256 - INFO - Loading HCRIS financial data...
+2026-01-08 13:05:47,262 - INFO -   Loaded 264 HCRIS records
+2026-01-08 13:05:47,263 - INFO - 
+Step 5: Loading Facility Characteristics
+2026-01-08 13:05:47,263 - INFO - Loading facility characteristics...
+2026-01-08 13:05:47,282 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 13:05:47,282 - INFO - 
+Step 6: Creating Composite Dataset
+2026-01-08 13:05:47,283 - INFO - Creating composite dataset...
+2026-01-08 13:05:47,296 - INFO -   Merged quality measures: 264 records
+2026-01-08 13:05:47,305 - INFO -   Merged characteristics: 264 records
+2026-01-08 13:05:47,308 - INFO - Adding derived metrics...
+2026-01-08 13:05:47,314 - INFO -   Added 3 derived columns
+2026-01-08 13:05:47,315 - INFO - 
+Step 7: Saving Outputs
+2026-01-08 13:05:47,343 - INFO - [OK] Saved composite dataset to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\processed\cah_composite_baseline.csv
+2026-01-08 13:05:47,346 - INFO -   Total records: 264
+2026-01-08 13:05:47,354 - INFO -   Total columns: 27
+2026-01-08 13:05:47,355 - INFO - Generating summary report...
+2026-01-08 13:05:47,390 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
+2026-01-08 14:11:04,566 - INFO - Step 1: Loading CAH Provider List
+2026-01-08 14:11:04,603 - INFO - Loaded 89 MT/WA CAH providers from designation file
+2026-01-08 14:11:04,604 - INFO - 
+Step 2: Loading/Downloading Quality Measures Data
+2026-01-08 14:11:04,652 - INFO - Loading existing data from C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\raw\mbqip_quality\timely_effective_care_hospital.csv (4461 MT/WA records)
+2026-01-08 14:11:04,653 - INFO - 
+Step 3: Processing Quality Measures
+2026-01-08 14:11:04,654 - INFO - Filtering for MT/WA Critical Access Hospitals...
+2026-01-08 14:11:04,655 - INFO -   Using CCN column: facility_id
+2026-01-08 14:11:04,697 - INFO -   Found 4438 records for MT/WA facilities
+2026-01-08 14:11:04,697 - INFO - Extracting MBQIP quality measures...
+2026-01-08 14:11:04,698 - INFO -   Using columns: facility=facility_id, measure=measure_id, score=score
+2026-01-08 14:11:04,772 - INFO -   Found 1341 records matching MBQIP measures
+2026-01-08 14:11:04,798 - INFO -   Created pivot table with 142 facilities
+2026-01-08 14:11:04,798 - INFO -   Measures found: ['IMM-2', 'OP-18', 'OP-2', 'SEP-1']
+2026-01-08 14:11:04,799 - INFO - 
+Step 4: Loading HCRIS Financial Data
+2026-01-08 14:11:04,799 - INFO - Loading HCRIS financial data...
+2026-01-08 14:11:04,805 - INFO -   Loaded 264 HCRIS records
+2026-01-08 14:11:04,807 - INFO - 
+Step 5: Loading Facility Characteristics
+2026-01-08 14:11:04,807 - INFO - Loading facility characteristics...
+2026-01-08 14:11:04,810 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 14:11:04,810 - INFO - 
+Step 6: Creating Composite Dataset
+2026-01-08 14:11:04,811 - INFO - Creating composite dataset...
+2026-01-08 14:11:04,815 - INFO -   Merged quality measures: 264 records
+2026-01-08 14:11:04,827 - INFO -   Merged characteristics: 264 records
+2026-01-08 14:11:04,828 - INFO - Adding derived metrics...
+2026-01-08 14:11:04,835 - INFO -   Added 3 derived columns
+2026-01-08 14:11:04,836 - INFO - 
+Step 7: Saving Outputs
+2026-01-08 14:11:04,863 - INFO - [OK] Saved composite dataset to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\processed\cah_composite_baseline.csv
+2026-01-08 14:11:04,864 - INFO -   Total records: 264
+2026-01-08 14:11:04,865 - INFO -   Total columns: 28
+2026-01-08 14:11:04,865 - INFO - Generating summary report...
+2026-01-08 14:11:04,881 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
+2026-01-08 14:14:58,980 - INFO - Step 1: Loading CAH Provider List
+2026-01-08 14:14:59,007 - INFO - Loaded 89 MT/WA CAH providers from designation file
+2026-01-08 14:14:59,008 - INFO - 
+Step 2: Loading/Downloading Quality Measures Data
+2026-01-08 14:14:59,042 - INFO - Loading existing data from C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\raw\mbqip_quality\timely_effective_care_hospital.csv (4461 MT/WA records)
+2026-01-08 14:14:59,043 - INFO - 
+Step 3: Processing Quality Measures
+2026-01-08 14:14:59,043 - INFO - Filtering for MT/WA Critical Access Hospitals...
+2026-01-08 14:14:59,044 - INFO -   Using CCN column: facility_id
+2026-01-08 14:14:59,071 - INFO -   Found 4438 records for MT/WA facilities
+2026-01-08 14:14:59,071 - INFO - Extracting MBQIP quality measures...
+2026-01-08 14:14:59,073 - INFO -   Using columns: facility=facility_id, measure=measure_id, score=score
+2026-01-08 14:14:59,119 - INFO -   Found 1341 records matching MBQIP measures
+2026-01-08 14:14:59,137 - INFO -   Created pivot table with 142 facilities
+2026-01-08 14:14:59,138 - INFO -   Measures found: ['IMM-2', 'OP-18', 'OP-2', 'OP-22', 'OP-23', 'SEP-1']
+2026-01-08 14:14:59,138 - INFO - 
+Step 4: Loading HCRIS Financial Data
+2026-01-08 14:14:59,139 - INFO - Loading HCRIS financial data...
+2026-01-08 14:14:59,144 - INFO -   Loaded 264 HCRIS records
+2026-01-08 14:14:59,146 - INFO - 
+Step 5: Loading Facility Characteristics
+2026-01-08 14:14:59,146 - INFO - Loading facility characteristics...
+2026-01-08 14:14:59,150 - INFO -   Loaded characteristics for 89 facilities
+2026-01-08 14:14:59,151 - INFO - 
+Step 6: Creating Composite Dataset
+2026-01-08 14:14:59,151 - INFO - Creating composite dataset...
+2026-01-08 14:14:59,158 - INFO -   Merged quality measures: 264 records
+2026-01-08 14:14:59,162 - INFO -   Merged characteristics: 264 records
+2026-01-08 14:14:59,162 - INFO - Adding derived metrics...
+2026-01-08 14:14:59,169 - INFO -   Added 3 derived columns
+2026-01-08 14:14:59,170 - INFO - 
+Step 7: Saving Outputs
+2026-01-08 14:14:59,189 - INFO - [OK] Saved composite dataset to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\data\processed\cah_composite_baseline.csv
+2026-01-08 14:14:59,190 - INFO -   Total records: 264
+2026-01-08 14:14:59,190 - INFO -   Total columns: 30
+2026-01-08 14:14:59,191 - INFO - Generating summary report...
+2026-01-08 14:14:59,213 - INFO -   Saved summary report to C:\Users\Admin\OneDrive - Visionblox\Documents\GitHub\cah\reports\composite_baseline_summary.json
