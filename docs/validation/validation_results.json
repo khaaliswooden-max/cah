@@ -1,0 +1,221 @@
+{
+  "generated": "2026-01-08T14:44:56.968483",
+  "summary": {
+    "total_claims": 26,
+    "validated": 3,
+    "partially_validated": 5,
+    "refuted": 4,
+    "insufficient_data": 14,
+    "validation_rate": 0.3076923076923077
+  },
+  "results": [
+    {
+      "claim_id": "CLAIM-001",
+      "claim_text": "Operating margins for CAHs are thin (0.3-3.1%)",
+      "actual_value": "Mean: 32.31%, Median: 35.70%, Range: [-30.54%, 70.98%]",
+      "variance": "Range overlaps but median 35.70% outside expected range",
+      "status": "PARTIALLY_VALIDATED",
+      "notes": "n=86 facilities (2023 data)"
+    },
+    {
+      "claim_id": "CLAIM-002",
+      "claim_text": "44-48% of CAHs operate at a loss",
+      "actual_value": "2.3% (2 of 86 facilities)",
+      "variance": "Actual 2.3% is LOWER than expected range (better performance)",
+      "status": "REFUTED",
+      "notes": "At-loss defined as Operating_Margin < 0, n=86 (2023)"
+    },
+    {
+      "claim_id": "CLAIM-003",
+      "claim_text": "Non-micropolitan CAH average margin is 1.8%",
+      "actual_value": "Mean: 32.31%, Median: 35.70%, Range: [-30.54%, 70.98%]",
+      "variance": "Actual mean 32.31% vs expected 1.80% (diff: 30.51%)",
+      "status": "REFUTED",
+      "notes": "n=86 facilities (2023 data)"
+    },
+    {
+      "claim_id": "CLAIM-004",
+      "claim_text": "Heavy payer-mix dependency on Medicare/Medicaid (63-70%)",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: CMS Cost Report Payer Mix Analysis"
+    },
+    {
+      "claim_id": "CLAIM-005",
+      "claim_text": "CAH revenues typically range $15-25M annually",
+      "actual_value": "Median: $44,005,435, Mean: $80,340,674",
+      "variance": "Median $44,005,435 outside but within 2x of range",
+      "status": "PARTIALLY_VALIDATED",
+      "notes": "n=86 facilities, MT/WA cohort includes larger CAHs"
+    },
+    {
+      "claim_id": "CLAIM-006",
+      "claim_text": "Rural areas have 10-20% higher mortality for time-sensitive conditions",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: JAMA/Lancet Rural Health Studies"
+    },
+    {
+      "claim_id": "CLAIM-007",
+      "claim_text": "ED throughput times (OP-18) target median 180 minutes",
+      "actual_value": "Median: 120.5, Mean: 124.6",
+      "variance": "Median 120.5 vs expected 180.0 (diff: 59.5)",
+      "status": "PARTIALLY_VALIDATED",
+      "notes": "n=70 facilities (79.5% coverage)"
+    },
+    {
+      "claim_id": "CLAIM-008",
+      "claim_text": "Influenza immunization rates (IMM-2) vary significantly across CAHs",
+      "actual_value": "Std Dev: 20.6, CV: 0.35",
+      "variance": "CV = 0.35 indicates high variance",
+      "status": "VALIDATED",
+      "notes": "n=83 facilities"
+    },
+    {
+      "claim_id": "CLAIM-009",
+      "claim_text": "Occupancy rates below 50% are common in CAHs",
+      "actual_value": "Cannot calculate directly",
+      "variance": "Occupancy requires patient days data not in current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Need Worksheet S-3 data for occupancy calculation (patient days / bed days available)"
+    },
+    {
+      "claim_id": "CLAIM-010",
+      "claim_text": "CAHs are capped at 25 beds by regulation",
+      "actual_value": "Max: 30, Mean: 30 beds",
+      "variance": "Some facilities exceed 25.0 beds (max observed: 30.0)",
+      "status": "REFUTED",
+      "notes": "n=88 facilities"
+    },
+    {
+      "claim_id": "CLAIM-011",
+      "claim_text": "Labor costs represent approximately 50-60% of CAH total expenses",
+      "actual_value": "Cost ratio median: 0.64 (est. labor ~35%)",
+      "variance": "Direct labor cost % requires Worksheet A salary data",
+      "status": "PARTIALLY_VALIDATED",
+      "notes": "Indirect validation - need salary data from WS A Column 1 for exact labor %"
+    },
+    {
+      "claim_id": "CLAIM-012",
+      "claim_text": "Rural hospitals face significant staffing shortages",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: NRHA/AHA Surveys"
+    },
+    {
+      "claim_id": "CLAIM-013",
+      "claim_text": "300+ CAHs are at elevated closure risk nationally",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Chartis/Navigant Vulnerable Hospital Index"
+    },
+    {
+      "claim_id": "CLAIM-014",
+      "claim_text": "60 million Americans depend on CAHs for healthcare access",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Census/HRSA Rural Health Data"
+    },
+    {
+      "claim_id": "CLAIM-015",
+      "claim_text": "Surgical services add +1.5% margin per additional inpatient service",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Holmes et al. 2022, PMID: 35357095"
+    },
+    {
+      "claim_id": "CLAIM-016",
+      "claim_text": "+0.9% margin per 10% occupancy increase",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Holmes et al. 2022, PMID: 35357095"
+    },
+    {
+      "claim_id": "CLAIM-017",
+      "claim_text": "+0.9% margin per 0.1 CMI increase",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Holmes et al. 2022, PMID: 35357095"
+    },
+    {
+      "claim_id": "CLAIM-018",
+      "claim_text": "Top quartile CAHs achieve 4-6% operating margins",
+      "actual_value": "Q3 (75th %ile): 46.25%, P90: 54.79%",
+      "variance": "Top quartile cutoff: 46.25%",
+      "status": "PARTIALLY_VALIDATED",
+      "notes": "n=86 facilities"
+    },
+    {
+      "claim_id": "CLAIM-019",
+      "claim_text": "Top 20 NRHA CAHs achieve 5-12% operating margins",
+      "actual_value": "Top 20 range: [47.1%, 71.0%], Mean: 56.4%",
+      "variance": "Top 20 range outside expected bounds",
+      "status": "REFUTED",
+      "notes": "Top 20 of n=86 facilities"
+    },
+    {
+      "claim_id": "CLAIM-020",
+      "claim_text": "RHH conversion cost estimated at $15-20M per site",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: Whitepaper Estimate"
+    },
+    {
+      "claim_id": "CLAIM-021",
+      "claim_text": "96-hour average LOS limit applies to CAH inpatient stays",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: 42 CFR \u00c2\u00a7 485.620"
+    },
+    {
+      "claim_id": "CLAIM-022",
+      "claim_text": "35-mile distance criterion for CAH designation",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: 42 CFR \u00c2\u00a7 485.610"
+    },
+    {
+      "claim_id": "CLAIM-023",
+      "claim_text": "42% of rural areas have broadband speeds under 100 Mbps",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: FCC Broadband Data"
+    },
+    {
+      "claim_id": "CLAIM-024",
+      "claim_text": "CAHs typically have 1-2 IT FTE capacity",
+      "actual_value": "External data required",
+      "variance": "Cannot validate with current dataset",
+      "status": "INSUFFICIENT_DATA",
+      "notes": "Claim requires: HIMSS Rural IT Survey"
+    },
+    {
+      "claim_id": "CLAIM-025",
+      "claim_text": "Montana has approximately 50 CAHs",
+      "actual_value": "49 unique Montana CAHs in 2023 data",
+      "variance": "Found 49 vs expected ~50",
+      "status": "VALIDATED",
+      "notes": "Based on Provider_Num unique count in cah_composite_baseline.csv"
+    },
+    {
+      "claim_id": "CLAIM-026",
+      "claim_text": "Washington has approximately 39 CAHs",
+      "actual_value": "39 unique Washington CAHs in 2023 data",
+      "variance": "Found 39 vs expected ~39",
+      "status": "VALIDATED",
+      "notes": "Based on Provider_Num unique count in cah_composite_baseline.csv"
+    }
+  ]
+}

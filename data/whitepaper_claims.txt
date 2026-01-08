@@ -1,0 +1,52 @@
+# Whitepaper Claims for Validation
+# Source: "Reimagining Critical Access Hospitals: A First-Principles Approach to Rural Healthcare Sustainability"
+# Format: CLAIM_ID|CLAIM_TEXT|METRIC_TYPE|EXPECTED_VALUE|COMPARISON_OPERATOR|VALIDATION_SOURCE
+
+# Operating Margin Claims
+CLAIM-001|Operating margins for CAHs are thin (0.3-3.1%)|Operating_Margin|0.003,0.031|RANGE|CMS HCRIS 2023, Worksheet G-3
+CLAIM-002|44-48% of CAHs operate at a loss|Percentage_At_Loss|44,48|RANGE|CMS HCRIS 2023, Worksheet G-3
+CLAIM-003|Non-micropolitan CAH average margin is 1.8%|Operating_Margin|0.018|EQUALS|Chartis 2024 Rural Hospital Analysis
+
+# Financial Structure Claims
+CLAIM-004|Heavy payer-mix dependency on Medicare/Medicaid (63-70%)|Medicare_Medicaid_Mix|63,70|RANGE|CMS Cost Report Payer Mix Analysis
+CLAIM-005|CAH revenues typically range $15-25M annually|Total_Patient_Revenue|15000000,25000000|RANGE|CMS HCRIS 2023, Worksheet G-3
+
+# Quality/Outcome Claims
+CLAIM-006|Rural areas have 10-20% higher mortality for time-sensitive conditions|Mortality_Differential|10,20|RANGE|JAMA/Lancet Rural Health Studies
+CLAIM-007|ED throughput times (OP-18) target median 180 minutes|OP-18|180|EQUALS|CMS Hospital Compare / MBQIP
+CLAIM-008|Influenza immunization rates (IMM-2) vary significantly across CAHs|IMM-2_Variance|HIGH|QUALITATIVE|CMS Hospital Compare / MBQIP
+
+# Occupancy/Utilization Claims
+CLAIM-009|Occupancy rates below 50% are common in CAHs|Occupancy_Rate|0.50|LESS_THAN|CMS HCRIS 2023, Worksheet S-3
+CLAIM-010|CAHs are capped at 25 beds by regulation|Bed_Count|25|MAX|42 CFR § 485.620
+
+# Staffing/Labor Claims
+CLAIM-011|Labor costs represent approximately 50-60% of CAH total expenses|Labor_Cost_Percentage|50,60|RANGE|CMS HCRIS 2023, Worksheet A
+CLAIM-012|Rural hospitals face significant staffing shortages|Staffing_Shortage|TRUE|QUALITATIVE|NRHA/AHA Surveys
+
+# Closure Risk Claims
+CLAIM-013|300+ CAHs are at elevated closure risk nationally|Closure_Risk_Count|300|GREATER_THAN|Chartis/Navigant Vulnerable Hospital Index
+CLAIM-014|60 million Americans depend on CAHs for healthcare access|Population_Served|60000000|EQUALS|Census/HRSA Rural Health Data
+
+# Financial Improvement Claims
+CLAIM-015|Surgical services add +1.5% margin per additional inpatient service|Surgical_Impact|1.5|EQUALS|Holmes et al. 2022, PMID: 35357095
+CLAIM-016|+0.9% margin per 10% occupancy increase|Occupancy_Impact|0.9|EQUALS|Holmes et al. 2022, PMID: 35357095
+CLAIM-017|+0.9% margin per 0.1 CMI increase|CMI_Impact|0.9|EQUALS|Holmes et al. 2022, PMID: 35357095
+
+# Cost Benchmark Claims
+CLAIM-018|Top quartile CAHs achieve 4-6% operating margins|Top_Quartile_Margin|0.04,0.06|RANGE|Chartis 2024
+CLAIM-019|Top 20 NRHA CAHs achieve 5-12% operating margins|Top_20_Margin|0.05,0.12|RANGE|NRHA 2024 Awards
+
+# Transformation Claims
+CLAIM-020|RHH conversion cost estimated at $15-20M per site|Conversion_Cost|15000000,20000000|RANGE|Whitepaper Estimate
+CLAIM-021|96-hour average LOS limit applies to CAH inpatient stays|ALOS_Limit|96|MAX|42 CFR § 485.620
+CLAIM-022|35-mile distance criterion for CAH designation|Distance_Criterion|35|EQUALS|42 CFR § 485.610
+
+# Technology/Infrastructure Claims
+CLAIM-023|42% of rural areas have broadband speeds under 100 Mbps|Broadband_Gap|42|EQUALS|FCC Broadband Data
+CLAIM-024|CAHs typically have 1-2 IT FTE capacity|IT_FTE|1,2|RANGE|HIMSS Rural IT Survey
+
+# MT/WA Specific Claims
+CLAIM-025|Montana has approximately 50 CAHs|MT_CAH_Count|50|APPROXIMATELY|CMS Provider of Services File
+CLAIM-026|Washington has approximately 39 CAHs|WA_CAH_Count|39|APPROXIMATELY|CMS Provider of Services File
+
