@@ -1,0 +1,98 @@
+2026-01-08 12:36:29,550 - INFO - ============================================================
+2026-01-08 12:36:29,550 - INFO - CAH Baseline Metrics Extraction
+2026-01-08 12:36:29,550 - INFO - Started: 2026-01-08 12:36:29
+2026-01-08 12:36:29,551 - INFO - ============================================================
+2026-01-08 12:36:29,551 - INFO - 
+============================================================
+2026-01-08 12:36:29,551 - INFO - Processing FY 2021
+2026-01-08 12:36:29,551 - INFO - ============================================================
+2026-01-08 12:36:29,551 - INFO - Loading 2021 HCRIS data from data\cms_cost_reports\2021
+2026-01-08 12:36:29,598 - INFO -   Loaded 6,057 report records
+2026-01-08 12:36:49,107 - INFO -   Loaded 19,642,003 numeric records
+2026-01-08 12:36:54,041 - INFO -   Loaded 3,739,166 alphanumeric records
+2026-01-08 12:36:54,070 - INFO -   Found 89 MT/WA CAH reports
+2026-01-08 12:36:54,071 - INFO -     Montana: 50
+2026-01-08 12:36:54,072 - INFO -     Washington: 39
+2026-01-08 12:36:54,076 - INFO -   Extracting metrics for 89 CAH reports
+2026-01-08 12:36:55,864 - INFO -   Using worksheet code: G300000
+2026-01-08 12:37:03,182 - INFO -   Extracted 89 CAH records for 2021
+2026-01-08 12:37:03,182 - INFO - 
+============================================================
+2026-01-08 12:37:03,182 - INFO - Processing FY 2022
+2026-01-08 12:37:03,182 - INFO - ============================================================
+2026-01-08 12:37:03,182 - INFO - Loading 2022 HCRIS data from data\cms_cost_reports\2022
+2026-01-08 12:37:03,239 - INFO -   Loaded 6,066 report records
+2026-01-08 12:37:27,897 - INFO -   Loaded 19,506,525 numeric records
+2026-01-08 12:37:32,914 - INFO -   Loaded 3,729,673 alphanumeric records
+2026-01-08 12:37:33,281 - INFO -   Found 87 MT/WA CAH reports
+2026-01-08 12:37:33,283 - INFO -     Montana: 48
+2026-01-08 12:37:33,284 - INFO -     Washington: 39
+2026-01-08 12:37:33,284 - INFO -   Extracting metrics for 87 CAH reports
+2026-01-08 12:37:34,971 - INFO -   Using worksheet code: G300000
+2026-01-08 12:37:42,298 - INFO -   Extracted 87 CAH records for 2022
+2026-01-08 12:37:42,298 - INFO - 
+============================================================
+2026-01-08 12:37:42,299 - INFO - Processing FY 2023
+2026-01-08 12:37:42,299 - INFO - ============================================================
+2026-01-08 12:37:42,299 - INFO - Loading 2023 HCRIS data from data\cms_cost_reports\2023
+2026-01-08 12:37:42,361 - INFO -   Loaded 6,104 report records
+2026-01-08 12:38:01,808 - INFO -   Loaded 19,491,619 numeric records
+2026-01-08 12:38:06,122 - INFO -   Loaded 3,741,189 alphanumeric records
+2026-01-08 12:38:06,502 - INFO -   Found 88 MT/WA CAH reports
+2026-01-08 12:38:06,503 - INFO -     Montana: 49
+2026-01-08 12:38:06,504 - INFO -     Washington: 39
+2026-01-08 12:38:06,505 - INFO -   Extracting metrics for 88 CAH reports
+2026-01-08 12:38:08,690 - INFO -   Using worksheet code: G300000
+2026-01-08 12:38:16,228 - INFO -   Extracted 88 CAH records for 2023
+2026-01-08 12:38:16,608 - INFO - 
+============================================================
+2026-01-08 12:38:16,608 - INFO - SUMMARY STATISTICS
+2026-01-08 12:38:16,608 - INFO - ============================================================
+2026-01-08 12:38:16,609 - INFO - 
+Total Records: 264
+2026-01-08 12:38:16,609 - INFO - Unique Facilities: 88
+2026-01-08 12:38:16,609 - INFO - 
+Records by State:
+2026-01-08 12:38:16,635 - INFO - 
+           Provider_Num Operating_Margin                    
+                  count             mean    median       std
+State                                                       
+Montana             147         0.223201  0.256035  0.153711
+Washington          117         0.423455  0.445783  0.195607
+2026-01-08 12:38:16,636 - INFO - 
+Records by Year:
+2026-01-08 12:38:16,637 - INFO - 
+Year
+2021    89
+2022    87
+2023    88
+dtype: int64
+2026-01-08 12:38:16,638 - INFO - 
+Financial Metrics Summary:
+2026-01-08 12:38:16,641 - INFO - 
+Total Patient Revenue:
+2026-01-08 12:38:16,641 - INFO -   Records with data: 258
+2026-01-08 12:38:16,642 - INFO -   Mean: $71,956,120
+2026-01-08 12:38:16,646 - INFO -   Median: $40,019,094
+2026-01-08 12:38:16,649 - INFO -   Min: $2,186,003
+2026-01-08 12:38:16,649 - INFO -   Max: $387,636,783
+2026-01-08 12:38:16,649 - INFO - 
+Total Operating Expenses:
+2026-01-08 12:38:16,650 - INFO -   Records with data: 258
+2026-01-08 12:38:16,650 - INFO -   Mean: $37,286,373
+2026-01-08 12:38:16,651 - INFO -   Median: $23,575,418
+2026-01-08 12:38:16,651 - INFO - 
+Operating Margin:
+2026-01-08 12:38:16,651 - INFO -   Records with data: 258
+2026-01-08 12:38:16,651 - INFO -   Mean: 31.40%
+2026-01-08 12:38:16,652 - INFO -   Median: 33.70%
+2026-01-08 12:38:16,652 - INFO -   Min: -45.04%
+2026-01-08 12:38:16,652 - INFO -   Max: 73.27%
+2026-01-08 12:38:16,653 - INFO -   Positive margins: 231 (89.5%)
+2026-01-08 12:38:16,653 - INFO -   Negative margins: 6 (2.3%)
+2026-01-08 12:38:16,665 - INFO - 
+Output saved to: data\processed\cah_baseline_metrics.csv
+2026-01-08 12:38:16,665 - INFO - 
+============================================================
+2026-01-08 12:38:16,665 - INFO - Completed: 2026-01-08 12:38:16
+2026-01-08 12:38:16,666 - INFO - ============================================================
