@@ -1,0 +1,6 @@
+# Placeholder for validation outputs
+# This directory will be populated during execution with:
+# - Baseline datasets from CMS HCRIS
+# - Benchmark citations database
+# - ROI models and optimization results
+
