@@ -354,7 +354,7 @@ document.addEventListener('keydown', (e) => {
 async function loadOptimizationResults() {
     try {
         // Load optimization summary
-        const summaryResponse = await fetch('../reports/optimization_summary.json');
+        const summaryResponse = await fetch('./data/optimization_summary.json');
         if (summaryResponse.ok) {
             const summary = await summaryResponse.json();
             updateDashboardWithResults(summary);
@@ -363,9 +363,9 @@ async function loadOptimizationResults() {
             initializeCounters();
             initializeChart();
         }
-        
+
         // Load Pareto front for visualization
-        const paretoResponse = await fetch('../reports/pareto_front.json');
+        const paretoResponse = await fetch('./data/pareto_front.json');
         if (paretoResponse.ok) {
             const pareto = await paretoResponse.json();
             updateParetoVisualization(pareto);

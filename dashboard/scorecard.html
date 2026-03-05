@@ -416,8 +416,9 @@
         .checklist-progress-fill {
             height: 100%;
             background: var(--excellent);
-            width: 65%;
+            width: 0%;
             border-radius: 4px;
+            transition: width 0.3s ease;
         }
         
         .checklist-progress-text {
@@ -549,6 +550,28 @@
             text-transform: uppercase;
         }
         
+        /* Back Navigation Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            margin-right: 8px;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(6, 182, 212, 0.06);
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .hypothesis-row {
@@ -574,6 +597,7 @@
 <body>
     <header>
         <div class="logo">
+            <a href="index.html" class="back-link">← Command Center</a>
             <div class="logo-icon">CAH</div>
             <div class="logo-text">
                 <h1>Operational Scorecard</h1>
@@ -678,69 +702,69 @@
                 <h2 class="checklist-title">📋 Staff Daily Checklist</h2>
                 <div class="checklist-progress">
                     <div class="checklist-progress-bar">
-                        <div class="checklist-progress-fill"></div>
+                        <div class="checklist-progress-fill" id="checklist-progress-fill"></div>
                     </div>
-                    <span class="checklist-progress-text">65% Complete</span>
+                    <span class="checklist-progress-text" id="checklist-progress-text">0% Complete</span>
                 </div>
             </div>
             <div class="checklist-grid">
                 <div class="checklist-group">
                     <div class="checklist-group-title">👩‍⚕️ Nursing</div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Document pain score within 30 min</span>
                         <span class="checklist-benchmark">QUAL-D02</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Complete falls risk assessment on admission</span>
                         <span class="checklist-benchmark">QUAL-D04</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox"></div>
                         <span class="checklist-text">Perform hand hygiene at 5 WHO moments</span>
                         <span class="checklist-benchmark">QUAL-D05</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Verify nurse-to-patient ratio ≥ 0.5</span>
                         <span class="checklist-benchmark">OPT-D03</span>
                     </div>
                 </div>
-                
+
                 <div class="checklist-group">
                     <div class="checklist-group-title">🏥 ED Staff</div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox"></div>
                         <span class="checklist-text">Provider contact within 25 minutes</span>
                         <span class="checklist-benchmark">QUAL-D01</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Ensure 24/7 provider coverage</span>
                         <span class="checklist-benchmark">OPT-D04</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox"></div>
                         <span class="checklist-text">Document all ED charges</span>
                         <span class="checklist-benchmark">PROF-D02</span>
                     </div>
                 </div>
-                
+
                 <div class="checklist-group">
                     <div class="checklist-group-title">📊 Charge Nurse</div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Monitor total beds &lt; 25</span>
                         <span class="checklist-benchmark">OPT-D01</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox"></div>
                         <span class="checklist-text">Review ALOS for 96hr approaching cases</span>
                         <span class="checklist-benchmark">OPT-D02</span>
                     </div>
                     <div class="checklist-item">
-                        <div class="checklist-checkbox checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="checklist-checkbox checked"></div>
                         <span class="checklist-text">Report charge capture completeness</span>
                         <span class="checklist-benchmark">PROF-W01</span>
                     </div>
@@ -772,6 +796,50 @@
                     { id: 'OPT-D02', name: 'Average Length of Stay', value: 68, target: 72, max: 96, unit: 'hours', status: 'excellent', fillPct: 71, lowerBetter: true, constraint: true },
                     { id: 'OPT-D03', name: 'Nurse-to-Patient Ratio', value: 0.52, target: 0.50, unit: 'ratio', status: 'excellent', fillPct: 85 },
                     { id: 'OPT-D04', name: 'ED Coverage Hours', value: 24, target: 24, unit: 'hours', status: 'excellent', fillPct: 100 },
+                ]
+            },
+            weekly: {
+                profitability: [
+                    { id: 'PROF-W01', name: 'Weekly Net Revenue', value: 355000, target: 340000, unit: '$', status: 'excellent', fillPct: 88 },
+                    { id: 'PROF-W02', name: 'Weekly ED Visits', value: 127, target: 120, unit: 'visits', status: 'excellent', fillPct: 90 },
+                    { id: 'PROF-W03', name: 'Weekly Labor Cost', value: 72500, target: 68000, unit: '$', status: 'acceptable', fillPct: 72 },
+                    { id: 'PROF-W04', name: 'Charge Capture Rate', value: 94, target: 96, unit: '%', status: 'acceptable', fillPct: 78 },
+                    { id: 'PROF-W05', name: 'Weekly Outpatient Revenue', value: 41200, target: 40000, unit: '$', status: 'excellent', fillPct: 85 },
+                ],
+                quality: [
+                    { id: 'QUAL-W01', name: '7-Day Readmission Rate', value: 4.2, target: 5.0, unit: '%', status: 'excellent', fillPct: 90, lowerBetter: true },
+                    { id: 'QUAL-W02', name: 'Patient Satisfaction Score', value: 87, target: 85, unit: '%', status: 'excellent', fillPct: 87 },
+                    { id: 'QUAL-W03', name: 'Medication Error Rate', value: 0.8, target: 1.0, unit: 'per 100 doses', status: 'excellent', fillPct: 90, lowerBetter: true },
+                    { id: 'QUAL-W04', name: 'Discharge Summary Timeliness', value: 91, target: 90, unit: '%', status: 'excellent', fillPct: 91 },
+                    { id: 'QUAL-W05', name: 'Nursing Hours per Patient Week', value: 54.2, target: 56.0, unit: 'hrs', status: 'acceptable', fillPct: 75 },
+                ],
+                optimization: [
+                    { id: 'OPT-W01', name: 'Avg Weekly Census', value: 17, target: 18, max: 25, unit: 'beds', status: 'acceptable', fillPct: 68, constraint: true },
+                    { id: 'OPT-W02', name: 'ALOS 7-Day Rolling Avg', value: 70, target: 72, max: 96, unit: 'hours', status: 'excellent', fillPct: 73, lowerBetter: true, constraint: true },
+                    { id: 'OPT-W03', name: 'Staffing Ratio Compliance', value: 96, target: 95, unit: '%', status: 'excellent', fillPct: 96 },
+                    { id: 'OPT-W04', name: 'On-Call Response Compliance', value: 100, target: 100, unit: '%', status: 'excellent', fillPct: 100 },
+                ]
+            },
+            monthly: {
+                profitability: [
+                    { id: 'PROF-M01', name: 'Operating Margin', value: 5.2, target: 5.0, unit: '%', status: 'excellent', fillPct: 88 },
+                    { id: 'PROF-M02', name: 'Monthly Net Revenue', value: 1542000, target: 1450000, unit: '$', status: 'excellent', fillPct: 90 },
+                    { id: 'PROF-M03', name: 'Labor Cost Ratio', value: 52.8, target: 52.0, unit: '%', status: 'acceptable', fillPct: 78 },
+                    { id: 'PROF-M04', name: 'Denial Rate', value: 4.8, target: 5.0, unit: '%', status: 'excellent', fillPct: 88, lowerBetter: true },
+                    { id: 'PROF-M05', name: 'Revenue per Adjusted Discharge', value: 6840, target: 6500, unit: '$', status: 'excellent', fillPct: 90 },
+                ],
+                quality: [
+                    { id: 'QUAL-M01', name: '30-Day Readmission Rate', value: 12.1, target: 14.0, unit: '%', status: 'excellent', fillPct: 88, lowerBetter: true },
+                    { id: 'QUAL-M02', name: 'HCAHPS Overall Rating ≥9', value: 72, target: 70, unit: '%', status: 'excellent', fillPct: 90 },
+                    { id: 'QUAL-M03', name: 'Core Measure Compliance', value: 96, target: 95, unit: '%', status: 'excellent', fillPct: 96 },
+                    { id: 'QUAL-M04', name: 'CAUTI Rate per 1000 Catheter Days', value: 0.0, target: 1.0, unit: '/1000d', status: 'excellent', fillPct: 100, lowerBetter: true },
+                    { id: 'QUAL-M05', name: 'Falls with Injury Rate', value: 0.4, target: 0.5, unit: 'per 1000 PD', status: 'excellent', fillPct: 90, lowerBetter: true },
+                ],
+                optimization: [
+                    { id: 'OPT-M01', name: 'Monthly Avg Census', value: 17.8, target: 18, max: 25, unit: 'beds', status: 'excellent', fillPct: 71, constraint: true },
+                    { id: 'OPT-M02', name: 'Monthly ALOS', value: 71, target: 72, max: 96, unit: 'hours', status: 'excellent', fillPct: 74, lowerBetter: true, constraint: true },
+                    { id: 'OPT-M03', name: 'FTE Utilization Rate', value: 94, target: 92, unit: '%', status: 'excellent', fillPct: 94 },
+                    { id: 'OPT-M04', name: 'Cost per Adjusted Patient Day', value: 2820, target: 2800, unit: '$/day', status: 'acceptable', fillPct: 75 },
                 ]
             }
         };
@@ -830,14 +898,34 @@
         function updateTime() {
             const now = new Date();
             document.getElementById('time').textContent = now.toLocaleTimeString('en-US', { hour12: false });
-            document.getElementById('date').textContent = now.toLocaleDateString('en-US', { 
-                month: 'short', 
-                day: 'numeric', 
-                year: 'numeric' 
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
             });
         }
         setInterval(updateTime, 1000);
         updateTime();
+
+        // Checklist progress bar — driven by actual checkbox state
+        function updateChecklistProgress() {
+            const all = document.querySelectorAll('.checklist-checkbox');
+            const checked = document.querySelectorAll('.checklist-checkbox.checked');
+            const pct = all.length === 0 ? 0 : Math.round((checked.length / all.length) * 100);
+            document.getElementById('checklist-progress-fill').style.width = pct + '%';
+            document.getElementById('checklist-progress-text').textContent = pct + '% Complete';
+        }
+
+        // Attach click handlers to all checkboxes
+        document.querySelectorAll('.checklist-checkbox').forEach(box => {
+            box.addEventListener('click', () => {
+                box.classList.toggle('checked');
+                updateChecklistProgress();
+            });
+        });
+
+        // Initialize progress bar on page load
+        updateChecklistProgress();
     </script>
 </body>
 </html>

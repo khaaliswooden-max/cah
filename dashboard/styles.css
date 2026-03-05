@@ -1025,6 +1025,32 @@ body {
     }
 }
 
+/* Navigation Link */
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 2px;
+    color: var(--white-muted);
+    text-decoration: none;
+    border: 1px solid var(--white-dim);
+    padding: var(--space-xs) var(--space-md);
+    margin-bottom: var(--space-sm);
+    transition: var(--transition-base);
+}
+
+.nav-link:hover {
+    color: var(--white);
+    border-color: var(--white-muted);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link-arrow {
+    font-size: 0.75rem;
+}
+
 /* Number Counter Animation */
 .value[data-value] {
     display: inline-block;

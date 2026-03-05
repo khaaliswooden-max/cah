@@ -1,0 +1,69 @@
+{
+  "executive_summary": {
+    "optimization_status": "optimal",
+    "target_margin_achieved": true,
+    "quality_benchmarks_met": false,
+    "robust_solution_available": true
+  },
+  "optimal_solution": {
+    "operating_margin": 0.19686833103124873,
+    "operating_margin_percent": 19.686833103124872,
+    "quality_score": 0.9888562449507292,
+    "annual_revenue": 15586159.525229191,
+    "annual_profit": 3068421.212918671
+  },
+  "resource_allocation": {
+    "acute_beds": 23.165706380018182,
+    "swing_beds": 0.9572588415626299,
+    "total_beds": 24.122965221580813,
+    "nursing_fte": 54.09653901032506,
+    "provider_fte": 11.999999999999996,
+    "expected_daily_census": 2.000000000000011,
+    "annual_ed_visits": 6608.832899848141,
+    "annual_outpatient_visits": 38974.430853821614,
+    "case_mix_index": 1.3358726727933186
+  },
+  "uncertainty_analysis": {
+    "margin_90_ci_lower": -0.19046559460556414,
+    "margin_90_ci_upper": 0.42918715445035677,
+    "probability_target_achieved": 0.772
+  },
+  "pareto_analysis": {
+    "n_pareto_optimal_solutions": 8,
+    "margin_range": [
+      0.05170429317858246,
+      0.7564760956071254
+    ],
+    "quality_range": [
+      0.7213243948963689,
+      0.9880875928694826
+    ]
+  },
+  "recommendations": [
+    {
+      "area": "Financial",
+      "priority": "Low",
+      "recommendation": "Operating margin of 19.7% exceeds 5% target with comfortable buffer.",
+      "action": "Consider reinvesting excess margin in quality improvement initiatives."
+    },
+    {
+      "area": "Quality",
+      "priority": "Low",
+      "recommendation": "Quality score of 0.989 indicates excellent performance.",
+      "action": "Maintain current staffing and protocols."
+    },
+    {
+      "area": "Risk Management",
+      "priority": "High",
+      "recommendation": "Only 77% probability of achieving target.",
+      "action": "Use robust optimization solution or increase safety margins."
+    },
+    {
+      "area": "Capacity",
+      "priority": "Medium",
+      "recommendation": "Operating near 25-bed CAH cap (24 beds).",
+      "action": "Optimize swing bed allocation for flexibility."
+    }
+  ],
+  "timestamp": "2026-01-03T20:15:14.815060"
+}
