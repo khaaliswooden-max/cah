@@ -2,6 +2,10 @@
 """
 STEP 3: Download CAH Designation Data (Provider of Services File)
 Critical dataset for regulatory constraints and CAH identification
+
+The authoritative CAH count varies with each CMS data release (quarterly).
+Use get_cah_count() to retrieve the current count from downloaded data.
+As of Q1 2026, approximately 1,377 CAHs are designated nationally.
 """
 
 import requests
@@ -26,6 +30,49 @@ POS_URLS = {
     "nber_backup": "https://www.nber.org/data/provider-of-services.html"
 }
 
+
+def get_cah_count() -> int:
+    """
+    Return the authoritative CAH count from downloaded data.
+
+    Checks (in order):
+      1. cah_regulatory_constraints.json → total_cahs
+      2. cah_providers.csv → row count
+      3. Falls back to the national estimate of 1,377
+
+    This function is the single source of truth for the CAH count.
+    Both the visionblox.org pages and the repo should derive their
+    numbers from this function after running the pipeline.
+
+    Returns:
+        Integer count of designated CAHs
+    """
+    # 1. Try regulatory constraints file (populated by extract_cah_constraints)
+    constraints_path = DATA_DIR / "cah_regulatory_constraints.json"
+    if constraints_path.exists():
+        try:
+            with open(constraints_path, "r") as f:
+                data = json.load(f)
+            count = data.get("total_cahs", 0)
+            if count > 0:
+                return int(count)
+        except (json.JSONDecodeError, KeyError):
+            pass
+
+    # 2. Try CAH providers CSV
+    cah_path = DATA_DIR / "cah_providers.csv"
+    if cah_path.exists():
+        try:
+            df = pd.read_csv(cah_path, low_memory=False)
+            if len(df) > 0:
+                return len(df)
+        except Exception:
+            pass
+
+    # 3. National estimate (CMS Q1 2026 baseline)
+    return 1377
+
+
 def download_provider_of_services():
     """Download CMS Provider of Services file"""
     print(f"\n{'='*60}")
@@ -43,7 +90,7 @@ def download_provider_of_services():
     
     for source_name, url in sources_to_try:
         try:
-            print(f"\n📥 Trying {source_name}...")
+            print(f"\n  Trying {source_name}...")
             print(f"   URL: {url}")
             
             response = requests.get(url, timeout=300, stream=True)
@@ -77,7 +124,7 @@ def download_provider_of_services():
                 if len(df) > 0:
                     csv_path = DATA_DIR / "provider_of_services_from_json.csv"
                     df.to_csv(csv_path, index=False)
-                    print(f"✓ Loaded {len(df):,} records from JSON")
+                    print(f"  Loaded {len(df):,} records from JSON")
                     print(f"   Columns: {list(df.columns[:10])}")
                     return df
             else:
@@ -93,7 +140,7 @@ def download_provider_of_services():
                             print(f"\r   Downloaded: {total_size/(1024*1024):.1f}MB", end='')
                 
                 if total_size > 1000:  # More than 1KB
-                    print(f"\n✓ Download complete: {total_size/(1024*1024):.1f}MB")
+                    print(f"\n  Download complete: {total_size/(1024*1024):.1f}MB")
                     
                     # Check if it's actually CSV
                     with open(csv_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -102,10 +149,10 @@ def download_provider_of_services():
                             print(f"   Response is HTML, not CSV. Trying next...")
                             continue
                     
-                    print(f"\n📊 Loading Provider of Services data...")
+                    print(f"\n  Loading Provider of Services data...")
                     df = pd.read_csv(csv_path, low_memory=False)
                     
-                    print(f"✓ Loaded {len(df):,} provider records")
+                    print(f"  Loaded {len(df):,} provider records")
                     print(f"   Columns: {len(df.columns)}")
                     print(f"\nSample columns: {list(df.columns[:15])}")
                     return df
@@ -116,12 +163,12 @@ def download_provider_of_services():
             print(f"   Error: {e}, trying next...")
             continue
     
-    print(f"\n⚠️ All sources failed. Trying alternative download...")
+    print(f"\n  All sources failed. Trying alternative download...")
     return try_alternative_download()
 
 def try_alternative_download():
     """Try alternative method to get Provider of Services data"""
-    print(f"\n📥 Attempting alternative download method...")
+    print(f"\n  Attempting alternative download method...")
     
     try:
         # Alternative: Use data.medicare.gov search
@@ -137,14 +184,14 @@ def try_alternative_download():
             csv_path = DATA_DIR / "provider_of_services_alternative.csv"
             df.to_csv(csv_path, index=False)
             
-            print(f"✓ Alternative download successful: {len(df)} records")
+            print(f"  Alternative download successful: {len(df)} records")
             return df
         else:
-            print(f"⚠️  Alternative method failed with status: {response.status_code}")
+            print(f"  Alternative method failed with status: {response.status_code}")
             return None
             
     except Exception as e:
-        print(f"✗ Alternative download error: {e}")
+        print(f"  Alternative download error: {e}")
         return None
 
 def filter_cah_providers(df):
@@ -154,7 +201,7 @@ def filter_cah_providers(df):
     print(f"{'='*60}")
     
     if df is None or len(df) == 0:
-        print(f"⚠️  No data available to filter")
+        print(f"  No data available to filter")
         return None
     
     try:
@@ -163,7 +210,7 @@ def filter_cah_providers(df):
         
         print(f"\nPotential CAH identifier columns:")
         for col in cah_columns[:10]:
-            print(f"   • {col}")
+            print(f"   - {col}")
         
         # Try different filtering approaches
         cah_df = None
@@ -174,7 +221,7 @@ def filter_cah_providers(df):
                 if 'cah' in col.lower() and df[col].dtype == 'object':
                     cah_df = df[df[col].astype(str).str.upper() == 'Y']
                     if len(cah_df) > 0:
-                        print(f"\n✓ Found {len(cah_df)} CAHs using column: {col}")
+                        print(f"\n  Found {len(cah_df)} CAHs using column: {col}")
                         break
         
         # Approach 2: Provider type or category
@@ -184,25 +231,25 @@ def filter_cah_providers(df):
                 if col in df.columns:
                     cah_df = df[df[col].astype(str).str.contains('Critical Access|CAH', case=False, na=False)]
                     if len(cah_df) > 0:
-                        print(f"\n✓ Found {len(cah_df)} CAHs using column: {col}")
+                        print(f"\n  Found {len(cah_df)} CAHs using column: {col}")
                         break
         
         if cah_df is None or len(cah_df) == 0:
-            print(f"\n⚠️  Could not automatically identify CAHs")
+            print(f"\n  Could not automatically identify CAHs")
             print(f"   Manual filtering may be required")
             print(f"   Review columns and data patterns")
             
             # Save full dataset for manual analysis
             analysis_path = DATA_DIR / "pos_full_for_manual_analysis.csv"
             df.to_csv(analysis_path, index=False)
-            print(f"✓ Saved full dataset to: {analysis_path.name}")
+            print(f"  Saved full dataset to: {analysis_path.name}")
             
             return None
         
         # Save CAH-specific data
         cah_path = DATA_DIR / "cah_providers.csv"
         cah_df.to_csv(cah_path, index=False)
-        print(f"✓ Saved {len(cah_df)} CAH records to: {cah_path.name}")
+        print(f"  Saved {len(cah_df)} CAH records to: {cah_path.name}")
         
         # Extract key constraint variables
         extract_cah_constraints(cah_df)
@@ -210,7 +257,7 @@ def filter_cah_providers(df):
         return cah_df
         
     except Exception as e:
-        print(f"✗ Error filtering CAHs: {e}")
+        print(f"  Error filtering CAHs: {e}")
         import traceback
         traceback.print_exc()
         return None
@@ -239,7 +286,7 @@ def extract_cah_constraints(cah_df):
                 "max": float(bed_data.max()) if len(bed_data) > 0 else None,
                 "regulatory_limit": 25
             }
-            print(f"\n✓ Bed Count Statistics:")
+            print(f"\n  Bed Count Statistics:")
             print(f"   Mean: {constraints['bed_constraints']['mean']:.1f}")
             print(f"   Median: {constraints['bed_constraints']['median']:.1f}")
             print(f"   Range: {constraints['bed_constraints']['min']:.0f} - {constraints['bed_constraints']['max']:.0f}")
@@ -251,7 +298,7 @@ def extract_cah_constraints(cah_df):
             state_col = state_cols[0]
             geo_dist = cah_df[state_col].value_counts().to_dict()
             constraints["geographic_distribution"] = {k: int(v) for k, v in list(geo_dist.items())[:10]}
-            print(f"\n✓ Geographic Distribution (Top 10 States):")
+            print(f"\n  Geographic Distribution (Top 10 States):")
             for state, count in list(geo_dist.items())[:10]:
                 print(f"   {state}: {count} CAHs")
         
@@ -260,12 +307,12 @@ def extract_cah_constraints(cah_df):
         with open(constraints_path, 'w') as f:
             json.dump(constraints, f, indent=2)
         
-        print(f"\n✓ Saved regulatory constraints to: {constraints_path.name}")
+        print(f"\n  Saved regulatory constraints to: {constraints_path.name}")
         
         return constraints
         
     except Exception as e:
-        print(f"✗ Error extracting constraints: {e}")
+        print(f"  Error extracting constraints: {e}")
         return None
 
 def generate_step3_report(df, cah_df):
@@ -279,8 +326,9 @@ def generate_step3_report(df, cah_df):
         "timestamp": datetime.now().isoformat(),
         "total_providers": len(df) if df is not None else 0,
         "cah_providers_identified": len(cah_df) if cah_df is not None else 0,
+        "authoritative_cah_count": get_cah_count(),
         "status": "complete" if cah_df is not None else "manual_verification_required",
-        "files_created": [f.name for f in DATA_DIR.glob("*")],
+        "files_created": [f.name for f in DATA_DIR.glob("*")] if DATA_DIR.exists() else [],
         "next_steps": [
             "Validate CAH designation accuracy",
             "Cross-reference with CMS cost report CAH flags",
@@ -295,13 +343,14 @@ def generate_step3_report(df, cah_df):
     with open(report_path, 'w') as f:
         json.dump(report, f, indent=2)
     
-    print(f"\n📊 SUMMARY:")
+    print(f"\n  SUMMARY:")
     print(f"   Total providers: {report['total_providers']:,}")
     print(f"   CAHs identified: {report['cah_providers_identified']:,}")
+    print(f"   Authoritative count: {report['authoritative_cah_count']:,}")
     print(f"   Status: {report['status']}")
     print(f"   Files created: {len(report['files_created'])}")
     
-    print(f"\n✓ Report saved to: {report_path}")
+    print(f"\n  Report saved to: {report_path}")
     print(f"\n{'='*60}")
     
     return report
@@ -315,7 +364,7 @@ def main():
     
     print(f"\nTarget: Current CAH designations + regulatory constraints")
     print(f"Purpose: Constraint boundary definition for optimization")
-    print(f"Expected: ~1,300 CAH records")
+    print(f"Expected: ~1,377 CAH records (varies with CMS quarterly updates)")
     
     # Auto-proceed (non-interactive mode)
     print("\n[AUTO-MODE] Proceeding with download...")
@@ -329,7 +378,11 @@ def main():
     # Generate completion report
     generate_step3_report(df, cah_df)
     
-    print(f"\n✅ STEP 3 COMPLETE")
+    # Report authoritative count
+    count = get_cah_count()
+    print(f"\n  Authoritative CAH count: {count}")
+    
+    print(f"\n  STEP 3 COMPLETE")
     print(f"\nNext: Proceed to calculate payer mix from cost reports")
 
 if __name__ == "__main__":
