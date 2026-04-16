@@ -113,7 +113,7 @@ class CAHConstraints:
             type="inequality",
             source="42 CFR § 485.620",
             func=lambda x: 25 - (x[0] + x[1]),  # Residual ≥ 0 when satisfied
-            grad=lambda x: np.array([-1, -1, 0, 0, 0, 0, 0, 0]),
+            grad=lambda x: np.array([-1, -1, 0, 0, 0, 0, 0, 0, 0]),
         )
         
         # ═══════════════════════════════════════════════════════════════════════
@@ -126,7 +126,7 @@ class CAHConstraints:
             type="inequality",
             source="Operational feasibility",
             func=lambda x: 0.85 * x[0] - x[4],
-            grad=lambda x: np.array([0.85, 0, 0, 0, -1, 0, 0, 0]),
+            grad=lambda x: np.array([0.85, 0, 0, 0, -1, 0, 0, 0, 0]),
         )
         
         self.constraints["nursing_ratio"] = Constraint(
@@ -135,7 +135,7 @@ class CAHConstraints:
             type="inequality",
             source="Aiken et al. (2014); Evidence-based staffing",
             func=lambda x: x[2] - 0.5 * x[4],
-            grad=lambda x: np.array([0, 0, 1, 0, -0.5, 0, 0, 0]),
+            grad=lambda x: np.array([0, 0, 1, 0, -0.5, 0, 0, 0, 0]),
         )
         
         self.constraints["ed_capacity"] = Constraint(
@@ -144,7 +144,7 @@ class CAHConstraints:
             type="inequality",
             source="ACEP workload guidelines",
             func=lambda x: 5000 * x[3] - x[5],
-            grad=lambda x: np.array([0, 0, 0, 5000, 0, -1, 0, 0]),
+            grad=lambda x: np.array([0, 0, 0, 5000, 0, -1, 0, 0, 0]),
         )
         
         self.constraints["min_providers"] = Constraint(
@@ -153,7 +153,20 @@ class CAHConstraints:
             type="inequality",
             source="24/7 emergency coverage requirement",
             func=lambda x: x[3] - 2.0,
-            grad=lambda x: np.array([0, 0, 0, 1, 0, 0, 0, 0]),
+            grad=lambda x: np.array([0, 0, 0, 1, 0, 0, 0, 0, 0]),
+        )
+
+        # ═══════════════════════════════════════════════════════════════════════
+        # TRANSFER CONSTRAINTS — CAHSP Class 2
+        # ═══════════════════════════════════════════════════════════════════════
+
+        self.constraints["transfer_capacity"] = Constraint(
+            name="transfer_capacity",
+            description="Transfer volume ≤ 15% of annual patient-days (MBQIP threshold)",
+            type="inequality",
+            source="MBQIP transfer appropriateness; CMS Hospital Compare",
+            func=lambda x: 0.15 * x[4] * 365 - x[8],
+            grad=lambda x: np.array([0, 0, 0, 0, 0.15 * 365, 0, 0, 0, -1]),
         )
     
     # ═══════════════════════════════════════════════════════════════════════════

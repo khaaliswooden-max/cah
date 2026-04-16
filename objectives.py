@@ -2,8 +2,8 @@
 Objective functions for CAH optimization.
 
 Mathematical Framework:
-- Revenue: R(x) = R_inpatient + R_ED + R_outpatient + R_swing
-- Cost: C(x) = C_labor + C_fixed + C_variable
+- Revenue: R(x) = R_inpatient + R_ED + R_outpatient + R_swing + R_transfer
+- Cost: C(x) = C_labor + C_fixed + C_variable + C_transfer
 - Profit: Π(x) = R(x) - C(x)
 - Margin: M(x) = Π(x) / R(x) — quasi-convex ratio objective
 - Quality: Q(x) = Σᵢ wᵢ × qᵢ_normalized(x)
@@ -86,19 +86,33 @@ class CAHObjectiveFunctions:
         p = self.params
         return p.alpha_4 * x[1] * 365 * p.swing_occupancy
     
+    def revenue_transfer(self, x: np.ndarray) -> float:
+        """
+        Transfer-related revenue (repatriation + avoided leakage).
+
+        R_transfer = α_transfer × transfer_volume
+
+        Captures net revenue from appropriate interfacility transfers:
+        avoided revenue leakage when patients are transferred to higher
+        acuity rather than lost to competing systems, plus coordination
+        revenue from sending-facility agreements.
+        """
+        return self.params.alpha_transfer * x[8]
+
     def revenue(self, x: np.ndarray) -> float:
         """
         Total revenue.
-        
-        R(x) = R_inpatient + R_ED + R_outpatient + R_swing
+
+        R(x) = R_inpatient + R_ED + R_outpatient + R_swing + R_transfer
         """
         return (
             self.revenue_inpatient(x) +
             self.revenue_ed(x) +
             self.revenue_outpatient(x) +
-            self.revenue_swing(x)
+            self.revenue_swing(x) +
+            self.revenue_transfer(x)
         )
-    
+
     def revenue_decomposition(self, x: np.ndarray) -> Dict[str, float]:
         """Get revenue breakdown by service line."""
         return {
@@ -106,6 +120,7 @@ class CAHObjectiveFunctions:
             "ed": self.revenue_ed(x),
             "outpatient": self.revenue_outpatient(x),
             "swing": self.revenue_swing(x),
+            "transfer": self.revenue_transfer(x),
             "total": self.revenue(x),
         }
     
@@ -138,24 +153,34 @@ class CAHObjectiveFunctions:
         """
         return self.params.beta_4 * x[4] * 365
     
+    def cost_transfer(self, x: np.ndarray) -> float:
+        """
+        Transfer coordination and transport cost.
+
+        C_transfer = β_transfer × transfer_volume
+        """
+        return self.params.beta_transfer * x[8]
+
     def cost(self, x: np.ndarray) -> float:
         """
         Total cost.
-        
-        C(x) = C_labor + C_fixed + C_variable
+
+        C(x) = C_labor + C_fixed + C_variable + C_transfer
         """
         return (
             self.cost_labor(x) +
             self.cost_fixed(x) +
-            self.cost_variable(x)
+            self.cost_variable(x) +
+            self.cost_transfer(x)
         )
-    
+
     def cost_decomposition(self, x: np.ndarray) -> Dict[str, float]:
         """Get cost breakdown by category."""
         return {
             "labor": self.cost_labor(x),
             "fixed": self.cost_fixed(x),
             "variable": self.cost_variable(x),
+            "transfer": self.cost_transfer(x),
             "total": self.cost(x),
         }
     
@@ -327,50 +352,56 @@ class CAHObjectiveFunctions:
         Computed analytically for efficiency.
         """
         p = self.params
-        grad = np.zeros(8)
-        
+        grad = np.zeros(9)
+
         # ∂R/∂x[0] (acute_beds) = 0 (no direct revenue dependency)
         grad[0] = 0.0
-        
+
         # ∂R/∂x[1] (swing_beds) = α₄ × 365 × occupancy
         grad[1] = p.alpha_4 * 365 * p.swing_occupancy
-        
+
         # ∂R/∂x[2] (nursing_fte) = 0
         grad[2] = 0.0
-        
+
         # ∂R/∂x[3] (provider_fte) = 0
         grad[3] = 0.0
-        
+
         # ∂R/∂x[4] (ADC) = α₁ × CMI × 365 / ALOS
         grad[4] = p.alpha_1 * x[7] * 365 / p.alos
-        
+
         # ∂R/∂x[5] (ED visits) = α₂
         grad[5] = p.alpha_2
-        
+
         # ∂R/∂x[6] (OP visits) = α₃
         grad[6] = p.alpha_3
-        
+
         # ∂R/∂x[7] (CMI) = α₁ × ADC × 365 / ALOS
         grad[7] = p.alpha_1 * x[4] * 365 / p.alos
-        
+
+        # ∂R/∂x[8] (transfer_volume) = α_transfer
+        grad[8] = p.alpha_transfer
+
         return grad
-    
+
     def cost_gradient(self, x: np.ndarray) -> np.ndarray:
         """
         Gradient of cost function ∇C(x).
         """
         p = self.params
-        grad = np.zeros(8)
-        
+        grad = np.zeros(9)
+
         # ∂C/∂x[2] (nursing_fte) = β₁
         grad[2] = p.beta_1
-        
+
         # ∂C/∂x[3] (provider_fte) = β₂
         grad[3] = p.beta_2
-        
+
         # ∂C/∂x[4] (ADC) = β₄ × 365
         grad[4] = p.beta_4 * 365
-        
+
+        # ∂C/∂x[8] (transfer_volume) = β_transfer
+        grad[8] = p.beta_transfer
+
         return grad
     
     def profit_gradient(self, x: np.ndarray) -> np.ndarray:
