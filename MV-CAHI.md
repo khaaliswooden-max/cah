@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Minimum Viable CAH Infrastructure (MV-CAHI) specification defines a reference architecture representing the **median capabilities** of America's 1,300+ Critical Access Hospitals. All solutions developed within the CAH Transformation Engine must demonstrate viability against this baseline before scaling assumptions are introduced.
+The Minimum Viable CAH Infrastructure (MV-CAHI) specification defines a reference architecture representing the **median capabilities** of America's 1,377 Critical Access Hospitals (per CMS POS FY2024). All solutions developed within the CAH Transformation Engine must demonstrate viability against this baseline before scaling assumptions are introduced.
 
 ---
 

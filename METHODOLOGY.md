@@ -120,7 +120,7 @@ Specific data or simulation that would confirm/refute.
 | Element | Specification |
 |---------|--------------|
 | Data Source | CMS Cost Reports 2018-2023 |
-| Sample | All CAH-designated facilities (n ≈ 1,300) |
+| Sample | All CAH-designated facilities (n ≈ 1,377 per CMS POS FY2024) |
 | Method | Panel regression with facility fixed effects |
 | Validation | 5-fold cross-validation |
 

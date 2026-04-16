@@ -82,9 +82,18 @@ class CAHParameters:
     sigma_beta_4: float = 178.0
     
     # ═══════════════════════════════════════════════════════════════════════════
+    # TRANSFER PARAMETERS — Source: CMS Hospital Compare, MBQIP transfer data
+    # ═══════════════════════════════════════════════════════════════════════════
+
+    alpha_transfer: float = 4_200.0   # ◐ Net revenue per appropriate transfer case
+    sigma_alpha_transfer: float = 980.0
+    beta_transfer: float = 1_350.0    # ◐ Cost per transfer (transport + coordination)
+    sigma_beta_transfer: float = 310.0
+
+    # ═══════════════════════════════════════════════════════════════════════════
     # OPERATIONAL CONSTANTS — Source: Flex Monitoring Team
     # ═══════════════════════════════════════════════════════════════════════════
-    
+
     alos: float = 3.2           # ✓ Average length of stay (days) — CAH median
     swing_occupancy: float = 0.65  # ◐ Swing bed occupancy rate — derived
     
@@ -106,6 +115,8 @@ class CAHParameters:
             "beta_2": self.beta_2,
             "beta_3": self.beta_3,
             "beta_4": self.beta_4,
+            "alpha_transfer": self.alpha_transfer,
+            "beta_transfer": self.beta_transfer,
             "alos": self.alos,
             "swing_occupancy": self.swing_occupancy,
         }
@@ -128,10 +139,12 @@ class CAHParameters:
             alpha_2=rng.normal(self.alpha_2, self.sigma_alpha_2),
             alpha_3=rng.normal(self.alpha_3, self.sigma_alpha_3),
             alpha_4=rng.normal(self.alpha_4, self.sigma_alpha_4),
+            alpha_transfer=rng.normal(self.alpha_transfer, self.sigma_alpha_transfer),
             beta_1=rng.normal(self.beta_1, self.sigma_beta_1),
             beta_2=rng.normal(self.beta_2, self.sigma_beta_2),
             beta_3=rng.normal(self.beta_3, self.sigma_beta_3),
             beta_4=rng.normal(self.beta_4, self.sigma_beta_4),
+            beta_transfer=rng.normal(self.beta_transfer, self.sigma_beta_transfer),
             alos=self.alos,
             swing_occupancy=self.swing_occupancy,
         )
@@ -272,10 +285,11 @@ class DecisionVariables:
     x[5]: ED visits/year            [2000, 15000]   AHA Annual Survey
     x[6]: Outpatient visits/year    [5000, 40000]   CMS Cost Report S-3
     x[7]: Case Mix Index            [0.8, 1.4]  CMS MS-DRG
+    x[8]: Transfer volume           [0, 500]    CMS Hospital Compare / MBQIP
     """
-    
-    n_variables: int = 8
-    
+
+    n_variables: int = 9
+
     bounds: List[Tuple[float, float]] = field(default_factory=lambda: [
         (5.0, 25.0),       # x[0]: Acute beds
         (0.0, 15.0),       # x[1]: Swing beds
@@ -285,19 +299,21 @@ class DecisionVariables:
         (2000.0, 15000.0), # x[5]: ED visits/year
         (5000.0, 40000.0), # x[6]: Outpatient visits/year
         (0.8, 1.4),        # x[7]: CMI
+        (0.0, 500.0),      # x[8]: Transfer volume (cases/year)
     ])
-    
+
     names: List[str] = field(default_factory=lambda: [
         "acute_beds",
-        "swing_beds", 
+        "swing_beds",
         "nursing_fte",
         "provider_fte",
         "avg_daily_census",
         "ed_visits",
         "outpatient_visits",
         "cmi",
+        "transfer_volume",
     ])
-    
+
     units: List[str] = field(default_factory=lambda: [
         "beds",
         "beds",
@@ -307,6 +323,7 @@ class DecisionVariables:
         "visits/year",
         "visits/year",
         "index",
+        "cases/year",
     ])
     
     def get_center(self) -> np.ndarray:

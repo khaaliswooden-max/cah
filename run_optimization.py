@@ -279,6 +279,7 @@ def get_variable_unit(name: str) -> str:
         "ed_visits": "visits/yr",
         "outpatient_visits": "visits/yr",
         "cmi": "index",
+        "transfer_volume": "cases/yr",
     }
     return units.get(name, "")
 
@@ -383,6 +384,7 @@ def generate_summary_report(
             "annual_ed_visits": float(result.x[5]),
             "annual_outpatient_visits": float(result.x[6]),
             "case_mix_index": float(result.x[7]),
+            "transfer_volume": float(result.x[8]),
         },
         "uncertainty_analysis": {
             "margin_90_ci_lower": float(mc_result["margin"]["ci_5"]),
@@ -493,6 +495,7 @@ def main():
     parser.add_argument("--pareto-points", type=int, default=20, help="Pareto front points")
     parser.add_argument("--mc-simulations", type=int, default=10000, help="Monte Carlo simulations")
     parser.add_argument("--robust-gamma", type=float, default=3.0, help="Robust uncertainty budget")
+    parser.add_argument("--auto-cite", action="store_true", help="Generate auto-citation report from payer-mix data")
     args = parser.parse_args()
     
     print_header()
@@ -527,7 +530,20 @@ def main():
     # Step 6: Robust optimization
     robust_result = run_robust_optimization(gamma=args.robust_gamma)
     
-    # Step 7: Save all results
+    # Step 7: Auto-citation (if requested)
+    if args.auto_cite:
+        print("\n[CITE] RUNNING AUTO-CITATION ENGINE")
+        print("-" * 40)
+        from auto_citation import AutoCitationEngine
+        engine = AutoCitationEngine(data_dir=DATA_DIR)
+        for year in [2021, 2022, 2023]:
+            report = engine.generate_benchmark_report(year=year)
+            if report["total_claims"] > 0:
+                cite_path = REPORTS_DIR / f"citations_{year}.json"
+                engine.export_citations(report["claims"], fmt="json", output_path=cite_path)
+                print(f"  [OK] {year}: {report['total_claims']} claims → {cite_path}")
+
+    # Step 8: Save all results
     save_results(result, pareto_front, sensitivities, mc_result, robust_result)
     
     # Final summary

@@ -102,7 +102,7 @@ python3 scripts/step3_download_cah_designation.py
 
 After execution, verify:
 
-- [ ] **Cost Reports**: 3 years of data for 1300+ CAHs
+- [ ] **Cost Reports**: 3 years of data for 1,377 CAHs
 - [ ] **Quality Measures**: MBQIP data across all 4 domains
 - [ ] **CAH Designations**: Current CAH list with constraints
 - [ ] **Data Quality**: <5% missing values in critical fields
@@ -135,7 +135,7 @@ pip install requests pandas beautifulsoup4 openpyxl
 
 1. **Validate Data Quality**
    - Check completion reports in `reports/`
-   - Verify CAH counts match expectations (~1,300)
+   - Verify CAH counts match expectations (~1,377 (per CMS POS FY2024))
    - Confirm financial and quality baselines established
 
 2. **Data Integration**
@@ -160,7 +160,7 @@ For issues or questions:
 
 Pipeline is successful when:
 - All 3 critical datasets downloaded and validated
-- CAH financial baselines established (~1,300 hospitals)
+- CAH financial baselines established (~1,377 (per CMS POS FY2024) hospitals)
 - Quality benchmarks defined (MBQIP 4 domains)
 - Regulatory constraints mathematically parameterized
 - Master execution report shows "CRITICAL_DATASETS_ACQUIRED"
