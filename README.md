@@ -1,5 +1,16 @@
 # CAH Data Acquisition Pipeline - Quick Start Guide
 
+> **Developed by VISIONBLOX LLC × ZUUP INNOVATION LAB**
+
+## 🌎 Geographic Scope
+
+| Scope | Facilities | Details |
+|-------|-----------|--------|
+| **Phase 1 Pilot** | 89 CAHs | Washington (39) + Montana (50) |
+| **National Pipeline** | 1,377 CAHs | Full CMS Hospital Compare dataset |
+
+The pipeline architecture is designed to process all 1,377 Critical Access Hospitals nationally. Phase 1 empirical validation targets Washington and Montana specifically, leveraging WSHA (Washington State Hospital Association) and MHA (Montana Hospital Association) benchmark networks for state-specific ground truth. See `PHASE1_EMPIRICAL_VALIDATION.md` for the complete evidence base.
+
 ## 🚀 Getting Started
 
 This pipeline acquires all critical datasets needed for CAH dual-objective optimization (5% profit increase + quality benchmarks).
@@ -155,3 +166,35 @@ Pipeline is successful when:
 - Master execution report shows "CRITICAL_DATASETS_ACQUIRED"
 
 **You're ready for optimization when all 3 critical steps complete successfully.**
+
+## 🗟a️ Roadmap Cross-Reference
+
+The project uses two independent phase/priority naming systems. Do not conflate them:
+
+| Label | System | Meaning |
+|-------|--------|--------|
+| **Phase 1** | Execution (repo) | `PHASE1_EMPIRICAL_VALIDATION.md` — 30-day empirical benchmark evidence base |
+| **Phase 2** | Execution (repo) | `phase2_optimization_execution.py` — Lagrangian dual-objective optimization |
+| **Phase 3** | Execution (repo) | `phase3_pilot_execution.py` — Pilot implementation and prospective ROI validation |
+| **P0** | Deployment cycle (CAHSP) | Now — HCRIS baseline scoring and Type A/B facility classification |
+| **P1** | Deployment cycle (CAHSP) | Q3 2026 — Type A benchmark cycle (known-template interventions) |
+| **P2** | Deployment cycle (CAHSP) | Q1 2027 — Type B benchmark cycle (novel architecture evaluation) |
+| **P1 / P2** | Priority labels (gap-analysis-1.md) | Priority classification of performance gaps — not deployment phases |
+
+**Execution → Deployment mapping:** Phase 1 feeds P0 (HCRIS baseline data). Phase 2 drives P1 (optimization outputs → Type A intervention priorities). Phase 3 validates P2 (pilot results → prospective novel architecture scoring).
+
+## 📚 Documentation Index
+
+| File | Purpose |
+|------|---------|
+| `gap-analysis-1.md` | Performance gap map — $1.97M opportunity identification (operating margin, denial rate, labor cost) |
+| `gap-analysis-2.md` | Benchmark evidence & priority actions — ROI: pre-bill scrubbing (+$298K), staffing (+$580K), swing-bed (+$185K) |
+| `gap-analysis-3.md` | Validation & confidence assessment — 70% overall grounding score across 6 dimensions |
+| `PHASE1_EMPIRICAL_VALIDATION.md` | Empirical evidence base; WA/MT state data, WSHA/MHA benchmarks, CARC/RARC denial code mapping |
+| `OPERATIONAL_BENCHMARKS.md` | 39 daily/weekly/monthly KPIs with staff checklists and Green/Yellow/Red/Black status tracking |
+| `MV-CAHI.md` | Minimum Viable CAH Infrastructure spec — clinical, financial, technical, workforce, computational baselines |
+| `OPTIMIZATION.md` | Dual-objective optimization framework (Lagrangian, KKT, Pareto front methodology) |
+| `pareto.py` | Complete Pareto front generation across profit–quality trade-off space |
+| `robust.py` | Bertsimas-Sim robust optimization under input data uncertainty |
+| `ARCHITECTURE.md` | Three-layer architecture: Foundation → Integration → Insight |
+| `METHODOLOGY.md` | Research methodology and analytical grounding standards |
