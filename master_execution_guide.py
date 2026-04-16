@@ -54,6 +54,15 @@ PIPELINE_STEPS = [
         "estimated_time": "2-5 minutes",
         "estimated_size": "~10MB (reports)",
         "critical": True
+    },
+    {
+        "step": 5,
+        "name": "HRSA Workforce Data",
+        "script": "step5_download_hrsa_workforce.py",
+        "description": "Workforce supply data for CAHSP Class 4 pipeline adequacy (HRSA AHRF)",
+        "estimated_time": "5-10 minutes",
+        "estimated_size": "~50MB",
+        "critical": False
     }
 ]
 
@@ -82,11 +91,11 @@ def execute_step(step_info):
     script_path = SCRIPTS_DIR / step_info['script']
     
     if not script_path.exists():
-        print(f"\n❌ ERROR: Script not found: {script_path}")
+        print(f"\n  ERROR: Script not found: {script_path}")
         return False
     
-    print(f"\n🚀 Executing: {script_path.name}")
-    print(f"⏱️  Start time: {datetime.now().strftime('%H:%M:%S')}")
+    print(f"\n  Executing: {script_path.name}")
+    print(f"  Start time: {datetime.now().strftime('%H:%M:%S')}")
     
     start_time = time.time()
     
@@ -102,16 +111,16 @@ def execute_step(step_info):
         duration = time.time() - start_time
         
         if result.returncode == 0:
-            print(f"\n✅ STEP {step_info['step']} COMPLETED SUCCESSFULLY")
-            print(f"⏱️  Duration: {duration/60:.1f} minutes")
+            print(f"\n  STEP {step_info['step']} COMPLETED SUCCESSFULLY")
+            print(f"  Duration: {duration/60:.1f} minutes")
             return True
         else:
-            print(f"\n❌ STEP {step_info['step']} FAILED")
+            print(f"\n  STEP {step_info['step']} FAILED")
             print(f"Return code: {result.returncode}")
             return False
             
     except Exception as e:
-        print(f"\n❌ ERROR executing step: {e}")
+        print(f"\n  ERROR executing step: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -127,12 +136,12 @@ def validate_pipeline_readiness():
     # Check 1: Base directory exists
     base_exists = BASE_DIR.exists()
     checks.append(("Base directory exists", base_exists))
-    print(f"✓ Base directory: {BASE_DIR}" if base_exists else f"✗ Base directory missing")
+    print(f"  Base directory: {BASE_DIR}" if base_exists else f"  Base directory missing")
     
     # Check 2: Scripts directory exists
     scripts_exists = SCRIPTS_DIR.exists()
     checks.append(("Scripts directory exists", scripts_exists))
-    print(f"✓ Scripts directory: {SCRIPTS_DIR}" if scripts_exists else f"✗ Scripts directory missing")
+    print(f"  Scripts directory: {SCRIPTS_DIR}" if scripts_exists else f"  Scripts directory missing")
     
     # Check 3: All step scripts exist
     all_scripts_exist = True
@@ -141,9 +150,9 @@ def validate_pipeline_readiness():
         exists = script_path.exists()
         all_scripts_exist = all_scripts_exist and exists
         if not exists:
-            print(f"✗ Missing script: {step['script']}")
+            print(f"  Missing script: {step['script']}")
         else:
-            print(f"✓ Script ready: {step['script']}")
+            print(f"  Script ready: {step['script']}")
     checks.append(("All scripts exist", all_scripts_exist))
     
     # Check 4: Python dependencies
@@ -157,9 +166,9 @@ def validate_pipeline_readiness():
     for import_name, pip_name in required_packages:
         try:
             __import__(import_name)
-            print(f"✓ {pip_name} installed")
+            print(f"  {pip_name} installed")
         except ImportError:
-            print(f"✗ {pip_name} missing - install with: pip install {pip_name}")
+            print(f"  {pip_name} missing - install with: pip install {pip_name}")
             packages_installed = False
     checks.append(("Dependencies installed", packages_installed))
     
@@ -168,9 +177,9 @@ def validate_pipeline_readiness():
     
     print(f"\n{'='*80}")
     if all_ready:
-        print("✅ PIPELINE READY TO EXECUTE")
+        print("  PIPELINE READY TO EXECUTE")
     else:
-        print("❌ PIPELINE NOT READY - Fix issues above")
+        print("  PIPELINE NOT READY - Fix issues above")
     print(f"{'='*80}\n")
     
     return all_ready
@@ -190,7 +199,8 @@ def generate_master_report(execution_results):
         "successful_steps": len(successful_steps),
         "failed_steps": len(failed_steps),
         "step_results": execution_results,
-        "critical_datasets_acquired": len([s for s in successful_steps if s <= 3]),
+        "critical_datasets_acquired": len([s for s in successful_steps if s <= 4]),
+        "workforce_data_acquired": 5 in successful_steps,
         "next_actions": []
     }
     
@@ -200,8 +210,13 @@ def generate_master_report(execution_results):
             "Validate data quality and completeness",
             "Calculate payer mix from cost reports",
             "Integrate datasets for optimization model",
-            "Proceed to mathematical optimization"
+            "Proceed to mathematical optimization",
+            "Run CAHSP scoring (cahsp_score.py) after optimization",
         ]
+        if 5 in successful_steps:
+            report["next_actions"].append(
+                "Load HRSA workforce data into WorkforceOptimizer for grounded Class 4 scoring"
+            )
     elif len(successful_steps) > 0:
         report["status"] = "PARTIAL_ACQUISITION"
         report["next_actions"] = [
@@ -226,20 +241,20 @@ def generate_master_report(execution_results):
         json.dump(report, f, indent=2)
     
     # Print summary
-    print(f"\n📊 EXECUTION SUMMARY:")
+    print(f"\n  EXECUTION SUMMARY:")
     print(f"   Total steps: {report['total_steps']}")
     print(f"   Successful: {report['successful_steps']}")
     print(f"   Failed: {report['failed_steps']}")
     print(f"   Status: {report['status']}")
     
     if failed_steps:
-        print(f"\n❌ Failed steps: {failed_steps}")
+        print(f"\n  Failed steps: {failed_steps}")
     
-    print(f"\n📋 NEXT ACTIONS:")
+    print(f"\n  NEXT ACTIONS:")
     for action in report['next_actions']:
-        print(f"   • {action}")
+        print(f"   - {action}")
     
-    print(f"\n✓ Report saved to: {report_path}")
+    print(f"\n  Report saved to: {report_path}")
     print(f"\n{'='*80}")
     
     return report
@@ -248,7 +263,7 @@ def main():
     """Main execution function"""
     print_header()
     
-    print(f"\n📋 PIPELINE OVERVIEW:")
+    print(f"\n  PIPELINE OVERVIEW:")
     print(f"   Total steps: {len(PIPELINE_STEPS)}")
     print(f"   Critical datasets: {len([s for s in PIPELINE_STEPS if s['critical']])}")
     total_time = sum([int(s['estimated_time'].split('-')[0]) for s in PIPELINE_STEPS])
@@ -256,7 +271,7 @@ def main():
     
     # Validate readiness
     if not validate_pipeline_readiness():
-        print(f"\n❌ Pipeline not ready. Please fix issues above.")
+        print(f"\n  Pipeline not ready. Please fix issues above.")
         return
     
     # Confirm execution
@@ -275,7 +290,7 @@ def main():
         execution_results[step_info['step']] = success
         
         if not success and step_info['critical']:
-            print(f"\n⚠️  CRITICAL STEP FAILED")
+            print(f"\n  CRITICAL STEP FAILED")
             # Auto-retry once in non-interactive mode
             print(f"[AUTO-MODE] Retrying step {step_info['step']}...")
             success = execute_step(step_info)
