@@ -13,6 +13,10 @@ Operational Constraints (Soft):
 - h₃: Provider FTE ≥ 0.5 (24/7 coverage with locums)
 - h₄: ED visits / provider FTE ≤ 5000 (workload ceiling)
 
+Workforce Constraints (MV-CAHI):
+- h₅: nursing_FTE + provider_FTE ≤ 120 (MV-CAHI upper bound)
+       This is the FTE cap referenced in CAHSP Class 4 targets.
+
 All constraints are formulated as g(x) ≤ 0 or h(x) = 0 for standard NLP.
 Constraint qualification (LICQ/MFCQ) verification is provided.
 """
@@ -154,6 +158,19 @@ class CAHConstraints:
             source="24/7 emergency coverage requirement",
             func=lambda x: x[3] - 2.0,
             grad=lambda x: np.array([0, 0, 0, 1, 0, 0, 0, 0]),
+        )
+
+        # ═══════════════════════════════════════════════════════════════════════
+        # WORKFORCE CONSTRAINTS (MV-CAHI) — CAHSP Class 4 anchor
+        # ═══════════════════════════════════════════════════════════════════════
+
+        self.constraints["total_fte_cap"] = Constraint(
+            name="total_fte_cap",
+            description="nursing_FTE + provider_FTE ≤ 120 (MV-CAHI upper bound)",
+            type="inequality",
+            source="MV-CAHI.md — Minimum Viable CAH Infrastructure; CAHSP Class 4",
+            func=lambda x: 120.0 - (x[2] + x[3]),
+            grad=lambda x: np.array([0, 0, -1, -1, 0, 0, 0, 0]),
         )
     
     # ═══════════════════════════════════════════════════════════════════════════
@@ -327,19 +344,12 @@ class CAHConstraints:
         if len(active_gradients) == 0:
             return True, "No active constraints; MFCQ trivially satisfied"
         
-        # For linear constraints, MFCQ holds iff there's no positive
-        # linear combination of gradients equal to zero (Farkas lemma)
-        # Simplified check: if gradients span less than full dimension,
-        # there exists a direction satisfying MFCQ
-        
         A = np.array(active_gradients)
         n_constraints, n_vars = A.shape
         
         if n_constraints < n_vars:
             return True, f"MFCQ satisfied: fewer active constraints ({n_constraints}) than variables ({n_vars})"
         
-        # More rigorous check would solve LP to find feasible direction
-        # For now, rely on LICQ check
         licq_holds, _ = self.check_licq(x, tol)
         if licq_holds:
             return True, "MFCQ satisfied (implied by LICQ)"
@@ -384,6 +394,10 @@ class CAHConstraints:
                 interpretations[name] = (
                     f"Each additional 100 ED visits/provider capacity worth {price * 100:.4f}"
                 )
+            elif name == "total_fte_cap":
+                interpretations[name] = (
+                    f"Raising MV-CAHI FTE cap by 1 FTE improves objective by {price:.4f}"
+                )
             else:
                 interpretations[name] = f"Shadow price: {price:.4f}"
         
@@ -412,3 +426,8 @@ def nursing_ratio(x: np.ndarray) -> float:
 def ed_capacity(x: np.ndarray) -> float:
     """h₄: ED visits / provider FTE ≤ 5000 → 5000 × x[3] - x[5] ≥ 0"""
     return 5000 * x[3] - x[5]
+
+
+def total_fte_cap(x: np.ndarray) -> float:
+    """h₅: nursing_FTE + provider_FTE ≤ 120 → 120 - (x[2] + x[3]) ≥ 0"""
+    return 120.0 - (x[2] + x[3])

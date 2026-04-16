@@ -138,6 +138,71 @@ class CAHParameters:
 
 
 @dataclass
+class WorkforceParameters:
+    """
+    Workforce configuration for CAHSP Class 4 optimization.
+
+    These parameters drive the WorkforceOptimizer in workforce.py and
+    the Workforce Index (WI) component of the CAHSP composite score.
+
+    Sources:
+        Flex Monitoring Team — rural CAH staffing benchmarks
+        HRSA Area Health Resources Files — workforce supply data
+        MV-CAHI.md — Minimum Viable CAH Infrastructure specification
+    """
+
+    # MV-CAHI FTE cap (42 CFR context; operational reality)
+    total_fte_cap: float = 100.0          # ◐ Nominal MV-CAHI midpoint (80–120 range)
+
+    # Travel nurse dependency
+    travel_nurse_ratio: float = 0.25      # ✓ ~25% sector baseline (Flex Monitoring Team)
+
+    # Tele-specialist coverage (hours / week across all disciplines)
+    tele_specialist_hours: float = 40.0   # ◯ Baseline; target ≥ 80 hrs/week
+
+    # HRSA NHSC pipeline (annual scholar / loan-repayment placements)
+    hrsa_scholar_pipeline: int = 0        # ◯ Facility-specific; 0 = no active pipeline
+
+    # Burn-out risk threshold (hours/week above 40-hr standard)
+    burnout_hours_threshold: float = 48.0 # ◐ 48 hrs/week = high burn-out risk (literature)
+
+    def to_dict(self) -> Dict:
+        return {
+            "total_fte_cap": self.total_fte_cap,
+            "travel_nurse_ratio": self.travel_nurse_ratio,
+            "tele_specialist_hours": self.tele_specialist_hours,
+            "hrsa_scholar_pipeline": self.hrsa_scholar_pipeline,
+            "burnout_hours_threshold": self.burnout_hours_threshold,
+        }
+
+
+@dataclass
+class WorkforceResult:
+    """
+    Lightweight summary of workforce evaluation output.
+
+    For full component detail (travel/tele/burnout/pipeline breakdowns),
+    use WorkforceEvaluation returned by WorkforceOptimizer.evaluate().
+    This dataclass is the compact form suitable for inclusion in reports.
+    """
+
+    travel_dependency_score: float  # [0, 1]; higher = less travel-dependent
+    tele_coverage_score: float      # [0, 1]; higher = more specialty coverage
+    burnout_index: float            # [0, 1]; lower = less overwork
+    pipeline_adequacy_5yr: float    # [0, 1]; higher = more pipeline confidence
+    wi_score: float                 # [0, 1]; composite Workforce Index for CAHSP
+
+    def to_dict(self) -> Dict:
+        return {
+            "travel_dependency_score": round(self.travel_dependency_score, 4),
+            "tele_coverage_score": round(self.tele_coverage_score, 4),
+            "burnout_index": round(self.burnout_index, 4),
+            "pipeline_adequacy_5yr": round(self.pipeline_adequacy_5yr, 4),
+            "wi_score": round(self.wi_score, 4),
+        }
+
+
+@dataclass
 class QualityBenchmarks:
     """
     MBQIP and CMS quality benchmarks with composite weights.
