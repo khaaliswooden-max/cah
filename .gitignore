@@ -8,6 +8,22 @@ data/raw/**/*.xlsx
 data/processed/**/*.csv
 data/processed/**/*.parquet
 
+# CMS Rural Health & CAH scrape: bulk raw downloads are reproducible via
+# step6_scrape_cms_rural_health.py (sha256-pinned in manifest.json).
+# Commit only the manifest + small filtered summary artifacts.
+data/cms_rural_health/cah/*.csv
+data/cms_rural_health/cah/*.zip
+data/cms_rural_health/geography/*.csv
+data/cms_rural_health/geography/*.zip
+data/cms_rural_health/post_acute/*.csv
+data/cms_rural_health/post_acute/*.zip
+data/cms_rural_health/rural/fqhc_*.csv
+data/cms_rural_health/rural/rhc_*.csv
+!data/cms_rural_health/manifest.json
+!data/cms_rural_health/cah_hospitals.csv
+!data/cms_rural_health/rural_emergency_hospitals.csv
+!data/cms_rural_health/rural/reh_*.csv
+
 # Keep directory structure but ignore data
 !data/raw/.gitkeep
 !data/processed/.gitkeep

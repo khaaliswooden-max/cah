@@ -1,0 +1,44 @@
+{
+  "step": "6_cms_rural_health_scrape",
+  "timestamp": "2026-04-19T14:04:14.076438",
+  "summary": {
+    "total": 41,
+    "ok": 41,
+    "error": 0,
+    "skipped": 0,
+    "bytes_downloaded": 1003889153
+  },
+  "manifest_path": "data/cms_rural_health/manifest.json",
+  "post_processing": {
+    "cah_hospitals": {
+      "total_hospitals": 5426,
+      "critical_access_hospitals": 1376,
+      "column_used": "Hospital Type",
+      "top_states": {
+        "TX": 92,
+        "IA": 82,
+        "KS": 82,
+        "MN": 76,
+        "NE": 62,
+        "WI": 58,
+        "IL": 55,
+        "MT": 50,
+        "SD": 40,
+        "OK": 39,
+        "WA": 39,
+        "CA": 38,
+        "ND": 37,
+        "MI": 35,
+        "MO": 35
+      }
+    },
+    "rural_emergency_hospitals": {
+      "reh_rows": 39,
+      "source_files": [
+        "reh_timely_effective_care_hospital.csv",
+        "reh_outpatient_imaging_hospital.csv",
+        "reh_unplanned_visits_hospital.csv"
+      ]
+    }
+  }
+}
