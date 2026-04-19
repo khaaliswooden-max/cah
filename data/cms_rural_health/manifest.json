@@ -1,0 +1,872 @@
+{
+  "step": "6_cms_rural_health_scrape",
+  "timestamp": "2026-04-19T14:04:14.076438",
+  "filter_group": null,
+  "max_file_mb": 400,
+  "dry_run": false,
+  "datasets": [
+    {
+      "slug": "rhc_enrollments",
+      "title": "Rural Health Clinic Enrollments",
+      "group": "rural",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/a935fa38-7399-4917-92e7-e47064b64fc4/RHC_Enrollments_2026.01.21.csv",
+      "local_path": "data/cms_rural_health/rural/rhc_enrollments.csv",
+      "size_bytes": 1263681,
+      "sha256": "33ab8041525b886ef87edaf86f356cf984b35def6c8eefe0d240174b6e352239",
+      "row_count": 5454,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/3b7e7659-067e-41ea-8e36-f9ee2036e1f6/data-viewer",
+        "modified": "2026-03-04",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/rural-health-clinic-enrollments",
+        "title": "Rural Health Clinic Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "rhc_all_owners",
+      "title": "Rural Health Clinic All Owners",
+      "group": "rural",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/7d234c00-e76a-4875-881c-afd0cd886207/RHC_All_Owners_2026.01.02.csv",
+      "local_path": "data/cms_rural_health/rural/rhc_all_owners.csv",
+      "size_bytes": 11017870,
+      "sha256": "80d488b3b9e28f6e2a898912f55804cfc520bd0a2c8dc832defa5ea26c3a2566",
+      "row_count": 64692,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/ab03c9bc-0c22-4ca4-b032-21dd3408210d/data-viewer",
+        "modified": "2026-03-04",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/rural-health-clinic-all-owners",
+        "title": "Rural Health Clinic All Owners"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "fqhc_enrollments",
+      "title": "Federally Qualified Health Center Enrollments",
+      "group": "rural",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/678258ec-0f6f-4788-8248-d2c30498ac8f/FQHC_Enrollments_2026.01.21.csv",
+      "local_path": "data/cms_rural_health/rural/fqhc_enrollments.csv",
+      "size_bytes": 2746234,
+      "sha256": "fc5475ce4ea10434a92b919016e5c90a3778d1dab35c4d060e08b04df60e6257",
+      "row_count": 10950,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/4bcae866-3411-439a-b762-90a6187c194b/data-viewer",
+        "modified": "2026-03-04",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/federally-qualified-health-center-enrollments",
+        "title": "Federally Qualified Health Center Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "fqhc_all_owners",
+      "title": "Federally Qualified Health Center All Owners",
+      "group": "rural",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/3fd6a3ff-cf75-4fcc-a979-86732bb2e55f/FQHC_All_Owners_2026.01.02.csv",
+      "local_path": "data/cms_rural_health/rural/fqhc_all_owners.csv",
+      "size_bytes": 24277992,
+      "sha256": "e5596f5ab43f506ff043ee5b720df93afd8822ab8e04eda1791d1475bd4db26c",
+      "row_count": 147419,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/ed289c89-0bb8-4221-a20a-85776066381b/data-viewer",
+        "modified": "2026-03-04",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/federally-qualified-health-center-all-owners",
+        "title": "Federally Qualified Health Center All Owners"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_timely_effective_care_hospital",
+      "title": "Rural Emergency Hospital Timely and Effective Care - Hospital",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/325633e3e81e17de313537518fdca092_1770163680/REH_Timely_and_Effective_Care-Hospital.csv",
+      "local_path": "data/cms_rural_health/rural/reh_timely_effective_care_hospital.csv",
+      "size_bytes": 56773,
+      "sha256": "d60da0c5790b026481b168eaaf77b9f654857b776e9feb493a8e4549d7eed690",
+      "row_count": 156,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "97xg-v3wv",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/97xg-v3wv",
+        "title": "Rural Emergency Hospital Timely and Effective Care - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_timely_effective_care_national",
+      "title": "Rural Emergency Hospital Timely and Effective Care - National",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/3e7a7fe925204d9f476690ad30ffcb28_1770163682/REH_Timely_and_Effective_Care-National.csv",
+      "local_path": "data/cms_rural_health/rural/reh_timely_effective_care_national.csv",
+      "size_bytes": 2821,
+      "sha256": "4ab2455b1a551da2abb4f15e2473495de59de269621998f037b432cfdea6def1",
+      "row_count": 8,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "d2k3-k3ac",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/d2k3-k3ac",
+        "title": "Rural Emergency Hospital Timely and Effective Care - National"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_outpatient_imaging_hospital",
+      "title": "Rural Emergency Hospital Outpatient Imaging Efficiency - Hospital",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/1a7240761452e8430813299b2e5b28e1_1770163682/REH_Outpatient_Imaging_Efficiency-Hospital.csv",
+      "local_path": "data/cms_rural_health/rural/reh_outpatient_imaging_hospital.csv",
+      "size_bytes": 7125,
+      "sha256": "70ffcdb7fccadf5313affb1a26c0e9a1e1573b2ebcb77063739d840e7d612db8",
+      "row_count": 39,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "7peb-i4pi",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/7peb-i4pi",
+        "title": "Rural Emergency Hospital Outpatient Imaging Efficiency - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_outpatient_imaging_national",
+      "title": "Rural Emergency Hospital Outpatient Imaging Efficiency - National",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/400efdf48b2a73bfef6217d28bf082e3_1770163683/REH_Outpatient_Imaging_Efficiency-National.csv",
+      "local_path": "data/cms_rural_health/rural/reh_outpatient_imaging_national.csv",
+      "size_bytes": 146,
+      "sha256": "a786d125bc74a699c6bfa362a250a57c777ed208e24cb7b4165affb3cee13357",
+      "row_count": 1,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "zt3q-3e1z",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/zt3q-3e1z",
+        "title": "Rural Emergency Hospital Outpatient Imaging Efficiency - National"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_unplanned_visits_hospital",
+      "title": "Rural Emergency Hospital Unplanned Hospital Visits - Hospital",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/8058b83869a5ba155b84c3227e60f61c_1770163683/REH_Unplanned_Hospital_Visits-Hospital.csv",
+      "local_path": "data/cms_rural_health/rural/reh_unplanned_visits_hospital.csv",
+      "size_bytes": 10828,
+      "sha256": "ec79acb874e89f288b544221debb9a5118d61c928d51044a1b0b876c6a6e3b11",
+      "row_count": 39,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "zez1-ka2w",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/zez1-ka2w",
+        "title": "Rural Emergency Hospital Unplanned Hospital Visits - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "reh_unplanned_visits_national",
+      "title": "Rural Emergency Hospital Unplanned Hospital Visits - National",
+      "group": "rural",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/ab50380fe5f8578c9b07e118dcdc43e4_1770163683/REH_Unplanned_Hospital_Visits-National.csv",
+      "local_path": "data/cms_rural_health/rural/reh_unplanned_visits_national.csv",
+      "size_bytes": 320,
+      "sha256": "f296d65d98bfa2fe71d58054d30c74f197a9db02213d968a032373ffb6bbdb08",
+      "row_count": 1,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "uk3n-au7a",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/uk3n-au7a",
+        "title": "Rural Emergency Hospital Unplanned Hospital Visits - National"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_provider_cost_report",
+      "title": "Hospital Provider Cost Report",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/3c39f483-c7e0-4025-8396-4df76942e10f/CostReport_2023_Final.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_provider_cost_report.csv",
+      "size_bytes": 4130294,
+      "sha256": "614f3d94dfeb84092ca775f90913ab4f843233a4fa90c3df3013efeb5221a757",
+      "row_count": 6103,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/44060663-47d8-4ced-a115-b53b4c270acb/data-viewer",
+        "modified": "2026-01-08",
+        "landingPage": "https://data.cms.gov/provider-compliance/cost-reports/hospital-provider-cost-report",
+        "title": "Hospital Provider Cost Report"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_general_information",
+      "title": "Hospital General Information",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/893c372430d9d71a1c52737d01239d47_1770163599/Hospital_General_Information.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_general_information.csv",
+      "size_bytes": 1478095,
+      "sha256": "e3c290c3953d8cf7609a3e51740c9a1a3836f97268ee5b1143ec4e85787854a3",
+      "row_count": 5426,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "xubh-q36u",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/xubh-q36u",
+        "title": "Hospital General Information"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_enrollments",
+      "title": "Hospital Enrollments",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-03/8752b367-9ac9-4f8e-bf05-ba51f0f9e59c/Hospital_Enrollments_2026.03.02.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_enrollments.csv",
+      "size_bytes": 2547169,
+      "sha256": "031fc0b171df6ca96d9484b1c057b2ccc9d07c8a94f668bccead997b774d56d3",
+      "row_count": 9187,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/f6f6505c-e8b0-4d57-b258-e2b94133aaf2/data-viewer",
+        "modified": "2026-03-16",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospital-enrollments",
+        "title": "Hospital Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_all_owners",
+      "title": "Hospital All Owners",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-03/cde22019-a033-44fe-9fd2-032b45e95134/Hospital_All_Owners_2026.03.02.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_all_owners.csv",
+      "size_bytes": 25992291,
+      "sha256": "102e18b088ab7ca427f2b30c21d68d3a439741c8da34e636dcb726e8016a77ba",
+      "row_count": 147661,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/029c119f-f79c-49be-9100-344d31d10344/data-viewer",
+        "modified": "2026-03-16",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospital-all-owners",
+        "title": "Hospital All Owners"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_change_of_ownership",
+      "title": "Hospital Change of Ownership",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/ca39f6b4-94ba-4242-8f4c-1d7654b55767/Hospital_CHOW_2026.01.02.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_change_of_ownership.csv",
+      "size_bytes": 244659,
+      "sha256": "7c7c9ecaab0cb122592e320ee45bc0da52b52dbc9f8a1136e8e2c05199cd2495",
+      "row_count": 754,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/c04031db-54ce-461c-85d1-d2613d71f167/data-viewer",
+        "modified": "2026-01-20",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospital-change-of-ownership",
+        "title": "Hospital Change of Ownership"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospital_service_area",
+      "title": "Hospital Service Area",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2025-07/8fca1932-adaa-411d-a912-78fb0854a286/Hospital_Service_Area_2024.csv",
+      "local_path": "data/cms_rural_health/cah/hospital_service_area.csv",
+      "size_bytes": 26951355,
+      "sha256": "1698b7fb8372ebafe126099e2b2406a841411f6eb2d22f50ca9add545bff5aa8",
+      "row_count": 1156702,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/8708ca8b-8636-44ed-8303-724cbfaf78ad/data-viewer",
+        "modified": "2025-09-10",
+        "landingPage": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-inpatient-hospitals/hospital-service-area",
+        "title": "Hospital Service Area"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "pos_iqies",
+      "title": "Provider of Services File - Internet Quality Improvement and Evaluation System",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-04/90983850-6dfe-4886-9dfa-1a3890a655b3/POS_File_iQIES_Q1_2026.csv",
+      "local_path": "data/cms_rural_health/cah/pos_iqies.csv",
+      "size_bytes": 174808521,
+      "sha256": "08bf2c75fe9a3793aa6ef93417ee04b2b2c4a72feb5dac0ade337b08c08f38b3",
+      "row_count": 77283,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/086e48c4-87a6-4be1-8823-29e8da8f225b/data-viewer",
+        "modified": "2026-04-15",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system",
+        "title": "Provider of Services File - Internet Quality Improvement and Evaluation System"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "pos_qies_hospital_other",
+      "title": "Provider of Services File - Quality Improvement and Evaluation System",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2026-04/8ff9bcf4-032e-4a6f-b1c1-d8f1c2e96885/Hospital_and_other.DATA.Q1_2026.csv",
+      "local_path": "data/cms_rural_health/cah/pos_qies_hospital_other.csv",
+      "size_bytes": 30016084,
+      "sha256": "dc6edee436a33d69771874fb2b2cf80d142343b653a4754f047cd33663608550",
+      "row_count": 44429,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/8ba0f9b4-9493-4aa0-9f82-44ea9468d1b5/data-viewer",
+        "modified": "2026-04-15",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-quality-improvement-and-evaluation-system",
+        "title": "Provider of Services File - Quality Improvement and Evaluation System"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "snf_swing_beds_qrp",
+      "title": "Skilled Nursing Facility Quality Reporting Program - Swing Beds - Provider Data",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/a74e6a1191a1b55e31ad874e4a980003_1768593950/Swing_Bed_SNF_data_Jan2026.csv",
+      "local_path": "data/cms_rural_health/cah/snf_swing_beds_qrp.csv",
+      "size_bytes": 7625565,
+      "sha256": "d6ac5019c67d2c381d95ec07fa261857a37c1830a6807b00a2046e0c8047e76d",
+      "row_count": 43890,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "6uyb-waub",
+        "modified": "2026-01-01",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/6uyb-waub",
+        "title": "Skilled Nursing Facility Quality Reporting Program - Swing Beds - Provider Data"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "medicare_inpatient_by_provider",
+      "title": "Medicare Inpatient Hospitals - by Provider",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2025-05/10e4b7e9-40c5-437b-b4d6-61801b6681f2/MUP_INP_RY25_P04_V10_DY23_Prv.CSV",
+      "local_path": "data/cms_rural_health/cah/medicare_inpatient_by_provider.csv",
+      "size_bytes": 1811896,
+      "sha256": "b5e74604a1ce1d5ca6ee8506595a77a0076f21aaa3e90a42c2516ed8100b4c1d",
+      "row_count": 3093,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/ee6fb1a5-39b9-46b3-a980-a7284551a732/data-viewer",
+        "modified": "2025-05-22",
+        "landingPage": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-inpatient-hospitals/medicare-inpatient-hospitals-by-provider",
+        "title": "Medicare Inpatient Hospitals - by Provider"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "medicare_outpatient_by_provider_service",
+      "title": "Medicare Outpatient Hospitals - by Provider and Service",
+      "group": "cah",
+      "url": "https://data.cms.gov/sites/default/files/2025-08/bceaa5e1-e58c-4109-9f05-832fc5e6bbc8/MUP_OUT_RY25_P04_V10_DY23_Prov_Svc.csv",
+      "local_path": "data/cms_rural_health/cah/medicare_outpatient_by_provider_service.csv",
+      "size_bytes": 28172823,
+      "sha256": "0f61ed6800ca0b4f8344975c2ce9eae708f6cc795734b57dd329a7efc30d91aa",
+      "row_count": 116799,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/ccbc9a44-40d4-46b4-a709-5caa59212e50/data-viewer",
+        "modified": "2025-08-22",
+        "landingPage": "https://data.cms.gov/provider-summary-by-type-of-service/medicare-outpatient-hospitals/medicare-outpatient-hospitals-by-provider-and-service",
+        "title": "Medicare Outpatient Hospitals - by Provider and Service"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "timely_effective_care_hospital",
+      "title": "Timely and Effective Care - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1770163650/Timely_and_Effective_Care-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/timely_effective_care_hospital.csv",
+      "size_bytes": 33731803,
+      "sha256": "80349ffa99c0085039f96b73060a0b5a4bcd792035b749b6aa3dda8c1c3d874e",
+      "row_count": 138129,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "yv7e-xc69",
+        "modified": "2026-01-27",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/yv7e-xc69",
+        "title": "Timely and Effective Care - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "unplanned_visits_hospital",
+      "title": "Unplanned Hospital Visits - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/30edc1d0417a34b58affcc2495a02b0a_1770163657/Unplanned_Hospital_Visits-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/unplanned_visits_hospital.csv",
+      "size_bytes": 19020010,
+      "sha256": "29ce42d8747545acd2678568ae8623f107a10270fca59d05a28b137fc5ee0c00",
+      "row_count": 67046,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "632h-zaca",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/632h-zaca",
+        "title": "Unplanned Hospital Visits - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "healthcare_associated_infections_hospital",
+      "title": "Healthcare Associated Infections - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/43825e12dc0c923df9ba5cbdf473c9d5_1770163586/Healthcare_Associated_Infections-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/healthcare_associated_infections_hospital.csv",
+      "size_bytes": 38605303,
+      "sha256": "dfdbdcc7cd87fa39a7a29269964c6a25f48d754631fbc4cad1913c50eeab876f",
+      "row_count": 172404,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "77hc-ibv8",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/77hc-ibv8",
+        "title": "Healthcare Associated Infections - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "complications_deaths_hospital",
+      "title": "Complications and Deaths - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/6af7c44d77436e5a1caac3ce39a83fe9_1770163566/Complications_and_Deaths-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/complications_deaths_hospital.csv",
+      "size_bytes": 22962876,
+      "sha256": "b88cf9898cb1068f3edcb353b88fbee1cdad9db2d875d198232e7fa2285f0542",
+      "row_count": 95780,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "ynj2-r877",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/ynj2-r877",
+        "title": "Complications and Deaths - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hcahps_hospital",
+      "title": "Patient survey (HCAHPS) - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1770163580/HCAHPS-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/hcahps_hospital.csv",
+      "size_bytes": 105412473,
+      "sha256": "2a3650e059d42ed1bc4b1091beba6c6fe812d53d059010b59cdd847d251902d5",
+      "row_count": 325652,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "dgck-syfz",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/dgck-syfz",
+        "title": "Patient survey (HCAHPS) - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hrrp",
+      "title": "Hospital Readmissions Reduction Program",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/a171bc36c488d3e0dc33ec63abb469a6_1770163617/FY_2026_Hospital_Readmissions_Reduction_Program_Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/hrrp.csv",
+      "size_bytes": 2068464,
+      "sha256": "7e7915dd2751a1e59ac46dbc9194fb781e820962a04d47c31344ea2bb30c91f6",
+      "row_count": 18330,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "9n3s-kdb3",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/9n3s-kdb3",
+        "title": "Hospital Readmissions Reduction Program"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hac_reduction",
+      "title": "Hospital-Acquired Condition (HAC) Reduction Program",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/74be67fd6833391f578abb5605d03ce6_1770163605/FY_2026_HAC_Reduction_Program_Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/hac_reduction.csv",
+      "size_bytes": 595701,
+      "sha256": "5e152d9872e6f3a012eafe312b1f9916c1cc0a830aed0752aa1aef1925a4e5c4",
+      "row_count": 3055,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "yq43-i98g",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/yq43-i98g",
+        "title": "Hospital-Acquired Condition (HAC) Reduction Program"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hvbp_total_performance",
+      "title": "Hospital Value-Based Purchasing (HVBP) - Total Performance Score",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/5551d4839c1dd75e3f7fe1310a1e2369_1770163628/hvbp_tps.csv",
+      "local_path": "data/cms_rural_health/cah/hvbp_total_performance.csv",
+      "size_bytes": 568036,
+      "sha256": "68263e795e5cd228b63e9632f50b1613e409f3ff20d85fd0c114aed4085ee103",
+      "row_count": 2455,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "ypbt-wvdk",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/ypbt-wvdk",
+        "title": "Hospital Value-Based Purchasing (HVBP) - Total Performance Score"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "msbp_hospital",
+      "title": "Medicare Spending Per Beneficiary - Hospital",
+      "group": "cah",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/69874ce604586980ac088283c1b35095_1770163639/Medicare_Hospital_Spending_Per_Patient-Hospital.csv",
+      "local_path": "data/cms_rural_health/cah/msbp_hospital.csv",
+      "size_bytes": 990223,
+      "sha256": "543ab5896385dd921c092ae849cbd9fd531edf1c6c4ffcefe8e6503210d587ef",
+      "row_count": 4625,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "provider_data",
+        "identifier": "rrqw-56er",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-data/dataset/rrqw-56er",
+        "title": "Medicare Spending Per Beneficiary - Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "home_health_enrollments",
+      "title": "Home Health Agency Enrollments",
+      "group": "post_acute",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/ba21a4f0-b9e2-418c-b927-f94697045a69/HHA_Enrollments_2026.01.21.csv",
+      "local_path": "data/cms_rural_health/post_acute/home_health_enrollments.csv",
+      "size_bytes": 2476086,
+      "sha256": "3e9f68045b3218c50e8cc71f1ffdbb070051a8c952a675bfd2b02732167c86e2",
+      "row_count": 11660,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/15f64ab4-3172-4a27-b589-ebd67a6d28aa/data-viewer",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/home-health-agency-enrollments",
+        "title": "Home Health Agency Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "home_health_cost_report",
+      "title": "Home Health Agency Cost Report",
+      "group": "post_acute",
+      "url": "https://data.cms.gov/sites/default/files/2026-04/ee846a4a-bfa2-4bd4-b79c-4e24a2b2782c/CostReporthha_Final_23_update.csv",
+      "local_path": "data/cms_rural_health/post_acute/home_health_cost_report.csv",
+      "size_bytes": 6861211,
+      "sha256": "a525e2786da56ccfc82883540122767d2eaa3e7f97a49514107f2c460e15cd60",
+      "row_count": 10715,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/4999da74-1d8d-4a6f-934e-2d7ea470cc63/data-viewer",
+        "modified": "2026-04-13",
+        "landingPage": "https://data.cms.gov/provider-compliance/cost-reports/home-health-agency-cost-report",
+        "title": "Home Health Agency Cost Report"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "hospice_enrollments",
+      "title": "Hospice Enrollments",
+      "group": "post_acute",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/adf86a27-5387-44b9-85c6-72e7c4ea5342/Hospice_Enrollments_2026.01.21.csv",
+      "local_path": "data/cms_rural_health/post_acute/hospice_enrollments.csv",
+      "size_bytes": 1224131,
+      "sha256": "1d6037ed03e157dea6b14a915aface5d20182382cbdbbfc4457093133b6d8a58",
+      "row_count": 6227,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/25704213-e833-4b8b-9dbc-58dd17149209/data-viewer",
+        "modified": "2026-01-26",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospice-enrollments",
+        "title": "Hospice Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "snf_enrollments",
+      "title": "Skilled Nursing Facility Enrollments",
+      "group": "post_acute",
+      "url": "https://data.cms.gov/sites/default/files/2026-03/5ea4e9fc-1081-4404-9eab-17013c4f6aa5/SNF_Enrollments_2026.03.02.csv",
+      "local_path": "data/cms_rural_health/post_acute/snf_enrollments.csv",
+      "size_bytes": 3936486,
+      "sha256": "751eb5f41870dfb020aa1ca6a1c470e1e9a287e63397d6e5318e5270278292e3",
+      "row_count": 14431,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/5f2c306f-3b1c-42cd-b037-187b2ce22126/data-viewer",
+        "modified": "2026-03-16",
+        "landingPage": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/skilled-nursing-facility-enrollments",
+        "title": "Skilled Nursing Facility Enrollments"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "snf_cost_report",
+      "title": "Skilled Nursing Facility Cost Report",
+      "group": "post_acute",
+      "url": "https://data.cms.gov/sites/default/files/2025-11/34ea98e4-20f4-42f7-b5b2-616d35b0fe93/CostReportsnf_Final_23.csv",
+      "local_path": "data/cms_rural_health/post_acute/snf_cost_report.csv",
+      "size_bytes": 8662303,
+      "sha256": "03a8f2fa70f070a0bdca68710ed4ca9de616430c4b58d9640ef300499781dd71",
+      "row_count": 14933,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/a69d3df7-3f66-4a0d-b5b8-0d66049bd565/data-viewer",
+        "modified": "2025-12-19",
+        "landingPage": "https://data.cms.gov/provider-compliance/cost-reports/skilled-nursing-facility-cost-report",
+        "title": "Skilled Nursing Facility Cost Report"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "medicare_geographic_variation_state_county",
+      "title": "Medicare Geographic Variation - by National, State & County",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2025-03/a40ac71d-9f80-4d99-92d2-fd149433d7d8/2014-2023%20Medicare%20Fee-for-Service%20Geographic%20Variation%20Public%20Use%20File.csv",
+      "local_path": "data/cms_rural_health/geography/medicare_geographic_variation_state_county.csv",
+      "size_bytes": 52838951,
+      "sha256": "658dc3fec0b08f4bce911a8483a8378a3cf09965ac7bc82d8790d0b35b7138a2",
+      "row_count": 33639,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/6219697b-8f6c-4164-bed4-cd9317c58ebc/data-viewer",
+        "modified": "2025-04-24",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-geographic-comparisons/medicare-geographic-variation-by-national-state-county",
+        "title": "Medicare Geographic Variation - by National, State & County"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "medicare_monthly_enrollment",
+      "title": "Medicare Monthly Enrollment",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2026-03/c2e42f20-57f6-4bbf-95a7-5267cec3f77c/Medicare%20Monthly%20Enrollment%20Data_December%202025.csv",
+      "local_path": "data/cms_rural_health/geography/medicare_monthly_enrollment.csv",
+      "size_bytes": 207292083,
+      "sha256": "41e827ac96ae95215f5b1a3aa494205f49dbbb50d653ef3fa246f8f6d0720ef9",
+      "row_count": 563758,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/d7fabe1e-d19b-4333-9eff-e80e0643f2fd/data-viewer",
+        "modified": "2026-03-24",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-beneficiary-enrollment/medicare-and-medicaid-reports/medicare-monthly-enrollment",
+        "title": "Medicare Monthly Enrollment"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "market_saturation_cbsa",
+      "title": "Market Saturation & Utilization Core-Based Statistical Areas",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2026-02/79de2d28-0fbf-44a6-b9a9-6929b389b15c/Market_Saturation_and_Utilization_CBSA_Dataset_Release_R22_25-12-17.csv",
+      "local_path": "data/cms_rural_health/geography/market_saturation_cbsa.csv",
+      "size_bytes": 153198813,
+      "sha256": "6b7bbead69fbb54868bf96330470508ac62d9ce73247527377361515716dd8e7",
+      "row_count": 207651,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/9b0e7798-d945-48fc-9861-d38bb5083a74/data-viewer",
+        "modified": "2026-02-19",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-use-and-payments/program-integrity-market-saturation-by-type-of-service/market-saturation-utilization-core-based-statistical-areas",
+        "title": "Market Saturation & Utilization Core-Based Statistical Areas"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "cms_ps_medicare_inpatient",
+      "title": "CMS Program Statistics - Medicare Inpatient Hospital",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/7b6c177c-76bc-45db-a26f-31640033ca85/MDCR%20INPT%20HOSP_CPS_05UIP_2023.zip",
+      "local_path": "data/cms_rural_health/geography/cms_ps_medicare_inpatient.zip",
+      "size_bytes": 123880,
+      "sha256": "3c5d92b938294003d47eb0ae7658ac7a85eb62682872079bcedd88dce72a562f",
+      "row_count": 1,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/1e1beaba-9b41-47ca-960a-bd47b6ea65bd/data-viewer",
+        "modified": "2026-01-30",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-service-type-reports/cms-program-statistics-medicare-inpatient-hospital",
+        "title": "CMS Program Statistics - Medicare Inpatient Hospital"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "cms_ps_medicare_outpatient",
+      "title": "CMS Program Statistics - Medicare Outpatient Facility",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2026-01/MDCR%20OUTPT_CPS_09UOT_2023.zip",
+      "local_path": "data/cms_rural_health/geography/cms_ps_medicare_outpatient.zip",
+      "size_bytes": 102274,
+      "sha256": "6069d8cda455bd17e5d33fb216bb081a2db075b4e5a80b356f24ef6791b2a439",
+      "row_count": 1,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/41d96997-415c-42fd-b473-81b7640a7ce2/data-viewer",
+        "modified": "2026-01-30",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-service-type-reports/cms-program-statistics-medicare-outpatient-facility",
+        "title": "CMS Program Statistics - Medicare Outpatient Facility"
+      },
+      "extras": {}
+    },
+    {
+      "slug": "cms_ps_medicare_providers",
+      "title": "CMS Program Statistics - Medicare Providers",
+      "group": "geography",
+      "url": "https://data.cms.gov/sites/default/files/2025-09/7e6dbbac-0873-4fe6-9d4a-4168b79e4556/MDCR%20PROVIDERS_CPS19PRV_2023.zip",
+      "local_path": "data/cms_rural_health/geography/cms_ps_medicare_providers.zip",
+      "size_bytes": 55504,
+      "sha256": "bf41d52bafd3d4146c2b37289ab46dc79aee8823c721289bd7775896cfaf692f",
+      "row_count": 1,
+      "status": "ok",
+      "error": "",
+      "catalog_meta": {
+        "source": "cms_catalog",
+        "identifier": "https://data.cms.gov/data-api/v1/dataset/5ad4e138-a8b4-49e1-a2f4-34f52b3a665a/data-viewer",
+        "modified": "2025-09-30",
+        "landingPage": "https://data.cms.gov/summary-statistics-on-provider-enrollment/medicare-provider-type-reports/cms-program-statistics-medicare-providers",
+        "title": "CMS Program Statistics - Medicare Providers"
+      },
+      "extras": {}
+    }
+  ],
+  "summary": {
+    "total": 41,
+    "ok": 41,
+    "error": 0,
+    "skipped": 0,
+    "bytes_downloaded": 1003889153
+  },
+  "post_processing": {
+    "cah_hospitals": {
+      "total_hospitals": 5426,
+      "critical_access_hospitals": 1376,
+      "column_used": "Hospital Type",
+      "top_states": {
+        "TX": 92,
+        "IA": 82,
+        "KS": 82,
+        "MN": 76,
+        "NE": 62,
+        "WI": 58,
+        "IL": 55,
+        "MT": 50,
+        "SD": 40,
+        "OK": 39,
+        "WA": 39,
+        "CA": 38,
+        "ND": 37,
+        "MI": 35,
+        "MO": 35
+      }
+    },
+    "rural_emergency_hospitals": {
+      "reh_rows": 39,
+      "source_files": [
+        "reh_timely_effective_care_hospital.csv",
+        "reh_outpatient_imaging_hospital.csv",
+        "reh_unplanned_visits_hospital.csv"
+      ]
+    }
+  },
+  "catalog_sources": {
+    "cms_catalog": "https://data.cms.gov/data.json",
+    "provider_data": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items"
+  }
+}
