@@ -1,0 +1,192 @@
+[submodule "experiments/alexwg/cpython"]
+	path = experiments/alexwg/cpython
+	url = https://github.com/alexwg/cpython.git
+[submodule "experiments/karpathy/nanochat"]
+	path = experiments/karpathy/nanochat
+	url = https://github.com/karpathy/nanochat.git
+[submodule "experiments/karpathy/karpathy.github.io"]
+	path = experiments/karpathy/karpathy.github.io
+	url = https://github.com/karpathy/karpathy.github.io.git
+[submodule "experiments/karpathy/autoresearch"]
+	path = experiments/karpathy/autoresearch
+	url = https://github.com/karpathy/autoresearch.git
+[submodule "experiments/karpathy/jobs"]
+	path = experiments/karpathy/jobs
+	url = https://github.com/karpathy/jobs.git
+[submodule "experiments/karpathy/rustbpe"]
+	path = experiments/karpathy/rustbpe
+	url = https://github.com/karpathy/rustbpe.git
+[submodule "experiments/karpathy/cpython"]
+	path = experiments/karpathy/cpython
+	url = https://github.com/karpathy/cpython.git
+[submodule "experiments/karpathy/hn-time-capsule"]
+	path = experiments/karpathy/hn-time-capsule
+	url = https://github.com/karpathy/hn-time-capsule.git
+[submodule "experiments/karpathy/llm-council"]
+	path = experiments/karpathy/llm-council
+	url = https://github.com/karpathy/llm-council.git
+[submodule "experiments/karpathy/reader3"]
+	path = experiments/karpathy/reader3
+	url = https://github.com/karpathy/reader3.git
+[submodule "experiments/karpathy/nanoGPT"]
+	path = experiments/karpathy/nanoGPT
+	url = https://github.com/karpathy/nanoGPT.git
+[submodule "experiments/karpathy/rendergit"]
+	path = experiments/karpathy/rendergit
+	url = https://github.com/karpathy/rendergit.git
+[submodule "experiments/karpathy/llm.c"]
+	path = experiments/karpathy/llm.c
+	url = https://github.com/karpathy/llm.c.git
+[submodule "experiments/karpathy/nn-zero-to-hero"]
+	path = experiments/karpathy/nn-zero-to-hero
+	url = https://github.com/karpathy/nn-zero-to-hero.git
+[submodule "experiments/karpathy/minGPT"]
+	path = experiments/karpathy/minGPT
+	url = https://github.com/karpathy/minGPT.git
+[submodule "experiments/karpathy/build-nanogpt"]
+	path = experiments/karpathy/build-nanogpt
+	url = https://github.com/karpathy/build-nanogpt.git
+[submodule "experiments/karpathy/micrograd"]
+	path = experiments/karpathy/micrograd
+	url = https://github.com/karpathy/micrograd.git
+[submodule "experiments/karpathy/llama2.c"]
+	path = experiments/karpathy/llama2.c
+	url = https://github.com/karpathy/llama2.c.git
+[submodule "experiments/karpathy/LLM101n"]
+	path = experiments/karpathy/LLM101n
+	url = https://github.com/karpathy/LLM101n.git
+[submodule "experiments/karpathy/minbpe"]
+	path = experiments/karpathy/minbpe
+	url = https://github.com/karpathy/minbpe.git
+[submodule "experiments/karpathy/makemore"]
+	path = experiments/karpathy/makemore
+	url = https://github.com/karpathy/makemore.git
+[submodule "experiments/karpathy/calorie"]
+	path = experiments/karpathy/calorie
+	url = https://github.com/karpathy/calorie.git
+[submodule "experiments/karpathy/lecun1989-repro"]
+	path = experiments/karpathy/lecun1989-repro
+	url = https://github.com/karpathy/lecun1989-repro.git
+[submodule "experiments/karpathy/ng-video-lecture"]
+	path = experiments/karpathy/ng-video-lecture
+	url = https://github.com/karpathy/ng-video-lecture.git
+[submodule "experiments/karpathy/char-rnn"]
+	path = experiments/karpathy/char-rnn
+	url = https://github.com/karpathy/char-rnn.git
+[submodule "experiments/karpathy/notpygamejs"]
+	path = experiments/karpathy/notpygamejs
+	url = https://github.com/karpathy/notpygamejs.git
+[submodule "experiments/karpathy/researchpooler"]
+	path = experiments/karpathy/researchpooler
+	url = https://github.com/karpathy/researchpooler.git
+[submodule "experiments/karpathy/karpathy"]
+	path = experiments/karpathy/karpathy
+	url = https://github.com/karpathy/karpathy.git
+[submodule "experiments/karpathy/arxiv-sanity-lite"]
+	path = experiments/karpathy/arxiv-sanity-lite
+	url = https://github.com/karpathy/arxiv-sanity-lite.git
+[submodule "experiments/karpathy/randomfun"]
+	path = experiments/karpathy/randomfun
+	url = https://github.com/karpathy/randomfun.git
+[submodule "experiments/karpathy/convnetjs"]
+	path = experiments/karpathy/convnetjs
+	url = https://github.com/karpathy/convnetjs.git
+[submodule "experiments/karpathy/transformers"]
+	path = experiments/karpathy/transformers
+	url = https://github.com/karpathy/transformers.git
+[submodule "experiments/karpathy/arxiv-sanity-preserver"]
+	path = experiments/karpathy/arxiv-sanity-preserver
+	url = https://github.com/karpathy/arxiv-sanity-preserver.git
+[submodule "experiments/karpathy/deep-vector-quantization"]
+	path = experiments/karpathy/deep-vector-quantization
+	url = https://github.com/karpathy/deep-vector-quantization.git
+[submodule "experiments/karpathy/optim"]
+	path = experiments/karpathy/optim
+	url = https://github.com/karpathy/optim.git
+[submodule "experiments/karpathy/cryptos"]
+	path = experiments/karpathy/cryptos
+	url = https://github.com/karpathy/cryptos.git
+[submodule "experiments/karpathy/neuraltalk"]
+	path = experiments/karpathy/neuraltalk
+	url = https://github.com/karpathy/neuraltalk.git
+[submodule "experiments/karpathy/ulogme"]
+	path = experiments/karpathy/ulogme
+	url = https://github.com/karpathy/ulogme.git
+[submodule "experiments/karpathy/covid-sanity"]
+	path = experiments/karpathy/covid-sanity
+	url = https://github.com/karpathy/covid-sanity.git
+[submodule "experiments/karpathy/gitstats"]
+	path = experiments/karpathy/gitstats
+	url = https://github.com/karpathy/gitstats.git
+[submodule "experiments/karpathy/sqlitedict"]
+	path = experiments/karpathy/sqlitedict
+	url = https://github.com/karpathy/sqlitedict.git
+[submodule "experiments/karpathy/pytorch-normalizing-flows"]
+	path = experiments/karpathy/pytorch-normalizing-flows
+	url = https://github.com/karpathy/pytorch-normalizing-flows.git
+[submodule "experiments/karpathy/tsnejs"]
+	path = experiments/karpathy/tsnejs
+	url = https://github.com/karpathy/tsnejs.git
+[submodule "experiments/karpathy/reinforcejs"]
+	path = experiments/karpathy/reinforcejs
+	url = https://github.com/karpathy/reinforcejs.git
+[submodule "experiments/karpathy/pytorch-made"]
+	path = experiments/karpathy/pytorch-made
+	url = https://github.com/karpathy/pytorch-made.git
+[submodule "experiments/karpathy/examples"]
+	path = experiments/karpathy/examples
+	url = https://github.com/karpathy/examples.git
+[submodule "experiments/karpathy/svmjs"]
+	path = experiments/karpathy/svmjs
+	url = https://github.com/karpathy/svmjs.git
+[submodule "experiments/karpathy/find-birds"]
+	path = experiments/karpathy/find-birds
+	url = https://github.com/karpathy/find-birds.git
+[submodule "experiments/karpathy/neuraltalk2"]
+	path = experiments/karpathy/neuraltalk2
+	url = https://github.com/karpathy/neuraltalk2.git
+[submodule "experiments/karpathy/tf-agent"]
+	path = experiments/karpathy/tf-agent
+	url = https://github.com/karpathy/tf-agent.git
+[submodule "experiments/karpathy/nipspreview"]
+	path = experiments/karpathy/nipspreview
+	url = https://github.com/karpathy/nipspreview.git
+[submodule "experiments/karpathy/paper-notes"]
+	path = experiments/karpathy/paper-notes
+	url = https://github.com/karpathy/paper-notes.git
+[submodule "experiments/karpathy/recurrentjs"]
+	path = experiments/karpathy/recurrentjs
+	url = https://github.com/karpathy/recurrentjs.git
+[submodule "experiments/karpathy/EigenLibSVM"]
+	path = experiments/karpathy/EigenLibSVM
+	url = https://github.com/karpathy/EigenLibSVM.git
+[submodule "experiments/karpathy/nn"]
+	path = experiments/karpathy/nn
+	url = https://github.com/karpathy/nn.git
+[submodule "experiments/karpathy/simple-amt"]
+	path = experiments/karpathy/simple-amt
+	url = https://github.com/karpathy/simple-amt.git
+[submodule "experiments/karpathy/scholaroctopus"]
+	path = experiments/karpathy/scholaroctopus
+	url = https://github.com/karpathy/scholaroctopus.git
+[submodule "experiments/karpathy/Random-Forest-Matlab"]
+	path = experiments/karpathy/Random-Forest-Matlab
+	url = https://github.com/karpathy/Random-Forest-Matlab.git
+[submodule "experiments/karpathy/researchlei"]
+	path = experiments/karpathy/researchlei
+	url = https://github.com/karpathy/researchlei.git
+[submodule "experiments/karpathy/twoolpy"]
+	path = experiments/karpathy/twoolpy
+	url = https://github.com/karpathy/twoolpy.git
+[submodule "experiments/karpathy/forestjs"]
+	path = experiments/karpathy/forestjs
+	url = https://github.com/karpathy/forestjs.git
+[submodule "experiments/karpathy/MatlabWrapper"]
+	path = experiments/karpathy/MatlabWrapper
+	url = https://github.com/karpathy/MatlabWrapper.git
+[submodule "experiments/karpathy/lifejs"]
+	path = experiments/karpathy/lifejs
+	url = https://github.com/karpathy/lifejs.git
+[submodule "experiments/karpathy/scriptsbots"]
+	path = experiments/karpathy/scriptsbots
+	url = https://github.com/karpathy/scriptsbots.git
