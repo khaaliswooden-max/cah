@@ -1,0 +1,16 @@
+# CAH Transformation Engine
+# Optional AI/LLM Dependencies
+# Install: pip install -r requirements-ai.txt
+
+# Include production dependencies
+-r requirements.txt
+
+# LLM SDKs
+openai>=1.50.0
+anthropic>=0.40.0
+
+# Tokenization
+tiktoken>=0.8.0
+
+# Model Context Protocol
+mcp>=1.0.0
