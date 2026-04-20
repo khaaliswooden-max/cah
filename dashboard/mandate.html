@@ -6,180 +6,201 @@
 <title>CAH Mandate Triage — Gap to FI ≥ 0.50 AND QI ≥ 0.50</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg-primary: #0a0f1a;
-    --bg-secondary: #111827;
-    --bg-card: #1a2234;
-    --border: #2d3a4f;
-    --text-primary: #f0f4f8;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --solved: #22c55e;
-    --qi-blocker: #f59e0b;
-    --fi-blocker: #06b6d4;
-    --both-blockers: #ef4444;
-    --accent: #06b6d4;
-    --quick-win: #facc15;
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #6b6b6b;
+    --border: #e5e5e5;
+    --hover: #f5f5f5;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    background: var(--bg-primary); color: var(--text-primary);
-    min-height: 100vh; line-height: 1.5;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--fg);
+    min-height: 100vh; line-height: 1.55; font-size: 15px;
+    -webkit-font-smoothing: antialiased;
 }
-.container { max-width: 1600px; margin: 0 auto; padding: 24px; }
+a { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+.container { max-width: 1600px; margin: 0 auto; padding: 24px 32px; }
 header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 16px 24px; background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding: 20px 32px; border-bottom: 1px solid var(--fg);
+    max-width: 1600px; margin: 0 auto;
 }
-header h1 { font-size: 20px; font-weight: 700; }
-header .subtitle { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
+header h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+}
+header .subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; max-width: 720px; }
+header .back-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    text-decoration: none; border-bottom: 1px solid var(--fg); padding-bottom: 2px;
+    margin-top: 6px; display: inline-block;
+}
 .status-chip {
-    display: inline-block; padding: 6px 12px; border-radius: 6px;
-    font-size: 12px; font-weight: 600; background: rgba(6, 182, 212, 0.15);
-    color: var(--accent); font-family: 'JetBrains Mono', monospace;
+    display: inline-block; padding: 6px 10px; border: 1px solid var(--fg);
+    font-size: 11px; font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase;
 }
 
 .cohort-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
 .cohort-card {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-left-width: 4px;
-    border-radius: 10px; padding: 16px;
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 16px;
 }
-.cohort-card.dual_solved { border-left-color: var(--solved); }
-.cohort-card.qi_only_blocker { border-left-color: var(--qi-blocker); }
-.cohort-card.fi_only_blocker { border-left-color: var(--fi-blocker); }
-.cohort-card.both_blockers { border-left-color: var(--both-blockers); }
 .cohort-card .label {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
 }
 .cohort-card .value {
-    font-size: 32px; font-weight: 700; margin: 6px 0 4px 0;
-    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px; font-weight: 500; margin: 6px 0 4px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-variant-numeric: tabular-nums; color: var(--fg);
 }
-.cohort-card.dual_solved .value { color: var(--solved); }
-.cohort-card.qi_only_blocker .value { color: var(--qi-blocker); }
-.cohort-card.fi_only_blocker .value { color: var(--fi-blocker); }
-.cohort-card.both_blockers .value { color: var(--both-blockers); }
-.cohort-card .pct { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-.cohort-card .desc { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+.cohort-card .pct { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.cohort-card .desc { font-size: 12px; color: var(--fg); line-height: 1.5; }
 
 .mandate-banner {
-    background: linear-gradient(90deg, rgba(6, 182, 212, 0.08), rgba(34, 197, 94, 0.05));
-    border: 1px solid var(--border); border-left: 4px solid var(--accent);
-    padding: 14px 18px; border-radius: 10px; margin-bottom: 20px;
+    background: var(--bg);
+    border: 1px solid var(--fg);
+    padding: 14px 18px; margin-bottom: 20px;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
 }
-.mandate-banner .title { font-weight: 600; font-size: 14px; }
+.mandate-banner .title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+}
 .mandate-banner .gates {
-    font-family: 'JetBrains Mono', monospace; color: var(--text-secondary);
+    font-family: 'IBM Plex Mono', monospace; color: var(--muted);
     font-size: 12px;
 }
 
 .quick-wins {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-left: 4px solid var(--quick-win);
-    border-radius: 10px; padding: 16px; margin-bottom: 20px;
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 16px 20px; margin-bottom: 20px;
 }
-.quick-wins h2 { font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.quick-wins h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
+}
 .quick-wins .badge {
-    display: inline-block; background: rgba(250, 204, 21, 0.15);
-    color: var(--quick-win); font-family: 'JetBrains Mono', monospace;
-    font-size: 11px; padding: 3px 8px; border-radius: 4px;
+    display: inline-block; border: 1px solid var(--fg);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; padding: 2px 8px;
+    color: var(--fg); background: var(--bg);
 }
-.quick-wins .hint { color: var(--text-secondary); font-size: 12px; margin-bottom: 10px; }
-.quick-wins ul { list-style: none; }
+.quick-wins .hint { color: var(--muted); font-size: 12px; margin-bottom: 12px; font-style: italic; }
+.quick-wins ul { list-style: none; border-top: 1px solid var(--border); }
 .quick-wins li {
     display: grid; grid-template-columns: 90px 1fr 60px 120px 120px 140px;
-    gap: 10px; padding: 6px 0; font-size: 13px;
-    border-bottom: 1px dashed rgba(45, 58, 79, 0.4);
+    gap: 10px; padding: 8px 0; font-size: 13px;
+    border-bottom: 1px solid var(--border);
     align-items: center;
 }
 .quick-wins li:last-child { border-bottom: none; }
-.quick-wins li .ccn { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 12px; }
-.quick-wins li .name { color: var(--text-primary); }
-.quick-wins li .st { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 12px; }
+.quick-wins li .ccn { font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.quick-wins li .name { color: var(--fg); }
+.quick-wins li .st { font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 12px; }
 .quick-wins li .gap {
-    font-family: 'JetBrains Mono', monospace; font-size: 12px;
-    color: var(--text-secondary);
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    color: var(--muted); font-variant-numeric: tabular-nums;
 }
-.quick-wins li .cohort-tag {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    padding: 2px 8px; border-radius: 4px; text-align: center;
+.quick-wins li .cohort-tag { justify-self: start; }
+.cohort-tag {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
+    padding: 2px 8px; border: 1px solid var(--border);
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg); display: inline-block;
 }
-.cohort-tag.qi_only_blocker { background: rgba(245, 158, 11, 0.15); color: var(--qi-blocker); }
-.cohort-tag.fi_only_blocker { background: rgba(6, 182, 212, 0.15); color: var(--fi-blocker); }
-.cohort-tag.both_blockers { background: rgba(239, 68, 68, 0.15); color: var(--both-blockers); }
-.cohort-tag.dual_solved { background: rgba(34, 197, 94, 0.15); color: var(--solved); }
+.cohort-tag.dual_solved { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 
 .filters {
     display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 14px 16px; align-items: center;
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 14px 16px; align-items: center;
 }
-.filters label { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-right: 8px; }
+.filters label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.1em; margin-right: 8px; font-weight: 600;
+}
 .filters select, .filters input[type="text"] {
-    background: var(--bg-primary); color: var(--text-primary);
-    border: 1px solid var(--border); border-radius: 6px;
+    background: var(--bg); color: var(--fg);
+    border: 1px solid var(--border);
     padding: 6px 10px; font-family: inherit; font-size: 13px; min-width: 140px;
+    border-radius: 0;
+}
+.filters select:focus, .filters input[type="text"]:focus {
+    outline: none; border-color: var(--fg);
 }
 .filters input[type="text"] { min-width: 220px; }
-.filters .count-chip { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+.filters .count-chip { margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); }
 .filters .quick-win-toggle {
     display: inline-flex; align-items: center; gap: 6px;
-    color: var(--text-secondary); font-size: 13px; cursor: pointer;
+    color: var(--fg); font-size: 13px; cursor: pointer;
 }
-.filters .quick-win-toggle input { accent-color: var(--quick-win); }
+.filters .quick-win-toggle input { accent-color: var(--fg); }
 
-.table-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.table-wrap { background: var(--bg); border: 1px solid var(--border); overflow: hidden; }
 table.facility-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .facility-table th {
-    position: sticky; top: 0; background: var(--bg-secondary); color: var(--text-secondary);
-    text-align: left; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
-    padding: 10px 12px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
+    position: sticky; top: 0; background: var(--bg); color: var(--muted);
+    text-align: left; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 10px 12px; border-bottom: 1px solid var(--fg); cursor: pointer; user-select: none;
+    font-family: 'IBM Plex Mono', monospace;
 }
-.facility-table th:hover { color: var(--text-primary); }
-.facility-table tbody tr { border-bottom: 1px solid rgba(45, 58, 79, 0.4); }
-.facility-table tbody tr:hover { background: rgba(6, 182, 212, 0.06); }
-.facility-table tbody tr.qw-row { background: rgba(250, 204, 21, 0.04); }
-.facility-table td { padding: 9px 12px; color: var(--text-primary); }
-.facility-table td.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
-.facility-table td.numeric { font-family: 'JetBrains Mono', monospace; text-align: right; }
+.facility-table th:hover { color: var(--fg); }
+.facility-table tbody tr { border-bottom: 1px solid var(--border); }
+.facility-table tbody tr:hover { background: var(--hover); }
+.facility-table tbody tr.qw-row { background: var(--hover); }
+.facility-table td { padding: 9px 12px; color: var(--fg); }
+.facility-table td.mono { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.facility-table td.numeric { font-family: 'IBM Plex Mono', monospace; text-align: right; font-variant-numeric: tabular-nums; }
 .bar {
-    position: relative; background: rgba(45, 58, 79, 0.4);
-    border-radius: 4px; height: 6px; width: 100%; max-width: 120px;
+    position: relative; background: var(--hover);
+    border: 1px solid var(--border);
+    height: 6px; width: 100%; max-width: 120px;
     margin-top: 2px; overflow: hidden;
 }
-.bar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; }
+.bar .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--fg); }
 .bar .floor-line {
     position: absolute; top: -2px; bottom: -2px; width: 1px;
-    background: var(--text-primary); left: 50%;
+    background: var(--fg); left: 50%;
 }
-.bar .fill.fi { background: var(--fi-blocker); }
-.bar .fill.qi { background: var(--qi-blocker); }
-.bar .fill.pass { background: var(--solved); }
 .qw-badge {
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    padding: 2px 6px; border-radius: 4px;
-    background: rgba(250, 204, 21, 0.15); color: var(--quick-win);
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
+    padding: 2px 6px; border: 1px solid var(--fg);
+    background: var(--fg); color: var(--bg); letter-spacing: 0.05em;
 }
 
-.pager { display: flex; gap: 10px; padding: 12px 16px; align-items: center; border-top: 1px solid var(--border); background: var(--bg-secondary); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
-.pager button { background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-family: inherit; font-size: 12px; cursor: pointer; }
-.pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+.pager {
+    display: flex; gap: 10px; padding: 12px 16px; align-items: center;
+    border-top: 1px solid var(--border); background: var(--bg);
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted);
+}
+.pager button {
+    background: var(--bg); color: var(--fg);
+    border: 1px solid var(--fg);
+    padding: 4px 12px; font-family: inherit; font-size: 12px; cursor: pointer;
+    border-radius: 0;
+}
+.pager button:hover:not(:disabled) { background: var(--fg); color: var(--bg); }
+.pager button:disabled { opacity: 0.3; cursor: not-allowed; border-color: var(--border); color: var(--muted); }
 .pager .pager-info { margin-left: auto; }
 
-.loading { text-align: center; padding: 40px; color: var(--text-muted); }
+.loading { text-align: center; padding: 40px; color: var(--muted); }
 .methodology {
     margin-top: 24px; padding: 16px; border: 1px solid var(--border);
-    background: var(--bg-card); border-radius: 10px;
-    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+    background: var(--bg);
+    font-size: 12px; color: var(--muted); line-height: 1.65;
 }
-.methodology strong { color: var(--text-primary); }
+.methodology strong { color: var(--fg); }
+.methodology code {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--fg);
+    background: var(--hover); padding: 1px 4px;
+}
 </style>
 </head>
 <body>
@@ -187,6 +208,7 @@ table.facility-table { width: 100%; border-collapse: collapse; font-size: 13px; 
     <div>
         <h1>CAH Mandate Triage</h1>
         <div class="subtitle">Gap to the 2-part mandate (FI ≥ 0.50 AND QI ≥ 0.50) — which lever unlocks each facility</div>
+        <a class="back-link" href="index.html#solved">&larr; What Solved Looks Like</a>
     </div>
     <div class="status-chip" id="data-status">Loading…</div>
 </header>
@@ -365,8 +387,7 @@ function applyFilters() {
 
 function barFor(value, floor, isPass) {
     const pct = Math.min(100, Math.max(0, value * 100));
-    const cls = isPass ? 'pass' : (floor === FI_FLOOR ? 'fi' : 'qi');
-    return `<div class="bar"><div class="fill ${cls}" style="width: ${pct}%"></div><div class="floor-line"></div></div>`;
+    return `<div class="bar"><div class="fill" style="width: ${pct}%"></div><div class="floor-line"></div></div>`;
 }
 
 function renderTable() {

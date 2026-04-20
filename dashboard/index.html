@@ -1,444 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAH Transformation Engine | Command Center</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAH Transformation Engine — National Baseline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Scanline overlay for CRT effect -->
-    <div class="scanlines"></div>
-    
-    <!-- Background grid -->
-    <div class="grid-bg"></div>
-    
-    <!-- Corner brackets decoration -->
-    <div class="corner-bracket top-left"></div>
-    <div class="corner-bracket top-right"></div>
-    <div class="corner-bracket bottom-left"></div>
-    <div class="corner-bracket bottom-right"></div>
 
-    <header class="header">
-        <div class="header-left">
-            <div class="logo-container">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" class="logo-svg">
-                        <path d="M20 2 L38 12 L38 28 L20 38 L2 28 L2 12 Z" fill="none" stroke="currentColor" stroke-width="1"/>
-                        <path d="M20 8 L32 15 L32 25 L20 32 L8 25 L8 15 Z" fill="none" stroke="currentColor" stroke-width="1"/>
-                        <circle cx="20" cy="20" r="4" fill="currentColor"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-main">CAH</span>
-                    <span class="logo-sub">TRANSFORMATION ENGINE</span>
-                </div>
-            </div>
+<header class="site-header">
+    <div class="container header-row">
+        <div class="brand">
+            <div class="brand-name">CAH TRANSFORMATION ENGINE</div>
+            <div class="brand-sub">1,376 Critical Access Hospitals · National baseline</div>
         </div>
-        <div class="header-center">
-            <div class="status-bar">
-                <span class="status-label">SYSTEM STATUS</span>
-                <span class="status-indicator online">
-                    <span class="pulse"></span>
-                    OPERATIONAL
-                </span>
-            </div>
+        <div class="brand-meta">
+            <span class="meta-label">BASELINE</span>
+            <span class="meta-value">2026&#8209;04&#8209;20</span>
         </div>
-        <div class="header-right">
-            <div class="datetime">
-                <div class="time" id="time">00:00:00</div>
-                <div class="date" id="date">JAN 01, 2025</div>
-            </div>
+    </div>
+</header>
+
+<nav class="tabs-nav">
+    <div class="container tabs-row">
+        <button class="tab active" data-tab="problem">The Problem</button>
+        <button class="tab" data-tab="solution">Our Solution</button>
+        <button class="tab" data-tab="solved">What Solved Looks Like</button>
+    </div>
+</nav>
+
+<main class="container main">
+
+<!-- ============================================================= -->
+<!-- TAB 1: THE PROBLEM                                             -->
+<!-- ============================================================= -->
+<section id="tab-problem" class="tab-panel">
+
+    <h1 class="panel-title">0 of 1,376 CAHs clear the benchmark.</h1>
+    <p class="lede">
+        Across the national Critical Access Hospital roster, no facility currently
+        satisfies <span class="mono">CAHSP &#8805; 85</span> with both mandate floors held
+        (<span class="mono">FI &#8805; 0.50</span> and <span class="mono">QI &#8805; 0.50</span>).
+        The baseline is not a forecast &mdash; it is what the published CMS and MBQIP data
+        say, scored through the model in this repository.
+    </p>
+
+    <h2 class="section-title">Band distribution</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">DEVELOPING</div>
+            <div class="cell-value mono">1,159</div>
+            <div class="cell-note mono">84.2%</div>
         </div>
-    </header>
-
-    <main class="dashboard">
-        <!-- Top Stats Row -->
-        <section class="stats-row">
-            <div class="stat-card primary" data-delay="0">
-                <div class="stat-header">
-                    <span class="stat-icon">◈</span>
-                    <span class="stat-title">OPERATING MARGIN</span>
-                </div>
-                <div class="stat-value">
-                    <span class="value" data-value="-2.3">-2.3</span>
-                    <span class="unit">%</span>
-                </div>
-                <div class="stat-benchmark">
-                    <span class="benchmark-label">BENCHMARK</span>
-                    <span class="benchmark-value">5.0%</span>
-                </div>
-                <div class="stat-bar">
-                    <div class="bar-fill negative" style="--fill: 46%"></div>
-                </div>
-                <div class="stat-delta negative">
-                    <span class="delta-icon">▼</span>
-                    <span class="delta-value">7.3% below target</span>
-                </div>
-            </div>
-
-            <div class="stat-card" data-delay="100">
-                <div class="stat-header">
-                    <span class="stat-icon">◇</span>
-                    <span class="stat-title">BED OCCUPANCY</span>
-                </div>
-                <div class="stat-value">
-                    <span class="value" data-value="38.2">38.2</span>
-                    <span class="unit">%</span>
-                </div>
-                <div class="stat-benchmark">
-                    <span class="benchmark-label">BENCHMARK</span>
-                    <span class="benchmark-value">42.0%</span>
-                </div>
-                <div class="stat-bar">
-                    <div class="bar-fill warning" style="--fill: 91%"></div>
-                </div>
-                <div class="stat-delta warning">
-                    <span class="delta-icon">●</span>
-                    <span class="delta-value">3.8% below median</span>
-                </div>
-            </div>
-
-            <div class="stat-card" data-delay="200">
-                <div class="stat-header">
-                    <span class="stat-icon">⬡</span>
-                    <span class="stat-title">AVG LENGTH OF STAY</span>
-                </div>
-                <div class="stat-value">
-                    <span class="value" data-value="68.4">68.4</span>
-                    <span class="unit">HRS</span>
-                </div>
-                <div class="stat-benchmark">
-                    <span class="benchmark-label">CAH LIMIT</span>
-                    <span class="benchmark-value">96.0h</span>
-                </div>
-                <div class="stat-bar">
-                    <div class="bar-fill good" style="--fill: 71%"></div>
-                </div>
-                <div class="stat-delta positive">
-                    <span class="delta-icon">▲</span>
-                    <span class="delta-value">27.6h headroom</span>
-                </div>
-            </div>
-
-            <div class="stat-card" data-delay="300">
-                <div class="stat-header">
-                    <span class="stat-icon">◆</span>
-                    <span class="stat-title">DENIAL RATE</span>
-                </div>
-                <div class="stat-value">
-                    <span class="value" data-value="8.7">8.7</span>
-                    <span class="unit">%</span>
-                </div>
-                <div class="stat-benchmark">
-                    <span class="benchmark-label">TARGET</span>
-                    <span class="benchmark-value">5.0%</span>
-                </div>
-                <div class="stat-bar">
-                    <div class="bar-fill negative" style="--fill: 174%"></div>
-                </div>
-                <div class="stat-delta negative">
-                    <span class="delta-icon">▼</span>
-                    <span class="delta-value">74% above target</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Content Grid -->
-        <section class="main-grid">
-            <!-- Financial Performance Panel -->
-            <div class="panel financial-panel" data-delay="400">
-                <div class="panel-header">
-                    <h2 class="panel-title">FINANCIAL PERFORMANCE</h2>
-                    <span class="panel-period">FY 2025 YTD</span>
-                </div>
-                <div class="panel-content">
-                    <div class="revenue-display">
-                        <div class="revenue-main">
-                            <span class="revenue-label">TOTAL OPERATING REVENUE</span>
-                            <span class="revenue-value">$<span data-count="18425000">0</span></span>
-                        </div>
-                        <div class="revenue-secondary">
-                            <div class="revenue-item">
-                                <span class="label">Net Patient Revenue</span>
-                                <span class="value">$16.2M</span>
-                            </div>
-                            <div class="revenue-item">
-                                <span class="label">Operating Expenses</span>
-                                <span class="value">$18.8M</span>
-                            </div>
-                            <div class="revenue-item deficit">
-                                <span class="label">Operating Income</span>
-                                <span class="value">-$424K</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="revenueChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Real-time Census Panel -->
-            <div class="panel census-panel" data-delay="500">
-                <div class="panel-header">
-                    <h2 class="panel-title">REAL-TIME CENSUS</h2>
-                    <span class="panel-badge live">
-                        <span class="live-dot"></span>
-                        LIVE
-                    </span>
-                </div>
-                <div class="panel-content">
-                    <div class="census-grid">
-                        <div class="census-visual">
-                            <div class="bed-grid">
-                                <!-- Acute Beds -->
-                                <div class="bed-section">
-                                    <span class="section-label">ACUTE</span>
-                                    <div class="beds">
-                                        <span class="bed occupied"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                    </div>
-                                </div>
-                                <!-- Swing Beds -->
-                                <div class="bed-section">
-                                    <span class="section-label">SWING</span>
-                                    <div class="beds">
-                                        <span class="bed occupied"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed occupied"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                        <span class="bed available"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="census-stats">
-                            <div class="census-stat">
-                                <span class="stat-num">12</span>
-                                <span class="stat-label">OCCUPIED</span>
-                            </div>
-                            <div class="census-stat">
-                                <span class="stat-num">13</span>
-                                <span class="stat-label">AVAILABLE</span>
-                            </div>
-                            <div class="census-stat">
-                                <span class="stat-num">25</span>
-                                <span class="stat-label">TOTAL BEDS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="census-alerts">
-                        <div class="alert-item">
-                            <span class="alert-icon">⚡</span>
-                            <span class="alert-text">2 pending admissions from ED</span>
-                        </div>
-                        <div class="alert-item">
-                            <span class="alert-icon">↗</span>
-                            <span class="alert-text">1 transfer request in queue</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Gap Analysis Panel -->
-            <div class="panel gap-panel" data-delay="600">
-                <div class="panel-header">
-                    <h2 class="panel-title">PERFORMANCE GAP ANALYSIS</h2>
-                    <span class="panel-badge critical">3 CRITICAL</span>
-                </div>
-                <div class="panel-content">
-                    <div class="gap-list">
-                        <div class="gap-item critical">
-                            <div class="gap-header">
-                                <span class="gap-priority">P1</span>
-                                <span class="gap-name">Operating Margin</span>
-                            </div>
-                            <div class="gap-bar">
-                                <div class="gap-current" style="left: 35%;">
-                                    <span class="marker"></span>
-                                    <span class="label">-2.3%</span>
-                                </div>
-                                <div class="gap-target" style="left: 75%;">
-                                    <span class="marker"></span>
-                                    <span class="label">5.0%</span>
-                                </div>
-                            </div>
-                            <div class="gap-impact">
-                                <span class="impact-label">Financial Gap:</span>
-                                <span class="impact-value">$1,345,938/yr</span>
-                            </div>
-                        </div>
-
-                        <div class="gap-item warning">
-                            <div class="gap-header">
-                                <span class="gap-priority">P2</span>
-                                <span class="gap-name">Denial Rate</span>
-                            </div>
-                            <div class="gap-bar">
-                                <div class="gap-current" style="left: 70%;">
-                                    <span class="marker"></span>
-                                    <span class="label">8.7%</span>
-                                </div>
-                                <div class="gap-target" style="left: 35%;">
-                                    <span class="marker"></span>
-                                    <span class="label">5.0%</span>
-                                </div>
-                            </div>
-                            <div class="gap-impact">
-                                <span class="impact-label">Revenue at Risk:</span>
-                                <span class="impact-value">$298,400/yr</span>
-                            </div>
-                        </div>
-
-                        <div class="gap-item warning">
-                            <div class="gap-header">
-                                <span class="gap-priority">P2</span>
-                                <span class="gap-name">Labor Cost Ratio</span>
-                            </div>
-                            <div class="gap-bar">
-                                <div class="gap-current" style="left: 72%;">
-                                    <span class="marker"></span>
-                                    <span class="label">58.2%</span>
-                                </div>
-                                <div class="gap-target" style="left: 52%;">
-                                    <span class="marker"></span>
-                                    <span class="label">52.0%</span>
-                                </div>
-                            </div>
-                            <div class="gap-impact">
-                                <span class="impact-label">Excess Cost:</span>
-                                <span class="impact-value">$1.16M/yr</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Compliance Monitor -->
-            <div class="panel compliance-panel" data-delay="700">
-                <div class="panel-header">
-                    <h2 class="panel-title">CAH COMPLIANCE MONITOR</h2>
-                    <span class="panel-ref">42 CFR § 485.610</span>
-                </div>
-                <div class="panel-content">
-                    <div class="compliance-grid">
-                        <div class="compliance-item compliant">
-                            <div class="compliance-icon">✓</div>
-                            <div class="compliance-details">
-                                <span class="compliance-rule">BED CAPACITY</span>
-                                <span class="compliance-value">25 / 25 max</span>
-                            </div>
-                            <div class="compliance-status">COMPLIANT</div>
-                        </div>
-                        <div class="compliance-item compliant">
-                            <div class="compliance-icon">✓</div>
-                            <div class="compliance-details">
-                                <span class="compliance-rule">AVG LOS LIMIT</span>
-                                <span class="compliance-value">68.4h / 96h max</span>
-                            </div>
-                            <div class="compliance-status">COMPLIANT</div>
-                        </div>
-                        <div class="compliance-item compliant">
-                            <div class="compliance-icon">✓</div>
-                            <div class="compliance-details">
-                                <span class="compliance-rule">DISTANCE REQ</span>
-                                <span class="compliance-value">42 mi / 35 mi min</span>
-                            </div>
-                            <div class="compliance-status">COMPLIANT</div>
-                        </div>
-                        <div class="compliance-item compliant">
-                            <div class="compliance-icon">✓</div>
-                            <div class="compliance-details">
-                                <span class="compliance-rule">24/7 EMERGENCY</span>
-                                <span class="compliance-value">Physician on-call</span>
-                            </div>
-                            <div class="compliance-status">COMPLIANT</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bottom Action Panel -->
-        <section class="action-panel" data-delay="800">
-            <div class="action-header">
-                <h2 class="action-title">PRIORITY ACTIONS</h2>
-                <span class="action-subtitle">AI-Generated Recommendations</span>
-            </div>
-            <div class="action-grid">
-                <div class="action-card">
-                    <div class="action-number">01</div>
-                    <div class="action-content">
-                        <h3>Implement Pre-Bill Scrubbing</h3>
-                        <p>Reduce denial rate from 8.7% to 5.0%</p>
-                    </div>
-                    <div class="action-impact">
-                        <span class="impact">+$298K</span>
-                        <span class="timeline">90 days</span>
-                    </div>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">02</div>
-                    <div class="action-content">
-                        <h3>Optimize Staffing Ratios</h3>
-                        <p>Align labor cost to 52% benchmark</p>
-                    </div>
-                    <div class="action-impact">
-                        <span class="impact">+$580K</span>
-                        <span class="timeline">6 months</span>
-                    </div>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">03</div>
-                    <div class="action-content">
-                        <h3>Expand Swing Bed Program</h3>
-                        <p>Increase utilization from 52% to 75%</p>
-                    </div>
-                    <div class="action-impact">
-                        <span class="impact">+$185K</span>
-                        <span class="timeline">12 months</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-left">
-            <span class="footer-text">VISIONBLOX LLC × ZUUP INNOVATION LAB</span>
+        <div class="cell">
+            <div class="cell-label">MODERATE</div>
+            <div class="cell-value mono">202</div>
+            <div class="cell-note mono">14.7%</div>
         </div>
-        <div class="footer-center">
-            <span class="footer-version">v1.0.0-alpha</span>
+        <div class="cell">
+            <div class="cell-label">HIGH</div>
+            <div class="cell-value mono">15</div>
+            <div class="cell-note mono">1.1%</div>
         </div>
-        <div class="footer-right">
-            <span class="footer-text">TRANSFORMATION ENGINE</span>
+        <div class="cell emphatic">
+            <div class="cell-label">BENCHMARK SOLVED</div>
+            <div class="cell-value mono">0</div>
+            <div class="cell-note mono">0.0%</div>
         </div>
-    </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="dashboard.js"></script>
+    <h2 class="section-title">CAHSP distribution</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">MEAN</div>
+            <div class="cell-value mono">46.17</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MEDIAN</div>
+            <div class="cell-value mono">45.5</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MIN</div>
+            <div class="cell-value mono">15.0</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MAX</div>
+            <div class="cell-value mono">78.17</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Binding constraint &mdash; which index is lowest, per facility</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">QI BINDS</div>
+            <div class="cell-value mono">742</div>
+            <div class="cell-note">Quality is the lowest index.</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">FI BINDS</div>
+            <div class="cell-value mono">506</div>
+            <div class="cell-note">Financial margin is the lowest.</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">OI BINDS</div>
+            <div class="cell-value mono">69</div>
+            <div class="cell-note">Operations is the lowest.</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">WI BINDS</div>
+            <div class="cell-value mono">59</div>
+            <div class="cell-note">Workforce is the lowest.</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Correction the national data forces</h2>
+    <p class="prose">
+        The binding&#8209;constraint count makes <span class="mono">QI</span> look like the dominant
+        blocker (742 vs. 506). At the 2&#8209;part mandate gate the picture inverts:
+        only 66 facilities are QI&#8209;only blockers versus 505 FI&#8209;only. Margin
+        interventions move more facilities across the gate than quality interventions do.
+        FI is the bottleneck &mdash; even in 3 of the 15 High&#8209;band facilities.
+    </p>
+
+    <p class="link-row">
+        <a class="deep-link" href="national.html">National baseline, per&#8209;facility &#8594;</a>
+    </p>
+
+</section>
+
+<!-- ============================================================= -->
+<!-- TAB 2: OUR SOLUTION                                            -->
+<!-- ============================================================= -->
+<section id="tab-solution" class="tab-panel" hidden>
+
+    <h1 class="panel-title">The 2&#8209;part mandate and the math behind it.</h1>
+    <p class="lede">
+        A CAH solution is only <em>Solved</em> when the composite clears the benchmark
+        and both mandate floors are held simultaneously. Financial without quality does
+        not count; quality without financial does not count. The dual mandate is a gate,
+        not a preference.
+    </p>
+
+    <h2 class="section-title">Mandate definition</h2>
+    <pre class="code-block mono">CAHSP &gt;= 85  AND  FI &gt;= 0.50  AND  QI &gt;= 0.50</pre>
+    <p class="prose-note mono">Source: cahsp_score.py:14, :51, :53&#8209;55</p>
+
+    <h2 class="section-title">Composite index weights</h2>
+    <table class="kv-table">
+        <thead>
+            <tr><th>INDEX</th><th>NAME</th><th class="num">WEIGHT</th><th>IN MANDATE GATE</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="mono">FI</td><td>Financial Index</td><td class="num mono">0.30</td><td>Yes (floor 0.50)</td></tr>
+            <tr><td class="mono">QI</td><td>Clinical Quality Index (MBQIP&#8209;weighted)</td><td class="num mono">0.30</td><td>Yes (floor 0.50)</td></tr>
+            <tr><td class="mono">OI</td><td>Operations Index</td><td class="num mono">0.20</td><td>No</td></tr>
+            <tr><td class="mono">WI</td><td>Workforce Index</td><td class="num mono">0.10</td><td>No</td></tr>
+            <tr><td class="mono">CI</td><td>Confidence Index</td><td class="num mono">0.10</td><td>No</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Objective</h2>
+    <pre class="code-block mono">R(x) = alpha_1 * CMI * (ADC * 365 / ALOS)
+     + alpha_2 * ED_visits
+     + alpha_3 * OP_visits
+     + alpha_4 * swing_beds * swing_occupancy * 365
+     + alpha_transfer * transfer_volume
+
+C(x) = beta_1 * nursing_FTE + beta_2 * provider_FTE
+     + beta_3 + beta_4 * ADC * 365
+     + beta_transfer * transfer_volume
+
+M(x) = (R(x) - C(x)) / R(x)                    # operating margin
+Q(x) = sum_i w_i * normalize(measure_i(x))     # quality composite
+J(x) = theta * Q(x) + (1 - theta) * M_hat(x)   # default theta = 0.6</pre>
+
+    <h2 class="section-title">Constraints</h2>
+    <ul class="bullet-list">
+        <li><span class="mono">acute_beds + swing_beds &le; 25</span> &mdash; 42 CFR &sect; 485.620/645</li>
+        <li><span class="mono">ADC &le; 0.85 * acute_beds</span></li>
+        <li><span class="mono">nursing_FTE / ADC &ge; 0.5</span> &mdash; Aiken 2014</li>
+        <li><span class="mono">provider_FTE &ge; 2.0</span>; <span class="mono">ED / provider &le; 5000</span></li>
+        <li><span class="mono">transfer &le; 0.15 * ADC * 365</span> &mdash; MBQIP corridor</li>
+        <li><span class="mono">nursing_FTE + provider_FTE &le; 120</span> &mdash; MV&#8209;CAHI workforce</li>
+        <li><span class="mono">M(x) &ge; 0.05</span> &mdash; margin floor</li>
+    </ul>
+
+    <h2 class="section-title">Solver stack</h2>
+    <table class="kv-table">
+        <thead>
+            <tr><th>COMPONENT</th><th>MODULE</th><th>METHOD</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Deterministic optimum</td>
+                <td class="mono">solver.py</td>
+                <td>Multi&#8209;start SLSQP with Charnes&#8209;Cooper reformulation of the margin ratio</td>
+            </tr>
+            <tr>
+                <td>Quality&#8209;margin frontier</td>
+                <td class="mono">pareto.py</td>
+                <td>Augmented &epsilon;&#8209;constraint (Mavrotas 2009)</td>
+            </tr>
+            <tr>
+                <td>Uncertainty &amp; CIs</td>
+                <td class="mono">robust.py</td>
+                <td>Bertsimas&#8209;Sim budget of uncertainty + Monte Carlo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="prose-note mono">Source: docs/MATH_AND_MANDATE.md &sect;1&#8209;&sect;4</p>
+
+</section>
+
+<!-- ============================================================= -->
+<!-- TAB 3: WHAT SOLVED LOOKS LIKE                                  -->
+<!-- ============================================================= -->
+<section id="tab-solved" class="tab-panel" hidden>
+
+    <h1 class="panel-title">1,376 facilities, four cohorts, one gate.</h1>
+    <p class="lede">
+        Partitioning the national roster against the dual mandate &mdash;
+        <span class="mono">FI &#8805; 0.50</span> and <span class="mono">QI &#8805; 0.50</span> &mdash;
+        produces four cohorts. Clearing the gate is the entry criterion; climbing to
+        <span class="mono">CAHSP &#8805; 85</span> requires OI, WI, and CI progress on top.
+    </p>
+
+    <h2 class="section-title">Cohorts</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">DUAL_SOLVED</div>
+            <div class="cell-value mono">762</div>
+            <div class="cell-note mono">55.4%</div>
+            <p class="cell-desc">Mandate cleared. Defend the floor.</p>
+        </div>
+        <div class="cell">
+            <div class="cell-label">FI_ONLY_BLOCKER</div>
+            <div class="cell-value mono">505</div>
+            <div class="cell-note mono">36.7%</div>
+            <p class="cell-desc">Margin push required to unlock mandate.</p>
+        </div>
+        <div class="cell">
+            <div class="cell-label">QI_ONLY_BLOCKER</div>
+            <div class="cell-value mono">66</div>
+            <div class="cell-note mono">4.8%</div>
+            <p class="cell-desc">Quality push required to unlock mandate.</p>
+        </div>
+        <div class="cell">
+            <div class="cell-label">BOTH_BLOCKERS</div>
+            <div class="cell-value mono">43</div>
+            <div class="cell-note mono">3.1%</div>
+            <p class="cell-desc">Dual push required.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Quick wins</h2>
+    <div class="quickwins-block">
+        <div class="qw-count mono">11</div>
+        <div class="qw-body">
+            <p>
+                facilities within 0.05 of both floors. All eleven sit at
+                <span class="mono">FI = 0.4833</span> and <span class="mono">QI = 0.50</span>
+                exactly, concentrated in Alaska and Arizona IHS/tribal facilities.
+            </p>
+            <p class="prose-note">
+                <em>Audit&#8209;then&#8209;act.</em> The narrow numerical stripe likely reflects an
+                ownership&#8209;bias default and a QI pinned at the neutral 0.50, not eleven
+                independent measurements. Reconcile scoring before any field push.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Cohort&#8209;specific action program</h2>
+    <table class="kv-table wide">
+        <thead>
+            <tr>
+                <th>COHORT</th>
+                <th>PRIMARY TOOL</th>
+                <th>FIELD ACTIONS</th>
+                <th>SUCCESS METRIC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="mono">fi_only_blocker (505)</td>
+                <td class="mono">CAHOptimizer.optimize() &middot; Charnes&#8209;Cooper</td>
+                <td>Revenue&#8209;cycle diagnostic, swing&#8209;bed expansion, payer&#8209;mix renegotiation, cost&#8209;based reimbursement audit</td>
+                <td>FI crosses 0.50 without QI slipping below 0.50</td>
+            </tr>
+            <tr>
+                <td class="mono">qi_only_blocker (66)</td>
+                <td class="mono">Solver with &theta; shifted toward quality</td>
+                <td>HCAHPS rounding, 30&#8209;day readmission bundle, ED&#8209;2b throughput, opioid stewardship</td>
+                <td>QI crosses 0.50 without FI slipping below 0.50</td>
+            </tr>
+            <tr>
+                <td class="mono">both_blockers (43)</td>
+                <td class="mono">pareto.py + robust.py</td>
+                <td>If front never crosses (0.50, 0.50), escalate to Flex Program, state rural grant, or affiliation</td>
+                <td>Feasible point above both floors exists</td>
+            </tr>
+            <tr>
+                <td class="mono">dual_solved (762)</td>
+                <td class="mono">robust.py under uncertainty</td>
+                <td>Defend the floor, then attack OI and WI to climb toward CAHSP &ge; 85</td>
+                <td>Band moves Developing &rarr; Moderate &rarr; High</td>
+            </tr>
+            <tr>
+                <td class="mono">quick_wins (11 AK/AZ)</td>
+                <td class="mono">Data audit</td>
+                <td>Reconcile IHS/tribal FI scoring and QI default before any field action</td>
+                <td>Scoring confirmed or corrected</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Dual mandate met &#8800; Solved</h2>
+    <p class="prose">
+        762 facilities (55.4%) clear both floors. Zero clear the full benchmark gate. The
+        2&#8209;part mandate is the entry criterion; the path from mandate&#8209;met to
+        <span class="mono">CAHSP &#8805; 85</span> requires progress on OI, WI, and CI on top
+        of the held floor.
+    </p>
+
+    <p class="link-row">
+        <a class="deep-link" href="mandate.html">Mandate triage, per&#8209;facility &#8594;</a>
+    </p>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-row">
+        <div class="footer-block">
+            <span class="footer-label">SOURCE</span>
+            <span class="mono">reports/cahsp_band_summary.json</span>
+            <span class="mono">reports/mandate_cohort_summary.json</span>
+            <span class="mono">reports/cahsp_binding_constraint_triage.json</span>
+            <span class="mono">docs/MATH_AND_MANDATE.md</span>
+        </div>
+        <div class="footer-block right">
+            <span class="mono">v1.0.0&#8209;alpha</span>
+        </div>
+    </div>
+</footer>
+
+<script src="dashboard.js"></script>
 </body>
 </html>
-
