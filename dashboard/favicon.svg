@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    rect { fill: #000; }
+    @media (prefers-color-scheme: dark) { rect { fill: #fff; } }
+  </style>
+  <!-- r: stem + shoulder -->
+  <rect x="4"  y="10" width="4"  height="18"/>
+  <rect x="4"  y="10" width="10" height="4"/>
+  <!-- h: left stem (ascender) + shoulder + right stem -->
+  <rect x="18" y="4"  width="4"  height="24"/>
+  <rect x="18" y="10" width="10" height="4"/>
+  <rect x="24" y="14" width="4"  height="14"/>
+</svg>
