@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAH Mandate Triage — Gap to FI ≥ 0.50 AND QI ≥ 0.50</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0f1a;
+    --bg-secondary: #111827;
+    --bg-card: #1a2234;
+    --border: #2d3a4f;
+    --text-primary: #f0f4f8;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --solved: #22c55e;
+    --qi-blocker: #f59e0b;
+    --fi-blocker: #06b6d4;
+    --both-blockers: #ef4444;
+    --accent: #06b6d4;
+    --quick-win: #facc15;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg-primary); color: var(--text-primary);
+    min-height: 100vh; line-height: 1.5;
+}
+.container { max-width: 1600px; margin: 0 auto; padding: 24px; }
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 24px; background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+header h1 { font-size: 20px; font-weight: 700; }
+header .subtitle { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
+.status-chip {
+    display: inline-block; padding: 6px 12px; border-radius: 6px;
+    font-size: 12px; font-weight: 600; background: rgba(6, 182, 212, 0.15);
+    color: var(--accent); font-family: 'JetBrains Mono', monospace;
+}
+
+.cohort-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.cohort-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 10px; padding: 16px;
+}
+.cohort-card.dual_solved { border-left-color: var(--solved); }
+.cohort-card.qi_only_blocker { border-left-color: var(--qi-blocker); }
+.cohort-card.fi_only_blocker { border-left-color: var(--fi-blocker); }
+.cohort-card.both_blockers { border-left-color: var(--both-blockers); }
+.cohort-card .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.cohort-card .value {
+    font-size: 32px; font-weight: 700; margin: 6px 0 4px 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+.cohort-card.dual_solved .value { color: var(--solved); }
+.cohort-card.qi_only_blocker .value { color: var(--qi-blocker); }
+.cohort-card.fi_only_blocker .value { color: var(--fi-blocker); }
+.cohort-card.both_blockers .value { color: var(--both-blockers); }
+.cohort-card .pct { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.cohort-card .desc { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+
+.mandate-banner {
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.08), rgba(34, 197, 94, 0.05));
+    border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    padding: 14px 18px; border-radius: 10px; margin-bottom: 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.mandate-banner .title { font-weight: 600; font-size: 14px; }
+.mandate-banner .gates {
+    font-family: 'JetBrains Mono', monospace; color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.quick-wins {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 4px solid var(--quick-win);
+    border-radius: 10px; padding: 16px; margin-bottom: 20px;
+}
+.quick-wins h2 { font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.quick-wins .badge {
+    display: inline-block; background: rgba(250, 204, 21, 0.15);
+    color: var(--quick-win); font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; padding: 3px 8px; border-radius: 4px;
+}
+.quick-wins .hint { color: var(--text-secondary); font-size: 12px; margin-bottom: 10px; }
+.quick-wins ul { list-style: none; }
+.quick-wins li {
+    display: grid; grid-template-columns: 90px 1fr 60px 120px 120px 140px;
+    gap: 10px; padding: 6px 0; font-size: 13px;
+    border-bottom: 1px dashed rgba(45, 58, 79, 0.4);
+    align-items: center;
+}
+.quick-wins li:last-child { border-bottom: none; }
+.quick-wins li .ccn { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 12px; }
+.quick-wins li .name { color: var(--text-primary); }
+.quick-wins li .st { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 12px; }
+.quick-wins li .gap {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--text-secondary);
+}
+.quick-wins li .cohort-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px; text-align: center;
+}
+.cohort-tag.qi_only_blocker { background: rgba(245, 158, 11, 0.15); color: var(--qi-blocker); }
+.cohort-tag.fi_only_blocker { background: rgba(6, 182, 212, 0.15); color: var(--fi-blocker); }
+.cohort-tag.both_blockers { background: rgba(239, 68, 68, 0.15); color: var(--both-blockers); }
+.cohort-tag.dual_solved { background: rgba(34, 197, 94, 0.15); color: var(--solved); }
+
+.filters {
+    display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 16px; align-items: center;
+}
+.filters label { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-right: 8px; }
+.filters select, .filters input[type="text"] {
+    background: var(--bg-primary); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 10px; font-family: inherit; font-size: 13px; min-width: 140px;
+}
+.filters input[type="text"] { min-width: 220px; }
+.filters .count-chip { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+.filters .quick-win-toggle {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-secondary); font-size: 13px; cursor: pointer;
+}
+.filters .quick-win-toggle input { accent-color: var(--quick-win); }
+
+.table-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+table.facility-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.facility-table th {
+    position: sticky; top: 0; background: var(--bg-secondary); color: var(--text-secondary);
+    text-align: left; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 10px 12px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
+}
+.facility-table th:hover { color: var(--text-primary); }
+.facility-table tbody tr { border-bottom: 1px solid rgba(45, 58, 79, 0.4); }
+.facility-table tbody tr:hover { background: rgba(6, 182, 212, 0.06); }
+.facility-table tbody tr.qw-row { background: rgba(250, 204, 21, 0.04); }
+.facility-table td { padding: 9px 12px; color: var(--text-primary); }
+.facility-table td.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+.facility-table td.numeric { font-family: 'JetBrains Mono', monospace; text-align: right; }
+.bar {
+    position: relative; background: rgba(45, 58, 79, 0.4);
+    border-radius: 4px; height: 6px; width: 100%; max-width: 120px;
+    margin-top: 2px; overflow: hidden;
+}
+.bar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; }
+.bar .floor-line {
+    position: absolute; top: -2px; bottom: -2px; width: 1px;
+    background: var(--text-primary); left: 50%;
+}
+.bar .fill.fi { background: var(--fi-blocker); }
+.bar .fill.qi { background: var(--qi-blocker); }
+.bar .fill.pass { background: var(--solved); }
+.qw-badge {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    padding: 2px 6px; border-radius: 4px;
+    background: rgba(250, 204, 21, 0.15); color: var(--quick-win);
+}
+
+.pager { display: flex; gap: 10px; padding: 12px 16px; align-items: center; border-top: 1px solid var(--border); background: var(--bg-secondary); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+.pager button { background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-family: inherit; font-size: 12px; cursor: pointer; }
+.pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+.pager .pager-info { margin-left: auto; }
+
+.loading { text-align: center; padding: 40px; color: var(--text-muted); }
+.methodology {
+    margin-top: 24px; padding: 16px; border: 1px solid var(--border);
+    background: var(--bg-card); border-radius: 10px;
+    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+}
+.methodology strong { color: var(--text-primary); }
+</style>
+</head>
+<body>
+<header>
+    <div>
+        <h1>CAH Mandate Triage</h1>
+        <div class="subtitle">Gap to the 2-part mandate (FI ≥ 0.50 AND QI ≥ 0.50) — which lever unlocks each facility</div>
+    </div>
+    <div class="status-chip" id="data-status">Loading…</div>
+</header>
+
+<div class="container">
+    <div class="mandate-banner">
+        <div>
+            <div class="title">CAH 2-Part Mandate</div>
+            <div class="gates">Financial Index ≥ 0.50 (margin) AND Clinical Quality Index ≥ 0.50 (MBQIP)</div>
+        </div>
+        <div id="mandate-progress" class="gates"></div>
+    </div>
+
+    <div class="cohort-grid" id="cohort-grid"></div>
+
+    <div class="quick-wins" id="quick-wins"></div>
+
+    <div class="filters">
+        <div><label>State</label><select id="filter-state"><option value="">All</option></select></div>
+        <div><label>Cohort</label><select id="filter-cohort">
+            <option value="">All</option>
+            <option value="dual_solved">Dual-solved</option>
+            <option value="qi_only_blocker">QI-only blocker</option>
+            <option value="fi_only_blocker">FI-only blocker</option>
+            <option value="both_blockers">Both blockers</option>
+        </select></div>
+        <div><label>Search</label><input type="text" id="filter-search" placeholder="CCN or facility name…"></div>
+        <label class="quick-win-toggle"><input type="checkbox" id="filter-qw"> Only quick wins</label>
+        <span class="count-chip" id="count-chip"></span>
+    </div>
+
+    <div class="table-wrap">
+        <div style="max-height: 62vh; overflow: auto;">
+            <table class="facility-table">
+                <thead>
+                    <tr>
+                        <th data-sort="ccn">CCN</th>
+                        <th data-sort="facility_name">Facility</th>
+                        <th data-sort="state">State</th>
+                        <th data-sort="cohort">Cohort</th>
+                        <th data-sort="fi">FI</th>
+                        <th data-sort="qi">QI</th>
+                        <th data-sort="max_gap">Max Gap</th>
+                        <th data-sort="cahsp">CAHSP</th>
+                        <th data-sort="is_quick_win">QW</th>
+                    </tr>
+                </thead>
+                <tbody id="facility-tbody">
+                    <tr><td colspan="9" class="loading">Loading facilities…</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pager">
+            <button id="prev-btn">Prev</button>
+            <button id="next-btn">Next</button>
+            <span class="pager-info" id="pager-info"></span>
+        </div>
+    </div>
+
+    <div class="methodology">
+        <strong>Methodology</strong> — Cohorts are derived purely from the FI/QI gates, not sized against intervention effort.
+        <strong>Dual-solved</strong> clears both floors; <strong>FI-only blocker</strong> clears QI but needs a margin push;
+        <strong>QI-only blocker</strong> clears FI but needs a quality push; <strong>both blockers</strong> miss both gates.
+        <strong>Quick wins</strong> are facilities within 0.05 of both floors — the 60-day push list.
+        <strong>Important:</strong> dual-mandate clearance (FI ≥ 0.50, QI ≥ 0.50) is a different threshold from
+        "Solved" band on CAHSP (≥ 85); a facility can clear the mandate gates and still be in the High or Moderate band
+        on total composite score. See <code>calculate_mandate_gap.py</code> for the rules and
+        <code>reports/mandate_gap_analysis.csv</code> for the full table.
+    </div>
+</div>
+
+<script>
+const REPORTS = '../reports/';
+const PAGE_SIZE = 50;
+const FI_FLOOR = 0.5;
+const QI_FLOOR = 0.5;
+
+let rows = [];
+let filtered = [];
+let sortKey = 'max_gap';
+let sortDesc = false;
+let page = 0;
+
+async function fetchCSV(path) {
+    const text = await fetch(path).then(r => r.text());
+    const lines = text.split(/\r?\n/).filter(Boolean);
+    const header = parseCSVLine(lines[0]);
+    return lines.slice(1).map(line => {
+        const vals = parseCSVLine(line);
+        const obj = {}; header.forEach((k, i) => obj[k] = vals[i]);
+        return obj;
+    });
+}
+function parseCSVLine(line) {
+    const out = []; let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (inQ) {
+            if (c === '"' && line[i+1] === '"') { cur += '"'; i++; }
+            else if (c === '"') inQ = false;
+            else cur += c;
+        } else {
+            if (c === ',') { out.push(cur); cur = ''; }
+            else if (c === '"') inQ = true;
+            else cur += c;
+        }
+    }
+    out.push(cur); return out;
+}
+
+function renderCohorts(summary) {
+    const order = ['dual_solved', 'fi_only_blocker', 'qi_only_blocker', 'both_blockers'];
+    const labels = {
+        dual_solved: 'Dual-Solved',
+        fi_only_blocker: 'FI-Only Blocker',
+        qi_only_blocker: 'QI-Only Blocker',
+        both_blockers: 'Both Blockers',
+    };
+    document.getElementById('cohort-grid').innerHTML = order.map(k => {
+        const c = summary.cohorts[k] || { count: 0, description: '' };
+        const pct = summary.total_facilities
+            ? (c.count / summary.total_facilities * 100).toFixed(1)
+            : '0.0';
+        return `<div class="cohort-card ${k}">
+            <div class="label">${labels[k]}</div>
+            <div class="value">${c.count}</div>
+            <div class="pct">${pct}% of ${summary.total_facilities}</div>
+            <div class="desc">${c.description}</div>
+        </div>`;
+    }).join('');
+
+    const dual = summary.cohorts.dual_solved?.count || 0;
+    const total = summary.total_facilities || 0;
+    const pct = total ? (dual / total * 100).toFixed(1) : '0.0';
+    document.getElementById('mandate-progress').textContent =
+        `${dual.toLocaleString()} / ${total.toLocaleString()} CAHs clear both gates today (${pct}%)`;
+}
+
+function renderQuickWins(summary) {
+    const qw = summary.quick_wins || { count: 0, facilities: [], headroom: 0.05 };
+    const container = document.getElementById('quick-wins');
+    if (!qw.count) {
+        container.innerHTML = `
+            <h2>Quick Wins <span class="badge">${qw.count}</span></h2>
+            <div class="hint">No facilities within ${qw.headroom.toFixed(2)} of both mandate floors.</div>`;
+        return;
+    }
+    container.innerHTML = `
+        <h2>Quick Wins <span class="badge">${qw.count}</span></h2>
+        <div class="hint">Within ${qw.headroom.toFixed(2)} of both mandate floors — the 60-day push list.</div>
+        <ul>${qw.facilities.map(f => `
+            <li>
+                <span class="ccn">${f.ccn}</span>
+                <span class="name">${f.name}</span>
+                <span class="st">${f.state}</span>
+                <span class="gap">FI ${f.fi.toFixed(2)} (gap ${f.fi_gap.toFixed(2)})</span>
+                <span class="gap">QI ${f.qi.toFixed(2)} (gap ${f.qi_gap.toFixed(2)})</span>
+                <span class="cohort-tag ${f.cohort}">${f.cohort.replace(/_/g, ' ')}</span>
+            </li>`).join('')}</ul>`;
+}
+
+function applyFilters() {
+    const st = document.getElementById('filter-state').value;
+    const coh = document.getElementById('filter-cohort').value;
+    const qwOnly = document.getElementById('filter-qw').checked;
+    const q = document.getElementById('filter-search').value.trim().toLowerCase();
+    filtered = rows.filter(r =>
+        (!st || r.state === st) &&
+        (!coh || r.cohort === coh) &&
+        (!qwOnly || r.is_quick_win === 'True') &&
+        (!q || r.ccn.toLowerCase().includes(q) || r.facility_name.toLowerCase().includes(q))
+    );
+    page = 0;
+    renderTable();
+}
+
+function barFor(value, floor, isPass) {
+    const pct = Math.min(100, Math.max(0, value * 100));
+    const cls = isPass ? 'pass' : (floor === FI_FLOOR ? 'fi' : 'qi');
+    return `<div class="bar"><div class="fill ${cls}" style="width: ${pct}%"></div><div class="floor-line"></div></div>`;
+}
+
+function renderTable() {
+    const tbody = document.getElementById('facility-tbody');
+    const sorted = [...filtered].sort((a, b) => {
+        let av = a[sortKey], bv = b[sortKey];
+        const an = parseFloat(av), bn = parseFloat(bv);
+        if (!isNaN(an) && !isNaN(bn)) { av = an; bv = bn; }
+        if (av < bv) return sortDesc ? 1 : -1;
+        if (av > bv) return sortDesc ? -1 : 1;
+        return 0;
+    });
+    const total = sorted.length;
+    const maxPage = Math.max(0, Math.ceil(total / PAGE_SIZE) - 1);
+    if (page > maxPage) page = maxPage;
+    const slice = sorted.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+    if (!slice.length) {
+        tbody.innerHTML = `<tr><td colspan="9" class="loading">No facilities match these filters.</td></tr>`;
+    } else {
+        tbody.innerHTML = slice.map(r => {
+            const fi = parseFloat(r.fi), qi = parseFloat(r.qi);
+            return `<tr class="${r.is_quick_win === 'True' ? 'qw-row' : ''}">
+                <td class="mono">${r.ccn}</td>
+                <td>${r.facility_name}</td>
+                <td>${r.state}</td>
+                <td><span class="cohort-tag ${r.cohort}">${r.cohort.replace(/_/g, ' ')}</span></td>
+                <td class="numeric">${fi.toFixed(2)}${barFor(fi, FI_FLOOR, fi >= FI_FLOOR)}</td>
+                <td class="numeric">${qi.toFixed(2)}${barFor(qi, QI_FLOOR, qi >= QI_FLOOR)}</td>
+                <td class="numeric">${parseFloat(r.max_gap).toFixed(2)}</td>
+                <td class="numeric">${parseFloat(r.cahsp).toFixed(1)}</td>
+                <td>${r.is_quick_win === 'True' ? '<span class="qw-badge">QW</span>' : ''}</td>
+            </tr>`;
+        }).join('');
+    }
+    document.getElementById('count-chip').textContent =
+        `${total.toLocaleString()} of ${rows.length.toLocaleString()} facilities`;
+    document.getElementById('pager-info').textContent = `Page ${page + 1} / ${maxPage + 1}`;
+    document.getElementById('prev-btn').disabled = page === 0;
+    document.getElementById('next-btn').disabled = page >= maxPage;
+}
+
+async function init() {
+    try {
+        const [csvRows, summary] = await Promise.all([
+            fetchCSV(REPORTS + 'mandate_gap_analysis.csv'),
+            fetch(REPORTS + 'mandate_cohort_summary.json').then(r => r.json()),
+        ]);
+        rows = csvRows;
+        filtered = rows;
+        renderCohorts(summary);
+        renderQuickWins(summary);
+
+        const stateSel = document.getElementById('filter-state');
+        const states = [...new Set(rows.map(r => r.state))].filter(Boolean).sort();
+        states.forEach(s => {
+            const opt = document.createElement('option');
+            opt.value = s; opt.textContent = s;
+            stateSel.appendChild(opt);
+        });
+
+        document.querySelectorAll('.facility-table th').forEach(th => {
+            th.addEventListener('click', () => {
+                const k = th.dataset.sort;
+                if (sortKey === k) sortDesc = !sortDesc;
+                else { sortKey = k; sortDesc = ['fi','qi','cahsp','is_quick_win'].includes(k); }
+                renderTable();
+            });
+        });
+        document.getElementById('filter-state').addEventListener('change', applyFilters);
+        document.getElementById('filter-cohort').addEventListener('change', applyFilters);
+        document.getElementById('filter-qw').addEventListener('change', applyFilters);
+        document.getElementById('filter-search').addEventListener('input', applyFilters);
+        document.getElementById('prev-btn').addEventListener('click', () => { if (page > 0) { page--; renderTable(); }});
+        document.getElementById('next-btn').addEventListener('click', () => { page++; renderTable(); });
+
+        document.getElementById('data-status').textContent = `${rows.length.toLocaleString()} CAHs loaded`;
+        renderTable();
+    } catch (e) {
+        document.getElementById('data-status').textContent = 'Error loading data';
+        document.getElementById('facility-tbody').innerHTML =
+            `<tr><td colspan="9" class="loading">Could not load reports: ${e.message}</td></tr>`;
+    }
+}
+init();
+</script>
+</body>
+</html>
