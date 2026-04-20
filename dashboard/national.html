@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAHSP National Baseline — 1,376 Critical Access Hospitals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0f1a;
+    --bg-secondary: #111827;
+    --bg-card: #1a2234;
+    --border: #2d3a4f;
+    --text-primary: #f0f4f8;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --elite: #10b981;
+    --solved: #22c55e;
+    --high: #06b6d4;
+    --moderate: #f59e0b;
+    --developing: #ef4444;
+    --accent: #06b6d4;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+.container { max-width: 1600px; margin: 0 auto; padding: 24px; }
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 24px; background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+header h1 { font-size: 20px; font-weight: 700; }
+header .subtitle { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
+.status-chip {
+    display: inline-block; padding: 6px 12px; border-radius: 6px;
+    font-size: 12px; font-weight: 600; background: rgba(6, 182, 212, 0.15);
+    color: var(--accent); font-family: 'JetBrains Mono', monospace;
+}
+
+.band-summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
+.band-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px;
+}
+.band-card .label { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+.band-card .value { font-size: 28px; font-weight: 700; margin-top: 6px; font-family: 'JetBrains Mono', monospace; }
+.band-card .pct { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.band-elite .value { color: var(--elite); }
+.band-solved .value { color: var(--solved); }
+.band-high .value { color: var(--high); }
+.band-moderate .value { color: var(--moderate); }
+.band-developing .value { color: var(--developing); }
+
+.triage {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px;
+}
+.triage-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px;
+}
+.triage-card .binding { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary); text-transform: uppercase; }
+.triage-card .count { font-size: 24px; font-weight: 700; color: var(--accent); margin: 4px 0; font-family: 'JetBrains Mono', monospace; }
+.triage-card .action { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+
+.filters {
+    display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 16px;
+    align-items: center;
+}
+.filters label { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-right: 8px; }
+.filters select, .filters input[type="text"] {
+    background: var(--bg-primary); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 10px; font-family: inherit; font-size: 13px;
+    min-width: 140px;
+}
+.filters input[type="text"] { min-width: 220px; }
+.filters .count-chip {
+    margin-left: auto; font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--text-secondary);
+}
+
+.table-wrap {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
+}
+table.facility-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.facility-table th {
+    position: sticky; top: 0;
+    background: var(--bg-secondary); color: var(--text-secondary);
+    text-align: left; font-weight: 600; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+    cursor: pointer; user-select: none;
+}
+.facility-table th:hover { color: var(--text-primary); }
+.facility-table tbody tr { border-bottom: 1px solid rgba(45, 58, 79, 0.4); }
+.facility-table tbody tr:hover { background: rgba(6, 182, 212, 0.06); }
+.facility-table td { padding: 9px 12px; color: var(--text-primary); }
+.facility-table td.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+.facility-table td.numeric { font-family: 'JetBrains Mono', monospace; text-align: right; }
+.band-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.band-tag.band-elite { background: rgba(16, 185, 129, 0.15); color: var(--elite); }
+.band-tag.band-solved { background: rgba(34, 197, 94, 0.15); color: var(--solved); }
+.band-tag.band-high { background: rgba(6, 182, 212, 0.15); color: var(--high); }
+.band-tag.band-moderate { background: rgba(245, 158, 11, 0.15); color: var(--moderate); }
+.band-tag.band-developing { background: rgba(239, 68, 68, 0.15); color: var(--developing); }
+.binding-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--text-secondary); }
+.dual-yes { color: var(--elite); }
+.dual-no { color: var(--developing); }
+
+.pager {
+    display: flex; gap: 10px; padding: 12px 16px; align-items: center;
+    border-top: 1px solid var(--border); background: var(--bg-secondary);
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--text-secondary);
+}
+.pager button {
+    background: var(--bg-primary); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 10px; font-family: inherit; font-size: 12px; cursor: pointer;
+}
+.pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+.pager .pager-info { margin-left: auto; }
+
+.loading { text-align: center; padding: 40px; color: var(--text-muted); }
+.methodology {
+    margin-top: 24px; padding: 16px; border: 1px solid var(--border);
+    background: var(--bg-card); border-radius: 10px;
+    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+}
+.methodology strong { color: var(--text-primary); }
+</style>
+</head>
+<body>
+<header>
+    <div>
+        <h1>CAHSP National Baseline</h1>
+        <div class="subtitle">Direct-computed scores across every Critical Access Hospital in the step6 roster</div>
+    </div>
+    <div class="status-chip" id="data-status">Loading…</div>
+</header>
+
+<div class="container">
+    <div class="band-summary" id="band-summary"></div>
+    <div class="triage" id="triage"></div>
+
+    <div class="filters">
+        <div><label>State</label><select id="filter-state"><option value="">All</option></select></div>
+        <div><label>Band</label><select id="filter-band">
+            <option value="">All</option>
+            <option value="Elite">Elite</option>
+            <option value="Solved">Solved</option>
+            <option value="High">High</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Developing">Developing</option>
+        </select></div>
+        <div><label>Binding</label><select id="filter-binding">
+            <option value="">All</option>
+            <option value="fi">FI — Financial</option>
+            <option value="qi">QI — Quality</option>
+            <option value="oi">OI — Operational</option>
+            <option value="wi">WI — Workforce</option>
+        </select></div>
+        <div><label>Search</label><input type="text" id="filter-search" placeholder="CCN or facility name…"></div>
+        <span class="count-chip" id="count-chip"></span>
+    </div>
+
+    <div class="table-wrap">
+        <div style="max-height: 68vh; overflow: auto;">
+            <table class="facility-table">
+                <thead>
+                    <tr>
+                        <th data-sort="ccn">CCN</th>
+                        <th data-sort="facility_name">Facility</th>
+                        <th data-sort="state">State</th>
+                        <th data-sort="cahsp">CAHSP</th>
+                        <th data-sort="band">Band</th>
+                        <th data-sort="fi">FI</th>
+                        <th data-sort="qi">QI</th>
+                        <th data-sort="oi">OI</th>
+                        <th data-sort="wi">WI</th>
+                        <th data-sort="ci">CI</th>
+                        <th data-sort="dual_mandate_met">Dual</th>
+                        <th data-sort="binding_constraint">Binding</th>
+                        <th data-sort="recommended_action">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="facility-tbody">
+                    <tr><td colspan="13" class="loading">Loading facilities…</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pager">
+            <button id="prev-btn">Prev</button>
+            <button id="next-btn">Next</button>
+            <span class="pager-info" id="pager-info"></span>
+        </div>
+    </div>
+
+    <div class="methodology">
+        <strong>Methodology</strong> — CAHSP = 100 × (0.30·FI + 0.30·QI + 0.20·OI + 0.10·WI + 0.10·CI).
+        Band thresholds: Elite ≥ 90, Solved ≥ 85, High ≥ 70, Moderate ≥ 50, Developing &lt; 50.
+        Dual-mandate gate: FI ≥ 0.50 AND QI ≥ 0.50. See <code>cahsp_score.py</code> for the reference
+        implementation. This baseline uses the direct-from-data proxies in
+        <code>calculate_cahsp_baseline.py</code>: FI from state-level margin + ownership bias, QI from
+        MORT/Safety/READM group-measure counts + star rating, OI as a rating proxy pending per-facility
+        throughput ingestion, WI as a neutral default pending HRSA FTE merge. CI reflects the share of
+        FI/QI/OI signals backed by real data (not fallbacks). The binding-constraint column flags the
+        sub-index with the lowest score for each facility — the first lever to pull.
+    </div>
+</div>
+
+<script>
+const REPORTS = '../reports/';
+const PAGE_SIZE = 50;
+
+let rows = [];
+let filtered = [];
+let sortKey = 'cahsp';
+let sortDesc = false;
+let page = 0;
+
+async function fetchCSV(path) {
+    const text = await fetch(path).then(r => r.text());
+    const lines = text.split(/\r?\n/).filter(Boolean);
+    const header = parseCSVLine(lines[0]);
+    return lines.slice(1).map(line => {
+        const vals = parseCSVLine(line);
+        const obj = {};
+        header.forEach((k, i) => obj[k] = vals[i]);
+        return obj;
+    });
+}
+
+function parseCSVLine(line) {
+    const out = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (inQ) {
+            if (c === '"' && line[i+1] === '"') { cur += '"'; i++; }
+            else if (c === '"') inQ = false;
+            else cur += c;
+        } else {
+            if (c === ',') { out.push(cur); cur = ''; }
+            else if (c === '"') inQ = true;
+            else cur += c;
+        }
+    }
+    out.push(cur);
+    return out;
+}
+
+function renderBandSummary(summary) {
+    const bands = summary.bands || {};
+    const total = summary.total_facilities || 0;
+    const order = ['Elite', 'Solved', 'High', 'Moderate', 'Developing'];
+    document.getElementById('band-summary').innerHTML = order.map(b => {
+        const n = bands[b] || 0;
+        const pct = total ? (n / total * 100).toFixed(1) : '0.0';
+        return `<div class="band-card band-${b.toLowerCase()}">
+            <div class="label">${b}</div>
+            <div class="value">${n}</div>
+            <div class="pct">${pct}% of ${total}</div>
+        </div>`;
+    }).join('');
+}
+
+function renderTriage(triage) {
+    const totals = triage.binding_totals || {};
+    const actions = triage.cohort_level_intervention_priorities || {};
+    const order = ['qi', 'fi', 'oi', 'wi'];
+    document.getElementById('triage').innerHTML = order.map(b => `
+        <div class="triage-card">
+            <div class="binding">${b.toUpperCase()} binding · ${totals[b] || 0} CAHs</div>
+            <div class="count">${totals[b] || 0}</div>
+            <div class="action">${actions[b] || ''}</div>
+        </div>
+    `).join('');
+}
+
+function applyFilters() {
+    const st = document.getElementById('filter-state').value;
+    const band = document.getElementById('filter-band').value;
+    const bind = document.getElementById('filter-binding').value;
+    const q = document.getElementById('filter-search').value.trim().toLowerCase();
+    filtered = rows.filter(r =>
+        (!st || r.state === st) &&
+        (!band || r.band === band) &&
+        (!bind || r.binding_constraint === bind) &&
+        (!q || r.ccn.toLowerCase().includes(q) || r.facility_name.toLowerCase().includes(q))
+    );
+    page = 0;
+    renderTable();
+}
+
+function renderTable() {
+    const tbody = document.getElementById('facility-tbody');
+    const sorted = [...filtered].sort((a, b) => {
+        let av = a[sortKey], bv = b[sortKey];
+        const an = parseFloat(av), bn = parseFloat(bv);
+        if (!isNaN(an) && !isNaN(bn)) { av = an; bv = bn; }
+        if (av < bv) return sortDesc ? 1 : -1;
+        if (av > bv) return sortDesc ? -1 : 1;
+        return 0;
+    });
+    const total = sorted.length;
+    const maxPage = Math.max(0, Math.ceil(total / PAGE_SIZE) - 1);
+    if (page > maxPage) page = maxPage;
+    const start = page * PAGE_SIZE;
+    const slice = sorted.slice(start, start + PAGE_SIZE);
+    if (!slice.length) {
+        tbody.innerHTML = `<tr><td colspan="13" class="loading">No facilities match these filters.</td></tr>`;
+    } else {
+        tbody.innerHTML = slice.map(r => `
+            <tr>
+                <td class="mono">${r.ccn}</td>
+                <td>${r.facility_name}</td>
+                <td>${r.state}</td>
+                <td class="numeric">${parseFloat(r.cahsp).toFixed(1)}</td>
+                <td><span class="band-tag band-${(r.band || '').toLowerCase()}">${r.band}</span></td>
+                <td class="numeric">${parseFloat(r.fi).toFixed(2)}</td>
+                <td class="numeric">${parseFloat(r.qi).toFixed(2)}</td>
+                <td class="numeric">${parseFloat(r.oi).toFixed(2)}</td>
+                <td class="numeric">${parseFloat(r.wi).toFixed(2)}</td>
+                <td class="numeric">${parseFloat(r.ci).toFixed(2)}</td>
+                <td class="${r.dual_mandate_met === 'True' ? 'dual-yes' : 'dual-no'}">${r.dual_mandate_met === 'True' ? '✓' : '—'}</td>
+                <td><span class="binding-tag">${(r.binding_constraint || '').toUpperCase()}</span></td>
+                <td>${r.recommended_action}</td>
+            </tr>
+        `).join('');
+    }
+    document.getElementById('count-chip').textContent =
+        `${total.toLocaleString()} of ${rows.length.toLocaleString()} facilities`;
+    document.getElementById('pager-info').textContent =
+        `Page ${page + 1} / ${maxPage + 1}`;
+    document.getElementById('prev-btn').disabled = page === 0;
+    document.getElementById('next-btn').disabled = page >= maxPage;
+}
+
+async function init() {
+    try {
+        const [csvRows, summary, triage] = await Promise.all([
+            fetchCSV(REPORTS + 'cahsp_national_baseline.csv'),
+            fetch(REPORTS + 'cahsp_band_summary.json').then(r => r.json()),
+            fetch(REPORTS + 'cahsp_binding_constraint_triage.json').then(r => r.json()),
+        ]);
+        rows = csvRows;
+        filtered = rows;
+        renderBandSummary(summary);
+        renderTriage(triage);
+
+        const stateSel = document.getElementById('filter-state');
+        const states = [...new Set(rows.map(r => r.state))].filter(Boolean).sort();
+        states.forEach(s => {
+            const opt = document.createElement('option');
+            opt.value = s; opt.textContent = s;
+            stateSel.appendChild(opt);
+        });
+
+        document.querySelectorAll('.facility-table th').forEach(th => {
+            th.addEventListener('click', () => {
+                const k = th.dataset.sort;
+                if (sortKey === k) sortDesc = !sortDesc;
+                else { sortKey = k; sortDesc = ['cahsp','fi','qi','oi','wi','ci'].includes(k); }
+                renderTable();
+            });
+        });
+        document.getElementById('filter-state').addEventListener('change', applyFilters);
+        document.getElementById('filter-band').addEventListener('change', applyFilters);
+        document.getElementById('filter-binding').addEventListener('change', applyFilters);
+        document.getElementById('filter-search').addEventListener('input', applyFilters);
+        document.getElementById('prev-btn').addEventListener('click', () => { if (page > 0) { page--; renderTable(); }});
+        document.getElementById('next-btn').addEventListener('click', () => { page++; renderTable(); });
+
+        document.getElementById('data-status').textContent = `${rows.length.toLocaleString()} CAHs loaded`;
+        sortKey = 'cahsp'; sortDesc = true;
+        renderTable();
+    } catch (e) {
+        document.getElementById('data-status').textContent = 'Error loading data';
+        document.getElementById('facility-tbody').innerHTML = `<tr><td colspan="13" class="loading">Could not load reports: ${e.message}</td></tr>`;
+    }
+}
+init();
+</script>
+</body>
+</html>

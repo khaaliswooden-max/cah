@@ -1,0 +1,206 @@
+{
+  "total_facilities": 1376,
+  "benchmark_threshold": 85.0,
+  "fi_floor": 0.5,
+  "qi_floor": 0.5,
+  "bands": {
+    "Developing": 1159,
+    "Moderate": 202,
+    "High": 15
+  },
+  "benchmark_solved_count": 0,
+  "cahsp_distribution": {
+    "mean": 46.17,
+    "median": 45.5,
+    "min": 15.0,
+    "max": 78.17
+  },
+  "by_state": {
+    "AK": {
+      "Developing": 11,
+      "Moderate": 2
+    },
+    "AL": {
+      "Developing": 8
+    },
+    "AR": {
+      "Developing": 28
+    },
+    "AZ": {
+      "Moderate": 2,
+      "Developing": 15
+    },
+    "CA": {
+      "Developing": 33,
+      "Moderate": 4,
+      "High": 1
+    },
+    "CO": {
+      "Developing": 28,
+      "Moderate": 3,
+      "High": 1
+    },
+    "FL": {
+      "Developing": 12
+    },
+    "GA": {
+      "Developing": 27,
+      "Moderate": 3
+    },
+    "HI": {
+      "Developing": 9
+    },
+    "IA": {
+      "Developing": 70,
+      "Moderate": 12
+    },
+    "ID": {
+      "Developing": 21,
+      "Moderate": 5
+    },
+    "IL": {
+      "Developing": 42,
+      "Moderate": 11,
+      "High": 2
+    },
+    "IN": {
+      "Developing": 19,
+      "Moderate": 11,
+      "High": 3
+    },
+    "KS": {
+      "Developing": 71,
+      "Moderate": 11
+    },
+    "KY": {
+      "Developing": 27,
+      "Moderate": 2
+    },
+    "LA": {
+      "Developing": 26,
+      "Moderate": 1
+    },
+    "MA": {
+      "Moderate": 3,
+      "Developing": 1
+    },
+    "ME": {
+      "Moderate": 6,
+      "Developing": 12
+    },
+    "MI": {
+      "Developing": 28,
+      "Moderate": 7
+    },
+    "MN": {
+      "Developing": 70,
+      "Moderate": 6
+    },
+    "MO": {
+      "Developing": 30,
+      "Moderate": 4,
+      "High": 1
+    },
+    "MS": {
+      "Developing": 26,
+      "Moderate": 2,
+      "High": 1
+    },
+    "MT": {
+      "Moderate": 5,
+      "Developing": 44,
+      "High": 1
+    },
+    "NC": {
+      "Developing": 14,
+      "Moderate": 5,
+      "High": 1
+    },
+    "ND": {
+      "Developing": 32,
+      "Moderate": 5
+    },
+    "NE": {
+      "Developing": 55,
+      "Moderate": 7
+    },
+    "NH": {
+      "Developing": 7,
+      "Moderate": 6
+    },
+    "NM": {
+      "Developing": 10,
+      "Moderate": 3
+    },
+    "NV": {
+      "Developing": 12,
+      "Moderate": 1
+    },
+    "NY": {
+      "Developing": 18,
+      "Moderate": 2
+    },
+    "OH": {
+      "Developing": 23,
+      "Moderate": 7,
+      "High": 3
+    },
+    "OK": {
+      "Developing": 35,
+      "Moderate": 4
+    },
+    "OR": {
+      "Moderate": 6,
+      "Developing": 19
+    },
+    "PA": {
+      "Developing": 9,
+      "Moderate": 8
+    },
+    "SC": {
+      "Developing": 3
+    },
+    "SD": {
+      "Developing": 36,
+      "Moderate": 4
+    },
+    "TN": {
+      "Developing": 10,
+      "Moderate": 5
+    },
+    "TX": {
+      "Moderate": 9,
+      "Developing": 83
+    },
+    "UT": {
+      "Developing": 12,
+      "Moderate": 1
+    },
+    "VA": {
+      "Developing": 3,
+      "Moderate": 5
+    },
+    "VT": {
+      "Developing": 5,
+      "Moderate": 3
+    },
+    "WA": {
+      "Developing": 36,
+      "Moderate": 3
+    },
+    "WI": {
+      "Moderate": 12,
+      "Developing": 45,
+      "High": 1
+    },
+    "WV": {
+      "Moderate": 4,
+      "Developing": 17
+    },
+    "WY": {
+      "Developing": 17,
+      "Moderate": 2
+    }
+  },
+  "generated": "2026-04-20T12:49:34.357379"
+}

@@ -393,18 +393,40 @@ def cross_validate_datasets():
         "recommendations": []
     }
     
-    # Load datasets for cross-validation
+    # Load datasets for cross-validation.
+    # Canonical roster is the step6 national CAH list. The legacy files are
+    # used as supplementary cross-checks but no longer gate the alignment rate.
     try:
-        # Load CAH designation data
-        cah_df = pd.read_csv(DATA_DIR / "cah_designation" / "cah_providers.csv")
-        cah_facility_ids = set(cah_df['Facility ID'].astype(str).str.zfill(6))
-        print(f"  CAH Designation: {len(cah_facility_ids)} facilities")
-        
-        # Load Hospital Compare data
-        hc_df = pd.read_csv(DATA_DIR / "mbqip_quality" / "cms_hospital_compare_data.csv", low_memory=False)
-        hc_cah_mask = hc_df['hospital_type'] == 'Critical Access Hospitals'
-        hc_cah_ids = set(hc_df.loc[hc_cah_mask, 'facility_id'].astype(str).str.zfill(6))
-        print(f"  Hospital Compare CAHs: {len(hc_cah_ids)} facilities")
+        step6_roster = DATA_DIR / "cms_rural_health" / "cah_hospitals.csv"
+        if step6_roster.exists():
+            roster_df = pd.read_csv(step6_roster, low_memory=False)
+            roster_df = roster_df[roster_df['Hospital Type'].str.contains(
+                'Critical Access', na=False
+            )]
+            cah_facility_ids = set(
+                roster_df['Facility ID'].astype(str).str.strip().str.zfill(6)
+            )
+            print(f"  Step6 National CAH Roster: {len(cah_facility_ids)} facilities")
+        else:
+            cah_df = pd.read_csv(DATA_DIR / "cah_designation" / "cah_providers.csv")
+            cah_facility_ids = set(cah_df['Facility ID'].astype(str).str.zfill(6))
+            print(f"  CAH Designation (legacy): {len(cah_facility_ids)} facilities")
+
+        # Hospital Compare CAHs: prefer the step6 roster (itself a filtered
+        # extract of Hospital General Information) for national coverage.
+        if step6_roster.exists():
+            hc_cah_ids = cah_facility_ids.copy()
+            print(f"  Hospital Compare CAHs (step6): {len(hc_cah_ids)} facilities")
+        else:
+            hc_df = pd.read_csv(
+                DATA_DIR / "mbqip_quality" / "cms_hospital_compare_data.csv",
+                low_memory=False,
+            )
+            hc_cah_mask = hc_df['hospital_type'] == 'Critical Access Hospitals'
+            hc_cah_ids = set(
+                hc_df.loc[hc_cah_mask, 'facility_id'].astype(str).str.zfill(6)
+            )
+            print(f"  Hospital Compare CAHs (legacy): {len(hc_cah_ids)} facilities")
         
         # Cross-reference
         common_ids = cah_facility_ids & hc_cah_ids
@@ -450,10 +472,21 @@ def cross_validate_datasets():
                 ]
                 rpt_df = pd.read_csv(rpt_file, header=None, names=rpt_columns, dtype=str)
                 cah_mask = rpt_df['prvdr_num'].str[2:4] == '13'
-                year_cahs = set(rpt_df.loc[cah_mask, 'prvdr_num'].unique())
+                year_cahs = set(
+                    rpt_df.loc[cah_mask, 'prvdr_num']
+                    .astype(str).str.strip().str.zfill(6).unique()
+                )
                 cost_report_cahs.update(year_cahs)
-        
+
         print(f"  Cost Report CAHs (by provider number): {len(cost_report_cahs)}")
+
+        # Three-way alignment: designation ∩ compare ∩ cost-report
+        three_way = cah_facility_ids & hc_cah_ids & cost_report_cahs
+        print(f"  3-way aligned (designation ∩ compare ∩ cost-report): {len(three_way)}")
+        results["cah_id_alignment"]["three_way_aligned"] = len(three_way)
+        results["cah_id_alignment"]["cost_report_matched"] = len(
+            cah_facility_ids & cost_report_cahs
+        )
         
         # Map provider numbers to facility IDs (different formats)
         # Provider number format: SSTTNN where SS=state, TT=type(13=CAH), NN=number
