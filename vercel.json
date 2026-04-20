@@ -3,6 +3,7 @@
   "name": "cah-dashboard",
   "version": 2,
   "public": false,
+  "buildCommand": "mkdir -p dashboard/reports && cp reports/cahsp_national_baseline.csv reports/cahsp_band_summary.json reports/cahsp_binding_constraint_triage.json reports/mandate_gap_analysis.csv reports/mandate_cohort_summary.json dashboard/reports/",
   "outputDirectory": "dashboard",
   "headers": [
     {
