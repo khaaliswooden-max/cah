@@ -31,6 +31,7 @@
 <nav class="tabs-nav">
     <div class="container tabs-row">
         <button class="tab active" data-tab="problem">The Problem</button>
+        <button class="tab" data-tab="benchmark">The Benchmark</button>
         <button class="tab" data-tab="solution">Our Solution</button>
         <button class="tab" data-tab="solved">What Solved Looks Like</button>
     </div>
@@ -136,7 +137,116 @@
 </section>
 
 <!-- ============================================================= -->
-<!-- TAB 2: OUR SOLUTION                                            -->
+<!-- TAB 2: THE BENCHMARK                                           -->
+<!-- ============================================================= -->
+<section id="tab-benchmark" class="tab-panel" hidden>
+
+    <h1 class="panel-title">The benchmark a CAH solution has to clear.</h1>
+    <p class="lede">
+        CAHSP &mdash; <em>Critical Assessment of Hospital Sustainability &amp; Performance</em>
+        &mdash; is a structured benchmark modeled on CASP/AlphaFold, applied to the 1,376
+        CAH viability problem. A solution is <em>Solved</em> only when the composite clears
+        <span class="mono">85</span>, both mandate floors hold, and the score holds for
+        24 months against HCRIS&#8209;grounded validation.
+    </p>
+
+    <h2 class="section-title">Success threshold</h2>
+    <pre class="code-block mono">CAHSP &gt;= 85  AND  FI &gt;= 0.50  AND  QI &gt;= 0.50
+held for 24 months on HCRIS-grounded validation</pre>
+    <p class="prose-note mono">Source: visionblox.org/cahsp</p>
+
+    <h2 class="section-title">Composite score</h2>
+    <table class="kv-table">
+        <thead>
+            <tr><th>INDEX</th><th>NAME</th><th class="num">WEIGHT</th><th>MEASURES</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="mono">FI</td><td>Financial Index</td><td class="num mono">0.30</td><td>Op. margin &Delta;, denial rate, labor/revenue</td></tr>
+            <tr><td class="mono">QI</td><td>Clinical Quality Index</td><td class="num mono">0.30</td><td>MBQIP %ile, readmits, HCAHPS</td></tr>
+            <tr><td class="mono">OI</td><td>Operational Efficiency</td><td class="num mono">0.20</td><td>Occupancy, LOS, ED throughput</td></tr>
+            <tr><td class="mono">WI</td><td>Workforce Index</td><td class="num mono">0.10</td><td>Travel&#8209;nurse dependency, tele&#8209;coverage, burnout</td></tr>
+            <tr><td class="mono">CI</td><td>Confidence Index</td><td class="num mono">0.10</td><td>&plusmn;15% accuracy, transferability, failure modes</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Score bands</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">DEVELOPING</div>
+            <div class="cell-value mono">&lt; 70</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MODERATE</div>
+            <div class="cell-value mono">70&ndash;84</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">HIGH</div>
+            <div class="cell-value mono">85&ndash;89</div>
+            <div class="cell-note">Solved threshold</div>
+        </div>
+        <div class="cell emphatic">
+            <div class="cell-label">ELITE</div>
+            <div class="cell-value mono">90&ndash;100</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Five problem classes</h2>
+    <table class="kv-table wide">
+        <thead>
+            <tr><th>CLASS</th><th>FOCUS</th><th>GROUND TRUTH</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="mono">CLASS 1</td>
+                <td>Financial structure &mdash; margin, denials, labor ratio</td>
+                <td class="mono">CMS HCRIS / MBQIP</td>
+            </tr>
+            <tr>
+                <td class="mono">CLASS 2</td>
+                <td>Clinical quality &mdash; readmits, transfers, HCAHPS</td>
+                <td class="mono">MBQIP / Hospital Compare</td>
+            </tr>
+            <tr>
+                <td class="mono">CLASS 3</td>
+                <td>Operational architecture &mdash; AI&#8209;native triage, federated RCM, swing&#8209;bed</td>
+                <td class="mono">Prospective pilot</td>
+            </tr>
+            <tr>
+                <td class="mono">CLASS 4</td>
+                <td>Workforce &mdash; travel&#8209;nurse cap (&le; 120 FTE), tele&#8209;coverage, burnout</td>
+                <td class="mono">HRSA / Flex Monitoring</td>
+            </tr>
+            <tr>
+                <td class="mono">CLASS 5</td>
+                <td>Confidence estimation (CAHSP&#8209;C) &mdash; &plusmn;15%, transferability, failure modes</td>
+                <td class="mono">Monte Carlo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Execution roadmap</h2>
+    <ul class="bullet-list">
+        <li><span class="mono">P0 (now)</span> &mdash; baseline scoring &amp; target classification</li>
+        <li><span class="mono">P1 (Q3 2026)</span> &mdash; Type A cycle: template&#8209;based interventions</li>
+        <li><span class="mono">P2 (Q1 2027)</span> &mdash; Type B cycle: novel architectures</li>
+    </ul>
+
+    <h2 class="section-title">Why a CASP&#8209;style gate</h2>
+    <p class="prose">
+        CASP gave protein folding one blind, independently&#8209;scored target that every
+        algorithm had to clear. CAHSP applies the same discipline to CAH viability: one
+        composite, one mandate gate, one validation window, run against the public
+        national roster so every proposed solution is comparable on the same ground truth.
+    </p>
+
+    <p class="link-row">
+        <a class="deep-link" href="https://visionblox.org/cahsp" target="_blank" rel="noopener">Full CAHSP specification &#8594;</a>
+    </p>
+
+</section>
+
+<!-- ============================================================= -->
+<!-- TAB 3: OUR SOLUTION                                            -->
 <!-- ============================================================= -->
 <section id="tab-solution" class="tab-panel" hidden>
 
@@ -221,7 +331,7 @@ J(x) = theta * Q(x) + (1 - theta) * M_hat(x)   # default theta = 0.6</pre>
 </section>
 
 <!-- ============================================================= -->
-<!-- TAB 3: WHAT SOLVED LOOKS LIKE                                  -->
+<!-- TAB 4: WHAT SOLVED LOOKS LIKE                                  -->
 <!-- ============================================================= -->
 <section id="tab-solved" class="tab-panel" hidden>
 
