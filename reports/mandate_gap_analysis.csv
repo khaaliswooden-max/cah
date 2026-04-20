@@ -1,0 +1,1377 @@
+ccn,facility_name,state,ownership,fi,qi,fi_gap,qi_gap,max_gap,cahsp,band,cohort,is_quick_win
+061301,RIO GRANDE HOSPITAL,CO,Proprietary,0.55,1.0,0.0,0.0,0.0,78.17,High,dual_solved,False
+051329,SUTTER LAKESIDE HOSPITAL,CA,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+141325,OSF SAINT LUKE MEDICAL CENTER,IL,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+151328,INDIANA UNIVERSITY HEALTH BEDFORD HOSPITAL,IN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+151312,INDIANA UNIVERSITY HEALTH WHITE MEMORIAL HOSPITAL,IN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+261321,HEDRICK MEDICAL CENTER,MO,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+271344,SIDNEY HEALTH CENTER,MT,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+341304,ECU HEALTH BERTIE HOSPITAL,NC,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+361320,HOLZER MEDICAL CENTER JACKSON,OH,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+361306,MERCY ALLEN HOSPITAL,OH,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+361312,MERCY HEALTH - URBANA HOSPITAL,OH,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+521358,DOOR COUNTY MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,77.17,High,dual_solved,False
+051310,ADVENTIST HEALTH HOWARD MEMORIAL,CA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,69.67,Moderate,dual_solved,False
+151334,NORTON SCOTT HOSPITAL,IN,Proprietary,0.55,0.875,0.0,0.0,0.0,69.42,Moderate,dual_solved,False
+171327,ELLSWORTH COUNTY MEDICAL CENTER,KS,Proprietary,0.55,0.875,0.0,0.0,0.0,69.42,Moderate,dual_solved,False
+201314,REDINGTON FAIRVIEW GENERAL HOSPITAL,ME,Proprietary,0.55,0.875,0.0,0.0,0.0,69.42,Moderate,dual_solved,False
+451380,UT HEALTH EAST TEXAS QUITMAN HOSPITAL,TX,Proprietary,0.55,0.875,0.0,0.0,0.0,69.42,Moderate,dual_solved,False
+161374,MYRTUE MEDICAL CENTER,IA,Voluntary non-profit - Other,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+141317,GIBSON COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+181301,MARCUM AND WALLACE MEMORIAL HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+201315,MAINEHEALTH STEPHENS HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+271340,BITTERROOT HEALTH - DALY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+271336,LOGAN HEALTH - WHITEFISH,MT,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+341324,"THE OUTER BANKS HOSPITAL, INC",NC,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+301310,ANDROSCOGGIN VALLEY HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+301308,VALLEY REGIONAL HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+511316,GRANT MEMORIAL HOSPITAL,WV,Voluntary non-profit - Other,0.5167,0.875,0.0,0.0,0.0,68.42,Moderate,dual_solved,False
+141348,RED BUD REGIONAL HOSPITAL,IL,Proprietary,0.55,1.0,0.0,0.0,0.0,64.83,Moderate,dual_solved,False
+031318,BANNER PAYSON MEDICAL CENTER,AZ,Voluntary non-profit - Other,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+161367,PELLA REGIONAL HEALTH CENTER,IA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+131315,SYRINGA GENERAL HOSPITAL,ID,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+141315,ILLINI COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+141339,TAYLORVILLE MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+151310,"PARKVIEW WABASH HOSPITAL, INC",IN,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+171363,"COMMUNITY MEMORIAL HEALTHCARE, INC.",KS,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+171372,SCOTT COUNTY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+191312,CHRISTUS COUSHATTA HEALTH CARE CENTER,LA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+221303,ATHOL MEMORIAL HOSPITAL,MA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+221300,MARTHA'S VINEYARD HOSPITAL INC,MA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+201302,LINCOLNHEALTH,ME,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+231332,BRONSON LAKEVIEW HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+231338,COREWELL HEALTH GERBER HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+231331,SPARROW IONIA HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+261303,COMMUNITY HOSPITAL ASSOCIATION,MO,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+251315,BAPTIST MEDICAL CENTER-LEAKE,MS,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+351330,WEST RIVER REGIONAL MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+281352,"COMMUNITY MEDICAL CENTER, INC",NE,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+281336,YORK GENERAL HEALTH CARE SERVICES,NE,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+291306,CARSON VALLEY HEALTH,NV,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+361328,PROMEDICA DEFIANCE REGIONAL HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+381317,ADVENTIST HEALTH TILLAMOOK,OR,Voluntary non-profit - Church,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+381318,PROVIDENCE HOOD RIVER MEMORIAL HOSPITAL,OR,Voluntary non-profit - Church,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+391300,GEISINGER JERSEY SHORE HOSPITAL,PA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+391313,UPMC COLE,PA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+491302,CARILION GILES COMMUNITY HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+471301,GIFFORD MEDICAL CENTER,VT,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+521340,MAYO CLINIC HEALTH SYSTEM-RED CEDAR INC,WI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+521357,MERCY WALWORTH HOSPITAL & MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+521341,RICHLAND HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+511315,POTOMAC VALLEY HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,64.67,Moderate,dual_solved,False
+021311,PEACEHEALTH KETCHIKAN MEDICAL CENTER,AK,Voluntary non-profit - Church,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+061303,EAST MORGAN COUNTY HOSPITAL,CO,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+061327,SOUTHWEST MEMORIAL HOSPITAL,CO,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+161306,JONES REGIONAL MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+161361,VAN DIEST MEDICAL CENTER,IA,Voluntary non-profit - Other,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+131326,CASSIA REGIONAL HOSPITAL,ID,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+131302,NORTH CANYON MEDICAL CENTER,ID,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+141347,CARLINVILLE AREA HOSPITAL,IL,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+141346,FAYETTE COUNTY HOSPITAL,IL,Voluntary non-profit - Other,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+141344,LAWRENCE COUNTY MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+151303,ASCENSION ST VINCENT JENNINGS,IN,Voluntary non-profit - Church,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+151316,INDIANA UNIVERSITY HEALTH FRANKFORT INC,IN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+171315,NEMAHA VALLEY COMMUNITY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+201310,BRIDGTON HOSPITAL,ME,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+231318,"ASPIRUS IRON RIVER HOSPITAL & CLINICS, INC",MI,Voluntary non-profit - Other,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241359,AVERA MARSHALL REGIONAL MEDICAL CTR,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241330,CENTRACARE HEALTH SYSTEM - MELROSE HOSPITAL,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241322,RAINY LAKE MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241381,SANFORD THIEF RIVER FALLS MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241380,ST JOSEPHS AREA  HEALTH SERVICES,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+241363,STEVENS COMMUNITY MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+261309,WRIGHT MEMORIAL HOSPITAL,MO,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+251302,MONROE REGIONAL HOSPITAL,MS,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+271332,GLENDIVE MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+341323,CHARLES A CANNON JR MEMORIAL HOSPITAL,NC,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+341322,ST LUKES HOSPITAL,NC,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+351333,CHI ST ALEXIUS HEALTH DEVILS LAKE,ND,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+351334,CHI ST ALEXIUS HEALTH WILLISTON,ND,Voluntary non-profit - Church,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+351310,SAKAKAWEA MEDICAL CENTER - CAH,ND,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+281362,PHELPS MEMORIAL HEALTH CENTER,NE,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+301301,COTTAGE HOSPITAL,NH,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+321308,CIBOLA GENERAL HOSPITAL,NM,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+361324,OHIOHEALTH SHELBY HOSPITAL,OH,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+371335,"HASKELL REGIONAL HOSPITAL, INC",OK,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+381313,ST CHARLES MEDICAL CENTER PRINEVILLE,OR,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+391312,PENN HIGHLANDS BROOKVILLE,PA,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+431310,AVERA FLANDREAU HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+431339,COTEAU DES PRAIRIES HEALTH CARE SYSTEM,SD,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+431301,FAULKTON AREA MEDICAL CENTER,SD,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+431321,MONUMENT HEALTH STURGIS HOSPITAL,SD,Voluntary non-profit - Other,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+451323,ADVENTHEALTH ROLLINS BROOK,TX,Voluntary non-profit - Church,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+451397,BAYLOR SCOTT & WHITE HOSPITAL BRENHAM,TX,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+461306,GUNNISON VALLEY HOSPITAL,UT,Voluntary non-profit - Other,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+491307,"PAGE MEMORIAL HOSPITAL, INC",VA,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+521330,CROSSING RIVERS HEALTH MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+521335,HUDSON HOSPITAL,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+521346,THEDACARE MEDICAL CENTER - SHAWANO,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+521334,THEDACARE MEDICAL CENTER-WAUPACA,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+521347,WESTERN WISCONSIN HEALTH,WI,Voluntary non-profit - Private,0.5167,1.0,0.0,0.0,0.0,63.83,Moderate,dual_solved,False
+051319,MERCY MEDICAL CENTER OF MT SHASTA,CA,Voluntary non-profit - Other,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+061344,ST THOMAS MORE HOSPITAL,CO,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+131320,CLEARWATER VALLEY HOSPITAL & CLINICS,ID,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+131327,GRITMAN MEDICAL CENTER,ID,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+141311,FAIRFIELD MEMORIAL HOSPITAL 1,IL,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+151322,PERRY COUNTY MEMORIAL HOSPITAL,IN,Voluntary non-profit - Other,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+341325,ASHE MEMORIAL HOSPITAL,NC,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+341329,BLUE RIDGE REGIONAL HOSPITAL,NC,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+381321,GRANDE RONDE HOSPITAL,OR,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+391315,PENN HIGHLANDS ELK,PA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+491305,SHENANDOAH MEMORIAL HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.75,0.0,0.0,0.0,59.67,Moderate,dual_solved,False
+111329,ST MARYS GOOD SAMARITAN HOSPITAL,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,53.17,Moderate,dual_solved,False
+231326,SPARROW CLINTON HOSPITAL,MI,Proprietary,0.55,0.5,0.0,0.0,0.0,53.17,Moderate,dual_solved,False
+441307,HIGHPOINT HEALTH-RIVERVIEW WITH ASCENSION SAINT TH,TN,Proprietary,0.55,0.5,0.0,0.0,0.0,53.17,Moderate,dual_solved,False
+031314,COBRE VALLEY REGIONAL MEDICAL CENTER,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+051320,BANNER LASSEN MEDICAL CENTER,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+051332,MARK TWAIN MEDICAL CENTER,CA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+111310,ATRIUM HEALTH NAVICENT PEACH,GA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+141350,ST FRANCIS HOSPITAL,IL,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+151307,ASCENSION ST VINCENT WILLIAMSPORT,IN,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+151315,CAMERON MEMORIAL COMMUNITY HOSPITAL INC,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+151326,UNION HOSPITAL CLINTON,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+171362,CITIZENS MEDICAL CENTER,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+171341,HIAWATHA COMMUNITY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+221302,FAIRVIEW HOSPITAL,MA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+231339,COREWELL HEALTH PENNOCK HOSPITAL,MI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+231337,OSF ST FRANCIS HOSPITAL AND MEDICAL GROUP,MI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+271335,COMMUNITY HOSPITAL OF ANACONDA,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+351335,JAMESTOWN REGIONAL MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+281364,"BEATRICE COMMUNITY HOSPITAL & HEALTH CENTER, INC",NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+301312,HUGGINS HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+301307,"MEMORIAL HOSPITAL, THE",NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+301311,SPEARE MEMORIAL HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+321310,HOLY CROSS HOSPITAL A DIV OF TAOS HEALTH SYSTEMS,NM,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+331320,COBLESKILL REGIONAL HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+331316,"COMMUNITY MEMORIAL HOSPITAL, INC",NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+361318,FOSTORIA COMMUNITY HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+361333,FULTON COUNTY HEALTH CENTER,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+361309,"HENRY COUNTY HOSPITAL, INC",OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+381302,SAMARITAN NORTH LINCOLN HOSPITAL,OR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+391306,ENDLESS MOUNTAINS HEALTH SYSTEMS,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+391303,FULTON COUNTY MEDICAL CENTER,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+391305,TROY COMMUNITY HOSPITAL,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+391316,UPMC WELLSBORO,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+441305,MACON COMMUNITY HOSPITAL,TN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+491304,CARILION STONEWALL JACKSON HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+471303,NORTHEASTERN VERMONT REGIONAL HOSPITAL,VT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+471307,PORTER HOSPITAL INC,VT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+521308,AMERY HOSPITAL & CLINIC,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+521351,REEDSBURG AREA MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+521337,ST CROIX REGIONAL MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+521352,UPLAND HILLS HEALTH,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+511320,JACKSON GENERAL HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,52.17,Moderate,dual_solved,False
+201312,MAINEHEALTH WALDO HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.625,0.0,0.0,0.0,50.92,Moderate,dual_solved,False
+191302,OCHSNER ST MARTIN HOSPITAL,LA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,48.83,Developing,dual_solved,False
+521348,VERNON MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,48.83,Developing,dual_solved,False
+511321,"ST JOSEPH'S HOSPITAL OF BUCKHANNON, INC",WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,48.83,Developing,dual_solved,False
+031313,HOLY CROSS HOSPITAL,AZ,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+051306,GLENN MEDICAL CENTER,CA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+101303,LAKE BUTLER HOSPITAL,FL,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+111334,CANDLER COUNTY HOSPITAL,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+111311,JENKINS COUNTY MEDICAL CENTER,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+111336,MOUNTAIN LAKES MEDICAL CENTER,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+111312,OPTIM MEDICAL CENTER - SCREVEN,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+111323,OPTIM MEDICAL CENTER - TATTNALL,GA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+131312,ST LUKE'S MCCALL,ID,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+141342,DEACONESS ILLINOIS UNION COUNTY,IL,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+171357,HILLSBORO COMMUNITY HOSPITAL,KS,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+181308,BLUEGRASS COMMUNITY HOSPITAL,KY,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+181334,KENTUCKY RIVER MEDICAL CENTER,KY,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+181323,OHIO COUNTY HOSPITAL,KY,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+191320,BIENVILLE MEDICAL CENTER,LA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+191307,DEQUINCY MEMORIAL HOSPITAL,LA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+191327,WEST CARROLL MEMORIAL HOSPITAL,LA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+201306,RUMFORD  HOSPITAL,ME,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+231321,BELL HOSPITAL,MI,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+241335,ST ELIZABETH MEDICAL CENTER,MN,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+261320,LAFAYETTE REGIONAL HEALTH CENTER,MO,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+341317,LIFEBRITE COMMUNITY HOSPITAL OF STOKES,NC,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+341314,WASHINGTON COUNTY HOSP INC,NC,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+321312,ALTA VISTA REGIONAL HOSPITAL,NM,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+321309,MIMBRES VALLEY MEDICAL CENTER,NM,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+371302,"MERCY HOSPITAL WATONGA, INC",OK,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+371318,RURAL WELLNESS FAIRFAX HOSPITAL,OK,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+371316,RURAL WELLNESS STROUD HOSPITAL,OK,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+371314,THE PHYSICIANS' HOSPITAL IN ANADARKO,OK,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+381320,COLUMBIA MEMORIAL HOSPITAL,OR,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+391302,CONEMAUGH MEYERSDALE MEDICAL CENTER,PA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+391317,CONEMAUGH MINERS MEDICAL CENTER,PA,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+441323,BIG SOUTH FORK MEDICAL CENTER,TN,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+441314,LAUDERDALE COMMUNITY HOSPITAL,TN,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451378,BIG BEND REGIONAL MEDICAL CENTER,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451347,COLEMAN COUNTY MEDICAL CENTER COMPANY,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451355,COLLINGSWORTH GENERAL HOSPITAL,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451369,GOLDEN PLAINS COMMUNITY HOSPITAL,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451306,KIMBLE HOSPITAL,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451372,MULESHOE AREA MEDICAL CENTER,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451312,RICE MEDICAL CENTER,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451328,RICELAND MEDICAL CENTER,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451361,SABINE COUNTY HOSPITAL,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+451304,SCHLEICHER COUNTY MEDICAL CENTER,TX,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+521342,INDIANHEAD MEDICAL CTR,WI,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+511312,PRESTON MEMORIAL HOSPITAL,WV,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+511304,SISTERSVILLE GENERAL HOSPITAL,WV,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+531319,EVANSTON REGIONAL HOSPITAL,WY,Proprietary,0.55,0.5,0.0,0.0,0.0,46.5,Developing,dual_solved,False
+021309,BRISTOL BAY DBA KANAKANAK HOSPITAL,AK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+021306,PROVIDENCE KODIAK ISLAND MEDICAL CTR,AK,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+021313,SOUTH PENINSULA HOSPITAL,AK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+011304,OCHSNER CHOCTAW GENERAL,AL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041321,BAPTIST HEALTH MEDICAL CENTER-ARKADELPHIA,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041327,BRADLEY COUNTY MEDICAL CENTER,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041324,CHI ST VINCENT MORRILTON,AR,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041328,CHICOT MEMORIAL MEDICAL CENTER,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041326,DELTA MEMORIAL HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041311,HOWARD MEMORIAL HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041306,IZARD REGIONAL HOSPITAL LLC,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041309,LAWRENCE MEMORIAL HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041320,LITTLE RIVER MEMORIAL HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041308,MCGEHEE HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041334,MENA REGIONAL HEALTH SYSTEM,AR,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041329,MERCY HOSPITAL BERRYVILLE,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041318,MERCY HOSPITAL BOONEVILLE,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041303,MERCY HOSPITAL OZARK,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041300,MERCY HOSPITAL PARIS,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041305,MERCY HOSPITAL WALDRON,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041313,OZARK HEALTH,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041331,OZARKS COMMUNITY HOSPITAL OF GRAVETTE,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041310,STONE COUNTY MEDICAL CENTER,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+041332,UNITY HEALTH - NEWPORT,AR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031301,BENSON HOSPITAL,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031312,COPPER QUEEN COMMUNITY HOSPITAL,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031317,LA PAZ REGIONAL HOSPITAL,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031302,"NORTHERN COCHISE COMMUNITY HOSPITAL, INC.",AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031309,SAGE MEMORIAL HOSPITAL,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031315,WHITE MOUNTAIN REGIONAL MEDICAL CENTER,AZ,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+031300,WICKENBURG COMMUNITY HOSPITAL,AZ,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051301,ADVENTIST HEALTH TEHACHAPI VALLEY,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051307,CATALINA ISLAND MEDICAL CENTER,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051323,COLORADO RIVER MEDICAL CENTER,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051334,COMMUNITY MEMORIAL HOSPITAL - OJAI,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051321,HEALDSBURG HOSPITAL,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051311,ORCHARD HOSPITAL,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051318,PROVIDENCE REDWOOD MEMORIAL HOSPITAL,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051333,RIDGECREST REGIONAL HOSPITAL,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051331,SANTA YNEZ VALLEY COTTAGE HOSPITAL,CA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+051336,SOUTHERN MONTEREY COUNTY MEMORIAL HOSPITAL,CA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061336,ARKANSAS VALLEY REGIONAL MEDICAL CENTER,CO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061302,FAMILY HEALTH WEST HOSPITAL,CO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061306,LINCOLN HEALTH HOSPITAL,CO,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061321,MT SAN RAFAEL HOSPITAL,CO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061308,SAN LUIS VALLEY HEALTH CONEJOS COUNTY HOSPITAL,CO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+061326,UCHEALTH PIKES PEAK REGIONAL HOSPITAL,CO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101300,ADVENTHEALTH WAUCHULA,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101304,CALHOUN-LIBERTY HOSPITAL,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101314,DOCTORS MEMORIAL HOSPITAL INC,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101312,FISHERMEN'S COMMUNITY HOSPITAL,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101309,HENDRY REGIONAL MEDICAL CENTER,FL,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101315,JAY HOSPITAL,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+101313,MARINERS HOSPITAL,FL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+111330,ATRIUM HEALTH FLOYD POLK MEDICAL CENTER,GA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+111327,BACON COUNTY HOSPITAL,GA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+111314,LIFEBRITE COMMUNITY HOSPITAL OF EARLY,GA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+111328,PHOEBE WORTH MEDICAL CENTER,GA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+111316,WARM SPRINGS MEDICAL CENTER,GA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+121304,KAHUKU MEDICAL CENTER,HI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+121308,KULA HOSPITAL,HI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+121305,LANAI COMMUNITY HOSPITAL,HI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+121303,MOLOKAI GENERAL HOSPITAL,HI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161351,AVERA HOLY FAMILY HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161321,AVERA MERRILL PIONEER HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161304,CHI HEALTH - MERCY CORNING,IA,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161309,CHI HEALTH MISSOURI VALLEY,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161348,CLARKE COUNTY HOSPITAL,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161320,COMMUNITY MEMORIAL HOSPITAL MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161313,GENESIS MEDICAL CENTER-DEWITT,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161324,GEORGE C GRAPE COMMUNITY HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161303,GRUNDY COUNTY MEMORIAL HOSPITAL,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161316,GUNDERSEN PALMER LUTHERAN HOSPITAL AND CLINICS,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161314,GUTHRIE COUNTY HOSPITAL,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161336,HEGG MEMORIAL HEALTH CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161354,HORN MEMORIAL HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161334,HUMBOLDT COUNTY MEMORIAL HOSPITAL,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161355,KNOXVILLE HOSPITAL & CLINICS,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161370,LORING HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161341,LUCAS COUNTY HEALTH CENTER,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161332,MANNING REGIONAL HEALTHCARE CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161331,MERCY MEDICAL CENTER-NEW HAMPTON,IA,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161377,MERCYONE CENTERVILLE MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161378,MERCYONE DYERSVILLE MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161319,MERCYONE ELKADER MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161338,MERCYONE OELWEIN MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161360,ORANGE CITY AREA HEALTH SYSTEM,IA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161345,OSCEOLA COMMUNITY HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161381,SANFORD SHELDON MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161366,SHENANDOAH MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161346,SIOUX CENTER HEALTH,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161382,ST ANTHONY REGIONAL HOSPITAL & NURSING HOME,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161350,STEWART MEMORIAL COMMUNITY HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+161349,VIRGINIA GAY HOSPITAL,IA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131325,BINGHAM MEMORIAL HOSPITAL,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131301,BOUNDARY COMMUNITY HOSPITAL,ID,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131322,FRANKLIN COUNTY MEDICAL CENTER,ID,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131311,ST LUKE'S ELMORE MEDICAL CENTER,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131310,ST LUKE'S JEROME,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131323,ST LUKE'S WOOD RIVER MEDICAL CENTER,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131321,ST MARY'S HOSPITAL,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131313,TETON VALLEY HOSPITAL,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141309,CARLE EUREKA  HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141316,CARLE HOOPESTON REGIONAL HEALTH CENTER,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141355,CARLE RICHLAND MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141306,COMMUNITY HOSPITAL OF STAUNTON,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141304,"GENESIS MEDICAL CENTER, ALEDO",IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141332,HILLSBORO AREA HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141330,HOPEDALE HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141354,HSHS GOOD SHEPHERD HOSPITAL INC,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141353,IROQUOIS MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141352,JACKSONVILLE MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141301,KIRBY MEDICAL CENTER,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141331,MARSHALL BROWNING HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141305,MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141335,MERCY HARVARD HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141302,MIDWEST MEDICAL CENTER,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141318,OSF HOLY FAMILY MEDICAL CENTER,IL,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141337,OSF SAINT CLARE MEDICAL CENTER,IL,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141341,PANA COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141312,ROCHELLE COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141334,ST JOSEPH MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+141340,VALLEY WEST COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151309,ASCENSION ST VINCENT CLAY,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151308,ASCENSION ST VINCENT MERCY,IN,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151301,ASCENSION ST VINCENT RANDOLPH,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151314,ASCENSION ST VINCENT SALEM,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151325,ASCENSION ST VINCENT WARRICK,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151300,COMMUNITY HOSPITAL OF BREMEN INC,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151324,"FRANCISCAN HEALTH RENSSELAER, INC",IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151319,GIBSON GENERAL HOSPITAL,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151306,INDIANA UNIVERSITY HEALTH PAOLI HOSPITAL,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151311,INDIANA UNIVERSITY HEALTH TIPTON HOSPITAL INC,IN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151323,PARKVIEW LAGRANGE HOSPITAL,IN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+151305,PULASKI MEMORIAL HOSPITAL,IN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171382,AMBERWELL ATCHISON ASSOCIATION,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171316,ANDERSON COUNTY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171304,ASHLAND HEALTH CENTER,KS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171388,BOB WILSON MEMORIAL HOSPITAL,KS,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171310,CHEYENNE COUNTY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171333,CLARA BARTON HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171349,CLOUD COUNTY HEALTH CENTER,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171352,DECATUR HEALTH,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171314,F W HUSTON MEDICAL CENTER,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171367,GOVE COUNTY MEDICAL CENTER,KS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171338,GREAT PLAINS OF SABETHA,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171319,HOLTON COMMUNITY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171378,KINGMAN HEALTHCARE CENTER,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171358,LINDSBORG COMMUNITY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171308,MERCY HOSPITAL COLUMBUS,KS,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171328,OTTAWA COUNTY HEALTH CENTER,KS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171345,PAWNEE VALLEY COMMUNITY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171307,RAWLINS COUNTY HEALTH CENTER,KS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171361,REPUBLIC COUNTY HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171350,RUSSELL REGIONAL HOSPITAL,KS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+171337,WAMEGO HEALTH CENTER,KS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181322,CALDWELL MEDICAL CENTER,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181310,CARROLL COUNTY MEMORIAL HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181314,CAVERNA MEMORIAL HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181329,CHI SAINT JOSEPH BEREA NF,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181315,EPHRAIM MCDOWELL FORT LOGAN HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181325,JANE TODD CRAWFORD HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181320,"LIVINGSTON HOSPITAL AND HEALTHCARE SERVICES, INC",KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181316,MARY BRECKINRIDGE ARH HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181331,MCDOWELL ARH HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181306,METHODIST HOSPITAL UNION COUNTY,KY,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181307,MORGAN COUNTY ARH HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181311,ST ELIZABETH GRANT,KY,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181302,THE JAMES B. HAGGIN MEMORIAL HOSPITAL,KY,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181333,THE MEDICAL CENTER AT ALBANY,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181318,THE MEDICAL CENTER AT FRANKLIN,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181304,TRIGG COUNTY HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+181321,WAYNE COUNTY HOSPITAL,KY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+191322,ABROM KAPLAN MEMORIAL HOSPITAL,LA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+191324,OCHSNER ST ANNE GENERAL HOSPITAL,LA,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+191301,UNION GENERAL HOSPITAL,LA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201305,CALAIS COMMUNITY HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201311,DOWN EAST COMMUNITY HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201316,MAINEHEALTH FRANKLIN HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201304,MOUNT DESERT ISLAND HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201300,NORTHERN LIGHT BLUE HILL MEMORIAL HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201313,NORTHERN LIGHT SEBASTICOOK VALLEY HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201317,NORTHERN MAINE MEDICAL CENTER,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+201303,PENOBSCOT VALLEY HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231328,ASCENSION BORGESS ALLEGAN HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231315,ASCENSION BORGESS LEE HOSPITAL,MI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231319,ASPIRUS KEWEENAW HOSPITAL AND CLINICS,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231322,CHARLEVOIX AREA HOSPITAL,MI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231323,COREWELL HEALTH REED CITY HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231311,DECKERVILLE COMMUNITY HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231324,EATON RAPIDS MEDICAL CENTER,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231313,HARBOR BEACH COMMUNITY HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231316,HILLS & DALES GENERAL HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231306,MACKINAC STRAITS HOSPITAL AND HEALTH CENTER,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231330,MARLETTE REGIONAL HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231314,MCKENZIE HEALTH SYSTEM,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231329,MCLAREN CARO REGION,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231340,MCLAREN THUMB REGION,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231320,MERCY HEALTH LAKESHORE CAMPUS,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231308,MUNISING MEMORIAL HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231325,MYMICHIGAN MEDICAL CENTER GLADWIN,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231305,SAINT MARY'S STANDISH COMMUNITY HOSPITAL,MI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231310,SCHEURER HOSPITAL,MI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231312,SHERIDAN COMMUNITY HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+231327,UNIVERSITY OF MICHIGAN HEALTH - SPARROW EATON,MI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241354,ASTERA HEALTH,MN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241348,AVERA TYLER HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241362,CENTRACARE HEALTH - MONTICELLO,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241349,CENTRACARE HEALTH PAYNESVILLE LLC,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241326,CENTRACARE HEALTH SYSTEM - LONG PRAIRIE,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241368,CENTRACARE HEALTH SYSTEM - SAUK CENTRE,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241364,COMMUNITY MEMORIAL HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241318,ELY - BLOOMENSON COMMUNITY HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241313,ESSENTIA HEALTH ADA,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241360,ESSENTIA HEALTH DEER RIVER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241357,ESSENTIA HEALTH FOSSTON,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241321,ESSENTIA HEALTH HOLY TRINITY HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241340,ESSENTIA HEALTH NORTHERN PINES MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241309,ESSENTIA HEALTH SANDSTONE,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241355,GLENCOE REGIONAL HEALTH,MN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241339,HENDRICKS COMMUNITY HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241336,KITTSON HEALTHCARE,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241308,LAKE VIEW MEMORIAL HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241301,LAKEWOOD HEALTH CENTER,MN,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241329,LAKEWOOD HEALTH SYSTEM,MN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241344,LIFECARE MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241323,MADELIA HEALTH,MN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241372,MADISON HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241346,MAYO CLINIC HEALTH SYSTEM - CANNON FALLS,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241338,MAYO CLINIC HEALTH SYSTEM - LAKE CITY,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241345,MAYO CLINIC HEALTH SYSTEM - WASECA,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241333,MAYO CLINIC HEALTH SYSTEM ST. JAMES,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241356,MILLE LACS HEALTH SYSTEM,MN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241375,MINNESOTA VALLEY HEALTH CENTER  INC,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241378,NEW ULM MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241337,NORTH VALLEY HEALTH CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241306,OLIVIA HOSPITAL & CLINIC,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241379,PRAIRIE RIDGE HOSPITAL AND HEALTH SERVICES,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241311,RIDGEVIEW SIBLEY MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241320,RIVERVIEW HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241305,RIVERWOOD HEALTHCARE CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241328,SANFORD BAGLEY MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241315,SANFORD JACKSON MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241303,SANFORD TRACY MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241302,SANFORD WESTBROOK MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241304,SANFORD WHEATON MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241377,ST FRANCIS MEDICAL CENTER,MN,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+241370,ST GABRIELS HOSPITAL,MN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261332,CARROLL COUNTY MEMORIAL HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261329,COX MONETT HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261331,FREEMAN NEOSHO HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261317,MERCY HOSPITAL - CASSVILLE,MO,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261338,MERCY HOSPITAL CARTHAGE,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261335,MERCY ST FRANCIS HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261340,MOSAIC MEDICAL CENTER - MARYVILLE,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261328,MOSAIC MEDICAL CENTER ALBANY,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+261307,PERSHING MEMORIAL HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251336,BAPTIST MEDICAL CENTER ATTALA,MS,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251313,BAPTIST MEDICAL CENTER-YAZOO,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251331,BMH-CALHOUN,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251322,OCHSNER LAIRD HOSPITAL,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251323,OCHSNER SCOTT REGIONAL,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251335,OCHSNER STENNIS MEMORIAL HOSPITAL,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251316,OCHSNER WATKINS HOSPITAL,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251308,PONTOTOC HEALTH SERVICE INC CAH,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251300,S E LACKEY MEMORIAL HOSPITAL,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+251317,SIMPSON GENERAL HOSPITAL CAH,MS,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271326,BEARTOOTH BILLINGS CLINIC,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271307,BENEFIS TETON MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271338,BIG HORN HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271311,BIG SANDY MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271333,BILLINGS CLINIC BROADWATER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271389,BOZEMAN HEALTH BIG SKY MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271320,CABINET PEAKS MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271345,CENTRAL MONTANA MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271323,CLARK FORK VALLEY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271302,DAHL MEMORIAL HEALTHCARE ASSOCIATION INC,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271342,DANIELS MEMORIAL HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271314,DEER LODGE MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271301,FALLON MEDICAL COMPLEX HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271316,FRANCES MAHON DEACONESS HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271347,HOLY ROSARY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271334,LOGAN HEALTH - CHESTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271328,LOGAN HEALTH - SHELBY,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271329,MADISON VALLEY MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271305,MCCONE COUNTY HEALTH CENTER,MT,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271306,MOUNTAINVIEW MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271348,NORTHERN MONTANA HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271337,NORTHERN ROCKIES MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271312,PHILLIPS COUNTY HOSPITAL - CAH,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271313,PIONEER MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271324,PONDERA MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271300,POPLAR COMMUNITY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271343,PROVIDENCE ST JOSEPH MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271308,ROOSEVELT MEDICAL CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271327,ROSEBUD HEALTH CARE CENTER,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271346,ROUNDUP MEMORIAL HEALTHCARE,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271322,SHERIDAN MEMORIAL HOSPTIAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271325,ST LUKE COMMUNITY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271330,STILLWATER BILLINGS CLINIC,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271341,TRINITY HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+271321,WHEATLAND MEMORIAL HOSPITAL,MT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341320,ALLEGHANY  MEMORIAL HOSPITAL,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341315,CAPE FEAR VALLEY-BLADEN COUNTY HOSPITAL,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341311,CHATHAM HOSPITAL INC,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341305,DLP SWAIN COUNTY HOSPITAL LLC,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341303,FIRSTHEALTH MONTGOMERY MEMORIAL HOSP,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341316,HIGHLANDS CASHIERS HOSPITAL,NC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+341327,J ARTHUR DOSHER MEMORIAL HOSPITAL,NC,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351322,ASHLEY MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351318,CARRINGTON HEALTH CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351323,CAVALIER COUNTY MEMORIAL HOSPITAL ASSOCIATION,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351324,CHI MERCY HEALTH,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351315,CHI OAKES HOSPITAL,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351336,CHI ST ALEXIUS HEALTH DICKINSON,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351304,CHI ST ALEXIUS HEALTH TURTLE LAKE,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351306,COOPERSTOWN MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351326,FIRST CARE HEALTH CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351303,GARRISON MEMORIAL HOSPITAL,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351332,HEART OF AMERICA MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351314,JACOBSON MEMORIAL HOSPITAL CARE CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351328,LINTON HOSPITAL - CAH,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351311,LISBON AREA HEALTH SERVICES,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351302,MCKENZIE COUNTY HEALTHCARE SYSTEMS INC,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351301,MOUNTRAIL COUNTY MEDICAL CENTER INC,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351308,NELSON COUNTY HEALTH SYSTEM,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351312,NORTHWOOD DEACONESS HEALTH CENTER,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351319,PEMBINA COUNTY MEMORIAL HOSPITAL,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351329,SANFORD HILLSBORO,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351309,SANFORD MAYVILLE,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351313,SOUTHWEST HEALTHCARE SERVICES,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351307,ST ANDREW'S HOSPITAL,ND,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351325,ST LUKE'S HOSPITAL,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351300,TIOGA MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351331,TOWNER COUNTY MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351305,TRINITY KENMARE COMMUNITY HOSPITAL,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+351320,UNITY MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281326,ANTELOPE MEMORIAL HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281331,AVERA CREIGHTON HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281329,AVERA ST ANTHONY'S HOSPITAL,NE,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281315,BRODSTONE HEALTHCARE,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281341,CHADRON COMMUNITY HOSPITAL AND HEALTH SERVICES,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281346,CHI HEALTH PLAINVIEW HOSPITAL,NE,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281323,CHI HEALTH SCHUYLER,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281342,CHI HEALTH ST. MARYS,NE,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281354,CRETE AREA MEDICAL CENTER,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281310,GARDEN COUNTY HEALTH SERVICES,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281308,HENDERSON COMMUNITY HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281338,HOWARD COUNTY MEDICAL CENTER,NE,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281319,JEFFERSON COMMUNITY HEALTH & LIFE,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281365,JENNIE M MELHAM MEMORIAL MEDICAL CENTER,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281359,MEMORIAL COMMUNITY HOSPITAL & HEALTH SYSTEM,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281339,MEMORIAL HEALTH CARE SYSTEMS,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281320,MEMORIAL HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281328,MERRICK MEDICAL CENTER,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281303,NIOBRARA VALLEY HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281347,OSMOND GENERAL HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281357,SIDNEY REGIONAL MEDICAL CENTER,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281348,TRI VALLEY HEALTH SYSTEM,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+281343,WEST HOLT MEMORIAL HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+301305,ALICE PECK DAY MEMORIAL HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+301306,CONCORD HOSPITAL- FRANKLIN,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+301304,NEW LONDON HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+301300,UPPER CONNECTICUT VALLEY HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+301303,WEEKS MEDICAL CENTER,NH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+321302,DR DAN C TRIGG MEMORIAL HOSPITAL,NM,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+321313,REHOBOTH MCKINLEY CHRISTIAN HEALTH CARE SERVICES,NM,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+321301,SOCORRO GENERAL HOSPITAL,NM,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+291309,BOULDER CITY HOSPITAL,NV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+291312,GROVER C DILS MEDICAL CENTER,NV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+291314,SOUTH LYON MEDICAL CENTER,NV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331318,"CARTHAGE AREA HOSPITAL, INC",NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331301,"CUBA MEMORIAL HOSPITAL, INC",NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331312,"DELAWARE VALLEY HOSPITAL, INC",NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331302,ELIZABETHTOWN COMMUNITY HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331310,ELLENVILLE REGIONAL HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331303,GARNET HEALTH MEDICAL CENTER CATSKILLS,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331315,GOUVERNEUR HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331311,LITTLE FALLS HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331304,MARGARETVILLE MEMORIAL HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331319,MEDINA MEMORIAL HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331305,O'CONNOR HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331309,RIVER HOSPITAL CLINICS,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331313,SCHUYLER HOSPITAL,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331322,"SLHS MASSENA, INC",NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+331314,SOLDIERS AND SAILORS MEMORIAL HOSPITAL OF YATES,NY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361334,ADENA PIKE MEDICAL CENTER,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361323,AULTMAN ORRVILLE HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361321,"BARNESVILLE HOSPITAL ASSOCIATION, INC",OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361322,BLUFFTON HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361327,COMMUNITY HOSPITALS AND WELLNESS CENTERS,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361325,GALION COMMUNITY HOSPITAL,OH,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361304,GREENFIELD AREA MEDICAL CENTER,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361315,HARDIN MEMORIAL HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361311,HARRISON COMMUNITY HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361330,HOCKING VALLEY COMMUNITY HOSPITAL,OH,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361303,LODI COMMUNITY HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361310,MERCY HEALTH - WILLARD HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361319,SELBY GENERAL HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361302,TWIN CITY MEDICAL CENTER,OH,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361308,UNIVERSITY HOSPITALS CONNEAUT MEDICAL CENTER,OH,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+361335,WAYNE HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371326,ALLIANCEHEALTH MADILL,OK,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371305,ASCENSION ST JOHN NOWATA,OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371312,ASCENSION ST JOHN SAPULPA,OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371319,"COAL COUNTY GENERAL HOSPITAL, INC.",OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371338,HARMON MEMORIAL HOSPITAL,OK,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371311,JEFFERSON COUNTY HOSPITAL,OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371310,"MERCY HOSPITAL HEALDTON, INC.",OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371313,"MERCY HOSPITAL KINGFISHER, INC",OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371317,MERCY HOSPITAL LOGAN COUNTY,OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371304,MERCY HOSPITAL TISHOMINGO INC,OK,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371309,"PAWHUSKA HOSPITAL, INC",OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+371303,ROGER MILLS MEMORIAL HOSPITAL,OK,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381325,GOOD SHEPHERD MEDICAL CENTER,OR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381316,PEACE HARBOR MEDICAL CENTER,OR,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381301,PEACEHEALTH COTTAGE GROVE COMMUNITY MEDICAL CENTER,OR,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381308,SALEM HEALTH WEST VALLEY HOSPITAL,OR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381324,ST CHARLES MADRAS,OR,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+381315,ST. ALPHONSUS MEDICAL CENTER - BAKER CITY,OR,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391309,BARNES-KASSON COUNTY HOSPITAL,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391304,BUCKTAIL MEDICAL CENTER,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391307,PENN HIGHLANDS TYRONE,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391314,TITUSVILLE AREA HOSPITAL,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391318,UPMC KANE,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+391301,UPMC MUNCY,PA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+421304,EDGEFIELD COUNTY HEALTHCARE AN AFFILIATE OF SELF R,SC,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431332,AVERA DE SMET MEMORIAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431331,AVERA DELLS AREA HOSPITAL  - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431338,AVERA GREGORY HOSPITAL,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431337,AVERA HAND COUNTY MEMORIAL HOSPITAL AND CLINIC,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431302,AVERA MISSOURI RIVER HEALTH CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431340,AVERA QUEEN OF PEACE,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431330,AVERA ST BENEDICT HEALTH CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431324,AVERA WESKOTA MEMORIAL MEDICAL CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431314,BENNETT COUNTY HOSPITAL AND NURSING HOME - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431309,COMMUNITY MEMORIAL HOSPITAL,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431305,DOUGLAS COUNTY MEMORIAL HOSPITAL-CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431308,EUREKA COMMUNITY HEALTH SERVICES - CAH,SD,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431313,FREEMAN MEDICAL CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431319,HANS P PETERSON MEMORIAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431335,HURON REGIONAL MEDICAL CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431317,LANDMANN-JUNGMAN MEMORIAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431300,MADISON REGIONAL HEALTH SYSTEM,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431312,MARSHALL COUNTY HEALTHCARE CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431326,MILBANK AREA HOSPITAL/AVERA HEALTH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431325,MOBRIDGE REGIONAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431323,MONUMENT HEALTH CUSTER HOSPITAL,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431320,MONUMENT HEALTH LEAD-DEADWOOD HOSPITAL,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431328,PIONEER MEMORIAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431306,PLATTE HEALTH CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431333,SANFORD CANTON-INWOOD MEDICAL CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431329,SANFORD CHAMBERLAIN MEDICAL CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431307,SANFORD CLEAR LAKE MEDICAL CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431311,SANFORD HOSPITAL WEBSTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431336,SANFORD VERMILLION MEDICAL CENTER,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431315,WAGNER COMMUNITY MEMORIAL HOSPITAL - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+431334,WINNER REGIONAL HEALTHCARE CENTER - CAH,SD,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+441303,ASCENSION SAINT THOMAS THREE RIVERS,TN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+441313,HANCOCK COUNTY HOSPITAL,TN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+441301,HIGHPOINT HEALTH-TROUSDALE WITH ASCENSION SAINT,TN,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+441304,JOHNSON COUNTY COMMUNITY HOSPITAL,TN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+441300,SAINT THOMAS HICKMAN HOSPITAL,TN,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451371,ASCENSION SETON EDGAR B DAVIS,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451365,ASCENSION SETON HIGHLAND LAKES,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451374,BAYLOR SCOTT & WHITE MEDICAL CENTER -TAYLOR,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451305,BURLESON ST JOSEPH HEALTH CENTER,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451319,CHRISTUS MOTHER FRANCES HOSPITAL- JACKSONVILLE,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451381,CHRISTUS MOTHER FRANCES HOSPITAL- WINNSBORO,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451338,CULBERSON HOSPITAL,TX,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451390,DIMMIT REGIONAL HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451391,FRIO REGIONAL HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451322,GRIMES ST JOSEPH HEALTH CENTER,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451348,HEART OF TEXAS MEMORIAL HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451316,MADISON ST JOSEPH HEALTH CENTER,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451332,PALACIOS COMMUNITY MEDICAL CENTER,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451398,PAMPA REGIONAL MEDICAL CENTER,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451300,PARMER COUNTY COMMUNITY HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451349,SWISHER MEMORIAL HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+451308,YOAKUM COUNTY HOSPITAL,TX,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461310,BLUE MOUNTAIN HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461304,CENTRAL VALLEY MEDICAL CENTER - CAH,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461301,FILLMORE COMMUNITY HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461300,INTERMOUNTAIN HEALTH DELTA COMMUNITY HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461333,INTERMOUNTAIN HEALTH GARFIELD MEMORIAL HOSPITAL,UT,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461307,INTERMOUNTAIN HEALTH HEBER VALLEY HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461303,INTERMOUNTAIN HEALTH SANPETE VALLEY HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461305,MILFORD MEMORIAL HOSPITAL,UT,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461302,MOAB REGIONAL HOSPITAL,UT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+461308,SAN JUAN HOSPITAL,UT,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+491300,BATH COMMUNITY HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+491303,DICKENSON COMMUNITY HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+491309,LEE COUNTY COMMUNITY HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+471300,GRACE COTTAGE HOSPITAL,VT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+471302,MT ASCUTNEY HOSPITAL,VT,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521317,ASCENSION CALUMET HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521324,"ASPIRUS MEDFORD HOSPITAL & CLINICS, INC",WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521339,ASPIRUS MERRILL HOSPITAL,WI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521311,ASPIRUS STANLEY HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521313,ASPIRUS TOMAHAWK HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521356,BELLIN HEALTH OCONTO HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521333,BLACK RIVER MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521331,BURNETT MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521307,CHIPPEWA VALLEY HOSPITAL,WI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521338,COLUMBUS COMMUNITY HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521353,CUMBERLAND MEMORIAL HOSPITAL,WI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521319,EDGERTON HOSPITAL AND HEALTH SERVICES,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521325,FLAMBEAU HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521322,GRANT REGIONAL HEALTH CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521344,GUNDERSEN BOSCOBEL AREA HOSPITAL AND CLINICS,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521309,GUNDERSEN MOUNDVIEW HOSPITAL AND CLINICS,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521304,GUNDERSEN ST JOSEPHS HOSPITAL AND CLINICS,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521316,GUNDERSEN TRI-COUNTY HOSPITAL & CLINICS,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521310,HSHS ST CLARE MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521318,LADD MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521350,LANGLADE HOSPITAL,WI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521323,MARSHFIELD MEDICAL CENTER - NEILLSVILLE,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521314,MAYO CLINIC HEALTH SYSTEM CHIPPEWA VALLEY,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521302,MAYO CLINIC HEALTH SYSTEM OAKRIDGE,WI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521315,MAYO CLINIC HEALTH SYSTEM-NORTHLAND,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521305,MAYO CLINIC HLTH SYSTM FRANCISCAN HLTHCARE SPARTA,WI,Voluntary non-profit - Church,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521312,MEMORIAL HOSPITAL OF LAFAYETTE COUNTY,WI,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521321,RIPON MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521349,RIVER FALLS AREA HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521354,SOUTHWEST HEALTH CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521332,SPOONER HEALTH SYSTEM,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521329,ST MARYS HOSPITAL SUPERIOR,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521343,STOUGHTON HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521336,TAMARACK HEALTH HAYWARD MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521355,THEDACARE MEDICAL CENTER - BERLIN INC,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521326,THEDACARE MEDICAL CENTER - NEW LONDON,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521303,THEDACARE MEDICAL CENTER - WILD ROSE,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521320,TOMAH MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521327,WAUPUN MEMORIAL HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+521345,WESTFIELDS HOSPITAL AND CLINIC,WI,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511308,"BRAXTON COUNTY MEMORIAL HOSPITAL, INC",WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511300,"BROADDUS HOSPITAL ASSOCIATION, INC",WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511311,HAMPSHIRE MEMORIAL HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511303,MINNIE HAMILTON HEALTH SYSTEM,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511318,MONTGOMERY GENERAL HOSPITAL,WV,Voluntary non-profit - Other,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511306,ROANE GENERAL HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511310,SUMMERS COUNTY ARH HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511322,SUMMERSVILLE REGIONAL MEDICAL CENTER,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511309,VALLEY HEALTH WAR MEMORIAL HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+511301,WEBSTER MEMORIAL HOSPITAL,WV,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+531307,COMMUNITY HOSPITAL,WY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+531317,NORTH PLATTE VALLEY MEDICAL CENTER,WY,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,45.5,Developing,dual_solved,False
+131328,BONNER GENERAL HOSPITAL,ID,Voluntary non-profit - Private,0.5167,0.5,0.0,0.0,0.0,42.17,Developing,dual_solved,False
+021314,SOUTHEAST ALASKA REGIONAL HEALTH CONSORTIUM,AK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,51.17,Moderate,fi_only_blocker,True
+021310,MANIILAQ HEALTH CENTER,AK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+021308,NORTON SOUND REGIONAL HOSPITAL,AK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+021312,SAMUEL SIMMONDS MEMORIAL HOSPITAL,AK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+021305,SEARHC WRANGELL MEDICAL CENTER & LTC,AK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+031305,HOPI HEALTH CARE CENTER,AZ,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+031320,SAN CARLOS APACHE HEALTHCARE CORPORATION,AZ,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+161356,HENRY COUNTY HEALTH CENTER,IA,Physician,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+371333,CREEK NATION COMMUNITY HOSPITAL,OK,Tribal,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+451393,CROCKETT MEDICAL CENTER,TX,Physician,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+451396,MID COAST MEDICAL CENTER - CENTRAL,TX,Physician,0.4833,0.5,0.0167,0.0,0.0167,44.5,Developing,fi_only_blocker,True
+141343,CRAWFORD MEMORIAL HOSPITAL,IL,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,74.17,High,fi_only_blocker,False
+151333,PUTNAM COUNTY HOSPITAL,IN,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,74.17,High,fi_only_blocker,False
+251337,TIPPAH COUNTY HOSPITAL,MS,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,74.17,High,fi_only_blocker,False
+161352,CLARINDA REGIONAL HEALTH CENTER,IA,Government - Local,0.4167,0.875,0.0833,0.0,0.0833,65.42,Moderate,fi_only_blocker,False
+141345,SALEM TOWNSHIP HOSPITAL,IL,Government - Local,0.4167,0.875,0.0833,0.0,0.0833,65.42,Moderate,fi_only_blocker,False
+161376,CASS COUNTY MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+161365,GREATER REGIONAL MEDICAL CENTER,IA,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+141351,CLAY COUNTY HOSPITAL,IL,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+171371,CLAY COUNTY MEDICAL CENTER,KS,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+171370,GOODLAND REGIONAL MEDICAL CENTER,KS,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+261318,SALEM MEMORIAL DISTRICT HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+361329,WYANDOT MEMORIAL HOSPITAL,OH,Government - Hospital District or Authority,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+531305,PLATTE COUNTY HOSPITAL,WY,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,61.67,Moderate,fi_only_blocker,False
+111305,MILLER COUNTY HOSPITAL,GA,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+161307,HANCOCK COUNTY HEALTH SYSTEM,IA,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+161380,HANSEN FAMILY HOSPITAL,IA,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+161328,REGIONAL HEALTH SERVICES OF HOWARD COUNTY,IA,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+161344,WASHINGTON COUNTY HOSPITAL AND CLINICS,IA,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+161358,WAYNE COUNTY HOSPITAL,IA,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+151320,"INDIANA UNIVERSITY HEALTH JAY, INC.",IN,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+151304,RUSH MEMORIAL HOSPITAL,IN,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+171330,HOSPITAL DISTRICT #1 OF RICE COUNTY,KS,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+171375,MITCHELL COUNTY HOSPITAL HEALTH SYSTEMS,KS,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+171311,ROOKS COUNTY HEALTH CENTER,KS,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+181327,MARSHALL COUNTY HOSPITAL,KY,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+261325,COX BARTON COUNTY HOSPITAL,MO,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+271318,BARRETT HOSPITAL & HEALTHCARE,MT,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+281327,COZAD COMMUNITY HOSPITAL,NE,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+281309,SYRACUSE AREA HEALTH,NE,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+281353,VALLEY COUNTY HEALTH SYSTEM,NE,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+321305,NOR-LEA HOSPITAL DISTRICT,NM,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+371337,EASTERN OKLAHOMA MEDICAL CENTER,OK,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+371329,FAIRVIEW REGIONAL MEDICAL CENTER AUTHORITY,OK,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+371321,HOLDENVILLE GENERAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+381304,SOUTHERN COOS HOSPITAL & HEALTH CENTER,OR,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+441306,ERLANGER BLEDSOE HOSPITAL,TN,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+441309,MARSHALL MEDICAL CENTER,TN,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+451362,CLAY COUNTY MEMORIAL HOSPITAL,TX,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+451331,COON MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+451385,GOODALL WITCHER HOSPITAL,TX,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+451315,NORTH RUNNELS HOSPITAL,TX,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+451377,REEVES REGIONAL HEALTH,TX,Government - Hospital District or Authority,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+511313,BOONE MEMORIAL HOSPITAL,WV,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+531306,WASHAKIE MEDICAL CENTER,WY,Government - Local,0.4167,1.0,0.0833,0.0,0.0833,60.83,Moderate,fi_only_blocker,False
+151332,DECATUR COUNTY MEMORIAL HOSPITAL,IN,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,56.67,Moderate,fi_only_blocker,False
+361331,ADENA FAYETTE MEDICAL CENTER,OH,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,56.67,Moderate,fi_only_blocker,False
+441310,RHEA MEDICAL CENTER,TN,Government - Local,0.4167,0.75,0.0833,0.0,0.0833,56.67,Moderate,fi_only_blocker,False
+041330,PIGGOTT COMMUNITY HOSPITAL,AR,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+161375,BUENA VISTA REGIONAL MEDICAL CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+161347,FLOYD COUNTY MEDICAL CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+161363,MONTGOMERY COUNTY MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+141326,HAMILTON MEMORIAL HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+151317,GREENE COUNTY GENERAL HOSPITAL,IN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+281334,BOONE COUNTY HEALTH CENTER,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+291308,HUMBOLDT GENERAL HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+361332,HIGHLAND DISTRICT HOSPITAL,OH,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,49.17,Developing,fi_only_blocker,False
+161369,CRAWFORD COUNTY MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.625,0.0833,0.0,0.0833,47.92,Developing,fi_only_blocker,False
+321311,GILA REGIONAL MEDICAL CENTER,NM,Government - Local,0.4167,0.625,0.0833,0.0,0.0833,47.92,Developing,fi_only_blocker,False
+051324,NORTHERN INYO HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,45.83,Developing,fi_only_blocker,False
+021307,CORDOVA COMMUNITY MEDICAL CENTER,AK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+021304,PETERSBURG MEDICAL CENTER,AK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+021302,PROVIDENCE SEWARD HOSPITAL,AK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+021301,PROVIDENCE VALDEZ MEDICAL CENTER,AK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011308,CRENSHAW COMMUNITY HOSPITAL,AL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011307,MEDICAL CENTER BARBOUR,AL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011302,RED BAY HOSPITAL,AL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011306,TANNER MEDICAL CENTER-EAST ALABAMA,AL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011300,WASHINGTON COUNTY HOSPITAL,AL,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+011309,WIREGRASS MEDICAL CENTER,AL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+041317,DALLAS COUNTY MEDICAL CENTER,AR,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+041302,DARDANELLE REGIONAL MEDICAL CENTER,AR,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+041333,SEVIER COUNTY MEDICAL CENTER,AR,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+031308,HUHU KAM MEMORIAL HOSPITAL,AZ,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+031319,MT. GRAHAM REGIONAL MEDICAL CENTER,AZ,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+031304,PAGE HOSPITAL,AZ,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+031307,PARKER INDIAN HEALTH CENTER,AZ,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051335,BEAR VALLEY COMMUNITY HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051338,COALINGA REGIONAL MEDICAL CENTER,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051300,EASTERN PLUMAS HOSPITAL - PORTOLA CAMPUS,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051337,HAZEL HAWKINS MEMORIAL HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051309,JEROLD PHELPS COMMUNITY HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051304,JOHN C FREMONT HEALTHCARE DISTRICT,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051314,KERN VALLEY HEALTHCARE DISTRICT,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051303,MAMMOTH HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051305,MAYERS MEMORIAL HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051330,MODOC MEDICAL CENTER,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051312,MOUNTAINS COMMUNITY HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051339,PALO VERDE HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051326,PLUMAS DISTRICT HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051327,SENECA DISTRICT HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051302,SOUTHERN INYO HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051308,SURPRISE VALLEY COMMUNITY HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051328,TAHOE FOREST HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+051315,TRINITY HOSPITAL,CA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061324,ASPEN VALLEY HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061325,EASTERN RIO BLANCO COUNTY HEALTH SERVICE DISTRICT,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061312,ESTES PARK MEDICAL CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061317,GRAND RIVER HOSPITAL DISTRICT,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061320,GUNNISON VALLEY HOSPITAL,CO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061304,HAXTUN HOSPITAL DISTRICT,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061322,HEART OF THE ROCKIES REGIONAL MEDICAL CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061343,KEEFE MEMORIAL HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061313,KIT CARSON COUNTY MEMORIAL HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061305,MELISSA MEMORIAL HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061314,"MEMORIAL HOSPITAL, THE",CO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061318,MIDDLE PARK MEDICAL CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061328,PAGOSA SPRINGS MEDICAL CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061323,PROWERS MEDICAL CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061307,RANGELY DISTRICT HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061310,SEDGWICK COUNTY MEMORIAL HOSPITAL,CO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061311,SOUTHEAST COLORADO HOSPITAL DISTRICT,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061316,SPANISH PEAKS REGIONAL HEALTH CENTER,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061319,ST VINCENT GENERAL HOSPITAL DISTRICT,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061300,WEISBROD MEMORIAL COUNTY HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061309,WRAY COMMUNITY DISTRICT HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+061315,YUMA DISTRICT HOSPITAL,CO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+101305,GEORGE E WEEMS MEMORIAL HOSPITAL,FL,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+101311,MADISON COUNTY MEMORIAL HOSPITAL,FL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111332,ARCHBOLD BROOKS,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111331,ARCHBOLD MITCHELL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111302,BLECKLEY MEMORIAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111324,CHATUGE REGIONAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111308,CLINCH MEMORIAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111306,EFFINGHAM HEALTH SYSTEM,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111337,ELBERT MEMORIAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111303,JASPER MEMORIAL HOSPITAL,GA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111333,JEFF DAVIS HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111335,LIBERTY REGIONAL MEDICAL CENTER,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111304,MORGAN MEDICAL CENTER,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111313,PUTNAM GENERAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111326,SGMC HEALTH LANIER,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111319,WELLSTAR SYLVAN GROVE MEDICAL CENTER,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+111325,WILLS MEMORIAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+121307,HALE HO'OLA HAMAKUA,HI,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+121301,KAU HOSPITAL,HI,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+121300,KAUAI VETERANS MEMORIAL HOSPITAL,HI,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+121302,KOHALA HOSPITAL,HI,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+121306,SAMUEL MAHELONA MEMORIAL HOSPITAL,HI,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161310,ADAIR COUNTY MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161330,AUDUBON COUNTY MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161372,BOONE COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161335,BUCHANAN COUNTY HEALTH CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161317,COMPASS MEMORIAL HEALTHCARE,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161322,DALLAS COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161327,DAVIS COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161340,DECATUR COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161368,FLOYD VALLEY HEALTHCARE,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161308,FRANKLIN GENERAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161325,GREENE COUNTY MEDICAL CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161312,GUTTENBERG MUNICIPAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161311,HAWARDEN REGIONAL HEALTHCARE,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161301,IOWA SPECIALTY HOSPITAL - BELMOND,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161302,IOWA SPECIALTY HOSPITAL - CLARION,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161329,JACKSON COUNTY REGIONAL HEALTH CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161315,KEOKUK COUNTY HEALTH CENTER,IA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161326,MADISON COUNTY HEALTH CARE SYSTEM,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161357,PALO ALTO COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161305,POCAHONTAS COMMUNITY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161343,REGIONAL MEDICAL CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161373,RINGGOLD COUNTY HOSPITAL,IA,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161333,STORY COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161337,VAN BUREN COUNTY HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161318,VETERANS MEMORIAL HOSPITAL,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+161339,WAVERLY HEALTH CENTER,IA,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131316,BEAR LAKE MEMORIAL HOSPITAL,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131317,BENEWAH COMMUNITY HOSPITAL,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131309,CARIBOU MEDICAL CENTER,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131324,LOST RIVERS MEDICAL CENTER,ID,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131319,MINIDOKA MEMORIAL HOSPITAL,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131303,NELL J REDFIELD MEMORIAL HOSPITAL,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131304,POWER COUNTY HOSPITAL DISTRICT,ID,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131314,SHOSHONE MEDICAL CENTER,ID,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131305,STEELE MEMORIAL MEDICAL CENTER,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131318,VALOR HEALTH,ID,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+131307,WEISER MEMORIAL HOSPITAL,ID,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141321,FRANKLIN HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141319,HAMMOND HENRY HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141313,MASON DISTRICT HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141323,MASSAC MEMORIAL HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141338,MEMORIAL HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141329,MORRISON COMMUNITY HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141307,PINCKNEYVILLE COMMUNITY HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141333,SARAH D CULBERTSON MEMORIAL HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141349,SPARTA COMMUNITY HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141300,THOMAS H BOYD MEMORIAL HOSPITAL,IL,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141327,WABASH GENERAL HOSPITAL 1,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141303,WARNER HOSPITAL AND HEALTH SERVICES,IL,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+141308,WASHINGTON COUNTY HOSPITAL,IL,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+151330,ADAMS MEMORIAL HOSPITAL,IN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+151327,SULLIVAN COUNTY COMMUNITY HOSPITAL,IN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+151313,WOODLAWN HOSPITAL,IN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171373,ALLEN COUNTY REGIONAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171329,CALDWELL REGIONAL MEDICAL CENTER,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171385,COFFEY COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171312,COMANCHE COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171354,"COMMUNITY HOSPITAL, ONAGA AND ST MARYS CAMPUS",KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171317,EDWARDS COUNTY MEDICAL CENTER,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171301,ELLINWOOD DISTRICT HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171374,FREDONIA REGIONAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171376,GIRARD MEDICAL CENTER,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171325,GRAHAM COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171359,GREELEY COUNTY HEALTH SERVICES,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171300,GRISELL MEMORIAL HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171322,HAMILTON COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171365,HANOVER HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171369,HODGEMAN COUNTY HEALTH CENTER,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171346,HOSPITAL DISTRICT #6 PATTERSON HEALTH CENTER,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171309,JEWELL COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171313,KEARNY COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171332,KIOWA COUNTY MEMORIAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171331,KIOWA DISTRICT HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171303,LANE COUNTY HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171360,LINCOLN COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171326,LOGAN COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171321,MEADE DISTRICT HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171334,MEDICINE LODGE MEMORIAL HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171368,MINNEOLA DISTRICT HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171379,MORRIS COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171386,MORTON COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171348,NORTON COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171364,OSBORNE COUNTY MEMORIAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171353,PHILLIPS COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171324,"SATANTA DISTRICT HOSPITAL, CLINICS, & LTCU",KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171318,SEDAN CITY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171347,SHERIDAN COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171377,SMITH COUNTY MEMORIAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171356,ST LUKE HOSPITAL & LIVING CENTER,KS,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171323,STAFFORD COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171343,STANTON COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171335,STEVENS COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171355,TREGO COUNTY LEMKE MEMORIAL HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171351,WASHINGTON COUNTY HOSPITAL,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171306,WICHITA COUNTY HEALTH CENTER,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+171344,WILSON MEDICAL CENTER,KS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+181330,RUSSELL COUNTY HOSPITAL,KY,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191319,ACADIA ST LANDRY,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191310,BAYOU BEND HEALTH SYSTEM,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191311,BUNKIE GENERAL HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191309,HOOD MEMORIAL HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191317,JACKSON PARISH HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191325,LADY OF THE SEA GENERAL HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191321,LALLIE KEMP MEDICAL CENTER,LA,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191314,MADISON PARISH HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191304,NORTH CADDO MEDICAL CENTER,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191316,POINTE COUPEE GENERAL HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191308,PREVOST MEMORIAL HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191326,REEVES MEMORIAL MEDICAL CENTER,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191323,RICHLAND PARISH HOSPITAL-DELHI,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191313,RIVERSIDE MEDICAL CENTER,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191300,ST HELENA PARISH HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191305,ST JAMES PARISH HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+191306,WEST FELICIANA PARISH HOSPITAL,LA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,MA,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+201301,NORTHERN LIGHT C A DEAN HOSPITAL,ME,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+231307,BARAGA COUNTY MEMORIAL HOSPITAL,MI,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+231304,HELEN NEWBERRY JOY HOSPITAL,MI,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+231301,KALKASKA MEMORIAL HEALTH CENTER,MI,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+231300,PAUL OLIVER MEMORIAL HOSPITAL,MI,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+231303,SCHOOLCRAFT MEMORIAL HOSPITAL,MI,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241341,APPLETON AREA HEALTH,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241343,AVERA GRANITE FALLS,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241316,BIGFORK VALLEY HOSPITAL,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241358,CASS LAKE INDIAN HEALTH SERVICES HOSPITAL,MN,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241365,CENTRACARE - BENSON,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241351,CENTRACARE - REDWOOD,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241325,CHIPPEWA COUNTY HOSPITAL,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241312,COOK HOSPITAL,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241353,CUYUNA REGIONAL MEDICAL CENTER,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241350,ESSENTIA HEALTH MOOSE LAKE,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241376,GLACIAL RIDGE HOSPITAL,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241314,JOHNSON MEMORIAL HOSPITAL,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241366,MEEKER MEMORIAL HOSPITAL,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241319,MURRAY COUNTY MEMORIAL HOSPITAL,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241317,NORTH SHORE HEALTH,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241342,ORTONVILLE AREA HEALTH SERVICES,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241373,PERHAM HEALTH,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241374,PIPESTONE COUNTY  MEDICAL CENTER,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241334,RIVER'S EDGE HOSPITAL & CLINIC,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241347,SANFORD CANBY MEDICAL CENTER,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241327,SLEEPY EYE MEDICAL CENTER,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241369,UNITED HOSPITAL DISTRICT,MN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241367,WELIA HEALTH,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+241332,WINDOM AREA HEALTH,MN,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261324,CASS REGIONAL MEDICAL CENTER,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261323,CEDAR COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261301,ELLETT MEMORIAL HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261322,EXCELSIOR SPRINGS HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261312,HARRISON COUNTY COMMUNITY HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261314,HERMANN AREA DISTRICT HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261336,IRON COUNTY MEDICAL CENTER,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261313,MACON COUNTY SAMARITAN MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261319,MERCY HOSPITAL LINCOLN,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261333,PIKE COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261305,PUTNAM COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261327,RAY COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261310,SCOTLAND COUNTY  HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261330,STE GENEVIEVE COUNTY MEMORIAL HOSPITAL,MO,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261306,SULLIVAN COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+261308,WASHINGTON COUNTY MEMORIAL HOSPITAL,MO,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251320,CLAIBORNE COUNTY HOSPITAL,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251327,COPIAH COUNTY MEDICAL CENTER,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251325,COVINGTON COUNTY HOSPITAL CAH,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251309,FIELD HEALTH SYSTEM,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251330,FRANKLIN COUNTY MEMORIAL HOSPITAL,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251319,HOLMES COUNTY HOSPITAL AND CLINICS,MS,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251326,JEFFERSON DAVIS COMMUNITY HOSPITAL CAH,MS,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251305,LAWRENCE COUNTY HOSPITAL CAH,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251307,NOXUBEE GENERAL CRITICAL ACCESS HOSP,MS,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251333,PEARL RIVER COUNTY HOSPITAL,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251339,QUITMAN COMMUNITY HOSPITAL,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251304,TALLAHATCHIE GENERAL HOSPITAL-CAH,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251312,TYLER HOLMES MEMORIAL HOSPITAL CAH,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+251324,WALTHALL COUNTY GENERAL HOSPITAL CAH,MS,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271310,GARFIELD COUNTY HEALTH CENTER,MT,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271303,GRANITE COUNTY MEDICAL CENTER,MT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271331,MINERAL COMMUNITY HOSPITAL,MT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271304,MISSOURI RIVER MEDICAL CENTER,MT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271339,P H S INDIAN HOSPITAL CROW / NORTHERN CHEYENNE,MT,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271315,P H S INDIAN HOSPITAL-FT BELKNAP AT HARLEM - CAH,MT,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271309,PRAIRIE COMMUNITY CAH,MT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+271319,RUBY VALLEY MEDICAL CENTER,MT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+341307,PENDER MEMORIAL HOSPITAL,NC,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+351321,SOUTH CENTRAL HEALTH,ND,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+351364,STANDING ROCK SERVICE UNIT,ND,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281314,ANNIE JEFFREY MEMORIAL COUNTY HEALTH CENTER,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281360,BOX BUTTE GENERAL HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281325,BROWN COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281332,BUTLER COUNTY HEALTH,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281335,CALLAWAY DISTRICT HOSPITAL,NE,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281351,CHASE COUNTY COMMUNITY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281344,CHERRY COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281340,DUNDY COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281301,FILLMORE COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281311,FRANKLIN COUNTY MEMORIAL HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281312,GENOA COMMUNITY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281358,GORDON MEMORIAL HOSPITAL DISTRICT,NE,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281313,GOTHENBURG HEALTH,NE,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281300,HARLAN COUNTY HEALTH SYSTEM,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281350,JOHNSON COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281306,KEARNEY COUNTY HEALTH SERVICES HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281305,KIMBALL HEALTH SERVICES,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281318,MORRILL COUNTY COMMUNITY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281324,NEMAHA COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281355,OGALLALA COMMUNITY HOSPITAL,NE,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281302,PAWNEE COUNTY MEMORIAL HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281349,PENDER COMMUNITY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281356,PERKINS COUNTY HEALTH SERVICES,NE,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281333,ROCK COUNTY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281304,THAYER COUNTY HEALTH SERVICES,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+281316,WEBSTER COUNTY COMMUNITY HOSPITAL,NE,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+321307,MINERS' COLFAX MEDICAL CENTER,NM,Government - State,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+321300,SIERRA VISTA HOSPITAL,NM,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+321304,UNION COUNTY GENERAL HOSPITAL,NM,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+291303,BATTLE MOUNTAIN GENERAL HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+291301,INCLINE VILLAGE COMMUNITY HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+291300,MOUNT GRANT GENERAL HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+291304,PERSHING GENERAL HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+291302,WILLIAM BEE RIRIE HOSPITAL,NV,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+331317,LEWIS COUNTY GENERAL HOSPITAL,NY,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+331323,WYOMING COUNTY,NY,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+361313,OHIOHEALTH MORROW COUNTY HOSPITAL,OH,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+361300,PAULDING COUNTY HOSPITAL,OH,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371328,ARBUCKLE MEMORIAL HOSPITAL,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371300,ATOKA COUNTY MEDICAL CENTER,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371322,BEAVER COUNTY MEMORIAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371334,CARNEGIE TRI-COUNTY MUNICIPAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371307,CIMARRON MEMORIAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371320,CLEVELAND AREA HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371325,CORDELL MEMORIAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371331,DRUMRIGHT REGIONAL HOSPITAL,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371330,MANGUM REGIONAL MEDICAL CENTER,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371306,MERCY HOSPITAL MARIETTA,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371336,NEWMAN MEMORIAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371327,OKEENE MUNICIPAL HOSPITAL,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371301,PRAGUE REGIONAL MEMORIAL HOSPITAL,OK,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371332,SEILING MUNICIPAL HOSPITAL,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371341,SHARE MEDICAL CENTER,OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+371323,"WEATHERFORD REGIONAL HOSPITAL, INC OF WEATHERFORD",OK,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381305,BLUE MOUNTAIN HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381312,COQUILLE VALLEY HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381307,HARNEY DISTRICT HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381309,LAKE DISTRICT HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381311,LOWER UMPQUA HOSPITAL DISTRICT,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381310,PIONEER MEMORIAL HOSPITAL (HEPPNER),OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+381306,WALLOWA MEMORIAL HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+391308,LECOM HEALTH CORRY MEMORIAL HOSPITAL,PA,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+421300,ALLENDALE COUNTY HOSPITAL,SC,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+431318,BOWDLE HOSPITAL - CAH,SD,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+431316,COMMUNITY MEMORIAL HOSPITAL,SD,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+431383,EAGLE BUTTE INDIAN HEALTH SERVICE HOSPITAL,SD,Government - Federal,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+431322,FALL RIVER HOSPITAL - CAH,SD,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+431327,ST MICHAEL'S HOSPITAL - CAH,SD,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+441320,WEST TENNESSEE HEALTHCARE BOLIVAR HOSPITAL,TN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+441316,WEST TENNESSEE HEALTHCARE CAMDEN HOSPITAL,TN,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451310,BALLINGER MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451320,BAYSIDE COMMUNITY HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451366,COCHRAN MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451384,COGDELL MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451325,CONCHO COUNTY HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451379,CORYELL MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451353,CRANE COUNTY HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451343,ELECTRA MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451313,FISHER COUNTY HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+671300,GRAHAM REGIONAL MEDICAL CENTER,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451392,HAMILTON GENERAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451354,HAMILTON HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451344,HANSFORD COUNTY HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451352,HARDEMAN COUNTY MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451341,HASKELL MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+671301,HEMPHILL COUNTY HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451307,IRAAN GENERAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451363,JACKSON HEALTHCARE CENTER,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451394,KNOX COUNTY HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451376,LAVACA MEDICAL CENTER,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451375,LIBERTY DAYTON REGIONAL MEDICAL CENTER,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451324,LILLIAN M HUDSPETH MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451303,LIMESTONE MEDICAL CENTER,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451351,LYNN COUNTY HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451333,MARTIN COUNTY HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451309,MC CAMEY HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451330,MEDINA REGIONAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451358,MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451356,MEMORIAL MEDICAL CENTER,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451342,MITCHELL COUNTY HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451335,MUENSTER MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451359,OCHILTREE GENERAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451364,OTTO KAISER MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451334,PARKVIEW HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451389,PECOS COUNTY MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451350,PLAINS MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451329,RANKIN HOSPITAL MEDICAL CLINIC,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451301,REAGAN MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451317,REFUGIO COUNTY MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451399,SEYMOUR HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451340,SHAMROCK GENERAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+671302,STEPHENS MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451318,STONEWALL MEMORIAL HOSPITAL DISTRICT,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451311,SWEENY COMMUNITY HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451339,THROCKMORTON COUNTY MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451337,W J MANGOLD MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451373,WARD MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+451314,WINKLER COUNTY MEMORIAL HOSPITAL,TX,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+461335,BEAVER VALLEY HOSPITAL,UT,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+461309,KANE COUNTY HOSPITAL,UT,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+521328,MARSHFIELD MEDICAL CENTER - LADYSMITH,WI,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+511307,"GRAFTON CITY HOSPITAL, INC",WV,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+511314,POCAHONTAS MEMORIAL HOSPITAL,WV,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531312,CODY REGIONAL HEALTH,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531311,CROOK COUNTY HOSPITAL,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531316,MEMORIAL HOSPITAL OF CARBON COUNTY,WY,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531302,MEMORIAL HOSPITAL OF CONVERSE COUNTY,WY,Government - Local,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531318,MEMORIAL HOSPITAL SWEETWATER COUNTY,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531314,NIOBRARA COUNTY HOSPITAL DISTRICT,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531309,NORTH BIG HORN HOSPITAL DISTRICT,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531310,POWELL VALLEY HOSPITAL,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531301,SOUTH BIG HORN COUNTY HOSPITAL,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531315,SOUTH LINCOLN MEDICAL CENTER - CAH,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531313,STAR VALLEY MEDICAL CENTER,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+531303,WESTON COUNTY HEALTH SERVICES,WY,Government - Hospital District or Authority,0.4167,0.5,0.0833,0.0,0.0833,42.5,Developing,fi_only_blocker,False
+201307,MILLINOCKET REGIONAL HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.375,0.0,0.125,0.125,53.42,Moderate,qi_only_blocker,False
+451395,HILL REGIONAL HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.375,0.0,0.125,0.125,53.42,Moderate,qi_only_blocker,False
+491308,RAPPAHANNOCK GENERAL HOSPITAL,VA,Voluntary non-profit - Private,0.5167,0.375,0.0,0.125,0.125,53.42,Moderate,qi_only_blocker,False
+201308,HOULTON REGIONAL HOSPITAL,ME,Voluntary non-profit - Private,0.5167,0.375,0.0,0.125,0.125,43.42,Developing,qi_only_blocker,False
+171384,NEWMAN REGIONAL HEALTH,KS,Government - Local,0.4167,0.375,0.0833,0.125,0.125,40.42,Developing,both_blockers,False
+171383,WILLIAM NEWTON HOSPITAL,KS,Government - Local,0.4167,0.375,0.0833,0.125,0.125,40.42,Developing,both_blockers,False
+151318,DUKES MEMORIAL HOSPITAL,IN,Proprietary,0.55,0.25,0.0,0.25,0.25,45.67,Developing,qi_only_blocker,False
+041323,ASHLEY COUNTY MEDICAL CENTER,AR,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+041307,CROSSRIDGE COMMUNITY HOSPITAL,AR,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+261311,MERCY HOSPITAL PERRY,MO,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+281363,COMMUNITY HOSPITAL,NE,Voluntary non-profit - Other,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+361307,UHHS MEMORIAL HOSPITAL OF GENEVA,OH,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+381319,ST ANTHONY HOSPITAL,OR,Voluntary non-profit - Church,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+471305,COPLEY HOSPITAL,VT,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+521359,TAMARACK HEALTH ASHLAND MEDICAL CENTER,WI,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,44.67,Developing,qi_only_blocker,False
+151331,HARRISON COUNTY HOSPITAL,IN,Government - Local,0.4167,0.25,0.0833,0.25,0.25,41.67,Developing,both_blockers,False
+451387,UVALDE MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.25,0.0833,0.25,0.25,41.67,Developing,both_blockers,False
+291311,DESERT VIEW HOSPITAL,NV,Proprietary,0.55,0.25,0.0,0.25,0.25,40.67,Developing,qi_only_blocker,False
+451367,UT HEALTH EAST TEXAS PITTSBURG HOSPITAL,TX,Proprietary,0.55,0.25,0.0,0.25,0.25,40.67,Developing,qi_only_blocker,False
+141322,ABRAHAM LINCOLN MEMORIAL HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+141328,HARDIN COUNTY GENERAL HOSPITAL & CLINIC,IL,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+141320,PARIS COMMUNITY HOSPITAL,IL,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+141336,ST JOSEPH'S HOSPITAL,IL,Voluntary non-profit - Church,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+261337,MISSOURI BAPTIST SULLIVAN HOSPITAL,MO,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+341326,ANGEL MEDICAL CENTER,NC,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+281322,ST FRANCIS MEMORIAL HOSPITAL,NE,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+301309,MONADNOCK COMMUNITY HOSPITAL,NH,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+381314,SAMARITAN PACIFIC COMMUNITY HOSPITAL,OR,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+471306,SPRINGFIELD HOSPITAL,VT,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+511319,JEFFERSON MEDICAL CENTER,WV,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,39.67,Developing,qi_only_blocker,False
+161353,KOSSUTH REGIONAL HEALTH CENTER,IA,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+161379,MAHASKA  HEALTH PARTNERSHIP,IA,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+161371,WINNMED,IA,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+171380,NEOSHO MEMORIAL REGIONAL MEDICAL CENTER,KS,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+181319,BRECKINRIDGE MEMORIAL HOSPITAL,KY,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+201309,NORTHERN LIGHT MAYO HOSPITAL,ME,Government - Hospital District or Authority,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+341318,VIDANT CHOWAN HOSPITAL,NC,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+361326,ADAMS COUNTY REGIONAL MEDICAL CENTER,OH,Government - Local,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+381322,CURRY GENERAL HOSPITAL,OR,Government - Hospital District or Authority,0.4167,0.25,0.0833,0.25,0.25,36.67,Developing,both_blockers,False
+341328,ERLANGER MURPHY MEDICAL CENTER,NC,Voluntary non-profit - Private,0.5167,0.25,0.0,0.25,0.25,34.67,Developing,qi_only_blocker,False
+141324,FERRELL HOSPITAL COMMUNITY FOUNDATIONS,IL,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+301302,LITTLETON REGIONAL HEALTHCARE,NH,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+321306,LINCOLN COUNTY MEDICAL CENTER,NM,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+291313,BANNER CHURCHILL COMMUNITY HOSPITAL,NV,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+371342,MCCURTAIN MEMORIAL HOSPITAL,OK,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+471304,NORTH COUNTRY HOSPITAL AND HEALTH CENTER,VT,Voluntary non-profit - Private,0.5167,0.125,0.0,0.375,0.375,35.92,Developing,qi_only_blocker,False
+181309,CASEY COUNTY HOSPITAL,KY,Government - Hospital District or Authority,0.4167,0.125,0.0833,0.375,0.375,32.92,Developing,both_blockers,False
+501326,PROVIDENCE MOUNT CARMEL HOSPITAL,WA,Voluntary non-profit - Church,0.06,0.75,0.44,0.0,0.44,49.3,Developing,fi_only_blocker,False
+501332,TRI-STATE MEMORIAL HOSPITAL,WA,Voluntary non-profit - Private,0.06,0.75,0.44,0.0,0.44,49.3,Developing,fi_only_blocker,False
+501337,LOURDES MEDICAL CENTER,WA,Voluntary non-profit - Church,0.06,0.5,0.44,0.0,0.44,41.8,Developing,fi_only_blocker,False
+501335,ST ELIZABETH HOSPITAL,WA,Voluntary non-profit - Private,0.06,0.5,0.44,0.0,0.44,41.8,Developing,fi_only_blocker,False
+501340,PEACEHEALTH PEACE ISLAND MEDICAL CENTER,WA,Voluntary non-profit - Private,0.06,0.5,0.44,0.0,0.44,35.13,Developing,fi_only_blocker,False
+501309,PROVIDENCE ST JOSEPH HOSPITAL,WA,Voluntary non-profit - Church,0.06,0.5,0.44,0.0,0.44,35.13,Developing,fi_only_blocker,False
+501312,PROSSER MEMORIAL HOSPITAL,WA,Government - Hospital District or Authority,0.0,1.0,0.5,0.0,0.5,65.0,Moderate,fi_only_blocker,False
+501329,PEACEHEALTH UNITED GENERAL MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.75,0.5,0.0,0.5,52.5,Moderate,fi_only_blocker,False
+501310,NEWPORT COMMUNITY HOSPITAL,WA,Government - Hospital District or Authority,0.0,1.0,0.5,0.0,0.5,51.67,Moderate,fi_only_blocker,False
+501331,PULLMAN REGIONAL HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.75,0.5,0.0,0.5,47.5,Developing,fi_only_blocker,False
+501323,JEFFERSON HEALTHCARE,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,40.0,Developing,fi_only_blocker,False
+501314,OCEAN BEACH HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,40.0,Developing,fi_only_blocker,False
+511317,"CAMC PLATEAU MEDICAL CENTER, INC",WV,Proprietary,0.55,0.0,0.0,0.5,0.5,34.83,Developing,qi_only_blocker,False
+011305,ST VINCENTS BLOUNT,AL,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+041312,BAPTIST HEALTH MEDICAL CENTER HEBER SPRINGS,AR,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+031311,LITTLE COLORADO MEDICAL CENTER,AZ,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+161359,BURGESS HEALTH CENTER,IA,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+161362,CHEROKEE REGIONAL MEDICAL CENTER,IA,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+141310,OSF SAINT PAUL MEDICAL CENTER,IL,Voluntary non-profit - Church,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+181305,ARH OUR LADY OF THE WAY,KY,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+181324,THE MEDICAL CENTER AT SCOTTSVILLE,KY,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+231333,ASPIRUS IRONWOOD HOSPITAL,MI,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+241361,MAYO CLINIC HEALTH SYSTEM NEW PRAGUE,MN,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+241371,SANFORD LUVERNE MEDICAL CENTER,MN,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+261302,MADISON MEDICAL CENTER,MO,Voluntary non-profit - Other,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+261316,MERCY HOSPITAL AURORA,MO,Voluntary non-profit - Church,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+351316,PRESENTATION MEDICAL CENTER,ND,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+351327,SMP HEALTH ST ALOISIUS,ND,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+281345,PROVIDENCE MEDICAL CENTER,NE,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+361316,BUCYRUS COMMUNITY HOSPITAL,OH,Voluntary non-profit - Other,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+361314,MAGRUDER HOSPITAL,OH,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+381303,PROVIDENCE SEASIDE HOSPITAL,OR,Voluntary non-profit - Church,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+421301,ABBEVILLE AREA MEDICAL CENTER,SC,Voluntary non-profit - Other,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+451346,YOAKUM COMMUNITY HOSPITAL,TX,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+521300,ASPIRUS EAGLE RIVER HOSPITAL,WI,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,33.83,Developing,qi_only_blocker,False
+501319,ARBOR HEALTH MORTON HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501313,CASCADE MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501317,COLUMBIA BASIN HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501308,COULEE MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501302,DAYTON GENERAL HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501311,EAST ADAMS RURAL HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501322,FERRY COUNTY MEMORIAL HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501325,FORKS COMMUNITY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501301,GARFIELD COUNTY PUBLIC HOSPITAL DISTRICT #1,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501333,KITTITAS VALLEY COMMUNITY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501316,KLICKITAT VALLEY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501334,LAKE CHELAN COMMUNITY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501305,LINCOLN HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501328,MID VALLEY HOSPITAL & CLINIC,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501321,NORTH VALLEY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501307,ODESSA MEMORIAL HEALTHCARE CENTER,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501318,OTHELLO COMMUNITY HOSPITAL,WA,Government - Local,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501320,QUINCY VALLEY MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501315,SKYLINE HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501338,SNOQUALMIE VALLEY HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501324,THREE RIVERS HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501327,WHITMAN HOSPITAL AND MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+501303,WILLAPA HARBOR HOSPITAL,WA,Government - Hospital District or Authority,0.0,0.5,0.5,0.0,0.5,33.33,Developing,fi_only_blocker,False
+041322,BAXTER HEALTH FULTON COUNTY HOSPITAL,AR,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+101307,DOCTORS MEMORIAL HOSPITAL,FL,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+111320,HIGGINS GENERAL HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+111318,MONROE COUNTY HOSPITAL,GA,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+161364,JEFFERSON COUNTY HEALTH CENTER,IA,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+161323,MITCHELL COUNTY REGIONAL HEALTH,IA,Government - Federal,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+161342,MONROE COUNTY HOSPITAL,IA,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+171339,GREENWOOD COUNTY HOSPITAL,KS,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+171381,MEMORIAL HOSPITAL,KS,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+171336,NESS COUNTY HOSPITAL DISTRICT #2,KS,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+181317,CUMBERLAND COUNTY HOSPITAL,KY,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+181328,KNOX COUNTY HOSPITAL,KY,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+191315,HARDTNER MEDICAL CENTER,LA,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+191318,RIVERLAND MEDICAL CENTER,LA,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+251334,CHOCTAW REGIONAL MEDICAL CENTER,MS,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+251318,NORTH SUNFLOWER MEDICAL CENTER CAH,MS,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+281361,LEXINGTON REGIONAL HEALTH CENTER,NE,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+281307,SAUNDERS MEDICAL CENTER,NE,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+371340,MEMORIAL HOSPITAL OF TEXAS COUNTY AUTHORITY,OK,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+441322,HOUSTON COUNTY COMMUNITY HOSPITAL,TN,Government - Local,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+451386,MEMORIAL HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+451370,TMC- BONHAM HOSPITAL,TX,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+531304,HOT SPRINGS COUNTY MEMORIAL HOSPITAL,WY,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+531308,JOHNSON COUNTY HEALTHCARE CENTER,WY,Government - Hospital District or Authority,0.4167,0.0,0.0833,0.5,0.5,30.83,Developing,both_blockers,False
+291307,MESA VIEW REGIONAL HOSPITAL,NV,Proprietary,0.55,0.0,0.0,0.5,0.5,28.17,Developing,qi_only_blocker,False
+501304,SUMMIT PACIFIC MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.25,0.5,0.25,0.5,27.5,Developing,both_blockers,False
+051317,ADVENTIST HEALTH CLEARLAKE,CA,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+051325,ADVENTIST HEALTH MENDOCINO COAST,CA,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+051316,FAIRCHILD MEDICAL CENTER,CA,Voluntary non-profit - Other,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+101308,NORTHWEST FLORIDA COMMUNITY HOSPITAL,FL,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+151329,MARGARET MARY COMMUNITY HOSPITAL INC,IN,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+341319,"TRANSYLVANIA REGIONAL HOSPITAL, INC",NC,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+331321,THE UNIVERSITY OF VERMONT HEALTH NETWORK-ALICE HY,NY,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+381323,SAMARITAN LEBANON COMMUNITY HOSPITAL,OR,Voluntary non-profit - Church,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+451382,COMANCHE COUNTY MEDICAL CENTER,TX,Voluntary non-profit - Private,0.5167,0.0,0.0,0.5,0.5,27.17,Developing,qi_only_blocker,False
+271317,LIVINGSTON HEALTHCARE,MT,Physician,0.4833,0.0,0.0167,0.5,0.5,26.17,Developing,both_blockers,False
+501330,ASTRIA SUNNYSIDE HOSPITAL,WA,Voluntary non-profit - Other,0.06,0.0,0.44,0.5,0.5,16.8,Developing,both_blockers,False
+501336,MASON GENERAL HOSPITAL & FAMILY OF CLINICS,WA,Government - Hospital District or Authority,0.0,0.0,0.5,0.5,0.5,15.0,Developing,both_blockers,False
+501339,WHIDBEYHEALTH MEDICAL CENTER,WA,Government - Hospital District or Authority,0.0,0.0,0.5,0.5,0.5,15.0,Developing,both_blockers,False

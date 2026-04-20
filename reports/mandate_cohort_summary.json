@@ -1,0 +1,818 @@
+{
+  "generated": "2026-04-20T14:25:47.404470",
+  "mandate": {
+    "fi_floor": 0.5,
+    "qi_floor": 0.5,
+    "quick_win_headroom": 0.05,
+    "description": "CAH 2-part mandate: a facility is 'solved' only when both FI >= 0.5 (margin) AND QI >= 0.5 (quality)."
+  },
+  "total_facilities": 1376,
+  "cohorts": {
+    "dual_solved": {
+      "count": 762,
+      "description": "FI >= 0.50 AND QI >= 0.50 \u2014 mandate cleared, maintain"
+    },
+    "qi_only_blocker": {
+      "count": 66,
+      "description": "FI >= 0.50 but QI < 0.50 \u2014 quality push to unlock mandate"
+    },
+    "fi_only_blocker": {
+      "count": 505,
+      "description": "QI >= 0.50 but FI < 0.50 \u2014 margin push to unlock mandate"
+    },
+    "both_blockers": {
+      "count": 43,
+      "description": "FI < 0.50 AND QI < 0.50 \u2014 dual push required"
+    }
+  },
+  "quick_wins": {
+    "headroom": 0.05,
+    "count": 11,
+    "facilities": [
+      {
+        "ccn": "021314",
+        "name": "SOUTHEAST ALASKA REGIONAL HEALTH CONSORTIUM",
+        "state": "AK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "021310",
+        "name": "MANIILAQ HEALTH CENTER",
+        "state": "AK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "021308",
+        "name": "NORTON SOUND REGIONAL HOSPITAL",
+        "state": "AK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "021312",
+        "name": "SAMUEL SIMMONDS MEMORIAL HOSPITAL",
+        "state": "AK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "021305",
+        "name": "SEARHC WRANGELL MEDICAL CENTER & LTC",
+        "state": "AK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "031305",
+        "name": "HOPI HEALTH CARE CENTER",
+        "state": "AZ",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "031320",
+        "name": "SAN CARLOS APACHE HEALTHCARE CORPORATION",
+        "state": "AZ",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "161356",
+        "name": "HENRY COUNTY HEALTH CENTER",
+        "state": "IA",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "371333",
+        "name": "CREEK NATION COMMUNITY HOSPITAL",
+        "state": "OK",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "451393",
+        "name": "CROCKETT MEDICAL CENTER",
+        "state": "TX",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      },
+      {
+        "ccn": "451396",
+        "name": "MID COAST MEDICAL CENTER - CENTRAL",
+        "state": "TX",
+        "fi": 0.4833,
+        "qi": 0.5,
+        "fi_gap": 0.0167,
+        "qi_gap": 0.0,
+        "cohort": "fi_only_blocker"
+      }
+    ]
+  },
+  "top_50_nearest_to_mandate": [
+    {
+      "ccn": "021314",
+      "name": "SOUTHEAST ALASKA REGIONAL HEALTH CONSORTIUM",
+      "state": "AK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 51.17
+    },
+    {
+      "ccn": "021310",
+      "name": "MANIILAQ HEALTH CENTER",
+      "state": "AK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "021308",
+      "name": "NORTON SOUND REGIONAL HOSPITAL",
+      "state": "AK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "021312",
+      "name": "SAMUEL SIMMONDS MEMORIAL HOSPITAL",
+      "state": "AK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "021305",
+      "name": "SEARHC WRANGELL MEDICAL CENTER & LTC",
+      "state": "AK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "031305",
+      "name": "HOPI HEALTH CARE CENTER",
+      "state": "AZ",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "031320",
+      "name": "SAN CARLOS APACHE HEALTHCARE CORPORATION",
+      "state": "AZ",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "161356",
+      "name": "HENRY COUNTY HEALTH CENTER",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "371333",
+      "name": "CREEK NATION COMMUNITY HOSPITAL",
+      "state": "OK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "451393",
+      "name": "CROCKETT MEDICAL CENTER",
+      "state": "TX",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "451396",
+      "name": "MID COAST MEDICAL CENTER - CENTRAL",
+      "state": "TX",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0167,
+      "cahsp": 44.5
+    },
+    {
+      "ccn": "141343",
+      "name": "CRAWFORD MEMORIAL HOSPITAL",
+      "state": "IL",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 74.17
+    },
+    {
+      "ccn": "151333",
+      "name": "PUTNAM COUNTY HOSPITAL",
+      "state": "IN",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 74.17
+    },
+    {
+      "ccn": "251337",
+      "name": "TIPPAH COUNTY HOSPITAL",
+      "state": "MS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 74.17
+    },
+    {
+      "ccn": "161352",
+      "name": "CLARINDA REGIONAL HEALTH CENTER",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 65.42
+    },
+    {
+      "ccn": "141345",
+      "name": "SALEM TOWNSHIP HOSPITAL",
+      "state": "IL",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 65.42
+    },
+    {
+      "ccn": "161376",
+      "name": "CASS COUNTY MEMORIAL HOSPITAL",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "161365",
+      "name": "GREATER REGIONAL MEDICAL CENTER",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "141351",
+      "name": "CLAY COUNTY HOSPITAL",
+      "state": "IL",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "171371",
+      "name": "CLAY COUNTY MEDICAL CENTER",
+      "state": "KS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "171370",
+      "name": "GOODLAND REGIONAL MEDICAL CENTER",
+      "state": "KS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "261318",
+      "name": "SALEM MEMORIAL DISTRICT HOSPITAL",
+      "state": "MO",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "361329",
+      "name": "WYANDOT MEMORIAL HOSPITAL",
+      "state": "OH",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "531305",
+      "name": "PLATTE COUNTY HOSPITAL",
+      "state": "WY",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 61.67
+    },
+    {
+      "ccn": "111305",
+      "name": "MILLER COUNTY HOSPITAL",
+      "state": "GA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "161307",
+      "name": "HANCOCK COUNTY HEALTH SYSTEM",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "161380",
+      "name": "HANSEN FAMILY HOSPITAL",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "161328",
+      "name": "REGIONAL HEALTH SERVICES OF HOWARD COUNTY",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "161344",
+      "name": "WASHINGTON COUNTY HOSPITAL AND CLINICS",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "161358",
+      "name": "WAYNE COUNTY HOSPITAL",
+      "state": "IA",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "151320",
+      "name": "INDIANA UNIVERSITY HEALTH JAY, INC.",
+      "state": "IN",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "151304",
+      "name": "RUSH MEMORIAL HOSPITAL",
+      "state": "IN",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "171330",
+      "name": "HOSPITAL DISTRICT #1 OF RICE COUNTY",
+      "state": "KS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "171375",
+      "name": "MITCHELL COUNTY HOSPITAL HEALTH SYSTEMS",
+      "state": "KS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "171311",
+      "name": "ROOKS COUNTY HEALTH CENTER",
+      "state": "KS",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "181327",
+      "name": "MARSHALL COUNTY HOSPITAL",
+      "state": "KY",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "261325",
+      "name": "COX BARTON COUNTY HOSPITAL",
+      "state": "MO",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "271318",
+      "name": "BARRETT HOSPITAL & HEALTHCARE",
+      "state": "MT",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "281327",
+      "name": "COZAD COMMUNITY HOSPITAL",
+      "state": "NE",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "281309",
+      "name": "SYRACUSE AREA HEALTH",
+      "state": "NE",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "281353",
+      "name": "VALLEY COUNTY HEALTH SYSTEM",
+      "state": "NE",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "321305",
+      "name": "NOR-LEA HOSPITAL DISTRICT",
+      "state": "NM",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "371337",
+      "name": "EASTERN OKLAHOMA MEDICAL CENTER",
+      "state": "OK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "371329",
+      "name": "FAIRVIEW REGIONAL MEDICAL CENTER AUTHORITY",
+      "state": "OK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "371321",
+      "name": "HOLDENVILLE GENERAL HOSPITAL",
+      "state": "OK",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "381304",
+      "name": "SOUTHERN COOS HOSPITAL & HEALTH CENTER",
+      "state": "OR",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "441306",
+      "name": "ERLANGER BLEDSOE HOSPITAL",
+      "state": "TN",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "441309",
+      "name": "MARSHALL MEDICAL CENTER",
+      "state": "TN",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "451362",
+      "name": "CLAY COUNTY MEMORIAL HOSPITAL",
+      "state": "TX",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    },
+    {
+      "ccn": "451331",
+      "name": "COON MEMORIAL HOSPITAL",
+      "state": "TX",
+      "cohort": "fi_only_blocker",
+      "max_gap": 0.0833,
+      "cahsp": 60.83
+    }
+  ],
+  "by_state": {
+    "CO": {
+      "dual_solved": 10,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 22,
+      "both_blockers": 0
+    },
+    "CA": {
+      "dual_solved": 16,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 19,
+      "both_blockers": 0
+    },
+    "IL": {
+      "dual_solved": 32,
+      "qi_only_blocker": 6,
+      "fi_only_blocker": 17,
+      "both_blockers": 0
+    },
+    "IN": {
+      "dual_solved": 22,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 8,
+      "both_blockers": 1
+    },
+    "MO": {
+      "dual_solved": 13,
+      "qi_only_blocker": 4,
+      "fi_only_blocker": 18,
+      "both_blockers": 0
+    },
+    "MT": {
+      "dual_solved": 40,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 9,
+      "both_blockers": 1
+    },
+    "NC": {
+      "dual_solved": 15,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 1,
+      "both_blockers": 1
+    },
+    "OH": {
+      "dual_solved": 24,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 5,
+      "both_blockers": 1
+    },
+    "WI": {
+      "dual_solved": 55,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 1,
+      "both_blockers": 0
+    },
+    "KS": {
+      "dual_solved": 28,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 48,
+      "both_blockers": 6
+    },
+    "ME": {
+      "dual_solved": 14,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 1,
+      "both_blockers": 1
+    },
+    "TX": {
+      "dual_solved": 30,
+      "qi_only_blocker": 4,
+      "fi_only_blocker": 55,
+      "both_blockers": 3
+    },
+    "IA": {
+      "dual_solved": 35,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 39,
+      "both_blockers": 6
+    },
+    "KY": {
+      "dual_solved": 21,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 2,
+      "both_blockers": 4
+    },
+    "NH": {
+      "dual_solved": 11,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 0,
+      "both_blockers": 0
+    },
+    "WV": {
+      "dual_solved": 16,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 3,
+      "both_blockers": 0
+    },
+    "AZ": {
+      "dual_solved": 10,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 6,
+      "both_blockers": 0
+    },
+    "ID": {
+      "dual_solved": 15,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 11,
+      "both_blockers": 0
+    },
+    "LA": {
+      "dual_solved": 8,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 17,
+      "both_blockers": 2
+    },
+    "MA": {
+      "dual_solved": 3,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 1,
+      "both_blockers": 0
+    },
+    "MI": {
+      "dual_solved": 29,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 5,
+      "both_blockers": 0
+    },
+    "MS": {
+      "dual_solved": 12,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 15,
+      "both_blockers": 2
+    },
+    "ND": {
+      "dual_solved": 33,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 2,
+      "both_blockers": 0
+    },
+    "NE": {
+      "dual_solved": 27,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 30,
+      "both_blockers": 2
+    },
+    "NV": {
+      "dual_solved": 4,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 6,
+      "both_blockers": 0
+    },
+    "OR": {
+      "dual_solved": 12,
+      "qi_only_blocker": 4,
+      "fi_only_blocker": 8,
+      "both_blockers": 1
+    },
+    "PA": {
+      "dual_solved": 16,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 1,
+      "both_blockers": 0
+    },
+    "VA": {
+      "dual_solved": 7,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 0,
+      "both_blockers": 0
+    },
+    "VT": {
+      "dual_solved": 5,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 0,
+      "both_blockers": 0
+    },
+    "AK": {
+      "dual_solved": 4,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 9,
+      "both_blockers": 0
+    },
+    "MN": {
+      "dual_solved": 50,
+      "qi_only_blocker": 2,
+      "fi_only_blocker": 24,
+      "both_blockers": 0
+    },
+    "NM": {
+      "dual_solved": 7,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 5,
+      "both_blockers": 0
+    },
+    "OK": {
+      "dual_solved": 17,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 20,
+      "both_blockers": 1
+    },
+    "SD": {
+      "dual_solved": 35,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 5,
+      "both_blockers": 0
+    },
+    "UT": {
+      "dual_solved": 11,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 2,
+      "both_blockers": 0
+    },
+    "GA": {
+      "dual_solved": 12,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 16,
+      "both_blockers": 2
+    },
+    "TN": {
+      "dual_solved": 9,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 5,
+      "both_blockers": 1
+    },
+    "NY": {
+      "dual_solved": 17,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 2,
+      "both_blockers": 0
+    },
+    "FL": {
+      "dual_solved": 8,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 2,
+      "both_blockers": 1
+    },
+    "WY": {
+      "dual_solved": 3,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 14,
+      "both_blockers": 2
+    },
+    "AL": {
+      "dual_solved": 1,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 6,
+      "both_blockers": 0
+    },
+    "AR": {
+      "dual_solved": 20,
+      "qi_only_blocker": 3,
+      "fi_only_blocker": 4,
+      "both_blockers": 1
+    },
+    "HI": {
+      "dual_solved": 4,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 5,
+      "both_blockers": 0
+    },
+    "SC": {
+      "dual_solved": 1,
+      "qi_only_blocker": 1,
+      "fi_only_blocker": 1,
+      "both_blockers": 0
+    },
+    "WA": {
+      "dual_solved": 0,
+      "qi_only_blocker": 0,
+      "fi_only_blocker": 35,
+      "both_blockers": 4
+    }
+  }
+}
