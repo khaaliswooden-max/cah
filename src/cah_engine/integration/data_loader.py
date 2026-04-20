@@ -11,12 +11,34 @@ Provides unified access to calibrate optimization parameters.
 
 import csv
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
 from typing import Any, Optional
 import statistics
+
+
+def normalize_ccn(raw: Any) -> str:
+    """Normalize a CMS Certification Number to a 6-char upper-case key.
+
+    Accepts ints, floats (from pandas int-as-float coercion), or strings with
+    whitespace / BOM. CCNs are traditionally 6 chars, left-zero-padded when
+    numeric. Alphanumeric CCNs (e.g. psychiatric units) are preserved.
+    """
+    if raw is None:
+        return ""
+    s = str(raw).strip().upper()
+    if not s or s in {"NAN", "NONE"}:
+        return ""
+    # Strip trailing ".0" from float-stringified ints
+    if s.endswith(".0") and s[:-2].isdigit():
+        s = s[:-2]
+    s = re.sub(r"[^A-Z0-9]", "", s)
+    if s.isdigit() and len(s) < 6:
+        s = s.zfill(6)
+    return s
 
 
 @dataclass
@@ -54,7 +76,13 @@ class CAHFacility:
     net_patient_revenue: Decimal = Decimal("0")
     salary_expenses: Decimal = Decimal("0")
     fte_count: float = 0.0
-    
+
+    # Measure-level observations keyed by canonical measure name (e.g.
+    # "ed_throughput_minutes", "readmission_rate"). Populated opportunistically
+    # from the step6 CMS Rural Health scrape. Absent keys → fall back to
+    # parametric estimates in objectives.py.
+    measures: dict[str, float] = field(default_factory=dict)
+
     # Computed metrics
     @property
     def operating_margin(self) -> float:
@@ -189,6 +217,7 @@ class CAHDataLoader:
         self.cost_reports_dir = self.data_dir / "cms_cost_reports"
         self.quality_dir = self.data_dir / "mbqip_quality"
         self.designation_dir = self.data_dir / "cah_designation"
+        self.rural_health_dir = self.data_dir / "cms_rural_health"
     
     def load_all(self, year: int = 2023) -> IntegratedDataset:
         """
@@ -217,25 +246,41 @@ class CAHDataLoader:
         return dataset
     
     def _load_cah_designation(self, dataset: IntegratedDataset) -> DatasetSummary:
-        """Load CAH provider designation data."""
+        """Load CAH provider designation data.
+
+        Prefers the step6 national roster (`data/cms_rural_health/cah_hospitals.csv`,
+        1,376 CAHs pulled 2026-04-19) which includes overall rating and the
+        MORT/Safety/READM/Pt Exp/TE group-measure counts. Falls back to the
+        legacy `data/cah_designation/cah_providers.csv` if the step6 file is
+        unavailable.
+        """
         summary = DatasetSummary(load_timestamp=datetime.now().isoformat())
-        
-        providers_file = self.designation_dir / "cah_providers.csv"
-        if not providers_file.exists():
-            summary.issues.append(f"CAH providers file not found: {providers_file}")
+
+        step6_file = self.rural_health_dir / "cah_hospitals.csv"
+        legacy_file = self.designation_dir / "cah_providers.csv"
+        if step6_file.exists():
+            providers_file = step6_file
+        elif legacy_file.exists():
+            providers_file = legacy_file
+        else:
+            summary.issues.append(
+                f"CAH roster not found at {step6_file} or {legacy_file}"
+            )
             return summary
-        
+
         try:
             with open(providers_file, "r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    facility_id = row.get("Facility ID", "").strip()
+                    facility_id = normalize_ccn(row.get("Facility ID", ""))
+                    if not facility_id:
+                        continue
                     hospital_type = row.get("Hospital Type", "")
-                    
+
                     # Only include Critical Access Hospitals
                     if "Critical Access" not in hospital_type:
                         continue
-                    
+
                     facility = CAHFacility(
                         facility_id=facility_id,
                         facility_name=row.get("Facility Name", ""),
@@ -246,12 +291,12 @@ class CAHDataLoader:
                         ownership=row.get("Hospital Ownership", ""),
                         emergency_services=row.get("Emergency Services", "").lower() == "yes",
                     )
-                    
+
                     # Parse overall rating
                     rating_str = row.get("Hospital overall rating", "")
                     if rating_str and rating_str.isdigit():
                         facility.overall_rating = int(rating_str)
-                    
+
                     # Parse quality measure counts
                     facility.mort_measures_better = self._parse_int(row.get("Count of MORT Measures Better", "0"))
                     facility.mort_measures_worse = self._parse_int(row.get("Count of MORT Measures Worse", "0"))
@@ -259,18 +304,35 @@ class CAHDataLoader:
                     facility.safety_measures_worse = self._parse_int(row.get("Count of Safety Measures Worse", "0"))
                     facility.readm_measures_better = self._parse_int(row.get("Count of READM Measures Better", "0"))
                     facility.readm_measures_worse = self._parse_int(row.get("Count of READM Measures Worse", "0"))
-                    
+
+                    # Attach group-level counts + rating to measures dict so
+                    # downstream scorers can read directly without re-parsing.
+                    if facility.overall_rating is not None:
+                        facility.measures["overall_rating"] = float(facility.overall_rating)
+                    total_measures = (
+                        facility.mort_measures_better + facility.mort_measures_worse
+                        + facility.safety_measures_better + facility.safety_measures_worse
+                        + facility.readm_measures_better + facility.readm_measures_worse
+                    )
+                    if total_measures > 0:
+                        better = (
+                            facility.mort_measures_better
+                            + facility.safety_measures_better
+                            + facility.readm_measures_better
+                        )
+                        facility.measures["quality_better_ratio"] = better / total_measures
+
                     dataset.facilities[facility_id] = facility
                     summary.total_records += 1
                     summary.cah_count += 1
-            
+
             # Count states
             states = set(f.state for f in dataset.facilities.values())
             summary.states_covered = len(states)
-            
+
         except Exception as e:
             summary.issues.append(f"Error loading CAH designation: {e}")
-        
+
         return summary
     
     def _load_quality_data(self, dataset: IntegratedDataset) -> DatasetSummary:
@@ -286,15 +348,17 @@ class CAHDataLoader:
             with open(quality_file, "r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    facility_id = row.get("facility_id", "").strip()
-                    
+                    facility_id = normalize_ccn(row.get("facility_id", ""))
+                    if not facility_id:
+                        continue
+
                     # Only update existing CAH facilities
                     if facility_id not in dataset.facilities:
                         # Check if this is a CAH based on hospital type
                         hospital_type = row.get("hospital_type", "")
                         if "Critical Access" not in hospital_type:
                             continue
-                        
+
                         # Create new facility
                         facility = CAHFacility(
                             facility_id=facility_id,
@@ -362,29 +426,19 @@ class CAHDataLoader:
                 for row in reader:
                     if len(row) >= 3:
                         report_num = row[0]
-                        provider_id = row[2]
-                        if provider_id and len(provider_id) == 6:
+                        provider_id = normalize_ccn(row[2])
+                        if provider_id:
                             provider_reports[provider_id] = report_num
                             summary.total_records += 1
-            
+
         except Exception as e:
             summary.issues.append(f"Error loading report index: {e}")
             return summary
-        
+
         # Match providers with CAH facilities
-        matched = 0
-        for provider_id in provider_reports:
-            # Convert 6-digit provider ID to facility format if needed
-            if provider_id in dataset.facilities:
-                matched += 1
-            else:
-                # Try different ID formats
-                alt_id = f"0{provider_id}" if len(provider_id) == 5 else provider_id
-                if alt_id in dataset.facilities:
-                    matched += 1
-        
+        matched = sum(1 for pid in provider_reports if pid in dataset.facilities)
         summary.cah_count = matched
-        
+
         return summary
     
     def _parse_int(self, value: str) -> int:
@@ -402,10 +456,11 @@ class CAHDataLoader:
         except Exception:
             return Decimal("0")
     
-    def get_facility(self, facility_id: str) -> Optional[CAHFacility]:
-        """Get facility by ID after loading."""
-        # Would need to store the dataset
-        pass
+    def get_facility(
+        self, dataset: IntegratedDataset, facility_id: str
+    ) -> Optional[CAHFacility]:
+        """Get a facility from a loaded dataset by CCN (normalized)."""
+        return dataset.facilities.get(normalize_ccn(facility_id))
     
     def export_summary(self, dataset: IntegratedDataset) -> dict[str, Any]:
         """Export dataset summary as dictionary."""

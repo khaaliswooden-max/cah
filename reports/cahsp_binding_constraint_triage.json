@@ -1,0 +1,34 @@
+{
+  "generated": "2026-04-20T12:49:34.358187",
+  "binding_by_band": {
+    "qi": {
+      "Developing": 697,
+      "Moderate": 45
+    },
+    "fi": {
+      "Developing": 455,
+      "Moderate": 48,
+      "High": 3
+    },
+    "oi": {
+      "Moderate": 62,
+      "Developing": 7
+    },
+    "wi": {
+      "Moderate": 47,
+      "High": 12
+    }
+  },
+  "binding_totals": {
+    "qi": 742,
+    "fi": 506,
+    "oi": 69,
+    "wi": 59
+  },
+  "cohort_level_intervention_priorities": {
+    "fi": "Drive operating margin: revenue-cycle + payer-mix diagnostic, labor-ratio review",
+    "oi": "Operational efficiency: ED throughput, occupancy, outpatient density",
+    "qi": "MBQIP quality push: prioritize readmission and safety measures",
+    "wi": "Workforce: nurse/provider ratio and coverage-model review"
+  }
+}
