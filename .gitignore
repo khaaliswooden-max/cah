@@ -31,6 +31,9 @@ data/cms_rural_health/rural/rhc_*.csv
 # Reports (can regenerate)
 reports/acquisition/*.json
 
+# Vercel build output: reports copied into dashboard/ at deploy time
+dashboard/reports/
+
 # Python cache
 __pycache__/
 *.pyc
