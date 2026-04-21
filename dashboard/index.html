@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -30,6 +30,7 @@
 
 <nav class="tabs-nav">
     <div class="container tabs-row">
+        <button class="tab" data-tab="cah">CAH</button>
         <button class="tab active" data-tab="problem">Problem</button>
         <button class="tab" data-tab="benchmark">Benchmark</button>
         <button class="tab" data-tab="solution">Solution</button>
@@ -38,6 +39,303 @@
 </nav>
 
 <main class="container main">
+
+<!-- ============================================================= -->
+<!-- TAB 0: CAH — what Critical Access Hospitals are                -->
+<!-- ============================================================= -->
+<section id="tab-cah" class="tab-panel" hidden>
+
+    <h1 class="panel-title">1,376 facilities. One regulatory envelope. One class.</h1>
+    <p class="lede">
+        Critical Access Hospitals are a federally&#8209;defined class created by
+        &sect;&nbsp;4201 of the Balanced Budget Act of 1997
+        (Pub.&nbsp;L.&nbsp;105&#8209;33) and certified under 42&nbsp;CFR Part&nbsp;485,
+        Subpart&nbsp;F. Five binding constraints govern every CAH; every CAH is reimbursed
+        on a cost basis under Medicare. Uniformity is not incidental &mdash; it is the
+        defining feature of the class, and the precondition for a single architecture to
+        transfer across the full market.
+    </p>
+
+    <h2 class="section-title">Origin &mdash; why the class exists</h2>
+    <p class="prose">
+        Between 1980 and 1997 more than 400 rural hospitals closed, driven by diseconomies
+        of scale in low&#8209;density markets: the fixed costs of 24/7 emergency coverage
+        cannot be amortized across thin patient volume. Congress responded with the
+        Medicare Rural Hospital Flexibility (Flex) Program, authorized by &sect;&nbsp;4201
+        of the Balanced Budget Act of 1997. The statute created a new certification
+        &mdash; Critical Access Hospital &mdash; that trades a fixed regulatory envelope
+        for cost&#8209;based Medicare reimbursement. The first CAHs were certified in
+        1999; the roster has held between roughly 1,300 and 1,400 facilities since the
+        mid&#8209;2000s.
+    </p>
+
+    <div class="grid-3">
+        <div class="cell">
+            <div class="cell-label">STATUTE</div>
+            <div class="cell-value mono">&sect; 4201</div>
+            <div class="cell-note">Balanced Budget Act of 1997, Pub.&nbsp;L.&nbsp;105&#8209;33</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">CERTIFICATION RULE</div>
+            <div class="cell-value mono">42 CFR 485</div>
+            <div class="cell-note">Subpart F &mdash; Conditions of Participation</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">ADMINISTRATOR</div>
+            <div class="cell-value mono">CMS / HRSA</div>
+            <div class="cell-note">Certification (CMS); Flex Program (HRSA FORHP)</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">The federal class definition</h2>
+    <p class="prose">
+        Every CAH operates inside the same five&#8209;part envelope. These are not
+        aspirational &mdash; they are conditions of participation. A facility that falls
+        out of any constraint loses CAH status and reverts to IPPS/OPPS prospective
+        payment.
+    </p>
+    <pre class="code-block mono">rural_location           AND
+inpatient_beds &lt;= 25     AND
+annual_avg_LOS &lt;= 96 hr  AND
+distance_to_hospital &gt;= 35 mi   (15 mi, mountainous / secondary roads)
+emergency_services_24_7  = true
+reimbursement            = cost_based (not IPPS/OPPS)</pre>
+    <p class="prose-note mono">Source: 42 CFR &sect;&sect; 485.610&ndash;485.647; CMS MLN006400</p>
+
+    <table class="kv-table wide">
+        <thead>
+            <tr><th>CONSTRAINT</th><th>REQUIREMENT</th><th>AUTHORITY</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="mono">LOCATION</td>
+                <td>Located in a rural area (outside an MSA) or treated as rural by CMS</td>
+                <td class="mono">42 CFR &sect; 485.610(b)</td>
+            </tr>
+            <tr>
+                <td class="mono">BED COUNT</td>
+                <td>Maximum 25 inpatient beds for acute care; swing&#8209;bed use permitted; optional 10&#8209;bed psych / rehab DPUs do not count toward the cap</td>
+                <td class="mono">42 CFR &sect; 485.620(a)</td>
+            </tr>
+            <tr>
+                <td class="mono">LENGTH OF STAY</td>
+                <td>Annual average acute inpatient LOS &le; 96 hours (swing&#8209;bed census excluded)</td>
+                <td class="mono">42 CFR &sect; 485.620(b)</td>
+            </tr>
+            <tr>
+                <td class="mono">DISTANCE</td>
+                <td>&gt; 35&#8209;mile drive from the nearest hospital on primary roads, or &gt; 15 miles in mountainous terrain or on secondary roads</td>
+                <td class="mono">42 CFR &sect; 485.610(c)</td>
+            </tr>
+            <tr>
+                <td class="mono">EMERGENCY CARE</td>
+                <td>24/7 emergency services with a practitioner on&#8209;site or on&#8209;call within 30 min (60 min in frontier areas)</td>
+                <td class="mono">42 CFR &sect; 485.618</td>
+            </tr>
+            <tr>
+                <td class="mono">REIMBURSEMENT</td>
+                <td>Cost&#8209;based Medicare payment (approx. 101% of reasonable costs) in place of IPPS/OPPS prospective payment</td>
+                <td class="mono">42 CFR &sect; 413.70</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Size &amp; footprint</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">FACILITIES</div>
+            <div class="cell-value mono">1,376</div>
+            <div class="cell-note">National CAH roster, 2026 baseline</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">STATES WITH CAHS</div>
+            <div class="cell-value mono">45</div>
+            <div class="cell-note">Absent: CT, DE, MD, NJ, RI</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">TYPICAL BED SIZE</div>
+            <div class="cell-value mono">25</div>
+            <div class="cell-note">Federal ceiling; most CAHs at or near cap</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">TYPICAL FTE</div>
+            <div class="cell-value mono">80&ndash;120</div>
+            <div class="cell-note">MV&#8209;CAHI workforce envelope</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MEDIAN REVENUE</div>
+            <div class="cell-value mono">$15&ndash;25M</div>
+            <div class="cell-note">Annual; MV&#8209;CAHI reference range</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">MEDICARE / MEDICAID SHARE</div>
+            <div class="cell-value mono">63&ndash;70%</div>
+            <div class="cell-note">Payer mix, rural hospitals</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">IT FTE</div>
+            <div class="cell-value mono">1&ndash;2</div>
+            <div class="cell-note">Typical CAH IT headcount</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">POPULATION SERVED</div>
+            <div class="cell-value mono">~60M</div>
+            <div class="cell-note">~20% of U.S. relies on rural providers</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">The shared pain &mdash; what every CAH lives inside</h2>
+    <p class="prose">
+        The regulatory envelope determines the operational envelope. Every CAH inherits
+        the same constraint stack; each constraint maps to a measurable performance
+        pressure that shows up identically across the roster.
+    </p>
+    <table class="kv-table wide">
+        <thead>
+            <tr><th>DIMENSION</th><th>CONSTRAINT</th><th>CONSEQUENCE</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="mono">VOLUME</td>
+                <td>25&#8209;bed cap; 96&#8209;hr LOS</td>
+                <td>Diseconomies of scale; fixed overhead spread thin</td>
+            </tr>
+            <tr>
+                <td class="mono">MARGIN</td>
+                <td>Cost&#8209;based reimbursement; Medicare/Medicaid 63&ndash;70% of revenue</td>
+                <td>44% of rural hospitals in negative operating margin (KFF 2023)</td>
+            </tr>
+            <tr>
+                <td class="mono">WORKFORCE</td>
+                <td>Geographic isolation; 1&ndash;2 IT FTE; projected rural physician decline</td>
+                <td>Travel&#8209;nurse dependency; recurring locum&#8209;tenens cost</td>
+            </tr>
+            <tr>
+                <td class="mono">CONNECTIVITY</td>
+                <td>Rural broadband; ~22% of rural below 25/3 Mbps</td>
+                <td>~15&ndash;18% of CAHs achieve full interoperability (vs. ~34% urban)</td>
+            </tr>
+            <tr>
+                <td class="mono">CLINICAL</td>
+                <td>Limited specialist coverage; high transfer dependency</td>
+                <td>Outcome gaps for complex conditions; obstetric desert expansion</td>
+            </tr>
+            <tr>
+                <td class="mono">DATA</td>
+                <td>Federal data (CMS HCRIS) exists; facility&#8209;level translation does not</td>
+                <td>Decisions made on aggregate averages, not facility&#8209;specific ground truth</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">Closure history, 2005&ndash;2025</h2>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">RURAL CLOSURES 2005&ndash;2025</div>
+            <div class="cell-value mono">196</div>
+            <div class="cell-note">Total rural hospital closures (Cecil G. Sheps Center)</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">RURAL CLOSURES 2010&ndash;2025</div>
+            <div class="cell-value mono">152</div>
+            <div class="cell-note">Of which 52 were CAHs (HRSA)</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">NEGATIVE MARGIN</div>
+            <div class="cell-value mono">44%</div>
+            <div class="cell-note">Rural hospitals operating at a loss (KFF)</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">HIGH&#8209;MEDICAID NEG.</div>
+            <div class="cell-value mono">48%</div>
+            <div class="cell-note">Rural hospitals, high&#8209;Medicaid + negative margin</div>
+        </div>
+    </div>
+    <p class="prose">
+        Closures outpace openings. The Sheps Center tracks 196 rural hospital closures
+        between 2005 and 2025, and HRSA reports that 52 of the 152 rural closures between
+        2010 and 2025 were CAHs. Each closure erodes the local economy by millions in
+        annual activity and widens care deserts &mdash; obstetric service lines have
+        contracted particularly sharply, with roughly half of rural counties now lacking
+        labor and delivery.
+    </p>
+
+    <h2 class="section-title">The current inflection &mdash; OBBBA (July 2025)</h2>
+    <p class="prose">
+        The One Big Beautiful Bill Act (Pub.&nbsp;L.&nbsp;119&#8209;21), signed
+        2025&#8209;07&#8209;04, restructures the federal payer floor on which the CAH
+        class depends. The CBO estimates ~$1.02 trillion in Medicaid cuts over the next
+        decade. The Cecil G. Sheps Center at UNC Chapel Hill identifies more than 300
+        rural hospitals at immediate risk of closure, conversion, or service reduction
+        under the bill. A $50 billion Rural Health Transformation Fund was added to
+        partially offset the cuts; independent analyses put the offset at roughly 37% of
+        projected rural losses.
+    </p>
+    <div class="grid-4">
+        <div class="cell">
+            <div class="cell-label">MEDICAID CUTS (CBO)</div>
+            <div class="cell-value mono">~$1.02T</div>
+            <div class="cell-note">10&#8209;year federal reduction</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">HOSPITAL&#8209;DIRECTED CUTS</div>
+            <div class="cell-value mono">~$665B</div>
+            <div class="cell-note">Share attributable to hospital payments</div>
+        </div>
+        <div class="cell emphatic">
+            <div class="cell-label">RURAL IMMEDIATE RISK</div>
+            <div class="cell-value mono">300+</div>
+            <div class="cell-note">Cecil G. Sheps Center, UNC Chapel Hill</div>
+        </div>
+        <div class="cell">
+            <div class="cell-label">RHT OFFSET FUND</div>
+            <div class="cell-value mono">$50B</div>
+            <div class="cell-note">~37% of projected rural losses; deadline Dec&nbsp;31, 2025</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Why uniformity is the investable feature</h2>
+    <p class="prose">
+        The usual read on CAHs is that the regulatory envelope is the problem &mdash; a
+        hard ceiling that holds the sector below profitability. The read that matters for
+        deployment is the opposite: the envelope is the asset. Every CAH operates under
+        the same five constraints, the same reimbursement mechanic, the same data
+        reporting obligations (HCRIS, MBQIP), and the same minimum viable infrastructure.
+        A solution architected against the envelope transfers across all 1,376 facilities
+        without re&#8209;engineering.
+    </p>
+    <p class="prose">
+        This is why the CAH Transformation Engine treats the sector as a single&#8209;class
+        problem rather than 1,376 custom engagements. The CAHSP benchmark &mdash;
+        developed in this repository and specified at
+        <span class="mono">visionblox.org/cahsp</span> &mdash; applies the same discipline
+        that CASP brought to protein folding: one composite score, one mandate gate, one
+        24&#8209;month validation window, scored against the public national roster.
+        Proposed solutions are comparable on the same ground truth, so capital can be
+        priced against the same gate.
+    </p>
+
+    <h2 class="section-title">Sources</h2>
+    <ul class="bullet-list">
+        <li><span class="mono">CMS</span> &mdash; 42 CFR Part 485, Subpart F &mdash; CAH Conditions of Participation</li>
+        <li><span class="mono">CMS</span> &mdash; MLN006400 &mdash; Information for Critical Access Hospitals</li>
+        <li><span class="mono">Pub. L. 105&#8209;33</span> &mdash; Balanced Budget Act of 1997, &sect;&nbsp;4201 (Medicare Rural Hospital Flexibility Program)</li>
+        <li><span class="mono">RHIhub</span> &mdash; Critical Access Hospitals Overview</li>
+        <li><span class="mono">Flex Monitoring Team</span> &mdash; CAH Locations List (facility roster, maintained quarterly)</li>
+        <li><span class="mono">HRSA</span> &mdash; Rural Hospital Programs &mdash; 152 rural closures 2010&ndash;2025; 52 CAHs</li>
+        <li><span class="mono">Sheps Center, UNC</span> &mdash; Rural Hospital Closures Tracker &mdash; 196 closures 2005&ndash;2025; 300+ at OBBBA immediate risk</li>
+        <li><span class="mono">KFF</span> &mdash; OBBBA Implications for Hospitals (2025) &mdash; margin distribution data</li>
+        <li><span class="mono">Pub. L. 119&#8209;21</span> &mdash; One Big Beautiful Bill Act, signed 2025&#8209;07&#8209;04; &sect;&nbsp;50B Rural Health Transformation Fund</li>
+        <li><span class="mono">CBO</span> &mdash; OBBBA cost estimate; ~$1.02T Medicaid reduction 2026&ndash;2034</li>
+        <li><span class="mono">Wooden 2025</span> &mdash; Reimagining Critical Access Hospitals (GRHD) &mdash; SSRN 5573278</li>
+        <li><span class="mono">Wooden 2025</span> &mdash; Rural Infrastructure Modernization (ARIS&#8209;2025) &mdash; SSRN 5579071</li>
+    </ul>
+
+    <p class="link-row">
+        <a class="deep-link" href="#problem">Continue to Problem &#8594;</a>
+    </p>
+
+</section>
 
 <!-- ============================================================= -->
 <!-- TAB 1: THE PROBLEM                                             -->
@@ -463,6 +761,6 @@ J(x) = theta * Q(x) + (1 - theta) * M_hat(x)   # default theta = 0.6</pre>
     </div>
 </footer>
 
-<script src="dashboard.js?v=2"></script>
+<script src="dashboard.js?v=3"></script>
 </body>
 </html>
