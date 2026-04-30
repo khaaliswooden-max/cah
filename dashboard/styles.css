@@ -376,6 +376,18 @@ a:hover { text-decoration-thickness: 2px; }
     color: var(--muted);
 }
 
+/* ---------- PDF embed ---------- */
+
+.pdf-embed {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    border: 1px solid var(--rule, #d8d4cc);
+    background: #f5f3ee;
+    margin-top: 16px;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {

@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -35,6 +35,7 @@
         <button class="tab" data-tab="benchmark">Benchmark</button>
         <button class="tab" data-tab="solution">Solution</button>
         <button class="tab" data-tab="solved">Solved</button>
+        <button class="tab" data-tab="paper">Paper</button>
     </div>
 </nav>
 
@@ -744,6 +745,34 @@ J(x) = theta * Q(x) + (1 - theta) * M_hat(x)   # default theta = 0.6</pre>
 
 </section>
 
+<!-- ============================================================= -->
+<!-- TAB 5: WHITEPAPER                                              -->
+<!-- ============================================================= -->
+<section id="tab-paper" class="tab-panel" hidden>
+
+    <h1 class="panel-title">Reimagining Critical Access Hospitals (GRHD).</h1>
+    <p class="lede">
+        The whitepaper underlying the CAH Transformation Engine &mdash; the General Rural
+        Health Doctrine (GRHD), the CAHSP benchmark, and the 2&#8209;part mandate that the
+        national baseline is scored against.
+    </p>
+
+    <p class="link-row">
+        <a class="deep-link" href="grhd-paper.pdf" target="_blank" rel="noopener">Open PDF in new tab &#8594;</a>
+        &nbsp;&middot;&nbsp;
+        <a class="deep-link" href="grhd-paper.pdf" download>Download PDF</a>
+    </p>
+
+    <object data="grhd-paper.pdf" type="application/pdf" class="pdf-embed" aria-label="GRHD whitepaper PDF">
+        <p class="prose">
+            Your browser cannot display PDFs inline.
+            <a href="grhd-paper.pdf" target="_blank" rel="noopener">Open the PDF in a new tab</a>
+            or <a href="grhd-paper.pdf" download>download it</a>.
+        </p>
+    </object>
+
+</section>
+
 </main>
 
 <footer class="site-footer">
@@ -761,6 +790,6 @@ J(x) = theta * Q(x) + (1 - theta) * M_hat(x)   # default theta = 0.6</pre>
     </div>
 </footer>
 
-<script src="dashboard.js?v=3"></script>
+<script src="dashboard.js?v=4"></script>
 </body>
 </html>
