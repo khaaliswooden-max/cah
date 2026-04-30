@@ -1,9 +1,9 @@
 /**
  * CAH Transformation Engine — tab controller.
- * 5-tab landing: #cah, #problem, #benchmark, #solution, #solved.
+ * 6-tab landing: #cah, #problem, #benchmark, #solution, #solved, #paper.
  */
 
-const TABS = ['cah', 'problem', 'benchmark', 'solution', 'solved'];
+const TABS = ['cah', 'problem', 'benchmark', 'solution', 'solved', 'paper'];
 const DEFAULT_TAB = 'problem';
 
 function showTab(name) {
