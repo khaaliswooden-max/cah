@@ -6,7 +6,8 @@ Executes dual-objective optimization for Critical Access Hospitals:
 - Objective 1: Achieve >=5% operating margin (profitability)
 - Objective 2: Maximize verified quality scores
 
-This script integrates acquired data and runs the optimization engine.
+This script integrates acquired data and runs the optimization engine,
+then scores the result using the CAHSP composite index.
 
 Usage:
     python run_optimization.py [--theta 0.6] [--multi-start 10] [--pareto-points 20]
@@ -15,6 +16,8 @@ Output:
     - reports/optimization_results.json
     - reports/pareto_front.json
     - reports/sensitivity_analysis.json
+    - reports/cahsp_score_results.json
+    - reports/workforce_evaluation.json
 """
 
 import sys
@@ -43,6 +46,8 @@ from constraints import CAHConstraints
 from solver import CAHOptimizer
 from pareto import ParetoFrontExplorer, ParetoFront
 from robust import RobustCAHOptimizer, UncertaintySet
+from cahsp_score import cahsp_score as compute_cahsp, CAHSPResult
+from workforce import WorkforceOptimizer
 
 
 # Configuration
@@ -65,13 +70,13 @@ def load_acquired_data() -> Dict[str, Any]:
     """Load data from acquisition pipeline."""
     print("\n[DATA] LOADING ACQUIRED DATA")
     print("-" * 40)
-    
+
     data = {
         "cost_reports": {},
         "quality_data": {},
         "cah_providers": {},
     }
-    
+
     # Load CMS Cost Report summaries
     for year in [2021, 2022, 2023]:
         summary_path = DATA_DIR / "cms_cost_reports" / str(year) / f"cah_identification_summary_{year}.json"
@@ -79,7 +84,7 @@ def load_acquired_data() -> Dict[str, Any]:
             with open(summary_path, 'r') as f:
                 data["cost_reports"][year] = json.load(f)
             print(f"  [OK] CMS Cost Reports {year}: {data['cost_reports'][year].get('total_cahs', 'N/A')} CAHs")
-    
+
     # Load MBQIP quality metadata
     for year in [2021, 2022, 2023]:
         quality_path = DATA_DIR / "mbqip_quality" / f"mbqip_report_{year}_metadata.json"
@@ -87,7 +92,7 @@ def load_acquired_data() -> Dict[str, Any]:
             with open(quality_path, 'r') as f:
                 data["quality_data"][year] = json.load(f)
             print(f"  [OK] MBQIP Quality {year}: Loaded")
-    
+
     # Load CAH provider list
     cah_providers_path = DATA_DIR / "cah_designation" / "cah_providers.csv"
     if cah_providers_path.exists():
@@ -98,14 +103,27 @@ def load_acquired_data() -> Dict[str, Any]:
             data["cah_providers"]["count"] = len(providers)
             data["cah_providers"]["sample"] = providers[:5] if providers else []
         print(f"  [OK] CAH Providers: {data['cah_providers']['count']} hospitals")
-    
+
     # Load regulatory constraints
     constraints_path = DATA_DIR / "cah_designation" / "cah_regulatory_constraints.json"
     if constraints_path.exists():
         with open(constraints_path, 'r') as f:
             data["regulatory_constraints"] = json.load(f)
         print(f"  [OK] Regulatory Constraints: Loaded")
-    
+
+    # Load HRSA workforce data (Step 5)
+    hrsa_path = DATA_DIR / "hrsa_workforce.csv"
+    if hrsa_path.exists():
+        import csv
+        with open(hrsa_path, 'r') as f:
+            reader = csv.DictReader(f)
+            hrsa_rows = list(reader)
+            data["hrsa_workforce"] = {"count": len(hrsa_rows)}
+        print(f"  [OK] HRSA Workforce Data: {len(hrsa_rows)} county records")
+    else:
+        data["hrsa_workforce"] = {}
+        print(f"  [--] HRSA Workforce Data: not yet downloaded (run step5_download_hrsa_workforce.py)")
+
     return data
 
 
@@ -120,19 +138,19 @@ def run_standard_optimization(
     print(f"  Quality weight (theta): {theta}")
     print(f"  Margin floor: {margin_floor:.1%}")
     print(f"  Multi-start restarts: {multi_start}")
-    
+
     optimizer = CAHOptimizer(
         theta=theta,
         margin_floor=margin_floor,
     )
-    
+
     start_time = time.time()
     result = optimizer.optimize(multi_start=multi_start, seed=42)
     elapsed = time.time() - start_time
-    
+
     print(f"\n  [TIME] Optimization completed in {elapsed:.2f} seconds")
     print(f"  [STATUS] Status: {result.status.value}")
-    
+
     return result
 
 
@@ -141,43 +159,43 @@ def run_pareto_exploration(n_points: int = 20) -> ParetoFront:
     print(f"\n[PARETO] GENERATING PARETO FRONT")
     print("-" * 40)
     print(f"  Points to generate: {n_points}")
-    
+
     explorer = ParetoFrontExplorer()
-    
+
     start_time = time.time()
     front = explorer.explore(n_points=n_points, seed=42)
     elapsed = time.time() - start_time
-    
+
     print(f"\n  [TIME] Pareto exploration completed in {elapsed:.2f} seconds")
     print(f"  [FOUND] Found {len(front.points)} Pareto optimal solutions")
-    
+
     if front.points:
         ideal = front.get_ideal_point()
         nadir = front.get_nadir_point()
         print(f"\n  Ideal point: Margin={ideal[0]:.2%}, Quality={ideal[1]:.3f}")
         print(f"  Nadir point: Margin={nadir[0]:.2%}, Quality={nadir[1]:.3f}")
-    
+
     return front
 
 
 def run_robust_optimization(gamma: float = 3.0) -> OptimizationResult:
-    """Run robust optimization with uncertainty handling."""
-    print(f"\n[ROBUST] RUNNING ROBUST OPTIMIZATION")
+    """Run Bertsimas-Sim robust optimization with uncertainty handling."""
+    print(f"\n[ROBUST] RUNNING ROBUST OPTIMIZATION (Bertsimas-Sim)")
     print("-" * 40)
-    
+
     uncertainty = UncertaintySet(gamma=gamma)
     print(f"  Uncertainty budget (Gamma): {gamma}")
     print(f"  P(violation) bound: {uncertainty.violation_probability_bound():.2%}")
-    
+
     optimizer = RobustCAHOptimizer(uncertainty_set=uncertainty)
-    
+
     start_time = time.time()
     result = optimizer.optimize(multi_start=5)
     elapsed = time.time() - start_time
-    
+
     print(f"\n  [TIME] Robust optimization completed in {elapsed:.2f} seconds")
     print(f"  [STATUS] Status: {result.status.value}")
-    
+
     return result
 
 
@@ -188,13 +206,13 @@ def run_sensitivity_analysis(
     """Run sensitivity analysis at optimal solution."""
     print(f"\n[SENS] RUNNING SENSITIVITY ANALYSIS")
     print("-" * 40)
-    
+
     sensitivities = optimizer.sensitivity_analysis(x)
-    
+
     print("\n  Variable Sensitivities (dMargin/dx):")
     for var_name, sens in sensitivities.items():
         print(f"    {var_name:20s}: {sens['dMargin_dx']:+.6f}")
-    
+
     return sensitivities
 
 
@@ -207,19 +225,63 @@ def run_monte_carlo_analysis(
     print(f"\n[MC] RUNNING MONTE CARLO ANALYSIS")
     print("-" * 40)
     print(f"  Simulations: {n_simulations:,}")
-    
+
     start_time = time.time()
     mc_result = optimizer.monte_carlo_analysis(x, n_simulations=n_simulations, seed=42)
     elapsed = time.time() - start_time
-    
+
     print(f"\n  [TIME] Monte Carlo completed in {elapsed:.2f} seconds")
     print(f"\n  Margin Distribution:")
     print(f"    Mean: {mc_result['margin']['mean']:.2%}")
     print(f"    Std:  {mc_result['margin']['std']:.2%}")
     print(f"    90% CI: [{mc_result['margin']['ci_5']:.2%}, {mc_result['margin']['ci_95']:.2%}]")
     print(f"    P(>=5%% margin): {mc_result['margin']['p_target_achieved']:.1%}")
-    
+
     return mc_result
+
+
+def run_cahsp_scoring(
+    result: OptimizationResult,
+    mc_result: Dict,
+) -> CAHSPResult:
+    """
+    Compute CAHSP composite index from optimization result.
+
+    Formula:  CAHSP(i,t) = 100 × [0.30·FI + 0.30·QI + 0.20·OI + 0.10·WI + 0.10·CI]
+
+    The dual mandate requires FI ≥ 0.50 AND QI ≥ 0.50 before a solution
+    can be designated "Solved" (CAHSP ≥ 85), mirroring CASP's GDT_TS standard.
+    CI (Confidence Index) is grounded in the Monte Carlo P(target) result.
+    """
+    print(f"\n[CAHSP] COMPUTING CAHSP COMPOSITE SCORE")
+    print("-" * 40)
+
+    cahsp_result = compute_cahsp(result, monte_carlo_result=mc_result)
+
+    print(f"\n  {cahsp_result}")
+
+    return cahsp_result
+
+
+def run_workforce_evaluation(result: OptimizationResult) -> Dict:
+    """
+    Evaluate CAHSP Class 4 workforce targets.
+
+    Covers all four sub-targets:
+      1. Travel nurse dependency reduction
+      2. Tele-specialist coverage optimization
+      3. Burn-out index minimization
+      4. 5-year HRSA pipeline adequacy projection
+    """
+    print(f"\n[WF] RUNNING WORKFORCE EVALUATION (CAHSP CLASS 4)")
+    print("-" * 40)
+
+    wf_optimizer = WorkforceOptimizer()
+    evaluation = wf_optimizer.evaluate(result.x)
+
+    print(f"\n  {evaluation}")
+
+    return evaluation.to_dict()
 
 
 def format_result_summary(result: OptimizationResult) -> str:
@@ -228,43 +290,43 @@ def format_result_summary(result: OptimizationResult) -> str:
     lines.append("\n" + "=" * 80)
     lines.append(" " * 25 + "OPTIMIZATION RESULTS")
     lines.append("=" * 80)
-    
+
     lines.append("\n[ALLOCATION] OPTIMAL RESOURCE ALLOCATION:")
     lines.append("-" * 40)
     for name, value in zip(result.variable_names, result.x):
         unit = get_variable_unit(name)
         lines.append(f"  {name:22s}: {value:10.2f} {unit}")
-    
+
     lines.append("\n[FINANCIALS] FINANCIAL PROJECTIONS:")
     lines.append("-" * 40)
     lines.append(f"  Revenue:           ${result.revenue:>15,.0f}")
     lines.append(f"  Cost:              ${result.cost:>15,.0f}")
     lines.append(f"  Profit:            ${result.profit:>15,.0f}")
     lines.append(f"  Operating Margin:  {result.margin:>15.2%}")
-    
+
     lines.append("\n[QUALITY] QUALITY METRICS:")
     lines.append("-" * 40)
     lines.append(f"  Composite Score:   {result.quality:>15.3f}")
     lines.append(f"  Benchmarks Met:    {result.benchmarks_met}")
-    
+
     if result.quality_scores:
         lines.append("\n  Individual Scores:")
         for measure, score in result.quality_scores.items():
             lines.append(f"    {measure:20s}: {score:>8.2f}")
-    
+
     lines.append("\n[CONSTRAINTS] CONSTRAINT STATUS:")
     lines.append("-" * 40)
     lines.append(f"  All Satisfied: {result.constraints_satisfied}")
     for name, status in result.constraint_status.items():
         lines.append(f"    {name:20s}: {status.value}")
-    
+
     lines.append("\n[SOLVER] SOLVER DIAGNOSTICS:")
     lines.append("-" * 40)
     lines.append(f"  Status:             {result.status.value}")
     lines.append(f"  Iterations:         {result.iterations}")
     lines.append(f"  Function Evals:     {result.function_evaluations}")
     lines.append(f"  Objective Value:    {result.objective_value:.6f}")
-    
+
     return "\n".join(lines)
 
 
@@ -290,13 +352,15 @@ def save_results(
     sensitivities: Dict,
     mc_result: Dict,
     robust_result: OptimizationResult,
+    cahsp_result: CAHSPResult,
+    workforce_result: Dict,
 ):
     """Save all results to files."""
     print("\n[SAVE] SAVING RESULTS")
     print("-" * 40)
-    
+
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    
+
     # Main optimization results
     result_dict = result.to_dict()
     result_dict["optimization_timestamp"] = datetime.now().isoformat()
@@ -304,7 +368,7 @@ def save_results(
     with open(result_path, 'w') as f:
         json.dump(result_dict, f, indent=2)
     print(f"  [OK] Optimization results: {result_path}")
-    
+
     # Pareto front
     pareto_dict = {
         "points": [
@@ -324,19 +388,19 @@ def save_results(
     with open(pareto_path, 'w') as f:
         json.dump(pareto_dict, f, indent=2)
     print(f"  [OK] Pareto front: {pareto_path}")
-    
+
     # Sensitivity analysis
     sens_path = REPORTS_DIR / "sensitivity_analysis.json"
     with open(sens_path, 'w') as f:
         json.dump(sensitivities, f, indent=2)
     print(f"  [OK] Sensitivity analysis: {sens_path}")
-    
+
     # Monte Carlo results
     mc_path = REPORTS_DIR / "monte_carlo_results.json"
     with open(mc_path, 'w') as f:
         json.dump(mc_result, f, indent=2)
     print(f"  [OK] Monte Carlo results: {mc_path}")
-    
+
     # Robust optimization results
     robust_dict = robust_result.to_dict()
     robust_dict["robust_timestamp"] = datetime.now().isoformat()
@@ -344,9 +408,23 @@ def save_results(
     with open(robust_path, 'w') as f:
         json.dump(robust_dict, f, indent=2)
     print(f"  [OK] Robust optimization: {robust_path}")
-    
+
+    # CAHSP composite score results
+    cahsp_dict = cahsp_result.to_dict()
+    cahsp_dict["scoring_timestamp"] = datetime.now().isoformat()
+    cahsp_path = REPORTS_DIR / "cahsp_score_results.json"
+    with open(cahsp_path, 'w') as f:
+        json.dump(cahsp_dict, f, indent=2)
+    print(f"  [OK] CAHSP score results: {cahsp_path}")
+
+    # Workforce evaluation results
+    workforce_path = REPORTS_DIR / "workforce_evaluation.json"
+    with open(workforce_path, 'w') as f:
+        json.dump(workforce_result, f, indent=2)
+    print(f"  [OK] Workforce evaluation: {workforce_path}")
+
     # Summary report
-    summary = generate_summary_report(result, pareto_front, mc_result, robust_result)
+    summary = generate_summary_report(result, pareto_front, mc_result, robust_result, cahsp_result)
     summary_path = REPORTS_DIR / "optimization_summary.json"
     with open(summary_path, 'w') as f:
         json.dump(summary, f, indent=2)
@@ -358,6 +436,7 @@ def generate_summary_report(
     pareto_front: ParetoFront,
     mc_result: Dict,
     robust_result: OptimizationResult,
+    cahsp_result: CAHSPResult,
 ) -> Dict:
     """Generate executive summary report."""
     return {
@@ -366,6 +445,11 @@ def generate_summary_report(
             "target_margin_achieved": bool(result.margin >= 0.05),
             "quality_benchmarks_met": bool(result.benchmarks_met),
             "robust_solution_available": bool(robust_result.status.value != "infeasible"),
+            "cahsp_score": round(cahsp_result.total, 2),
+            "cahsp_band": cahsp_result.band,
+            "cahsp_benchmark_solved": bool(
+                cahsp_result.total >= 85.0 and cahsp_result.dual_mandate_met
+            ),
         },
         "optimal_solution": {
             "operating_margin": float(result.margin),
@@ -374,6 +458,7 @@ def generate_summary_report(
             "annual_revenue": float(result.revenue),
             "annual_profit": float(result.profit),
         },
+        "cahsp_components": cahsp_result.to_dict(),
         "resource_allocation": {
             "acute_beds": float(result.x[0]),
             "swing_beds": float(result.x[1]),
@@ -396,15 +481,19 @@ def generate_summary_report(
             "margin_range": [float(pareto_front.get_nadir_point()[0]), float(pareto_front.get_ideal_point()[0])],
             "quality_range": [float(pareto_front.get_nadir_point()[1]), float(pareto_front.get_ideal_point()[1])],
         },
-        "recommendations": generate_recommendations(result, mc_result),
+        "recommendations": generate_recommendations(result, mc_result, cahsp_result),
         "timestamp": datetime.now().isoformat(),
     }
 
 
-def generate_recommendations(result: OptimizationResult, mc_result: Dict) -> list:
+def generate_recommendations(
+    result: OptimizationResult,
+    mc_result: Dict,
+    cahsp_result: CAHSPResult,
+) -> list:
     """Generate actionable recommendations based on results."""
     recommendations = []
-    
+
     # Margin assessment
     if result.margin >= 0.08:
         recommendations.append({
@@ -427,7 +516,7 @@ def generate_recommendations(result: OptimizationResult, mc_result: Dict) -> lis
             "recommendation": f"Operating margin of {result.margin:.1%} is below 5% target.",
             "action": "Implement immediate cost reduction or revenue enhancement strategies.",
         })
-    
+
     # Quality assessment
     if result.quality >= 0.9:
         recommendations.append({
@@ -450,7 +539,7 @@ def generate_recommendations(result: OptimizationResult, mc_result: Dict) -> lis
             "recommendation": f"Quality score of {result.quality:.3f} needs improvement.",
             "action": "Prioritize staffing increases and quality improvement programs.",
         })
-    
+
     # Uncertainty assessment
     if mc_result["margin"]["p_target_achieved"] >= 0.95:
         recommendations.append({
@@ -471,9 +560,32 @@ def generate_recommendations(result: OptimizationResult, mc_result: Dict) -> lis
             "area": "Risk Management",
             "priority": "High",
             "recommendation": f"Only {mc_result['margin']['p_target_achieved']:.0%} probability of achieving target.",
-            "action": "Use robust optimization solution or increase safety margins.",
+            "action": "Use Bertsimas-Sim robust optimization solution or increase safety margins.",
         })
-    
+
+    # CAHSP score assessment
+    if cahsp_result.total >= 85.0 and cahsp_result.dual_mandate_met:
+        recommendations.append({
+            "area": "CAHSP Benchmark",
+            "priority": "Low",
+            "recommendation": f"CAHSP score {cahsp_result.total:.1f} — benchmark solved on dual mandate.",
+            "action": "Proceed to 24-month validation window per CAHSP v1.0 spec.",
+        })
+    elif cahsp_result.total >= 70.0:
+        recommendations.append({
+            "area": "CAHSP Benchmark",
+            "priority": "Medium",
+            "recommendation": f"CAHSP score {cahsp_result.total:.1f} [{cahsp_result.band}] — High performance, not yet solved.",
+            "action": f"FI={'[OK]' if cahsp_result.fi >= 0.50 else '[BELOW FLOOR]'}, QI={'[OK]' if cahsp_result.qi >= 0.50 else '[BELOW FLOOR]'}. Focus on lowest-scoring component.",
+        })
+    else:
+        recommendations.append({
+            "area": "CAHSP Benchmark",
+            "priority": "High",
+            "recommendation": f"CAHSP score {cahsp_result.total:.1f} [{cahsp_result.band}] — solution not yet viable.",
+            "action": "Run additional optimization passes; consider robust solution as starting point.",
+        })
+
     # Bed utilization
     total_beds = result.x[0] + result.x[1]
     if total_beds >= 23:
@@ -483,26 +595,26 @@ def generate_recommendations(result: OptimizationResult, mc_result: Dict) -> lis
             "recommendation": f"Operating near 25-bed CAH cap ({total_beds:.0f} beds).",
             "action": "Optimize swing bed allocation for flexibility.",
         })
-    
+
     return recommendations
 
 
 def main():
     """Main execution function."""
-    parser = argparse.ArgumentParser(description="CAH Mathematical Optimization")
+    parser = argparse.ArgumentParser(description="CAH Mathematical Optimization + CAHSP Scoring")
     parser.add_argument("--theta", type=float, default=0.6, help="Quality weight (0-1)")
     parser.add_argument("--multi-start", type=int, default=10, help="Multi-start restarts")
     parser.add_argument("--pareto-points", type=int, default=20, help="Pareto front points")
     parser.add_argument("--mc-simulations", type=int, default=10000, help="Monte Carlo simulations")
-    parser.add_argument("--robust-gamma", type=float, default=3.0, help="Robust uncertainty budget")
+    parser.add_argument("--robust-gamma", type=float, default=3.0, help="Robust uncertainty budget (Bertsimas-Sim Gamma)")
     parser.add_argument("--auto-cite", action="store_true", help="Generate auto-citation report from payer-mix data")
     args = parser.parse_args()
-    
+
     print_header()
-    
+
     # Step 1: Load acquired data
     acquired_data = load_acquired_data()
-    
+
     # Step 2: Run standard optimization
     optimizer = CAHOptimizer(theta=args.theta, margin_floor=0.05)
     result = run_standard_optimization(
@@ -510,27 +622,33 @@ def main():
         margin_floor=0.05,
         multi_start=args.multi_start,
     )
-    
+
     # Display results
     print(format_result_summary(result))
-    
+
     # Step 3: Generate Pareto front
     pareto_front = run_pareto_exploration(n_points=args.pareto_points)
-    
+
     # Step 4: Sensitivity analysis
     sensitivities = run_sensitivity_analysis(optimizer, result.x)
-    
+
     # Step 5: Monte Carlo uncertainty quantification
     mc_result = run_monte_carlo_analysis(
         optimizer,
         result.x,
         n_simulations=args.mc_simulations,
     )
-    
-    # Step 6: Robust optimization
+
+    # Step 6: CAHSP composite scoring
+    cahsp_result = run_cahsp_scoring(result, mc_result)
+
+    # Step 7: Workforce evaluation (CAHSP Class 4)
+    workforce_result = run_workforce_evaluation(result)
+
+    # Step 8: Robust optimization (Bertsimas-Sim)
     robust_result = run_robust_optimization(gamma=args.robust_gamma)
-    
-    # Step 7: Auto-citation (if requested)
+
+    # Step 9: Auto-citation (if requested)
     if args.auto_cite:
         print("\n[CITE] RUNNING AUTO-CITATION ENGINE")
         print("-" * 40)
@@ -543,31 +661,42 @@ def main():
                 engine.export_citations(report["claims"], fmt="json", output_path=cite_path)
                 print(f"  [OK] {year}: {report['total_claims']} claims → {cite_path}")
 
-    # Step 8: Save all results
-    save_results(result, pareto_front, sensitivities, mc_result, robust_result)
-    
+    # Step 10: Save all results
+    save_results(
+        result,
+        pareto_front,
+        sensitivities,
+        mc_result,
+        robust_result,
+        cahsp_result,
+        workforce_result,
+    )
+
     # Final summary
     print("\n" + "=" * 80)
     print(" " * 25 + "OPTIMIZATION COMPLETE")
     print("=" * 80)
     print(f"\n[FINAL] FINAL STATUS:")
-    print(f"   Operating Margin: {result.margin:.2%} {'[OK]' if result.margin >= 0.05 else '[FAIL]'} (target: >=5%)")
-    print(f"   Quality Score: {result.quality:.3f}")
+    print(f"   Operating Margin:    {result.margin:.2%} {'[OK]' if result.margin >= 0.05 else '[FAIL]'} (target: >=5%)")
+    print(f"   Quality Score:       {result.quality:.3f}")
     print(f"   Constraints Satisfied: {result.constraints_satisfied}")
-    print(f"   Pareto Solutions: {len(pareto_front.points)}")
-    print(f"   P(Target Achieved): {mc_result['margin']['p_target_achieved']:.1%}")
-    
+    print(f"   Pareto Solutions:    {len(pareto_front.points)}")
+    print(f"   P(Target Achieved):  {mc_result['margin']['p_target_achieved']:.1%}")
+    print(f"   CAHSP Score:         {cahsp_result.total:.1f} / 100  [{cahsp_result.band}]")
+    print(f"   Dual Mandate Met:    {cahsp_result.dual_mandate_met}  (FI={cahsp_result.fi:.3f}, QI={cahsp_result.qi:.3f})")
+
     print(f"\n[SAVED] Results saved to: {REPORTS_DIR}")
     print("\n[NEXT] NEXT STEPS:")
-    print("   1. Review optimization_summary.json for recommendations")
-    print("   2. Examine Pareto front for alternative solutions")
-    print("   3. Consider robust solution if uncertainty is high")
-    print("   4. Validate results with domain experts")
+    print("   1. Review optimization_summary.json for CAHSP score and recommendations")
+    print("   2. Examine cahsp_score_results.json for component breakdown (FI/QI/OI/WI/CI)")
+    print("   3. Review workforce_evaluation.json for Class 4 staffing analysis")
+    print("   4. Examine Pareto front for alternative solutions")
+    print("   5. Consider robust solution if uncertainty is high")
+    print("   6. Validate results with domain experts")
     print("=" * 80 + "\n")
-    
+
     return result
 
 
 if __name__ == "__main__":
     main()
-
